@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seekle</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+
+
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div id="logo"><%= link_to "SEEKLE", root_path %></div>
+    <ul class="header-right">
+      <li><%= link_to "ホーム", root_path %></li>
+      <li><%= link_to "プロになる", pro_path %></li>
+      <li><%= link_to "アカウント作成",notes_new_path %></li>
+      <li>ログイン</li>
+    </ul>
+  </div>
+</header>
+
+
+  <div class="container">
+    <%= yield %></div>
+
+<div class="container">
+  <footer class="footer">
+
+<footer>
+
+  <div class="footer-top">
+    <div class="container">
+     <div class="row">
+
+       <div class="col-sm-3 col-xs-6">
+         <div class="widget widget_menu">
+          <h3 class="widget-title">Company</h3>
+          <div class="widget-details">
+           <nav>
+            <ul>
+             <li>SEEKLEとは</li>
+             <li>求人</li>
+             <li>ブログ</li>
+             <li>チーム</li>
+             <li>サービス利用規約</li>
+           </ul>
+          </nav>
+        </div>
+       </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-xs-6">
+      <div class="widget widget_latest-blog-post">
+       <h3 class="widget-title">Customers</h3>
+       <div class="widget-details">
+        <div class="title-list">
+          <ul>
+           <li>信頼&安全</li>
+           <li>ヘルプ/FAQ</li>
+           <li>ご利用ガイド</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3 col-xs-6"> 
+   <div class="widget widget_photo_stream">
+     <h3 class="widget-title">Pros</h3>
+     <div class="widget-details">
+      <div class="title-list">
+      <ul>
+       <li>Sign Up</li>
+       <li>Proの責任</li>
+       <li>Proセンター</li>
+     </ul>
+   </div>
+ </div>
+ </div>
+  </div>
+ </div>
+
+
+<div class="social-media">
+  <h3>SOCIAL MEDIA</h3>
+  <p>Spread SEEKLER!</p>
+   <div class="btn facebook"><span class="fa fa-facebook"></span>Facebook</div>
+   <div class="btn twitter"><span class="fa fa-twitter"></span>Twitter</div>
+   <div class="btn instagram"><span class="fa fa-instagram"></span>Instagram</div>
+</div>
+
+  </div>
+
+<div class="footer-bottom">
+ <div class="container">
+  <div class="footer-menu pull-left">
+   <div class="widget widget_menu">
+    <nav class="widget-menu">
+     <ul>
+      <li>利用規約</li>
+      <li>特定商取引に基づく表記</li>
+      <li>プライバシーポリシー</li>
+    </ul>
+    </nav>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="copy-right">© SEEKLE inc., All Rights Reseved.</div>
+  </footer>
+</div>
+
+</body>
+</html>

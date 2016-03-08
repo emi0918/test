@@ -1,0 +1,208 @@
+
+/* 共通レイアウト ================================ */
+
+html {
+    overflow: auto;
+}
+body {
+    overflow: hidden;
+    position: relative;
+    margin: 0px;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #1f89e2;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1b7ccd;
+}
+
+.container {
+
+    margin: 0px auto;
+}
+
+/* フォント ================================ */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+/* ヘッダー ================================ */
+header {
+   height: 57px;
+    width: 100%;
+    background-color: rgba(34, 49, 52, 0.901961);
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+text-decoration:none;
+    padding:1px;
+
+    }
+
+#logo {
+  float: left;
+  font-size: 27px;
+  font-color: #fff;
+  padding: 12px 50px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  text-decoration:none;
+
+}
+
+
+#logo:hover {
+  color: #fff;
+text-decoration:none;
+}
+
+.header-right {
+  float: right;
+  margin: 0 auto;
+  text-decoration:none;
+}
+
+.header-right a {
+  color: white;
+  display: block;
+ text-decoration:none;
+}
+.header-right a:hover{
+  color: rgba(255,255,255,0.5);
+text-decoration:none;
+}
+
+.header-right li {
+  line-height: 65px;
+  padding: 0 25px;
+  float: left;
+  color: white;
+}
+
+
+
+
+
+
+
+
+/* フッター ================================ */
+
+.footer {
+    padding-top: 0px;
+}
+
+.footer-top {
+border-top: 1px solid rgb(238, 238, 238);
+    background-color:#FFFFFF;
+    color: black;
+    clear: both;
+    height: 260px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    margin: auto;
+}
+
+.row {
+    margin-right: -30px;
+    margin-left: -20px;
+}
+.col-sm-3 {
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.col-sm-3 ul li {
+    list-style: none;
+    margin: 14px 38px;
+    font-size:15px;
+}
+.footer p {
+    color: rgb(179, 174, 181);
+    font-size: 12px;
+}
+.col-sm-3 ul li:hover{
+  color:  #D3D3D3;
+}
+
+
+.facebook {
+    background-color: rgb(59, 89, 152);
+    margin-right: 10px;
+}
+.twitter {
+    background-color: rgb(85, 172, 238);
+}
+.instagram {
+    background-color: rgb(160, 82, 45);
+}
+.fa {
+    margin-right: 5px;
+}
+.footer-bottom {
+    background-color: rgba(34, 49, 52, 0.901961);
+    font-size: 0.8125em;
+    padding: 5px 0px;
+
+}
+
+
+
+.widget-menu {
+    cursor: pointer;
+    margin: 1px;
+    transition: all 0.5s;
+}
+.widget-menu ul {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+.widget-menu li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.widget-menu ul li:hover{
+  color: rgba(255,255,255,0.5);
+}
+
+.copy-right {
+    width: 100%;
+    clear: both;
+    text-align: center;
+    margin-top: 12.5px;
+    color: rgb(130, 136, 138);
+    font-size: 12px;
+    padding-bottom: 9px;
+}
+
+
+
+
+
