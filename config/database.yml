@@ -9,13 +9,14 @@ default: &default
   pool: 5
   timeout: 5000
   encoding: utf8
-  username: root
-  password:
+  username: sqale_19a40eeb84
+  password: cb683bebb48242a904da241c26bc4c7aad0285d1148a470f
   socket: /tmp/mysql.sock
+  host: mysql001.sqale.jp
 
 development:
   <<: *default
-  database: Seekle_development
+  database: sqale_19a40eeb84
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -28,6 +29,5 @@ production:
   <<: *default
   username: root
   database: Seekle_production
-
 
 
