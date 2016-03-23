@@ -1,6 +1,6 @@
 .first-wrapper{
-  padding-top:90px;
-  margin-left:90px;
+  padding-top:150px;
+  margin-left:40px;
   }
 /* forms */
 
@@ -8,6 +8,10 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   margin-bottom: 18px;
 
+}
+
+.alert{
+  color:red;
 }
 
 .form-control {
@@ -37,4 +41,28 @@ margin-left: 500px;
     color: red;
     margin: 0 0 30px 0;
   }
+}
+
+
+
+
+@media screen and  ( max-width:640px )
+{
+  .email-form {
+    margin:0px auto;
+    margin-left: -220px
+   
+
+  }
+   
+
+  }
+
+  @media screen and (min-device-width:320px)
+              and (max-device-width:568px)
+{
+.email-form {
+    margin:0px auto;
+    margin-left: -300px
+   
 }

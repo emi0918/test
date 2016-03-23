@@ -1,5 +1,4 @@
 
-/* 共通レイアウト ================================ */
 
 html {
     overflow: auto;
@@ -58,27 +57,49 @@ header {
     position: fixed;
     top: 0px;
     z-index: 10;
-text-decoration:none;
+  text-decoration:none;
     padding:1px;
 
     }
 
-#logo {
+
+
+
+.logo a{
   float: left;
   font-size: 27px;
-  font-color: #fff;
+  color: #fff;
   padding: 12px 50px;
   letter-spacing: -1px;
+  margin-left:-40px; 
   font-weight: bold;
   text-decoration:none;
 
 }
 
 
-#logo:hover {
+.logo a:hover {
   color: #fff;
 text-decoration:none;
 }
+
+@media screen and  ( max-width:640px )
+{
+  /* ボディ */
+  .logo a
+  {
+    font-size: 24px ; 
+    margin-left:-70px;/* 文字サイズ */
+  }
+}
+
+
+
+
+
+
+
+
 
 .header-right {
   float: right;
@@ -103,7 +124,40 @@ text-decoration:none;
   color: white;
 }
 
+@media screen and  ( max-width:640px )
+{
+  /* ボディ */
+  .header-right a{
+    font-size: 10px ;
+    margin-top:-60px;
+    float:right; 
 
+
+  }
+
+  .header-right li{
+    padding-right: 90px;
+
+ 
+  }
+}
+
+@media screen and (min-device-width:320px)
+              and (max-device-width:568px)
+{
+  .header-right a{
+    font-size: 10px ;
+    margin-top:-60px;
+
+
+  }
+
+  .header-right li{
+    padding-right: 50px;
+
+ 
+  }
+}
 
 
 
@@ -111,6 +165,8 @@ text-decoration:none;
 
 
 /* フッター ================================ */
+
+
 
 .footer {
     padding-top: 0px;
@@ -128,19 +184,27 @@ border-top: 1px solid rgb(238, 238, 238);
     margin: auto;
 }
 
+@media screen and  ( max-width:640px )
+{
+  .footer-top{
+    height:400px;
+
+  }
+
+  .column-menu
+  {
+    font-size:9px;
+    margin-right: 22px;
+    clear:both;
+  }
+}
+
+
+
+
 .row {
     margin-right: -30px;
     margin-left: -20px;
-}
-.col-sm-3 {
-    float: left;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-.col-sm-3 ul li {
-    list-style: none;
-    margin: 14px 38px;
-    font-size:15px;
 }
 .footer p {
     color: rgb(179, 174, 181);
@@ -151,16 +215,7 @@ border-top: 1px solid rgb(238, 238, 238);
 }
 
 
-.facebook {
-    background-color: rgb(59, 89, 152);
-    margin-right: 10px;
-}
-.twitter {
-    background-color: rgb(85, 172, 238);
-}
-.instagram {
-    background-color: rgb(160, 82, 45);
-}
+
 .fa {
     margin-right: 5px;
 }
@@ -173,23 +228,29 @@ border-top: 1px solid rgb(238, 238, 238);
 
 
 
-.widget-menu {
+.column-menu a{
     cursor: pointer;
     margin: 1px;
-    transition: all 0.5s;
+    color:#fff;
 }
-.widget-menu ul {
+.column-menu ul {
     color: white;
     margin: 0px;
     padding: 0px;
 }
-.widget-menu li {
+.column-menu li {
     display: inline-block;
     margin: 10px;
+
 }
 
-.widget-menu ul li:hover{
+.column-menu ul li:hover{
   color: rgba(255,255,255,0.5);
+  
+}
+.column-menu ul li a:hover{
+text-decoration: none;
+ color: rgba(255,255,255,0.5);
 }
 
 .copy-right {
@@ -201,7 +262,6 @@ border-top: 1px solid rgb(238, 238, 238);
     font-size: 12px;
     padding-bottom: 9px;
 }
-
 
 
 

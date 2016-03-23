@@ -1,6 +1,5 @@
 <h1><%= @message %></h1>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="pro.css">
+
  <div class="pro-top-wrapper">
     <div class="pro-container">
       <div class="pro-background-image">
@@ -8,7 +7,7 @@
        </a>
      </div>
       <h1>こんなビジネス始めてみたい。</h1>
-     <p>会社を作らなくてもビジネスは身近に始められる</p>
+     <p>会社を作らなくてもビジネスはもっと身近に始められる</p>
 
 
       <%= link_to "事前登録する", new_user_path, class: "btn btn-lg btn-primary" %>
@@ -17,7 +16,7 @@
 
 
 <div class="pro-explain-wrapper">
-    <div class="container">
+    <div class="pro-container">
  <div class="heading">
         <h2>プロバイダーとして活躍しませんか</h2>
         
@@ -62,7 +61,7 @@
         <h2>あなたも得意を仕事にしませんか？</h2>
         <h3 id="tagline">Let's find customers who need you!</h3>
       </div>
-      <span class="btn message signup-show">プロバイダーとして参加</span>
+ <%= link_to "プロバイダーとして参加", new_user_path, class: "btn message signup-show" %>
     </div>
   </div>
 

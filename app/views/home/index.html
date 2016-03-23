@@ -2,6 +2,7 @@
 <h1><%= @message %></h1>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <link rel="stylesheet" type="text/css" href="index.css">
 
@@ -11,11 +12,12 @@
  <div class="top-wrapper">
     <div class="container">
       <div class="background-image">
+
        <a img="https://static.pexels.com/photos/7075/people-office-group-team.jpg">
        </a>
      </div>
-      <h1>賢く生きよう。</h1>
-      <p>SEEKLEは人と人をつなげるマッチングサービスです。</p>
+      <h1>よく生きる。</h1>
+      <p>シェアリングエコノミーの未来を切り開く</p>
 
 
      <%= link_to "事前登録する", new_user_path, class: "btn btn-lg btn-primary" %>
@@ -39,30 +41,40 @@
     </div>
   </div>
 
+
+<div class="explain-seekle-wrapper">
+ <div clas="container">
+    <div class="Seekle-heading">
+     <h2>Seekleとは？</h2>
+　　　　<p>Seekleは語学教室・カメラマン・メイクアップアーティストなど<br>各種サービスのプロバイダーと顧客を繋ぐ場を提供するローカルサービスです。</p>
+    </div>
+  </div>
+</div>
+
+
 <div class="about-seekle-wrapper">
    <div class="container">
-    <div class="heading">
-      <h2>Seekleとは</h2>
-      <p>Seekleは語学教室・カメラマン・メイクアップアーティストなど<br>各種サービスのプロバイダーと顧客を繋ぐ場を提供するローカルサービスです。</p>
-   </div>
+ 
+      
+      
      <div class="reasons">
        <div class="reason">
-        <p class="txt-contents"></p><h3>プロバイダーとは</h3>
-<p>プロバイダーとは必要としている<br>サービスを提供する提供者です。プロフィール、<br>レビュー、サービス価格などの様々な<br>情報から、あなたの求めるサービスに<br>ぴったりなプロバイダーを比較できます。</p>
+        <p class="txt-contents"></p><h2>プロバイダーとは</h2>
+<p>プロバイダーとはサービスを提供する提供者です。プロフィール、レビュー、サービス価格などの様々な情報から、あなたの求めるサービスにぴったりなプロバイダーを比較できます。</p>
         </div>
   </div>
      <div class="reasons">
        <div class="reason">
-        <p class="txt-contents"></p><h3>お手頃な費用で貴重な経験</h3>
-<p>高いお金を払って専門の業者に頼む前に、<br>あなたの周りで解決してくれるプロバイダーを<br>探しませんか？ お手頃な月謝で地域の習い事に<br>参加してみませんか？
-イベントにマジシャン、<br>DJを呼んで少し豪華な体験をしてみませんか？</p>
+        <p class="txt-contents"></p><h2>お手頃な費用で貴重な経験</h2>
+<p>高いお金を払って専門の業者に頼む前に、あなたの周りで解決してくれるプロバイダーを探しませんか？ お手頃な月謝で地域の習い事に参加してみませんか？
+イベントにマジシャン、DJを呼んで少し豪華な体験をしてみませんか？</p>
         </div>
   </div>
 
      <div class="reasons">
        <div class="reason">
-        <p class="txt-contents"></p><h3>豊富なジャンル</h3>
-<p>結婚式のためのカメラマン、英会話教室、<br>ペットのしつけを頼みたいなど、Seekleは様々な<br>ジャンルのプロバイダーと繋がることのできる場です。<br>新しい事に気軽に挑戦し、夢中になれるものを探すこと<br>ができたり、小さなお悩みの解決のお手伝いもします。</p>
+        <p class="txt-contents"></p><h2>豊富なジャンル</h2>
+<p>結婚式のためのカメラマン、英会話教室、ペットのしつけを頼みたいなど、Seekleは様々なジャンルのプロバイダーと繋がることのできる場です。新しい事に気軽に挑戦し、夢中になれるものを探すことができたり、小さなお悩みの解決のお手伝いもします。</p>
         </div>
   </div>
   </div>
@@ -72,45 +84,51 @@
 
 
 <div class="lesson-wrapper">
-    <div class="container">
+
+
       <div class="heading">
         <h2>How Seekle works</h2>
-        <p></p>
-
       </div>
+  <div class="lesson-container">
       <div class="images">
         <div class="first">
           <div class="first-icon">
-          <p><img src="https://pixabay.com/static/uploads/photo/2016/02/07/21/11/computer-1185637_960_720.jpg" alt="First" width="320" height="212" border="0" /></p>
+           <img src="https://pixabay.com/static/uploads/photo/2016/02/07/21/11/computer-1185637_960_720.jpg" alt="First" width="320" height="212" border="0" />
+          </div>
+
+          <div class="how-works-explain">
+           <h3>1. 見つけよう</h3>
+         <p> あなたの住所、または各種サービス覧から<br>プロバイダーを探そう。</p> 
+          </div>
+        </div>
+
+
+
+
+    <div class="first">
+      <div class="first-icon">
+        <img src="http://gahag.net/img/201602/14s/gahag-0055980653-1.jpg" alt="Second" width="320" height="212" border="0" />
+      </div>
             
-          </div>
-          <p class="txt-contents"></p><h3>1. 見つけよう</h3>
-あなたの住所、またはサービス一覧から<br>プロバイダーを探そう。<p></p>
+      <div class="how-works-explain">
+        <h3>2. 選ぼう</h3>
+           <p>値段、プロフィール、レビュー、などの様々な情報から、あなたの求めるサービスにあったプロバイダーを比較しよう。</p> 
+         </div>
+    </div>
+
+
+
+     <div class="first">
+        <div class="first-icon">
+          <img src="http://www.cambiandoelnorte.com/wp-content/uploads/2016/01/photo-1453127370373-a52c2f02c097.jpeg" alt="Third" width="320" height="212" border="0" />
         </div>
-        <div class="first">
-          <div class="first-icon">
-
-<p><img src="http://gahag.net/img/201602/14s/gahag-0055980653-1.jpg" alt="Second" width="320" height="212" border="0" /></p>
-
-
-
-
-
-
-          </div>
-          <p class="txt-contents"></p><h3>2. 選ぼう</h3>
-
-<p>値段、プロフィール、レビュー、などの様々な情報から、<br>あなたの求めるサービスにあったプロバイダーを比較しよう。</p>
-        </div>
-        <div class="first">
-          <div class="first-icon">
-            <p><img src="http://www.cambiandoelnorte.com/wp-content/uploads/2016/01/photo-1453127370373-a52c2f02c097.jpeg" alt="Third" width="320" height="212" border="0" /></p>
-           
-          </div>
-          <p class="txt-contents"></p><h3>3. 採用</h3>
-<p>準備ができたら採用！<br>Seekleでの素晴らしい経験を増やしていきましょう。</p>
+         <div class="how-works-explain">
+          <h3>3. 採用</h3>
+            <p>準備ができたら採用！<br>Seekleでの素晴らしい経験を増やしていきましょう。</p>
         </div>
       </div>
+      </div>
+
     </div>
   </div>
 
