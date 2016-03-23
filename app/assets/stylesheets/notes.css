@@ -19,9 +19,7 @@
 .choose-account-wrapper .box.service-pro-account {
     background: url(https://pixabay.com/static/uploads/photo/2015/05/31/11/47/makeup-791303_960_720.jpg) center #000;
     color: #FFF;
-   
     webkit-background-size: cover;
-     
     background-size: cover;
 }
 

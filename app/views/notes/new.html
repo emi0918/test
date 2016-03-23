@@ -15,9 +15,10 @@
             <p class="account-description">
                 プロバイダーとしてあなたのビジネスを提供しよう。
             </p>
-            <a class="bttn blue create-accout-bttn" href="/pro">
-                Sign Up
-            </a>
+           
+ <%= link_to "sign up", new_user_path, class: "btn btn-lg btn-primary" %>
+
+
         </div>
 
                 <h3 class="or choose-account">
@@ -31,9 +32,15 @@
             <p class="account-description">
                 様々なジャンルからぴったりを見つけよう。
             </p>
-            <a class="bttn blue create-accout-bttn" href="/register">
-                Sign Up
-            </a>
+            
+
+ <%= link_to "sign up", new_user_path, class: "btn btn-lg btn-primary" %>
+
+
+
+
+
+            
         </div>
 
     </div>
@@ -41,9 +48,7 @@
 
 <div class="login-wrapper">
     <div class="bottom-link-wrapper">
-        すでにアカウントをお持ちですか？
-        <a href="/login">
-            ログイン
-        </a>
+        すでにアカウントをお持ちですか？      ログイン
+      
     </div>
 </div>

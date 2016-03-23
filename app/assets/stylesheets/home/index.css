@@ -1,0 +1,303 @@
+
+.top-wrapper {
+  margin-top: -30px;
+    background-size: cover;
+    color: white;
+    background-image: url("https://static.pexels.com/photos/6182/man-hands-photographer-cameras.jpg");
+    text-align: center;   
+    padding: 150px 0 130px 0px;
+
+}
+
+
+
+@media only screen and  ( max-width:640px )
+{
+  /* ボディ */
+  .background-image
+  {
+    float:left;
+  }
+  .top-wrapper{
+    padding: 80px 0 100px 0px;
+  }
+  .top-wrapper h1 {
+   text-shadow: 2px 2px 1px black;
+  }
+}
+
+
+.top-wrapper h1 {
+    opacity: 0.9;
+    font-size: 45px;
+    letter-spacing: 5px;
+    padding-top:20px;
+}
+
+.top-wrapper p {
+    opacity: 0.7;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    cursor: pointer;
+    padding: 10px 24px;
+    border-radius: 3px;
+     background-color: rgb(35, 155, 118);
+    text-decoration:none;
+}
+.btn:hover{
+  opacity: 1;
+}
+
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+
+.jobstyle-row {
+    text-align: center;
+    height: 40px;
+    cursor: pointer;
+    margin: 0px;
+    border-bottom: 2px solid rgb(235, 235, 235);
+    transition: all 0.5s;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.wrapper {
+    width: 900px;
+    position: relative;
+    margin: 0px auto;
+}
+.jobstyle-row ul li {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+    border-right: 1px solid rgb(235, 235, 235);
+    overflow: hidden;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.jobstyle-row ul li:hover{
+    color:gray;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+@media screen and  ( max-width:640px )
+{
+
+  .wrapper{
+   width:auto;
+  position:relative;
+  margin-left:-22px;
+    max-width:640px; 
+  }
+
+  .explain-seekle-wrapper p{
+    font-size:9px;
+  }
+
+}
+
+
+.explain-seekle-wrapper
+{
+
+  height:260px;
+  text-align: center;
+background-color: rgb(247, 247, 247);
+}
+
+
+.explain-seekle-wrapper p{
+    font-size:15px;
+    line-height:25px;
+}
+
+.Seekle-heading {
+    padding-top: 40px;
+    padding-bottom: 15px;
+    color: rgb(95, 93, 96);
+}
+.Seekle-heading h2{
+
+margin-top:12px;
+  margin-bottom: -15px;
+}
+.Seekle-heading p{
+  font-size: 15px;
+}
+
+.reason p{
+  text-align: center;
+  text-rendering:optimizeLegibility;
+  width:90%;
+  margin:0 auto;
+}
+
+.about-seekle-wrapper{
+    height:270px;
+      padding-bottom: 80px;
+    background-color: #fff;
+    text-align: center;
+    font-size:14px;
+}
+
+.about-seekle-wrapper p{
+    font-size:15px;
+    line-height:25px;
+}
+
+
+.reason {
+    float: left;
+    width: 33%;
+    padding-top: 50px;
+}
+
+
+@media screen and  ( max-width:640px )
+{
+
+  .reasons {
+    font-size:60%;
+    clear:both;
+    padding-top: -20px;
+    padding-left:43px;
+
+  }
+  .reason  {
+    display: inline-block;
+    font-size: 10px;
+     line-height:14px;
+      width:90%;
+
+  }
+
+  .about-seekle-wrapper{
+    height:750px;
+
+ }
+
+  
+}
+
+
+@media screen and (max-width:479px)
+{
+
+.about-seekle-wrapper{
+    height:900px;
+
+ }
+}
+
+
+
+
+
+
+.lesson-wrapper {
+    height: 470px;
+    padding-bottom: 80px;
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+    font-size:14px;
+}
+.lesson-wrapper p{
+    font-size:15px;
+    line-height:25px;
+}
+
+.images{
+    padding-top:34px;
+}
+
+.first {
+
+    float: left;
+    width: 33%;
+}
+.first-icon {
+    position: relative;
+}
+
+
+
+@media screen and  ( max-width:640px )
+{
+  .lesson-wrapper{
+    height:1130px;
+    
+  }
+  .images{
+    padding-top: 10%;
+
+  }
+
+  .first {  
+  clear:both;
+  padding-left: 12%;
+    }
+
+.how-works-explain{
+  width: 300px;
+  padding-bottom: 20px;
+}
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 374px)
+{
+.first{
+padding-left:0px;
+}
+}
+
+
+
+
+.txt-contents {
+    width: 500%;
+    display: inline-block;
+    font-size: 10px;
+    color: rgb(179, 174, 181);
+}
+
+
+.message-wrapper {
+   height: 280px;
+   padding-top:40px;
+    background-color: #fff;
+    text-align: center;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+.message-wrapper .heading h3 {
+    font-weight: normal;
+}
+.message {
+    background-color: rgb(153, 50, 204);
+    cursor: pointer;
+    box-shadow: rgb(148, 0, 211) 0px 3px;
+    padding: 15px 40px;
+}
+
+.message:active{
+  position: relative;
+  top: 4px;
+  box-shadow: none;
+}
+
+
+
+
