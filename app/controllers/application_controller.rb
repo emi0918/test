@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   rescue_from Exception, with: :render_500
 
 
-
   def error_404(exception = nil)
    render 'error404', status: 404, formats: [:html]
   end
