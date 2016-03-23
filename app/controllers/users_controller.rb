@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
 
        NoticeMailer.sendmail_confirm(@user).deliver
-      
+
        redirect_to @user
     else
       render 'new'
