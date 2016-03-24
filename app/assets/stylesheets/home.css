@@ -71,7 +71,11 @@ header {
   color: #fff;
   padding: 12px 50px;
   letter-spacing: -1px;
+<<<<<<< HEAD
   margin-left:-40px;
+=======
+  margin-left:-40px;
+>>>>>>> 33a49fdae6c57b7f4713ea0b9affbd7efb7e783f
   font-weight: bold;
   text-decoration:none;
 
@@ -130,6 +134,7 @@ text-decoration:none;
   .header-right a{
     font-size: 10px ;
     margin-top:-60px;
+<<<<<<< HEAD
     float:right;
 
 
@@ -148,7 +153,36 @@ text-decoration:none;
   .header-right a{
     font-size: 10px ;
     margin-top:-60px;
+=======
+    float:right;
 
+>>>>>>> 33a49fdae6c57b7f4713ea0b9affbd7efb7e783f
+
+  }
+
+  .header-right li{
+    padding-right: 90px;
+
+
+  }
+}
+
+@media screen and (min-device-width:320px)
+              and (max-device-width:568px)
+{
+  .header-right a{
+    font-size: 10px ;
+    margin-top:-60px;
+
+
+  }
+
+  .header-right li{
+    padding-right: 50px;
+
+
+  }
+}
 
   }
 
@@ -246,6 +280,11 @@ border-top: 1px solid rgb(238, 238, 238);
 
 .column-menu ul li:hover{
   color: rgba(255,255,255,0.5);
+
+}
+.column-menu ul li a:hover{
+text-decoration: none;
+ color: rgba(255,255,255,0.5);
 }
 .column-menu ul li a:hover{
 text-decoration: none;
