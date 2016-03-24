@@ -1,0 +1,16 @@
+.policy-wrapper{
+   border: 1px solid #C0C0C0;
+   margin:90px;
+   border-radius:5px;
+   box-shadow:1px 1px 3px #c0c0c0;
+   background-color:#F5F5F5;
+}
+
+.policy-contents{
+  padding:30px;
+font-size:13px;
+}
+
+.policy-contents ul li{
+  list-style: none;
+}
