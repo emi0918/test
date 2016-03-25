@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root'home#index'
   get '/notes/new' =>'notes#new'
   post '/notes' => 'notes#create'
