@@ -135,7 +135,7 @@ background-color: rgb(247, 247, 247);
 .Seekle-heading h2{
 
 margin-top:12px;
-  margin-bottom: -15px;
+  margin-bottom: 50px;
 }
 .Seekle-heading p{
   font-size: 15px;
@@ -217,6 +217,7 @@ margin-top:12px;
     text-align: center;
     font-size:14px;
 }
+
 .lesson-wrapper p{
     font-size:15px;
     line-height:25px;
