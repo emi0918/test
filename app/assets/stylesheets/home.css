@@ -346,13 +346,13 @@ input{
   background-color: #000080;
 }
 
-#login{
+#login, #sign{
   background-color:#D2691E;
   margin-top: 10px;
   margin-bottom: 0;
 }
 
-#login:hover {
+#login:hover, #sign:hover {
     background-color: #b53e00;
 }
 
@@ -362,16 +362,11 @@ input{
   margin-top: 0px;
 }
 
-#user_email:focus {
+#user_email:focus, #user_password:focus, #user_password:focus, #user_password_confirmation:focus{
   outline: none;
 }
 
-#user_password:focus{
-  outline: none;
-}
-
-
-#user_email, #user_password {
+#user_email, #user_password, #user_パスワード確認, #user_password_confirmation {
   border: none;
   border-bottom:solid 1px black;
   background-color: #DCDCDC;
@@ -393,6 +388,10 @@ hr{
   margin: 0;
   margin-top: 10px;
   width: 100%;
+}
+
+#sign{
+  margin-bottom: 18px;
 }
 
 /*ドロップダウン*/
@@ -465,4 +464,5 @@ hr{
   visibility: visible;
   opacity: 1;
 }
+
 
