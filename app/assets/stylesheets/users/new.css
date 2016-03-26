@@ -24,14 +24,13 @@ input, textarea, select, .uneditable-input {
     background-color: #fff;
     border: 1px solid #ccc;
     margin-left:340px;
-  
+
 }
 
 input {
-  height: auto !important;
-font-size: 18px;
-margin-left: 500px;
 
+height: auto !important;
+font-size: 18px;
 }
 
 
@@ -51,10 +50,10 @@ margin-left: 500px;
   .email-form {
     margin:0px auto;
     margin-left: -220px
-   
+
 
   }
-   
+
 
   }
 
@@ -64,5 +63,6 @@ margin-left: 500px;
 .email-form {
     margin:0px auto;
     margin-left: -300px
-   
+
 }
+
