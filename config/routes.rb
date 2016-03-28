@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   root'home#index'
+  namespace :company do
+    get :index
+    get :philosophy
+  end
   resources :home, only: [:index]
   resources :housing, only: [:index]
   resources :dashboard, only: [:index]
