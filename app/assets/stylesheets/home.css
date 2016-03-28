@@ -11,6 +11,7 @@ body {
 
 ul, li {
   list-style-type: none;
+  margin: 0px;
 }
 
 a {
@@ -23,8 +24,8 @@ a:hover {
   color: #1b7ccd;
 }
 
-.container {
-
+.main_content {
+    padding-top: 57px;
     margin: 0px auto;
 }
 
@@ -196,8 +197,6 @@ text-decoration:none;
 
 
 
-
-
 /* フッター ================================ */
 
 
@@ -301,6 +300,169 @@ text-decoration: none;
     padding-bottom: 9px;
 }
 
+/*ユーザーログイン*/
 
+.user_content {
+  width: 500px;
+  height: 100%;
+  margin: auto;
+  background-color: #DCDCDC;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  font-family:  "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, Meiryo, sans-serif;
+}
+
+.content_in_user{
+  margin: auto;
+  width: 333px;
+  padding-top: 53px;
+  padding-bottom: 30px;
+}
+
+.content_in_user a {
+  color: #483D8B;
+}
+
+.log_button{
+  border-radius: 5px;
+  width: 333px;
+  font-size: 15px;
+  color: #FFFAFA;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  outline: none;
+}
+
+input{
+  transition-duration: 0.4s;
+}
+
+#face{
+  background-color: #001db5;
+}
+
+#face:hover{
+  background-color: #000080;
+}
+
+#login, #sign{
+  background-color:#D2691E;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+#login:hover, #sign:hover {
+    background-color: #b53e00;
+}
+
+.actions p{
+  text-align: center;
+  height: 20px;
+  margin-top: 0px;
+}
+
+#user_email:focus, #user_password:focus, #user_password:focus, #user_password_confirmation:focus{
+  outline: none;
+}
+
+#user_email, #user_password, #user_パスワード確認, #user_password_confirmation {
+  border: none;
+  border-bottom:solid 1px black;
+  background-color: #DCDCDC;
+  border-radius: 0px;
+  width: 333px;
+  padding-top: 23px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #DCDCDC inset;
+}
+
+#pass_for{
+  float: right;
+}
+
+
+hr{
+  margin: 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#sign{
+  margin-bottom: 18px;
+}
+
+/*ドロップダウン*/
+.dropmenu{
+  *zoom: 1;
+  list-style-type: none;
+  width: 960px;
+  margin: auto;
+  padding: 0;
+}
+.dropmenu:before, .dropmenu:after{
+  content: "";
+  display: table;
+}
+.dropmenu:after{
+  clear: both;
+}
+.dropmenu li{
+  position: relative;
+  width: 20%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.dropmenu li a{
+  display: block;
+  margin: 0;
+  padding: 15px 0 11px;
+  background: white;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.dropmenu li ul{
+  list-style: none;
+  position: absolute;
+  z-index: 9999;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+.dropmenu li ul li{
+  width: 100%;
+}
+.dropmenu li ul li a{
+  padding: 13px 15px;
+  border-top: 1px solid #F5F5F5;
+  background: white;
+  text-align: left;
+}
+.dropmenu li:hover > a{
+  background: #FFA500;
+}
+.dropmenu li a:hover{
+  background: #FFA500;
+}
+
+#fade-in2 li ul{
+  opacity: 0;
+  top: 50%;
+  visibility: hidden;
+  transition: .5s;
+}
+
+#fade-in2 li:hover ul{
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+}
 
 

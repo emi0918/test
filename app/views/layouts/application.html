@@ -9,30 +9,27 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-
-
-
 </head>
 
 <body>
 
 <header>
-  <div class="container">
 
+  <div class="container_head">
 
     <div class="logo"><a><%= link_to "Seekle", root_path %></a></div>
     <ul class="header-right">
       <li><%= link_to "ホーム", root_path %></li>
       <li><%= link_to "プロバイダー", pro_path %></li>
 
-
     </ul>
   </div>
 </header>
 
 
-  <div class="container">
-    <%= yield %></div>
+  <div class="main_content">
+    <%= yield %>
+  </div>
 
 
 <div class="footer-bottom">
@@ -50,14 +47,6 @@
   </div>
  </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 
