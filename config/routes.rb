@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   root'home#index'
+  namespace :company do
+    get :index
+    get :philosophy
+  end
   get '/notes/new' =>'notes#new'
   post '/notes' => 'notes#create'
   get '/pro' => 'home#pro'
