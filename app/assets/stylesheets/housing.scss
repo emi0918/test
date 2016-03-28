@@ -38,29 +38,24 @@
 .top_home_page{
      height:330px;
     width:2000px;
-    margin-top:-35px;
-    text-align:center;
-       background-size: cover;
-   background-image: url("https://pixabay.com/static/uploads/photo/2014/07/05/10/30/tool-384740_960_720.jpg");
-   background-position: 0px;
-　background-color: rgba(0,0,255,0.1) ;
-
+    position:relative;
 
 }
 
 
 .top_home_page h1{
-   padding-top: 100px;
+ position: absolute;
+    right: 550px;
+    bottom: 150px;
    font-size:50px;
-
    margin-right: 730px;
 }
 
 .top_home_page h3{
     font-size:15px;
-    margin-top: -55px;
-    padding-top:66px;
-
+position: absolute;
+    right: 450px;
+    bottom: 130px;
 margin-right: 730px;
 }
 
