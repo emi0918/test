@@ -5,9 +5,13 @@ Rails.application.routes.draw do
   namespace :company do
     get :index
     get :philosophy
+    get :question
   end
   resources :home, only: [:index]
-  resources :housing, only: [:index]
+  namespace :housing do
+    get :index
+    get :move
+  end
   resources :dashboard, only: [:index]
   get '/notes/new' =>'notes#new'
   post '/notes' => 'notes#create'
