@@ -1,7 +1,7 @@
-.company_header, .company_explanation, .company_member, .company_philosophy{
+.company_header, .company_explanation, .company_member, .company_philosophy, .company_question{
   background-color: #F5F5F5;
   width: 50%;
-  min-height: 500px;
+  min-height: 350px;
   margin: auto;
   margin-bottom: 10px;
     strong{
@@ -11,6 +11,11 @@
     padding-top: 30px;
     padding-left: 30px;
     font-size: 20px;
+  }
+  h4{
+    margin-left: 50px;
+    margin-right: 30px;
+    line-height: 150%;
   }
   p{
     margin: 60px;
@@ -63,7 +68,7 @@
 
 .company_content h1{
   position: absolute;
-  top: 400px;
+  top: 250px;
   left: 60%;
   color: white;
   font-size: 50px;
@@ -90,4 +95,15 @@
 
 .company_philosophy h2{
     margin-left: 30px;
+}
+
+.company_question{
+  h2{
+    width: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+  }
+}
+.company_member{
+  height: 500px;
 }
