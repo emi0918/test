@@ -1,0 +1,21 @@
+<div class="bootstrap">
+<% @receipts.each do |receipt| %>
+    <% message = receipt.message %>
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="http://placehold.it/64x64" alt="...">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">
+          <%= message.sender.user_name %> <br>
+          <small><b>件名: </b><%= message.subject %></small><br>
+          <small><b>日付: </b><%=  message.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+        </h4>
+        <%= message.body %>
+      </div>
+    </div>
+<% end %>
+  </div>
+

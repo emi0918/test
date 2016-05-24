@@ -1,6 +1,3 @@
-
-<h1><%= @message %></h1>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -16,11 +13,20 @@
        <a img="https://static.pexels.com/photos/7075/people-office-group-team.jpg">
        </a>
      </div>
-      <h1>よく生きる。</h1>
-      <p>シェアリングエコノミーの未来を切り開く</p>
+      <h1>人と繋がる、これからの新しい暮らし方</h1>
+
+      <p>簡単にあなたの求めるサービスを依頼</p>
 
 
-     <%= link_to "事前登録する", new_user_session_path, class: "btn btn-lg btn-primary" %>
+  <% if user_signed_in? %>
+ <div class="bootstrap"><%= link_to "ご利用の流れ", '/home/guide', class: "btn btn-lg btn-primary" %></div>
+   <% else %>
+
+<div class="bootstrap">
+     <%= link_to "アカウントを作成する", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+   </div>
+    <% end %>
+
 
     </div>
 
@@ -32,40 +38,21 @@
   <div id="fade-in2" class="dropmenu">
     <div class="wrapper" >
     <ul>
-      <li><a href="#">住まい</a>
-        <ul>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-        </ul>
+      <li><a href="/housing/index"><i class="fa fa-home fa-fw"></i>住まい</a>
+
       </li>
-      <li><a href="#">イベント</a>
-        <ul>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-        </ul>
+      <li><a href="/housing/event">
+<i class="fa fa-glass fa-fw"></i>イベント</a>
+
       </li>
-      <li><a href="#">習い事</a>
-        <ul>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-        </ul>
+      <li><a href="/housing/index"><i class="fa fa-book fa-fw"></i>習い事</a>
+
       </li>
-      <li><a href="#">健康</a>
-        <ul>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-        </ul>
+      <li><a href="/housing/index"><i class="fa fa-heart fa-fw"></i>健康</a>
+
       </li>
-      <li><a href="#">その他</a>
-        <ul>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-          </ul>
+      <li><a href="/housing/index"><i class="fa fa-list-ul fa-fw"></i>その他</a>
+
       </li>
     </ul>
     </div>
@@ -75,7 +62,7 @@
 <div class="explain-seekle-wrapper">
  <div class="container">
     <div class="Seekle-heading">
-     <h2>Seekleとは？</h2>
+     <h2>これからのあなたの新しい暮らしかた</h2>
       <p>Seekleは語学教室・カメラマン・メイクアップアーティストなど<br>各種サービスのプロバイダーと顧客を繋ぐ場を提供するローカルサービスです。</p>
     </div>
   </div>
@@ -86,22 +73,30 @@
    <div class="container">
      <div class="reasons">
        <div class="reason">
+       <div class=icons>
+       <i class="fa fa-users fa-5x"></i>
+     </div>
         <p class="txt-contents"></p><h2>プロバイダーとは</h2>
-<p>プロバイダーとはサービスを提供する提供者です。プロフィール、レビュー、サービス価格などの様々な情報から、あなたの求めるサービスにぴったりなプロバイダーを比較できます。</p>
+<p>サービスを提供する提供者です。プロフィール、レビュー、サービス価格などの様々な情報から、ぴったりなプロバイダーを比較できます。</p>
         </div>
   </div>
      <div class="reasons">
        <div class="reason">
+       <div class="icons">
+          <i class="fa fa-money fa-5x"></i>
+        </div>
         <p class="txt-contents"></p><h2>お手頃な費用で貴重な経験</h2>
-<p>高いお金を払って専門の業者に頼む前に、あなたの周りで解決してくれるプロバイダーを探しませんか？ お手頃な月謝で地域の習い事に参加してみませんか？
-イベントにマジシャン、DJを呼んで少し豪華な体験をしてみませんか？</p>
+<p>高いお金を払って専門のプロに頼む前に、あなたの周りで求めるサービスを提供するプロバイダーを探すことができます。 </p>
         </div>
   </div>
 
      <div class="reasons">
        <div class="reason">
+       <div class="icons">
+       <i class="fa fa-smile-o fa-5x"></i>
+     </div>
         <p class="txt-contents"></p><h2>豊富なジャンル</h2>
-<p>結婚式のためのカメラマン、英会話教室、ペットのしつけを頼みたいなど、Seekleは様々なジャンルのプロバイダーと繋がることのできる場です。新しい事に気軽に挑戦し、夢中になれるものを探すことができたり、小さなお悩みの解決のお手伝いもします。</p>
+<p>カメラマン、英会話教室、ペットのしつけを頼みたいなど、Seekleは様々なジャンルのプロバイダーと繋がることのできる場です。</p>
         </div>
   </div>
   </div>
@@ -114,13 +109,13 @@
 
 
       <div class="heading">
-        <h2>How Seekle works</h2>
+        <h2>How Seekle Works</h2>
       </div>
   <div class="lesson-container">
       <div class="images">
         <div class="first">
           <div class="first-icon">
-           <img src="https://pixabay.com/static/uploads/photo/2016/02/07/21/11/computer-1185637_960_720.jpg" alt="First" width="320" height="212" border="0" />
+           <img src="https://pixabay.com/static/uploads/photo/2016/02/07/21/11/computer-1185637_960_720.jpg" alt="First" width="300" height="212" border="0" />
 
           </div>
 
@@ -132,7 +127,7 @@
 
     <div class="first">
       <div class="first-icon">
-        <img src="http://gahag.net/img/201602/14s/gahag-0055980653-1.jpg" alt="Second" width="320" height="212" border="0" />
+        <img src="http://gahag.net/img/201602/14s/gahag-0055980653-1.jpg" alt="Second" width="300" height="212" border="0" />
       </div>
 
 
@@ -146,10 +141,10 @@
 
      <div class="first">
         <div class="first-icon">
-          <img src="http://www.cambiandoelnorte.com/wp-content/uploads/2016/01/photo-1453127370373-a52c2f02c097.jpeg" alt="Third" width="320" height="212" border="0" />
+          <img src="http://www.cambiandoelnorte.com/wp-content/uploads/2016/01/photo-1453127370373-a52c2f02c097.jpeg" alt="Third" width="300" height="212" border="0" />
         </div>
          <div class="how-works-explain">
-          <h3>3. 採用</h3>
+          <h3>3. 依頼しよう</h3>
             <p>準備ができたら採用！<br>Seekleでの素晴らしい経験を増やしていきましょう。</p>
         </div>
       </div>
@@ -168,7 +163,7 @@
         <h2>あなたもプロバイダーとして参加しませんか？</h2>
         <h3 id="tagline">Let's find customers who need you!</h3>
       </div>
-      <%= link_to "プロバイダーとして参加", pro_path, class: "btn message signup-show" %>
+      <%= link_to "プロバイダーとして参加",'/home/pro', class: "btn message signup-show" %>
     </div>
   </div>
 

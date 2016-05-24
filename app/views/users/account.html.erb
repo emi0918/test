@@ -1,0 +1,40 @@
+<div class="first-wrapper">
+<% provide(:title, 'Sign up') %>
+<h1>Seekle、もうすぐ！</h1>
+  <p>メールアドレスを登録するとSeekleの新着情報を受け取れるようになります。</p>
+
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <%= form_for(@user) do |f| %>
+
+    <% if @user.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <strong>入力内容にエラーがあります</strong>
+      <ul>
+        <% @user.errors.each do |attr, msg| %>
+         <%= "#{attr} #{msg}" if @user.errors[attr].first == msg %>
+<% end %>
+
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+    <p>メールアドレスをご入力ください</p>
+     <div class="email-form">
+      <%= f.email_field :email, class: 'form-control' %>
+
+
+
+      <%= f.submit "事前登録", class: "btn btn-primary" %>
+
+    <% end %>
+  </div>
+
+  </div>
+</div>
+  </div>

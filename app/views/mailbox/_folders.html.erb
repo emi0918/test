@@ -1,0 +1,28 @@
+<div class="bootstrap">
+<ul class="nav nav-pills nav-stacked">
+  <li class="<%= active_page(:inbox) %>">
+    <%= link_to mailbox_inbox_path do  %>
+        <span class="label label-danger pull-right"><%=unread_messages_count%></span>
+        <em class="fa fa-inbox fa-lg"></em>
+        <span>受信箱</span>
+    <% end %>
+  </li>
+  <li class="<%= active_page(:sent) %>">
+    <%= link_to mailbox_sent_path do %>
+
+        <em class="fa fa-paper-plane-o fa-lg"></em>
+        <span>送信済み</span>
+    <% end %>
+  </li>
+
+  <li class="<%= active_page(:trash) %>">
+    <%= link_to mailbox_trash_path do %>
+        <em class="fa fa-trash-o fa-lg"></em>
+        <span>ゴミ箱</span>
+    <% end %>
+  </li>
+</ul>
+  </div>
+
+
+
