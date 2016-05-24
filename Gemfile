@@ -29,12 +29,26 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bcrypt', '~> 3.1.7'
+
 gem 'devise'
+
 gem 'rails_admin'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'jquery-turbolinks'
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'wicked'
+gem 'kaminari'
+gem "simple_calendar", "~> 2.0"
+gem 'bootstrap-sass'
+gem 'chosen-rails'
+gem 'mailboxer'
+gem 'webpay'
+gem 'jquery-validation-rails'
+gem 'jquery-form-validator-rails'
+gem 'jquery-steps-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -53,5 +67,8 @@ group :development do
 
 end
 
-gem 'jquery-ui-rails'
+
+
+
+
 

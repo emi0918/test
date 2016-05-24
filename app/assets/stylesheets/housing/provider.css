@@ -1,0 +1,153 @@
+.provider_wrapper{
+width:100%;
+margin-top: 0px;
+height:1400px;
+}
+
+
+.provider-introduction{
+  float:left;
+  background-color: white;
+  width:70%; height:250px;
+  border-bottom: 1px solid gray;
+  display:block;
+}
+.provider-introduction h1 p {
+  float:left;
+ padding-right: 80px;
+padding-top:50px;
+}
+
+
+.face_pic{
+  border-radius: 100%;
+  background-color: gray;
+  width:160px;
+  height:160px;
+  float:left;
+  margin-left:30px;
+  margin-top: 30px;
+  margin-right:40px;
+}
+
+
+
+.service-introduction{
+
+  background-color: #fff;
+  width:30%; height:400px;
+  border: 1px solid gray;
+   position: fixed;
+    top: 40;
+  right: 0;
+  bottom: auto;
+left:auto;
+   margin-left:910px;
+}
+
+.service_order_btn{
+ width:230px;
+    font-size:22px;
+    font-weight:bold;
+    text-decoration:none;
+    display:block;
+    text-align:center;
+    padding:1px 0px 5px;
+    cursor: pointer;
+    color:#333;
+    border:1px solid #333;
+     color:#fff;
+    background-color: #6495ED;
+    box-shadow:2px 2px #555;
+    margin-top:180px;
+margin-left:76px;
+
+}
+
+.service_order_btn:active{
+ box-shadow:0px 0px #555;
+ margin-top: 185px;
+}
+
+
+.service-price_provider h1{
+  color:white;
+  text-align: center;
+  font-size: 40px;
+padding-top: 28px;
+
+}
+.service-price_provider{
+  background-color: #FFA500;
+margin-top: -27px;
+  height:100px;
+}
+.fa-jpy{
+  padding-right: 16px;
+
+    font-size: 46px;
+}
+
+.service_explain{
+  height:280px;
+   border-bottom: 1px solid gray;
+     width:70%;
+     float:left;
+     background-color:  #F5F5F5;
+}
+
+.service_explain p{
+  line-height: 24px;
+  margin:30px;
+}
+
+.service_explain h3{
+  margin-left: 750px;
+  margin-top:60px;
+}
+
+
+.provider_service_pictures{
+  width:73%;
+  height:420px;
+  background-color: white;
+  float:left;
+    border-bottom: 1px solid gray;
+    margin-left: -30px;
+}
+.service_pic {
+  float:left;
+  width:270px; height:300px;
+  background-color:  black;
+margin-top: 60px;
+margin-left: 15px;
+
+}
+
+.rulesfromprovider{
+    width:70%;
+  height:270px;
+  background-color: #F5F5F5;
+  float:left;
+    border-bottom: 1px solid gray;
+}
+
+h2{
+  margin-left: 20px;
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+.rulesfromprovider ul li{
+  list-style-type: circle;
+  margin-left: 30px;
+}
+
+
+.reviews_providers{
+       width:100%;
+  height:250px;
+  background-color: white;
+  float:left;
+      border-bottom: 1px solid gray;
+}

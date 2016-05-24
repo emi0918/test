@@ -1,0 +1,248 @@
+
+
+
+.up-var{
+    padding-top:57px;
+
+}
+
+.upper-menu {
+    text-align: center;
+
+    height: 50px;
+    cursor: pointer;
+    margin-top: -43px;
+      margin-left: -170px;
+  border-top: 2px solid rgb(235, 235, 235);
+    border-bottom: 2px solid rgb(235, 235, 235);
+    transition: all 0.5s;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.upper-menu ul li {
+  margin-top: 16px;
+
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    width: 13%;
+    float: left;
+    box-sizing: border-box;
+    border-right: 1px solid rgb(235, 235, 235);
+    overflow: hidden;
+
+}
+.upper-menu ul li:hover{
+    color:gray;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+
+.home-all-wrapper{
+  position:relative;
+  height:1000px;
+}
+
+
+.top_home_page{
+     height:280px;
+    width:2000px;
+    position:relative;
+    background-color:#F5F5F5;
+}
+
+
+
+
+.top_home_page h1{
+ position: absolute;
+    right: 550px;
+    bottom: 100px;
+   font-size:50px;
+   margin-right: 730px;
+}
+
+.top_home_page h3{
+    font-size:15px;
+position: absolute;
+    right: 450px;
+    bottom: 80px;
+margin-right: 730px;
+}
+
+
+.home_pictures_wrapper {
+  text-align: left;
+}
+.home_pictures_wrapper h1{
+  color:  #696969;
+  margin-left: 100px;
+  padding-top:30px;
+  padding-bottom:10px;
+}
+
+.home_pictures{
+  margin-left:144px;
+}
+
+
+.home_pictures p{
+  text-align: center;
+  text-rendering:optimizeLegibility;
+  width:70%;
+  margin:0 auto;
+}
+
+
+.pic {
+    float: left;
+    width: 0px auto;
+    margin:4px;
+}
+
+
+
+
+.home-all-wrapper h2{
+  margin-left: 154px;
+}
+
+.categories ul{
+        margin-left:92px;
+
+}
+
+.categories ul li{
+   height:140px;
+  margin-top:30px ;
+   margin-left: 10px; padding:3px;
+   float: left;
+   width: 21%;
+   list-style: none;
+   font-size: 17px;
+   border-radius: 4px;
+}
+
+
+
+.home-story-wrapper{
+height:600px;
+}
+
+
+.home-story{
+   margin-left: 109px;
+   padding-top:25px;
+}
+
+.panel-body-housing{
+  height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2014/06/30/12/24/pigeon-380221_960_720.jpg)
+}
+
+
+.panel-body-housing-90{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2015/08/16/18/22/repair-891422_960_720.jpg)
+}
+
+
+.panel-body-housing-91{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2015/09/29/22/49/blueprint-964630_960_720.jpg)
+}
+
+.panel-body-housing-92{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2015/07/09/21/47/concrete-838614_960_720.jpg)
+}
+
+.panel-body-housing-93{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2015/09/05/08/12/painting-924144_960_720.jpg)
+}
+
+.panel-body-housing-94{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2014/02/12/15/33/roof-plate-264744_960_720.jpg)
+}
+
+.panel-body-housing-95{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2015/02/19/06/25/floor-truss-641787_960_720.jpg)
+}
+
+.panel-body-housing-96{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2015/05/15/14/48/house-768707_960_720.jpg)
+}
+
+
+.panel-body-housing-97{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2014/02/17/13/34/cleaning-268126_960_720.jpg)
+}
+
+.panel-body-housing-98{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2014/06/30/12/24/pigeon-380221_960_720.jpg)
+}
+
+.panel-body-housing-99{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2016/04/18/19/57/crosscut-saw-1337288_960_720.jpg)
+}
+
+.panel-body-housing-100{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2013/12/13/21/13/plumber-228010_960_720.jpg)
+}
+
+
+.panel-body-housing-101{
+   height:120px;
+  background-size: cover;
+  background-image: url(https://pixabay.com/static/uploads/photo/2014/06/30/12/24/pigeon-380221_960_720.jpg)
+}
+
+
+.main-story{
+
+  float: left;
+
+   height:358px;
+   width:300px;
+  margin:11px;
+  border:2px solid gray;
+
+
+}
+
+
+.hoge{
+  border:0;
+padding:10px;
+font-size:1.3em;
+font-family:Arial, sans-serif;
+color:#aaa;
+border:solid 1px #ccc;
+margin:0 0 20px;
+width:300px;
+}
+
+
+
+

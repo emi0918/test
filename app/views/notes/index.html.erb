@@ -1,0 +1,68 @@
+
+
+<div class="up-var">
+ <div class="upper-menu">
+    <div class="wrapper" >
+    <ul>
+     <li><a href='/users/index'>マイページ</a></li>
+     <li><%= link_to '掲載中', notes_path %></li>
+     <li><a href='/dashboard/transaction'>取引方法</a></li>
+     <li><a href='/users/edit'>設定</a></li>
+     <li><a href='/conversations/new'>メッセージ</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+
+
+<div class="menu-heading">
+  <h3>掲載中</h3>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <a href="/notes/new" class="btn-new-listing">新規サービスの掲載</a>
+  </ul>
+</div>
+
+
+<div class="listing-wrapper">
+ <div class="provider-listings">
+  <div class="provider-listings-heading">
+    <h2>あなたのサービス</h2>
+  </div>
+
+
+
+<div class="bootstrap">
+  <ul>
+    <% @notes.each do |note| %>
+    <li> <div class="panel panel-default">
+       <div class="panel-heading">
+        <%= link_to note.title, note_path(note) %>
+       </div>
+          <div class="panel-body-list">
+             <%= image_tag("Buq4YUxCcAAISFu.jpg", class: "service_image")%>
+             <%= link_to '編集する', edit_note_path(note) %>
+          </div>
+      </div>
+    </li>
+     <% end %>
+  </ul>
+</div>
+
+</div>
+
+
+
+<div class="bootstrap">
+ <div class="list-number-2">
+  <%= paginate(@notes) %>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+
+

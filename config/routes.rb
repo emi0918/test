@@ -1,25 +1,96 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+
+
+
+   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
+resources :notes do
+collection do
+    get :search
+  end
+  member do
+    get :description
+    get :images
+    get :price
+  end
+end
+
+    get '/notes/search/:show_id' => "notes#search"
+
+
+get 'pay' => 'api#pay'
+
+
+  resources :notes_steps
+
   root'home#index'
+
+namespace :home do
+  get :pro
+  get :signage
+  get :term
+  get :policy
+  get :guide
+  get :newlisting
+  get :service_setting
+end
+
+namespace :service_setting do
+  get :basic
+  get :description
+  get :pictures
+  get :price
+end
+
+
+
   namespace :company do
     get :index
     get :philosophy
     get :question
   end
-  resources :home, only: [:index]
+
   namespace :housing do
     get :index
+    get :event
+    get :lesson
+    get :health
+    get :others
     get :move
-  end
-  resources :dashboard, only: [:index]
-  get '/notes/new' =>'notes#new'
-  post '/notes' => 'notes#create'
-  get '/pro' => 'home#pro'
-  get '/policy'=>'home#policy'
-  get '/signage' =>'home#signage'
-  get '/term' => 'home#term'
+    get :provider
 
-# match '*path' => 'application#error404', via: :all
+  end
+  namespace :dashboard do
+    get :index
+    get :listing
+    get :account
+    get :mypage
+    get :messages
+    get :transaction
+  end
+
+
+
+namespace :users do
+  get :index
+  get :account
+  get :profile
+  get :profile_setting
+end
+
+ # mailbox folder routes
+  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
+  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
+  get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
+
+  # conversations
+  resources :conversations do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+  end
 
 end

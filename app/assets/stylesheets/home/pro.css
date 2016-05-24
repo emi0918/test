@@ -14,13 +14,16 @@
 }
 
 
+
+
+
 .pro-top-wrapper {
-  margin-top: -30px;
+  margin-top: -90px;
     background-size: cover;
     color: white;
     background-image: url("https://pixabay.com/static/uploads/photo/2015/06/08/15/06/woman-801872_960_720.jpg");
-    text-align: center;   
-    padding: 140px 0 90px 0px;
+    text-align: center;
+    padding: 90px 0 90px 0px;
 
 }
 
@@ -29,7 +32,7 @@
 }
 
 .pro-top-wrapper h1 {
-  padding-top:20px;
+  padding-top:70px;
     opacity: 0.9;
     font-size: 42px;
     letter-spacing: 2px;
@@ -63,23 +66,7 @@ font-size: 17px;
   color:#DCDCDC;
 }
 
-input, textarea {
-  border: 1px solid #bbb;
-  margin-bottom: 15px;
-  border-radius: 3px;
-}
 
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 6px 12px;
-  font-size: 18px;
-  line-height: 1.428571429;
-  color: #555555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-}
 
 .title-field {
   width: 480px;
@@ -93,6 +80,7 @@ input, textarea {
 .signup {
     background-color: rgb(35, 155, 118);
 }
+
 
 
 .pro-explain-wrapper{
@@ -165,30 +153,3 @@ input, textarea {
 
 
 
-
-
-.pro-message-wrapper {
-    margin-bottom: -100px;
-    background-color: rgb(247, 247, 247);
-    text-align: center;
-    border-bottom: 1px solid rgb(238, 238, 238);
- padding: 40px 0 120px 0px;
- height:250px;
-
-}
-.pro-message-wrapper .heading h3 {
-    font-weight: normal;
-}
-.pro-message {
-    background-color: rgb(153, 50, 204);
-    cursor: pointer;
-    box-shadow: rgb(148, 0, 211) 0px 7px;
-
-
-}
-
-.pro-message:active{
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}

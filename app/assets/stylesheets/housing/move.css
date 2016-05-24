@@ -1,0 +1,145 @@
+
+.genre{
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+  background-color: #87CEEB;
+  border-bottom: 1px solid #F5F5F5;
+
+}
+
+ .genre p{
+  padding-left: 20px;
+    font-size: 14px;
+  }
+
+.left-other-housing{
+  float: left;
+display: block;
+width:240px;
+height:1000px;
+display:block;
+clear:both;
+margin-top: 0px;
+
+}
+
+.other-jobs-menu{
+  margin:54px 30px;
+  line-height: 30px;
+
+}
+.other-jobs-menu ul li{
+  color:#696969;
+}
+
+.find-wrapper{
+  float:right;
+}
+
+.search-provider{
+  margin-right: 30px;
+  margin-top: 26px;
+float:left;
+  width:1000px;
+  height:1800px;
+
+}
+
+
+
+
+.create_requirement{
+  margin-top: 10px;
+  margin-left: 32px;
+}
+  .date, .gender, .price {
+  margin-bottom: 30px;
+    margin-top: 10px;
+
+  }
+
+
+
+
+.provider_service_image{
+  width: 290px;
+  height:180px;
+  margin-bottom: 10px;
+    background-color: orange;
+    float: left;
+  }
+
+
+
+.provider_job{
+  height: 400px;
+  border: 1px solid gray;
+  width: 290px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  margin-left: 40px;
+  float: left;
+  }
+
+.provider_job h3{
+margin-top: 30px;
+float:left;
+}
+
+.provider_job p{
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.title{
+margin-top: 10px;
+text-align: center;
+}
+
+.title h2{
+  font-size:21px;
+  text-align: center;
+}
+
+.provider_image{
+  border-radius: 100%;
+background-color: gray;
+height:70px;width:70px;
+margin-bottom: 30px;
+margin-left: 210px;
+float:left;
+margin-top: -50px;
+}
+
+
+.show_providers{
+  margin-top: 50px;
+
+  padding-top: 20px;
+
+}
+
+
+
+
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+.footer-bottom {
+  clear: both;
+}
+
+
+
+
+
+
+
+

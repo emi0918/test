@@ -1,0 +1,2 @@
+class ServiceSettingController < ApplicationController
+end
