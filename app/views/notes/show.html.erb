@@ -1,0 +1,70 @@
+
+<div class="genre">
+ <div class="bootstrap1">
+
+ </div>
+</div>
+
+
+
+<div class="provider_wrapper">
+
+<div class="service-introduction">
+ <div class="service-price_provider">
+ <h1><i class="fa fa-jpy "></i> <%= @note.price %>/月</h1>
+  </div>
+
+  <div class="service_order_btn"><div id="like-link">
+  <%= render "likes/like_links", note: @note %>
+</div>
+
+<div>
+  <small>
+    <%= link_to @note.likes.count(@note.id), id: "like-count" %>人がキープしています。
+
+  </small>
+</div></div>
+  </div>
+
+
+
+<div class="provider-introduction">
+ <%= image_tag("Buq4YUxCcAAISFu.jpg", class: "face_pic")%>
+<h1>  <%= @note.title %></h1>
+  <p>サービスカテゴリー： <%= @note.category %></p>
+  <p2>エリア：大阪 梅田</p2>
+
+</div>
+
+<div class="service_explain">
+<h2>このサービスについて</h2>
+  <p>  <%= @note.content %></p>
+
+
+  </div>
+
+
+  <div class="provider_service_pictures">
+    <ul>
+      <li><%= image_for(@note) %></li>
+      <li><%= image_for(@note) %></li>
+      <li> <%= image_for(@note) %></li>
+    </ul>
+  </div>
+
+<div class="rulesfromprovider">
+<h2>プロバイダーからのお願い</h2>
+ <ul>
+    <%= @note.rule %>
+ </ul>
+  </div>
+
+  <div class="reviews_providers">
+    <h2>レビュー (2)</h2>
+  </div>
+
+  </div>
+
+
+
+

@@ -1,0 +1,108 @@
+
+<div class="genre">
+<div class="bootstrap1">
+<ol class="breadcrumb">
+ホーム＞ 関西＞ 兵庫
+</ol>
+</div>
+  </div>
+
+    <div class="left-other-housing">
+
+     <div class="other-jobs-menu">
+      <h2>住まい</h2>
+      <ul>
+
+
+       <li>便利屋</li>
+       <li>修復</li>
+       <li>増設</li>
+       <li>リモデル</li>
+       <li>コンクリート</li>
+       <li>石像建築</li>
+       <li>ペインティング</li>
+       <li>クリーニング</li>
+       <li>屋根、雨漏り</li>
+       <li>配管工事</li>
+       <li>引っ越し</li>
+       <li>壁</li>
+      <li>階段</li>
+      <li>大工、木工</li>
+        <li>その他</li>
+      </ul>
+      <br><br>
+
+           <h2>ご利用にあたって</h2>
+           <ul>
+             <li>ご利用の流れ</li>
+             <li>よくある質問</li>
+
+           </ul>
+
+         </div>
+    </div>
+
+
+
+
+
+
+
+
+<div class="show_providers clearfix">
+
+
+<div class="introduce_providers">
+
+
+
+  <ul>
+    <% @notes.each do |note| %>
+
+
+  <div class="provider_job ">
+
+
+     <%= image_tag "/note_images/#{note.image_1}" ,class: "provider_service_image"%>
+
+
+     <div class="title"><h2> <%= link_to note.title, note_path(note) %></h2>
+      <p> <%= note.content %></p>
+       <div class="service-price"><h3>¥<%= note.price %></h3> </div>
+          <div class="provider_image"><%= image_tag("a")%> </div>
+          </div>
+       </div>
+    <% end %>
+
+ </ul>
+
+
+
+
+
+<div class="bootstrap">
+ <div class="list-number clearfix">
+  <%= paginate(@notes) %>
+  </div>
+  </div>
+  </div>
+
+
+
+  </div>
+
+
+
+
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
