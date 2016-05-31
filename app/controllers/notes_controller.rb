@@ -8,23 +8,30 @@ include ApplicationHelper
   def index
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 3d6c39304d2456958ddf86dc587b95104b9d9f56
 =======
 
 >>>>>>> 3a2a46bc5ee5caab923671d91b7927b7439c96db
+=======
+
+>>>>>>> 4e725f171624d23eb9ebcf78074ad397e7cecfac
     @notes = current_user.notes.all
        @notes = Note.page(params[:page]).per(3).order(:id)
   end
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 3d6c39304d2456958ddf86dc587b95104b9d9f56
 =======
 >>>>>>> 3a2a46bc5ee5caab923671d91b7927b7439c96db
+=======
+>>>>>>> 4e725f171624d23eb9ebcf78074ad397e7cecfac
   # GET /notes/1
   # GET /notes/1.json
 def show
@@ -42,8 +49,11 @@ def new
     @note = Note.new
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3a2a46bc5ee5caab923671d91b7927b7439c96db
+=======
+>>>>>>> 4e725f171624d23eb9ebcf78074ad397e7cecfac
   end
 
 
@@ -97,10 +107,13 @@ correct_user
     correct_user
     @note.destroy
 <<<<<<< HEAD
+<<<<<<< HEAD
      redirect_to notes_url, notice: '掲載削除しました'
 =======
 >>>>>>> 3d6c39304d2456958ddf86dc587b95104b9d9f56
 =======
+=======
+>>>>>>> 4e725f171624d23eb9ebcf78074ad397e7cecfac
     redirect_to root_path
   end
 
@@ -126,7 +139,10 @@ end
       redirect_to root_path
     end
 end
+<<<<<<< HEAD
 >>>>>>> 3a2a46bc5ee5caab923671d91b7927b7439c96db
+=======
+>>>>>>> 4e725f171624d23eb9ebcf78074ad397e7cecfac
   end
 
 
@@ -205,6 +221,7 @@ end
       redirect_to root_path
     end
 end
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   private
@@ -222,6 +239,12 @@ end
 >>>>>>> 3d6c39304d2456958ddf86dc587b95104b9d9f56
 =======
 >>>>>>> 3a2a46bc5ee5caab923671d91b7927b7439c96db
+=======
+
+
+
+
+>>>>>>> 4e725f171624d23eb9ebcf78074ad397e7cecfac
 
 
 
