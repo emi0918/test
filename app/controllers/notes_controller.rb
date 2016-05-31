@@ -6,10 +6,10 @@ include ApplicationHelper
   # GET /notes
   # GET /notes.json
   def index
+
     @notes = current_user.notes.all
        @notes = Note.page(params[:page]).per(3).order(:id)
   end
-
 
   # GET /notes/1
   # GET /notes/1.json
@@ -32,29 +32,14 @@ def new
   # GET /notes/1/sedit
   def edit
     @note = Note.find(params[:id])
+correct_user
   end
-
-def description
- @note = Note.find(params[:id])
-              @note.update_attributes (params[:note])
-      if @note.update(note_params)
-        redirect_to @note, notice: '編集完了しました'
-      else
-        render :edit
-      end
-    end
-
-
-def images
-      @note = Note.new
-end
-
 
 
 
   # POST /notes
   # POST /notes.json
-  def create
+    def create
     @note = Note.new(note_params)
 
      file=params[:note][:image_1]
@@ -70,9 +55,11 @@ end
 
 
 
+
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
+    correct_user
         @note = Note.find(params[:id])
               @note.update_attributes (params[:note])
       if @note.update(note_params)
@@ -83,23 +70,28 @@ end
     end
 
 
+
   # DELETE /notes/1
   # DELETE /notes/1.json
 
+
   def destroy
+    correct_user
     @note.destroy
-     redirect_to notes_url, notice: '掲載削除しました'
+    redirect_to root_path
   end
+
 end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
-      @note = Note.find(params[:id])
+        @note = current_user.notes.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule)
+      params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:user_id)
     end
        def user_params
       params.require(:user, :note).permit(:user_name, :profile_pic, :profile, :area, :email)
@@ -111,6 +103,7 @@ end
       redirect_to root_path
     end
 end
+
 
 
 
