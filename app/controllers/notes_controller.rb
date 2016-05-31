@@ -37,7 +37,6 @@ correct_user
 
 
 
-
   # POST /notes
   # POST /notes.json
     def create
@@ -104,8 +103,6 @@ end
       redirect_to root_path
     end
 end
-
-
 
 
 

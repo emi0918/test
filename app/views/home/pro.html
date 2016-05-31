@@ -7,65 +7,81 @@
        </a>
      </div>
       <h1>こんなビジネス始めてみたい。</h1>
-     <p>会社を作らなくてもビジネスはもっと身近に始められる</p>
-      <%= link_to "事前登録する", new_user_session_path, class: "btn btn-lg btn-primary" %>
-    </div>
-  </div>
+<<<<<<< HEAD
+     <p>ビジネスはもっと身近に始めよう</p>
+=======
+     <p>ビジネスをもっと身近に始めよう</p>
+>>>>>>> responsive_seekle
 
-
-<div class="pro-explain-wrapper">
-    <div class="pro-container">
- <div class="heading">
-        <h2>プロバイダーとして活躍しませんか</h2>
-
-
-      </div>
-      <div class="All-first">
-
-        <div class="first">
-
-          <p class="txt-contents"></p><h3>スキマ時間活用</h3>
-<p>子供を送り出した後の空いている時間、仕事帰り、など<br>人それぞれのスキマ時間にプロバイダーとして活動することで<br>副業としてもSeekleは活躍します。</p>
-        </div>
-
-        <div class="first">
-
-          <p class="txt-contents"></p><h3>個人経営の方も</h3>
-
-<p>Seekleは個人経営の方のための広告塔としても<br>利用できます。地域で個人教室を開いてる方など、<br>生徒集めに無料で掲載してみませんか？</p>
-        </div>
-
-        <div class="first">
-
-          <p class="txt-contents"></p><h3>好きな仕事をしたい！</h3>
-<p>"自分はこんな資格持っているのに、普段の生活で<br>使うことがない"。 例えば、"家に人を呼んで料理教室を<br>始めたいな" と、考えた経験はありませんか？<br>Seekleはあなたのスキルを他の人に共有できる機会を作ります。</p>
-        </div>
-
-
-
-      </div>
-
-
-
+      <% if user_signed_in? %>
+      <div class="bootstrap">
+        <%= link_to "サービスを掲載する", '/notes/new', class: "btn btn-lg btn-primary" %></div>
+         <% end %>
     </div>
   </div>
 
 
 
 
-  <div class="pro-message-wrapper">
+<div class="explain-seekle-wrapper">
+ <div class="container">
+    <div class="Seekle-heading">
+     <h2>プロバイダーとして活躍しませんか</h2>
+      <p>実際にあなたのサービスを必要としている人を見つけ、お金を稼ぐことができます。<br>Seekleではスキルのある方がプロバイダーとして誰でも活躍できる機会を提供します。</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="about-seekle-wrapper">
+   <div class="container">
+     <div class="reasons">
+       <div class="reason">
+       <div class="icons">
+    <i class="fa fa-clock-o fa-5x"></i>
+     </div>
+        <p class="txt-contents"></p><h2>スキマ時間活用</h2>
+<p>子供を送り出した後の空いている時間、仕事帰り、など。人それぞれのスキマ時間にプロバイダーとして活動することで副業としてもSeekleは活躍します。</p>
+        </div>
+  </div>
+     <div class="reasons">
+       <div class="reason">
+       <div class="icons">
+        <i class="fa fa-user fa-5x"></i>
+        </div>
+          <p class="txt-contents"></p><h2>個人経営の方も</h2>
+
+<p>Seekleは個人経営の方のための広告塔としても利用できます。地域で個人教室を開いてる方など、生徒集めに無料で掲載してみませんか？</p>
+        </div>
+  </div>
+
+     <div class="reasons">
+       <div class="reason">
+       <div class="icons">
+      <i class="fa fa-bullhorn fa-5x"></i>
+     </div>
+       <p class="txt-contents"></p><h2>好きな仕事をしたい！</h2>
+<p>"自分はこんな資格持っているのに、普段の生活で使うことがない"。 例えば、"家に人を呼んで料理教室を始めたいな" と、考えた経験はありませんか？Seekleはあなたのスキルを他の人に共有できる機会を作ります。</p>
+        </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="message-wrapper">
     <div class="container">
       <div class="heading">
-        <h2>あなたも得意を仕事にしませんか？</h2>
+        <h2>あなたもプロバイダーとして参加しませんか？</h2>
         <h3 id="tagline">Let's find customers who need you!</h3>
       </div>
- <%= link_to "プロバイダーとして参加", new_user_session_path, class: "btn message signup-show" %>
+      <%= link_to "プロバイダーとして参加",new_user_registration_path , class: "btn message signup-show" %>
     </div>
   </div>
-
-
-
-
 
 
 

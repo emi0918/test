@@ -1,5 +1,4 @@
 
-
 html {
     overflow: auto;
 }
@@ -16,11 +15,12 @@ ul, li {
 
 a {
   text-decoration: none;
-  color: #1f89e2;
+  color: gray;
 }
 
+
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #1b7ccd;
 }
 
@@ -54,22 +54,27 @@ p {
 header {
    height: 57px;
     width: 100%;
-    background-color: rgba(34, 49, 52, 0.901961);
-    position: fixed;
+margin: 0 110px 0;
+    position:absolute;
     top: 0px;
     z-index: 10;
   text-decoration:none;
     padding:1px;
+    cursor: pointer;
 
     }
 
 
+.logo{
+  height:70px;
+  width:16%;
+}
 
 
 .logo a{
   float: left;
   font-size: 27px;
-  color: #fff;
+
   padding: 12px 50px;
   letter-spacing: -1px;
 <<<<<<< HEAD
@@ -84,7 +89,7 @@ header {
 
 
 .logo a:hover {
-  color: #fff;
+
 text-decoration:none;
 }
 
@@ -103,17 +108,14 @@ text-decoration:none;
 
 
 
-
-
-
 .header-right {
   float: right;
-  margin: 0 auto;
+  margin-right:270px;
   text-decoration:none;
 }
 
 .header-right a {
-  color: white;
+  color: gray;
   display: block;
  text-decoration:none;
 }
@@ -202,13 +204,14 @@ text-decoration:none;
 
 
 .footer {
+  position: absolute;
     padding-top: 0px;
 }
 
+
 .footer-top {
+
 border-top: 1px solid rgb(238, 238, 238);
-    background-color:#FFFFFF;
-    color: black;
     clear: both;
     height: 260px;
     width: 100%;
@@ -216,6 +219,75 @@ border-top: 1px solid rgb(238, 238, 238);
     padding-top: 20px;
     margin: auto;
 }
+
+
+
+.col-sm-3 {
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.col-sm-3 ul li {
+    list-style: none;
+    margin: 14px 60px;
+    font-size:15px;
+}
+.footer p {
+    color: rgb(179, 174, 181);
+    font-size: 12px;
+}
+.col-sm-3 ul li:hover{
+  color:  #D3D3D3;
+}
+
+.col-sm-4{
+    float: left;
+    cursor: pointer;
+
+    margin-left: 100px;
+}
+
+
+
+.footer-bottom {
+  height:42px;
+    background-color: rgba(34, 49, 52, 0.901961);
+    font-size: 0.8125em;
+    padding: 5px 0px;
+
+}
+
+
+.widget-menu {
+    cursor: pointer;
+    margin: 1px;
+    transition: all 0.5s;
+}
+.widget-menu a{
+  color:  #F5F5F5;
+}
+.widget-menu a:hover{
+  color:  #D3D3D3;
+}
+
+
+.widget-menu li {
+    display: inline-block;
+    margin: 10px;
+}
+
+
+.widget-details li a{
+      text-decoration: none;
+
+}
+
+.footer {
+    padding-top: 0px;
+}
+
+
+
 
 @media screen and  ( max-width:640px )
 {
@@ -234,30 +306,6 @@ border-top: 1px solid rgb(238, 238, 238);
 
 
 
-
-.row {
-    margin-right: -30px;
-    margin-left: -20px;
-}
-.footer p {
-    color: rgb(179, 174, 181);
-    font-size: 12px;
-}
-.col-sm-3 ul li:hover{
-  color:  #D3D3D3;
-}
-
-
-
-.fa {
-    margin-right: 5px;
-}
-.footer-bottom {
-    background-color: rgba(34, 49, 52, 0.901961);
-    font-size: 0.8125em;
-    padding: 5px 0px;
-
-}
 
 
 
@@ -300,24 +348,80 @@ text-decoration: none;
     padding-bottom: 9px;
 }
 
+#social-icon a {
+  display: block;
+  float: left;
+
+  margin: 80px 5px 5px 0;
+  padding: 0;
+  color: #fff;
+}
+#social-icon i {
+  width: 50px;
+  height: 50px;
+
+  line-height: 50px;
+  text-align: center;
+}
+#social-icon i:before { line-height: 50px; }
+#social-icon .fa-twitter { background: #00a1e9; }
+#social-icon .fa-facebook { background: #3b5998; }
+#social-icon .fa-instagram { background: #9b6954; }
+#social-icon .fa-pinterest { background: #fb3958; }
+
+
+
 /*ユーザーログイン*/
 
 .user_content {
-  width: 500px;
+  width: 440px;
   height: 100%;
-  margin: auto;
-  background-color: #DCDCDC;
-  margin-top: 30px;
-  margin-bottom: 30px;
+
+ border:1px solid gray;
+  margin:30px 440px;
   border-radius: 8px;
-  font-family:  "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, Meiryo, sans-serif;
+
 }
 
+.field{
+  margin-bottom: 29px;
+
+}
+
+
+.field input{
+  font-size: 20px;
+
+}
+
+
+
+
+
+.name_field input{
+
+  width:340px;
+  font-size: 20px;
+  padding:7px;
+}
+
+.name_field{
+  margin-bottom: 29px;
+  margin-top: 29px;
+}
+
+
+#user_remember_me{
+
+width:0px;
+}
+
+
 .content_in_user{
-  margin: auto;
+margin-left: 460px;
   width: 333px;
   padding-top: 53px;
-  padding-bottom: 30px;
+  padding-bottom: 90px;
 }
 
 .content_in_user a {
@@ -328,33 +432,32 @@ text-decoration: none;
   border-radius: 5px;
   width: 333px;
   font-size: 15px;
-  color: #FFFAFA;
+color: white;
   padding-top: 15px;
   padding-bottom: 15px;
-  outline: none;
+
 }
 
-input{
-  transition-duration: 0.4s;
-}
 
 #face{
-  background-color: #001db5;
+  background-color: #3b5998;
 }
 
 #face:hover{
-  background-color: #000080;
+  background-color:#6495ED;
 }
 
 #login, #sign{
-  background-color:#D2691E;
+  background-color: #FF7F50;
   margin-top: 10px;
   margin-bottom: 0;
 }
 
 #login:hover, #sign:hover {
-    background-color: #b53e00;
+    background-color:   #FFA07A;
 }
+
+
 
 .actions p{
   text-align: center;
@@ -367,16 +470,10 @@ input{
 }
 
 #user_email, #user_password, #user_パスワード確認, #user_password_confirmation {
-  border: none;
-  border-bottom:solid 1px black;
-  background-color: #DCDCDC;
-  border-radius: 0px;
+  border:1px solid gray;
+  border-radius: 2px;
   width: 333px;
-  padding-top: 23px;
-}
-
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #DCDCDC inset;
+  padding-top: 10px;
 }
 
 #pass_for{
@@ -393,6 +490,9 @@ hr{
 #sign{
   margin-bottom: 18px;
 }
+
+
+
 
 /*ドロップダウン*/
 .dropmenu{
@@ -441,15 +541,13 @@ hr{
 }
 .dropmenu li ul li a{
   padding: 13px 15px;
-  border-top: 1px solid #F5F5F5;
-  background: white;
   text-align: left;
 }
 .dropmenu li:hover > a{
-  background: #FFA500;
+  background: #F5F5F5;
 }
 .dropmenu li a:hover{
-  background: #FFA500;
+  background: #F5F5F5;
 }
 
 #fade-in2 li ul{
@@ -465,4 +563,36 @@ hr{
   opacity: 1;
 }
 
+/*ログインしました報告*/
 
+.alert-error {
+    width: 100%;
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    width: 100%;
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    width: 100%;    width: 100%;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    width: 100%;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }

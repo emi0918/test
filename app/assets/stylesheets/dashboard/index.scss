@@ -1,0 +1,165 @@
+
+.jobstyle-row {
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(235, 235, 235);
+    transition: all 0.5s;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.jobstyle-row ul li {
+    text-transform: uppercase;
+    font-size: 14px;
+    float: left;
+    box-sizing: border-box;
+    border-right: 1px solid rgb(235, 235, 235);
+    overflow: hidden;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.jobstyle-row ul li:hover{
+    color:gray;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+
+.dashboard-wrapper{
+  height:900px;
+margin-top: 0px;
+padding-top:70px;
+    background-color:#fff;
+}
+
+
+.left-wrapper{
+
+margin-left: 140px;
+margin-top: 0px;
+float: left;
+
+}
+.right-wrapper{
+margin-top: 140px;
+  margin-right: 150px;
+  float:left;
+}
+
+
+
+.security-heading{
+    width:241px;
+    height:44px;
+    background-color: #A9A9A9;
+    color: #fff;
+      font-weight: bold;
+    clear:left;
+    margin-top:-16px;
+      border-radius:2px;
+
+}
+
+.security-heading p{
+padding-left: 14px;
+
+}
+
+.security-wrapper {
+
+        margin-top:260px;
+      width:240px;
+
+height:300px;
+
+}
+
+
+
+.notification-wrapper{
+    float:right;
+    height:250px;
+    margin-top:-680px;
+border-radius:5px;
+ background-color: #fff;
+border:2px solid  #C0C0C0;
+}
+
+
+
+
+.notification-heading{
+    width:690px;
+    height:44px;
+
+  border-radius:2px;
+    background-color:#A9A9A9;
+    clear:right;
+      font-weight: bold;
+    margin-top:-16px;
+}
+.notification-heading p{
+padding-left: 12px;
+color: #fff;
+}
+
+.notification-contents ul li{
+     border-bottom:1px solid #CCCCCC;/*下線*/
+margin-bottom:17px; /*下マージン*/
+width:600px;
+margin-top:30px;
+
+}
+
+
+.schedule-wrapper{
+    float:right;
+    width:690px;
+     background-color: #fff;
+    height:400px;
+    margin-top:-380px;
+ border-radius:5px;
+    border:2px solid  #C0C0C0;
+}
+
+
+
+
+/*カレンダー用テーブル
+---------------------------------------------------------------------------*/
+/*テーブル全体の設定*/
+.cal {
+  border: 1px solid #a2a2a2;  /*枠線の幅、線種、色*/
+  background: #FFF;     /*テーブル内の背景色*/
+  font-size: 12px;      /*文字サイズ*/
+  margin-right: 0px;
+  margin-left: 50px;
+  margin-top:50px;
+  float:left;
+}
+
+
+.cal td, .cal th{
+  border: 1px solid #a2a2a2;  /*枠線の幅、線種、色*/
+  line-height: 1;       /*行間*/
+  text-align: center;     /*文字をセンタリング*/
+ padding: 10px;       /*ボックス内の余白*/
+}
+/*テーブル内のth(曜日)設定*/
+.cal th{
+  background: #ebebeb;  /*背景色*/
+}
+/*休日の設定*/
+.cal .off {
+  background:   #FFDAB9;  /*背景色*/
+  color: #666;      /*文字色*/
+}
+/*日曜日の設定*/
+.cal .sun {
+  color: #FF5C7F;     /*文字色*/
+}
+
+.footer-bottom{
+  display:show;
+}
+
+
+

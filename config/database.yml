@@ -10,7 +10,7 @@ default: &default
   timeout: 5000
   encoding: utf8
   username: root
-  password:
+  password: Ggc0918me
   socket: /tmp/mysql.sock
 
 development:

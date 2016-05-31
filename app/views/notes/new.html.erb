@@ -1,43 +1,34 @@
 
+<div class="up-var">
+ <div class="upper-menu">
+    <div class="wrapper" >
+    <ul>
 
+    </ul>
+    </div>
+  </div>
+  </div>
+
+<div class="setting-heading">
+<p>掲載設定</p>
+
+ <ul>
+   <li> <a href="#"><i class="fa fa-plus-square-o"></i>  サービスについて</a></li>
+   <li> <a href="/service_setting/description"><i class="fa fa-plus-square-o"></i>  顧客へのお願い</a></li>
+   <li><a href="/service_setting/pictures"><i class="fa fa-plus-square-o"></i>  写真</a></li>
+   <li><i class="fa fa-plus-square-o"></i>  料金</li>
+
+
+  </ul>
+  </div>
 
 <div class="bootstrap">
 
 <div class="setting-wrapper">
-
-
-<div class="wizard" data-initialize="wizard" id="myWizard">
-<div class="steps-container">
-  <ul class="steps">
-    <li data-step="1" data-name="campaign" class="active">
-      <span class="badge">1</span>基本情報
-      <span class="chevron"></span>
-    </li>
-    <li data-step="2">
-      <span class="badge">2</span> 料金
-      <span class="chevron"></span>
-    </li>
-    <li data-step="3" data-name="template">
-      <span class="badge">3</span> 画像
-      <span class="chevron"></span>
-    </li>
-  </ul>
-</div>
-
-
-<div class="actions">
-  <button type="button" class="btn btn-default btn-prev">
-<i class="fa fa-chevron-left" aria-hidden="true"></i>戻る</button>
-
-  <button type="button" class="btn btn-primary btn-next" data-last= "掲載する" onclick="document.frm.submit();" >次へ
-<i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-  </button>
-</div>
-
-
-
-<div class="step-content">
-  <div class="step-pane active sample-pane alert" data-step="1">
+<div class="customize-setting">
+<h2>あなたのサービスを紹介しよう</h2>
+  <p>あなたのサービスを求めるカスタマーの決め手になるようなタイトルや内容を考えよう</p>
+  </div>
 
 
 <%= form_for(@note, class: 'form-horizontal', role: 'form' ) do |f| %>
@@ -51,10 +42,7 @@
   </div>
   <% end %>
 
-<div class="customize-setting">
-<h2>あなたのサービスを紹介しよう</h2>
-  <p>あなたのサービスを求めるカスタマーの決め手になるようなタイトルや内容を考えよう</p>
-  </div>
+
 
   <div class="form-group">
     <p>カテゴリー </p>
@@ -79,78 +67,12 @@
   </div>
 
 
+<%= f.submit '作成する', class: 'btn btn-default', data:{ disable_with: "作成中・・・"} %>
+
+
+  <% end %>
+
+
+<%= link_to 'Back', notes_path %>
 
   </div>
- <div class="step-pane active sample-pane alert" data-step="2">
-
-<div class="customize-setting">
-<h2>サービス料金の設定をしよう</h2>
-  <p>あなたのサービスを求めるカスタマーの決め手になるようなタイトルや内容を考えよう</p>
-
-  </div>
-
-  <div class="form-group">
-    <p>料金</p>
-<div class="input-group">
-
- <%= f.text_field :price, class: 'form-control' %>
-  <span class="input-group-addon">円</span>
-</div>
-
-  </div>
-
-
-
-  <div class="form-group">
-    <p>カスタマーへのおねがい </p>
-<%= f.text_area :rule, class: 'content-area' %>
-  </div>
-
-
-  </div>
- <div class="step-pane active sample-pane alert" data-step="3">
-
-
-<div class="customize-setting">
-<h2>あなたのサービスの写真を公開しよう</h2>
-  <p>あなたのサービスを求めるカスタマーの決め手になるようなタイトルや内容を考えよう</p>
-  </div>
-
-
- <div class="form-group">
-    <p>写真1</p>
-
-  <%= f.file_field :image_1, class: "form-control image-field" %>
-  </div>
-
-  <div class="form-group">
-    <p>写真2</p>
- <%= f.file_field :image_2, class: "form-control image-field" %>
-  </div>
-
-  <div class="form-group">
-    <p>写真3</p>
- <%= f.file_field :image_3, class: "form-control image-field" %>
-  </div>
-  <%= f.submit '作成する', class: 'btn btn-default', data:{ disable_with: "作成中・・・"} %>
-
-
-<% end %>
-  </div>
-</div>
-
-
-
-
-
-</div>
-
-
-
-
-  </div>
-
-
-
-
-
