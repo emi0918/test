@@ -1,5 +1,6 @@
 
-# Many of these configuration options can be set straight in your model.
+
+  require "omniauth-facebook"
 
 
 Devise.setup do |config|
@@ -242,7 +243,10 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
+
   require "omniauth-facebook"
+
+
   config.omniauth :facebook,"862536317192033","ce4242fc6d38502d84ecf65da6e4eb8d"
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

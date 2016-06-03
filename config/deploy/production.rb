@@ -1,5 +1,9 @@
-server '00.00.000.000', user: 'emi', roles: %w{app} #serverのipとuser名は適宜
-set :ssh_options, keys: '~/.ssh/first_aws_rsa' #ssh_keyの名前は適宜# server-based syntax
+server '160.16.205.112', user: 'seekle', roles: %w{SeekleFinal} #serverのipとuser名は適宜
+set :deploy_to, '/var/www/html/SeekleFinal'
+set :ssh_options, keys: '~/.ssh/id_rsa' #ssh_keyの名前は適宜# server-based syntax
+
+
+
 # ======================
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:

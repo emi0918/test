@@ -5,18 +5,25 @@ include ApplicationHelper
 
  def index
   @users= User.all
+
  end
 
+
+    @notes = current_user.notes
+
+end
 
 
   def show
     @note = @user.notes
+
   end
 
 
   def new
     @user = User.new
   end
+
 
  def info
   @user = User.new(user_params)
@@ -36,6 +43,13 @@ include ApplicationHelper
   def edit
    @user = User.find(params[:id])
   end
+
+def edit
+@user = User.find(params[:id])
+end
+
+
+
 
 
 
@@ -68,10 +82,17 @@ include ApplicationHelper
 
 
 
-
   def destroy
     @user.destroy
     redirect_to users_url, notice: 'ユーザーが削除されました'
+  end
+
+
+
+def like_notes
+    @notes = @user.like_notes
+    @title = "いいね！一覧"
+    render :index
   end
 
   private
@@ -104,6 +125,20 @@ private
     end
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

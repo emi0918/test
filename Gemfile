@@ -34,9 +34,28 @@ gem 'devise'
 
 gem 'rails_admin'
 
+
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'jquery-turbolinks'
+
+
+gem 'rb-readline'
+gem 'unicorn'
+gem 'capistrano', '>= 3'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv', github: "capistrano/rbenv"
+gem 'capistrano-rails'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'jquery-turbolinks'
+gem 'omniauth-oauth2', '~> 1.3.1'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'wicked'
@@ -49,6 +68,9 @@ gem 'webpay'
 gem 'jquery-validation-rails'
 gem 'jquery-form-validator-rails'
 gem 'jquery-steps-rails'
+
+gem 'unicorn'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
