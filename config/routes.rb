@@ -1,15 +1,9 @@
 Rails.application.routes.draw do
 
-
-   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-
-resources :notes do
-
    devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
 resources :notes do
   post '/posts/temp',   to: 'posts#create_temp',  as: :temp_post
-
 collection do
     get :search
   end
@@ -26,10 +20,8 @@ end
 get 'pay' => 'api#pay'
 
 
-
   post '/like/:note_id' => 'likes#like', as: 'like'
   delete '/unlike/:note_id' => 'likes#unlike', as: 'unlike'
-
 
   resources :notes_steps
 
@@ -80,22 +72,11 @@ end
   end
 
 
-
-
-namespace :users do
-  get :index
-  get :account
-  get :profile
-  get :profile_setting
-end
-
-
 resources :users, only:[:index] do
   member do
     get :like_notes
 end
 end
-
  # mailbox folder routes
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
   get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
