@@ -9,12 +9,29 @@
   <%= csrf_meta_tags %>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
    <link rel="shortcut icon" href="favicon.ico" type="images/Seekle.icon.png">
+
+       <script src="jquery.js"></script>
+        <script src="jquery.steps.js"></script>
+        <body class="fuelux">
+
+<link href="//www.fuelcdn.com/fuelux/3.13.0/css/fuelux.min.css" rel="stylesheet">
+        <!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>
+ <link rel="stylesheet" href="//www.fuelcdn.com/fuelux/3.13.0/css/fuelux.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>
+
 </head>
   <body>
 
 <header>
 
   <div class="container_head">
+
 
  <div class="alert alert-success"><%= notice %></div>
     <div class="alert alert-danger"><%= alert %></div>
@@ -26,9 +43,18 @@
 
 
 
+
+  <a href="/"><%= image_tag('logo.png',class: 'logo')  %></a>
+
+
+
     <ul class="header-right">
   <% if user_signed_in? %>
+
   <li> <%= link_to 'ダッシュボード', '/users/index' %></li>
+
+  <li> <%= link_to 'ダッシュボード', users_path %></li>
+
      <li> <%= link_to 'サービスを掲載',home_pro_path %></li>
   <li> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
 

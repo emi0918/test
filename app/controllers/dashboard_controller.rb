@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 class DashboardController < ApplicationController
+<<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
 class DashboardController < ApplicationController
@@ -7,6 +8,8 @@ class DashboardController < ApplicationController
  class DashboardController < ApplicationController
 >>>>>>> responsive_seekle
 >>>>>>> 4e725f171624d23eb9ebcf78074ad397e7cecfac
+=======
+>>>>>>> Stashed changes
   before_action :authenticate_user!
 
   helper_method :current_user, :logged_in?
@@ -16,6 +19,7 @@ class DashboardController < ApplicationController
     @notes = @user.notes
     @user_name = User.find(params[:id])
     @area = User.find(params[:id])
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   end
 =======
@@ -25,11 +29,15 @@ class DashboardController < ApplicationController
    end
 >>>>>>> responsive_seekle
 >>>>>>> 4e725f171624d23eb9ebcf78074ad397e7cecfac
+=======
+  end
+>>>>>>> Stashed changes
 
 private
 
 def current_user
   return unless session[:user_id]
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -65,3 +73,15 @@ end
 =======
 >>>>>>> responsive_seekle
 >>>>>>> 4e725f171624d23eb9ebcf78074ad397e7cecfac
+=======
+  @current_user ||=User.find(session[:user_id])
+end
+
+def logged_in?
+  !!session[:user_id]
+end
+
+
+end
+
+>>>>>>> Stashed changes

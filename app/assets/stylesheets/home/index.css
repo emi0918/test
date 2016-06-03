@@ -3,11 +3,13 @@
   margin-top: -90px;
     background-size: cover;
     color: white;
-    background-image: url("https://static.pexels.com/photos/6182/man-hands-photographer-cameras.jpg");
+    background-color: #87CEEB;
     text-align: center;
     padding: 150px 0 130px 0px;
     position: relative;
 }
+
+
 
 
 
@@ -64,6 +66,7 @@ form {
 }
 
 
+
 .jobstyle-row {
     text-align: center;
     height: 50px;
@@ -74,6 +77,7 @@ form {
     transition: all 0.5s;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
+
 
 .wrapper {
     width: 900px;
