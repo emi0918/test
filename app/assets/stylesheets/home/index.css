@@ -67,18 +67,6 @@ form {
 
 
 
-.jobstyle-row {
-    text-align: center;
-    height: 50px;
-    cursor: pointer;
-
-
-    border-bottom: 2px solid rgb(235, 235, 235);
-    transition: all 0.5s;
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
-}
-
-
 .wrapper {
     width: 900px;
     margin: 0px auto;
@@ -323,3 +311,5 @@ padding-left:0px;
   font-size: 18px;
   padding-right: 10px;
 }
+
+
