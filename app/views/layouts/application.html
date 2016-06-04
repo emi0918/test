@@ -2,13 +2,22 @@
 <html lang="en">
 <head>
   <title>Seekle</title>
+<<<<<<< Updated upstream
    <meta name="viewport" content="width=device-width,initial-scale=1">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+=======
+<meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<script type="text/javascript" src="js/calender.js" charset="UTF-8"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+>>>>>>> Stashed changes
   <%= csrf_meta_tags %>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
    <link rel="shortcut icon" href="favicon.ico" type="images/Seekle.icon.png">
+
        <script src="jquery.js"></script>
         <script src="jquery.steps.js"></script>
         <body class="fuelux">
@@ -23,12 +32,22 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>
+
 </head>
   <body>
 
 <header>
 
   <div class="container_head">
+
+
+ <div class="alert alert-success"><%= notice %></div>
+    <div class="alert alert-danger"><%= alert %></div>
+
+
+  <a href="/"><%= image_tag('logo.png',class: 'logo')  %></a>
+
+
 
 
 
@@ -39,7 +58,11 @@
 
     <ul class="header-right">
   <% if user_signed_in? %>
+
+  <li> <%= link_to 'ダッシュボード', '/users/index' %></li>
+
   <li> <%= link_to 'ダッシュボード', users_path %></li>
+
      <li> <%= link_to 'サービスを掲載',home_pro_path %></li>
   <li> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
 

@@ -9,8 +9,20 @@
   </div>
   </div>
 
+<div class="setting-heading">
+<p>掲載設定</p>
 
- <div class="bootstrap">
+ <ul>
+   <li> <a href="#"><i class="fa fa-plus-square-o"></i>  サービスについて</a></li>
+   <li> <a href="/service_setting/description"><i class="fa fa-plus-square-o"></i>  顧客へのお願い</a></li>
+   <li><a href="/service_setting/pictures"><i class="fa fa-plus-square-o"></i>  写真</a></li>
+   <li><i class="fa fa-plus-square-o"></i>  料金</li>
+
+
+  </ul>
+  </div>
+
+
 <div class="setting-wrapper">
 <div class="customize-setting">
 <h2>掲載サービスを編集する</h2>
@@ -52,22 +64,10 @@
   </div>
 
 
-<div class="form-group">
-    <p>料金</p>
-<div class="input-group">
-
- <%= f.text_field :price, class: 'form-control' %>
-  <span class="input-group-addon">円</span>
-</div>
-
-  </div>
-
-
   <div class="form-group">
-    <p>カスタマーへのおねがい </p>
-<%= f.text_area :rule, class: 'content-area' %>
+    <p>料金</p>
+<%= f.text_field :price, class: 'form-control' %>
   </div>
-
 
   <div class="form-group">
     <p>写真1</p>
@@ -85,6 +85,10 @@
  <%= f.file_field :image_3, class: "form-control image-field" %>
   </div>
 
+  <div class="form-group">
+    <p>カスタマーへのおねがい </p>
+<%= f.text_field :rule, class: 'form-control' %>
+  </div>
 
 
 <%= f.submit '保存', class: 'btn btn-default', data:{ disable_with: "保存中・・・"} %>
@@ -95,4 +99,3 @@
 
 <%= link_to 'サービスページ', @note %> |
 <%= link_to '掲載サービス一覧', notes_path %>
-  </div>

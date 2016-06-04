@@ -20,6 +20,7 @@ class ConversationsController < ApplicationController
     conversation.mark_as_read(current_user)
   end
 
+
   def reply
     current_user.reply_to_conversation(conversation, message_params[:body])
     flash[:notice] = "メッセージが送信されました。"
@@ -46,7 +47,4 @@ class ConversationsController < ApplicationController
     params.require(:message).permit(:body, :subject)
   end
 end
-
-
-
 
