@@ -1,10 +1,7 @@
 class User < ActiveRecord::Base
  has_many :notes
-<<<<<<< HEAD
-=======
    has_many :likes
   has_many :like_notes, through: :likes, source: :note
->>>>>>> responsive_seekle
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -12,21 +9,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
 
-<<<<<<< HEAD
-   validates :user_name, length:{ maximum:10}, presence: false
-=======
    validates :user_name, length:{ maximum:10}, presence:true
->>>>>>> responsive_seekle
    validates :profile, length:{maximum:1000}, presence:false
    validates :area, presence:false
 
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> responsive_seekle
  acts_as_messageable
 
 def mailboxer_user_name
@@ -37,10 +25,7 @@ def mailboxer_email(object)
   self.email
 end
 
-<<<<<<< HEAD
-=======
 
->>>>>>> responsive_seekle
 def self.find_for_facebook_oauth(auth)
     user = User.where(provider: auth.provider, uid: auth.uid).first
     unless user

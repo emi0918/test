@@ -7,6 +7,3 @@ class CompanyController < ApplicationController
   end
 
 end
-
-
-

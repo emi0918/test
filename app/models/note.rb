@@ -1,7 +1,7 @@
 class Note < ActiveRecord::Base
   belongs_to :user
-
-
+    has_many :likes, dependent: :destroy
+has_many :liking_users, through: :likes, source: :user
 
 
 
@@ -11,23 +11,12 @@ class Note < ActiveRecord::Base
     validates :image_3, presence: false
 
 
-validates_presence_of :title, {
-    on: :update
-  }
-  validates_presence_of :category, {
-    on: :update
-  }
-validates_presence_of :content, {
-    on: :update
-  }
-validates_presence_of :price, {
-    on: :update
-  }
-
-validates_presence_of :rule, {
-    on: :update
-  }
-
+validates :title, presence:  true
+validates :category, presence: true
+validates :content, presence: true
+validates :price, presence: true
+validates :rule, presence: false
+validates :user_id, presence: true
 
 
   def set_image(file)

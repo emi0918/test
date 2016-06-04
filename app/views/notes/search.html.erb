@@ -61,7 +61,11 @@
 
 
   <div class="provider_job ">
-   <%= image_tag("Buq4YUxCcAAISFu.jpg", class: "provider_service_image")%>
+
+
+     <%= image_tag "/note_images/#{note.image_1}" ,class: "provider_service_image"%>
+
+
      <div class="title"><h2> <%= link_to note.title, note_path(note) %></h2>
       <p> <%= note.content %></p>
        <div class="service-price"><h3>¥<%= note.price %></h3> </div>
@@ -71,6 +75,10 @@
     <% end %>
 
  </ul>
+
+
+
+
 
 <div class="bootstrap">
  <div class="list-number clearfix">
