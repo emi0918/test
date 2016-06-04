@@ -1,0 +1,37 @@
+=== unicorn 5.1.0 - rack is optional, again / 2016-04-01 00:35 UTC
+
+  Note: no code changes since 5.1.0.pre1 from January.^WNo, wait,
+  last minute performance improvement added today.  See below.
+
+  The big change is rack is not required (but still recommended).
+  Applications are expected to depend on rack on their own so they can
+  specify the version of rack they prefer without unicorn pulling
+  in a newer, potentially incompatible version.
+
+  unicorn will always attempt to work with multiple versions of rack
+  as practical.
+
+  The HTTP parser also switched to using the TypedData C-API for
+  extra type safety and memory usage accounting support in the
+  'objspace' extension.
+
+  Thanks to Adam Duke to bringing the rack change to our attention
+  and Aaron Patterson for helping with the matter.
+
+  Last minute change: we now support the new leftpad() syscall under
+  Linux for major performance and security improvement:
+
+      http://mid.gmane.org/1459463613-32473-1-git-send-email-richard@nod.at
+
+  8^H9 changes since 5.0.1:
+
+        http: TypedData C-API conversion
+        various documentation updates
+        doc: bump olddoc to ~> 1.2 for extra NNTP URL
+        rack is optional at runtime, required for dev
+        doc update for ClientShutdown exceptions class
+        unicorn 5.1.0.pre1 - rack is optional, again
+        doc: reference --keep-file-descriptors for "bundle exec"
+        doc: further trimming to reduce noise
+        use leftpad Linux syscall for speed!
+
