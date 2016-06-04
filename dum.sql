@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.6.27, for osx10.11 (x86_64)
 --
--- Host: localhost    Database: 
+-- Host: localhost    Database:
 -- ------------------------------------------------------
 -- Server version	5.6.27
 
@@ -221,13 +221,14 @@ CREATE TABLE `notes` (
 
 LOCK TABLES `notes` WRITE;
 /*!40000 ALTER TABLE `notes` DISABLE KEYS */;
-INSERT INTO `notes` VALUES (25,'英語を教えます','ーーー','2016-05-25 07:26:04','2016-05-25 07:26:04','4000','gahag-0047740295.jpg',NULL,NULL,'その他','','63',NULL);
+INSERT INTO `notes` VALUES ;
 /*!40000 ALTER TABLE `notes` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
 -- Table structure for table `schema_migrations`
 --
+
 
 DROP TABLE IF EXISTS `schema_migrations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
