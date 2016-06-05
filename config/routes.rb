@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
- root'home#index'
    devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
 resources :notes do
@@ -27,7 +25,7 @@ get 'pay' => 'api#pay'
 
   resources :notes_steps
 
-
+  root'home#index'
 
 namespace :home do
   get :pro
