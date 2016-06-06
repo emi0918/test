@@ -35,6 +35,7 @@ end
       }
       self.image = file_name
     end
+
   end
 
 
