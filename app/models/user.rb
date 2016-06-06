@@ -1,10 +1,9 @@
 class User < ActiveRecord::Base
  has_many :notes
-<<<<<<< HEAD
-=======
    has_many :likes
   has_many :like_notes, through: :likes, source: :note
->>>>>>> responsive_seekle
+   has_many :likes
+  has_many :like_notes, through: :likes, source: :note
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -12,21 +11,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
 
-<<<<<<< HEAD
    validates :user_name, length:{ maximum:10}, presence: false
-=======
    validates :user_name, length:{ maximum:10}, presence:true
->>>>>>> responsive_seekle
+   validates :user_name, length:{ maximum:10}, presence:true
    validates :profile, length:{maximum:1000}, presence:false
    validates :area, presence:false
 
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> responsive_seekle
  acts_as_messageable
 
 def mailboxer_user_name
@@ -37,10 +29,19 @@ def mailboxer_email(object)
   self.email
 end
 
-<<<<<<< HEAD
-=======
+  # userオブジェクトから呼び出せるインスタンスメソッドとして定義
+  def set_image(file)
+    if !file.nil?
+      file_name = file.original_filename
+      File.open("public/user_images/#{file_name}", 'wb') { |f|
+        f.write(file.read)
+      }
+      self.image = file_name
+    end
 
->>>>>>> responsive_seekle
+  end
+
+
 def self.find_for_facebook_oauth(auth)
     user = User.where(provider: auth.provider, uid: auth.uid).first
     unless user
