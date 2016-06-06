@@ -3,10 +3,13 @@
   margin-top: 20px;
   width: 100%;
   height: 40px;
-  background-color: #87CEEB;
+  background-color: #F5F5F5;
   border-bottom: 1px solid #F5F5F5;
 
 }
+
+
+
 
  .genre p{
   padding-left: 20px;
@@ -64,9 +67,8 @@ float:left;
 
 .provider_service_image{
   width: 290px;
-  height:180px;
+  height:190px;
   margin-bottom: 10px;
-    background-color: orange;
     float: left;
   }
 
