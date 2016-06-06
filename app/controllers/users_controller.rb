@@ -30,7 +30,7 @@ end
 
   def create
     @user = User.new(user_params)
- file = params[:user][:image]
+ file = params[:user][:profile_pic]
 
 @user.set_image(file)
 
@@ -45,7 +45,7 @@ end
 
 
   def update
-    file = params[:user][:image]
+    file = params[:user][:profile_pic]
     @user.set_image(file)
 
     if @user.update(user_params)
