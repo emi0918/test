@@ -29,17 +29,13 @@
 <header>
 
   <div class="container_head">
-
-
-
-
-  <a href="/"><%= image_tag('logo.png',class: 'logo')  %></a>
+    <a href="/"><%= image_tag('logo.png',class: 'logo')  %></a>
 
 
 
     <ul class="header-right">
   <% if user_signed_in? %>
-  <li> <%= link_to 'ダッシュボド', users_path %></li>
+  <li> <%= link_to 'ダッシュボード', users_path %></li>
      <li> <%= link_to 'サービスを掲載',home_pro_path %></li>
   <li> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
 
@@ -53,6 +49,7 @@
     </ul>
   </div>
 </header>
+
 
 
   <div class="main_content">
