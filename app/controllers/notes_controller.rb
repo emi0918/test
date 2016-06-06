@@ -37,6 +37,7 @@ correct_user
 
 
 
+
   # POST /notes
   # POST /notes.json
     def create
@@ -69,8 +70,11 @@ correct_user
       end
     end
 
+
+
   # DELETE /notes/1
   # DELETE /notes/1.json
+
 
   def destroy
     correct_user
@@ -91,7 +95,7 @@ end
       params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:user_id)
     end
        def user_params
-      params.require(:user, :note).permit(:user_name, :profile_pic, :profile, :area, :email)
+      params.require(:user, :note).permit(:user_name, :image, :profile, :area, :email)
     end
 
    def correct_user
@@ -100,5 +104,11 @@ end
       redirect_to root_path
     end
 end
+
+
+
+
+
+
 
 
