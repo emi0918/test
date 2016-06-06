@@ -9,7 +9,6 @@ include ApplicationHelper
 
     @notes = current_user.notes.all
        @notes = Note.page(params[:page]).per(3).order(:id)
-
   end
 
   # GET /notes/1
@@ -35,35 +34,6 @@ def new
     @note = Note.find(params[:id])
 correct_user
   end
-
-
-  end
-
-  # GET /notes/1
-  # GET /notes/1.json
-def show
-    @note = Note.find(params[:id])
-
-end
-
-def search
-   @notes = Note.page(params[:page]).per(6).order(:id)
-end
-
-  # GET /notes/ne
-
-def new
-    @note = Note.new
-  end
-
-
-  # GET /notes/1/sedit
-  def edit
-    @note = Note.find(params[:id])
-correct_user
-  end
-
-
 
 
 
@@ -99,11 +69,8 @@ correct_user
       end
     end
 
-
-
   # DELETE /notes/1
   # DELETE /notes/1.json
-
 
   def destroy
     correct_user
@@ -111,7 +78,6 @@ correct_user
     redirect_to root_path
   end
 
-
 end
 
   private
@@ -134,34 +100,5 @@ end
       redirect_to root_path
     end
 end
-
-end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_note
-        @note = current_user.notes.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def note_params
-      params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:user_id)
-    end
-       def user_params
-      params.require(:user, :note).permit(:user_name, :profile_pic, :profile, :area, :email)
-    end
-
-   def correct_user
-    note = Note.find(params[:id])
-    if !current_user?(note.user)
-      redirect_to root_path
-    end
-end
-
-
-
-
-
-
 
 
