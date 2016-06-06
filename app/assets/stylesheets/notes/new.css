@@ -23,6 +23,7 @@ background-color:   #F5F5F5;
 }
 
 
+
 .setting-left-heading{
     width:270px;
 float:left;
@@ -50,13 +51,14 @@ padding-top: 20px;
 
 
 .setting-wrapper{
-
+  margin-top: 40px;
+margin-bottom: 100px;
   float:left;
-  margin-left:173px;
+  margin-left:130px;
 }
 
 .customize-setting h2  {
- margin-top: 80px;
+ margin-top: 30px;
 margin-left: -3px;
  font-weight: normal;
 }
@@ -74,4 +76,31 @@ font-family:Arial, sans-serif;
 border:solid 1px #ccc;
 margin:0 0 20px;
 width:600px;
+}
+
+.step-pane{
+  width:700px;
+  margin-left: 40px;
+}
+
+.wizard{
+   width:940px;
+}
+
+
+
+.fuelux .wizard .step-content {
+  background-color: white;
+}
+
+
+
+
+
+.fa-chevron-left{
+  margin-right: 10px;
+}
+
+.fa-chevron-right{
+  margin-left: 10px;
 }
