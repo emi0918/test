@@ -30,8 +30,9 @@ end
 
   def create
     @user = User.new(user_params)
-    file = params[:user][:profile_pic]
-    @user.set_image(file)
+ file = params[:user][:image]
+
+@user.set_image(file)
 
     if @user.save
        session[:user_id] = @user.id
@@ -44,7 +45,7 @@ end
 
 
   def update
-    file = params[:user][:profile_pic]
+    file = params[:user][:image]
     @user.set_image(file)
 
     if @user.update(user_params)
@@ -89,7 +90,7 @@ private
   end
 
     def user_params
-      params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
+      params.require(:user).permit(:user_name, :image, :profile, :area, :email)
     end
 
 end
