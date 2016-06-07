@@ -44,7 +44,7 @@ correct_user
     @note = Note.new(note_params)
 
      file=params[:note][:image_1]
-    @note.set_image(file)
+    @note.set_image_1(file)
     @note.user_id = current_user.id
    if @note.save
        redirect_to @note
