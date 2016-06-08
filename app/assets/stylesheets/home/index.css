@@ -167,6 +167,33 @@ margin-top:12px;
 }
 
 
+@media screen and  ( max-width:640px )
+{
+
+  .reasons {
+    font-size:60%;
+    clear:both;
+    padding-top: 20px;
+    padding-right:21px;
+
+  }
+  .reason  {
+    display: inline-block;
+    font-size: 10px;
+     line-height:14px;
+      width:110%;
+
+  }
+
+  .about-seekle-wrapper{
+    height:750px;
+
+ }
+
+
+}
+
+
 
 @media screen and (max-width:479px)
 {
