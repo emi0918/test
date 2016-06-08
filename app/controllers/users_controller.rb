@@ -49,7 +49,7 @@ end
     @user.set_image(file)
 
     if @user.update(user_params)
-      redirect_to @user, notice: 'ユーザー情報が更新されました'
+      redirect_to users_path, notice: 'ユーザー情報が更新されました'
     else
       render :edit
     end
