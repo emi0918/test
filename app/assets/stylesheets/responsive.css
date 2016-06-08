@@ -1,0 +1,82 @@
+/* タブレット向けレイアウト */
+
+/* ブレイクポイントが1000px以下の時のメディアクエリを設定してください*/
+@media (max-width: 1000px) {
+  /* lessonクラスのwidthを50%に変更し、margin-bottom: 50px;を追加してください */
+  .lesson{
+    width:50%;
+    margin-bottom:50px;
+  }
+.column-menu{
+  display:none;
+}
+
+.dropmenu{
+  display:none;
+}
+
+.header-right {
+  display: none;
+}
+
+.btn .btn-lg .btn-primary{
+  display: none;
+}
+
+.footer{
+  display: none;
+}
+
+
+.footer-bottom{
+  display: none;
+}
+
+.lesson-wrapper{
+  display:none;
+}
+
+.join-button{
+  display: none;
+}
+
+
+}
+
+
+
+
+
+@media only screen and  ( max-width:640px )
+{
+  .body{
+    position: relative;
+  }
+  /* ボディ */
+  .background-image
+  {
+    float:left;
+  }
+  .top-wrapper{
+    padding: 80px 0 100px 0px;
+  }
+  .top-wrapper h1 {
+   text-shadow: 2px 2px 1px black;
+  }
+
+.message-wrapper{
+  margin-top: 100px;
+  width:80%;
+  padding-left: 38px;
+}
+
+.explain-seekle-wrapper{
+  margin-bottom: 110px;
+  width:80%;
+  padding-left: 45px;
+}
+
+
+}
+
+
