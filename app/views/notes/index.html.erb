@@ -44,7 +44,14 @@
 
 
 
+
+
     <% if note.user==current_user %>
+
+<% if notes.present? %>
+掲載中のサービスはありません
+<% end %>
+
 
      <ul>
     <li> <div class="panel panel-default">
@@ -59,6 +66,8 @@
           </div>
       </div>
     </li>
+
+
      <% end %>
      <% end %>
 
