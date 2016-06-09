@@ -36,11 +36,14 @@ end
 @user.set_image(file)
 
     if @user.save
+      UserMailer.welcome_email(@user).deliver
        session[:user_id] = @user.id
 redirect_to users_path
     else
       render :new
     end
+
+
   end
 
 
@@ -94,9 +97,15 @@ private
       params.require(:user).permit(:user_name, :image, :profile, :area, :email)
     end
 
+    def sendmail
+      user= User.find(params[:id])
+      @mail =NoticeMailer.sendmail_confirm(user).deliver
+
+    end
+
+
+
 end
-
-
 
 
 
