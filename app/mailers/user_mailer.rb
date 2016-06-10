@@ -8,11 +8,10 @@ class UserMailer < ApplicationMailer
   def welcome_email(user)
     @greeting = "Hi"
 
-     @user = user
+     @user = current_user
      @url ="seekle.jp"
-     mail(to: @user.email, subject: '【Seekle】アカウント登録が完了しました。')
+     mail(to: current_user.email, subject: '【Seekle】アカウント登録が完了しました。')
       format.html
   end
 end
-
 
