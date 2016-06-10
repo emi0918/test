@@ -44,13 +44,8 @@
   </div>
   </div>
 <% end %>
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
- <%= link_to image_tag('facebook_login.png'), user_omniauth_authorize_path(:facebook) %>
+
+  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
