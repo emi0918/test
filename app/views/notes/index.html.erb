@@ -38,10 +38,10 @@
 
 
 <div class="bootstrap">
-  <ul>
+
     <% @notes.each do |note|  %>
     <% if note.user==current_user %>
-
+ <ul>
 
     <li> <div class="panel panel-default">
        <div class="panel-heading">
@@ -54,10 +54,9 @@
           </div>
       </div>
     </li>
+</ul>
 
      <% end %>
-       </ul>
-
      <% end %>
 
 </div>
