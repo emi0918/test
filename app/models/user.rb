@@ -52,6 +52,8 @@ def self.find_for_facebook_oauth(auth)
                           password: Devise.friendly_token[0,20] )
     end
 
+
+
   user
 end
 end

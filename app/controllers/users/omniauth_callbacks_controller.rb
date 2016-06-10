@@ -1,16 +1,27 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def facebook
-    @user = User.find_for_facebook_oauth(request.env["omniauth.auth"])
-
-    if @user.persisted?
-      sign_in_and_redirect @user, :event => :authentication #this will throw if @user is not activated
-
-      set_flash_message(:notice, :success, :kind => "Facebook") if is_navigational_format?
-    else
-      session["devise.facebook_data"] = request.env["omniauth.auth"]
-      redirect_to root_path
-    end
+    callback_from :facebook
   end
-end
 
+
+  def fa
+
+ private
+    def callback_from(provider)
+      provider = provider.to_s
+      @user = User.find_for_oauth(request.env['omniauth.auth'])
+      if @user.persisted?
+        cookies.permanent[:xxx_logined] = { value: @user.created_at }
+        flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: provider.capitalize)
+        sign_in_and_redirect @user, event: :authentication
+      else
+        if provider == 'twitter'
+          session["devise.twitter_data"] = request.env["omniauth.auth"].except("extra")
+        else
+          session["devise.facebook_data"] = request.env["omniauth.auth"]
+        end
+        redirect_to users_path
+      end
+    end
+end
