@@ -38,21 +38,14 @@
 
 
 <div class="bootstrap">
-
-
+  <ul>
     <% @notes.each do |note|  %>
-
-
-
-
-
     <% if note.user==current_user %>
 
-     <ul>
+
     <li> <div class="panel panel-default">
        <div class="panel-heading">
         <%= link_to note.title, note_path(note) %>
-
        </div>
           <div class="panel-body-list">
              <%= image_tag "/note_images/#{note.image_1}" ,class: "service_image"%>
@@ -62,11 +55,11 @@
       </div>
     </li>
 
+     <% end %>
+       </ul>
 
      <% end %>
-     <% end %>
 
-  </ul>
 </div>
 
 </div>
