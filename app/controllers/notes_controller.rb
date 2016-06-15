@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-
+  before_action :correct_user,   only: :destroy
 include ApplicationHelper
 
 
@@ -62,7 +62,7 @@ correct_user
   def update
     correct_user
         @note = Note.find(params[:id])
-              @note.update_attributes (params[:note])
+
       if @note.update(note_params)
         redirect_to @note, notice: '編集完了しました'
       else
@@ -76,11 +76,10 @@ correct_user
   # DELETE /notes/1.json
 
 
-  def destroy
-    correct_user
-    @note.destroy
-    redirect_to root_path
-  end
+
+
+
+
 
 end
 
@@ -95,13 +94,13 @@ end
       params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:user_id)
     end
        def user_params
-      params.require(:user, :note).permit(:user_name, :image, :profile, :area, :email)
+      params.require(:user, :note).permit(:user_name, :profile_pic, :profile, :area, :email)
     end
 
    def correct_user
     note = Note.find(params[:id])
     if !current_user?(note.user)
-      redirect_to root_path
+      redirect_to root_path if @note.nill?
     end
 end
 
