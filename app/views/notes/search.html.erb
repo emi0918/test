@@ -55,7 +55,6 @@
 <div class="introduce_providers">
 
 
-
   <ul>
     <% @notes.each do |note| %>
 
@@ -67,15 +66,14 @@
 
 
      <div class="title"><h2> <%= link_to note.title, note_path(note) %></h2>
-      <p> <%= note.content %></p>
-       <div class="service-price"><h3>¥<%= note.price %></h3> </div>
+
+       <div class="service-price"><h3> ¥<%= note.price %></h3> </div>
           <div class="provider_image"><%= image_tag("a")%> </div>
           </div>
        </div>
     <% end %>
 
  </ul>
-
 
 
 
