@@ -75,6 +75,7 @@ end
 resources :users, only:[:index] do
   member do
     get :like_notes
+
 end
 end
  # mailbox folder routes
