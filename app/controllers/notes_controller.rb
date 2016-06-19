@@ -16,7 +16,7 @@ include ApplicationHelper
 def show
 
    @notes = Note.includes(:users).all
-    @note = Note.find(params[:id])
+   @note = Note.find(params[:id])
 
 
 end
@@ -96,10 +96,10 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note,:user).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:user_id)
+      params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:user_id)
     end
        def user_params
-      params.require(:user, :note).permit(:user_name, :profile_pic, :profile, :area, :email)
+      params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
     end
 
    def correct_user
