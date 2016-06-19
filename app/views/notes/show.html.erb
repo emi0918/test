@@ -31,10 +31,19 @@
 <div class="provider-introduction">
  <%= image_tag("Buq4YUxCcAAISFu.jpg", class: "face_pic")%>
 <h1>  <%= @note.title %></h1>
-  <p>サービスカテゴリー： <%= @note.category %></p>
-  <p2>エリア：大阪 梅田</p2>
 
+
+
+提供者：<%= @note.user.user_name %><br />
+エリア：<%= @note.user.area %><br />
+
+
+サービスカテゴリー： <%= @note.category %>
 </div>
+
+
+
+
 
 <div class="service_explain">
 <h2>このサービスについて</h2>
