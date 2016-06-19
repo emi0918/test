@@ -8,13 +8,16 @@ include ApplicationHelper
   def index
 
     @notes = current_user.notes.all
-       @notes = Note.page(params[:page]).per(3).order(:id)
+       @notes = Note.includes(:user).page(params[:page]).per(3).order(:id)
   end
 
   # GET /notes/1
   # GET /notes/1.json
 def show
+
+   @notes = Note.includes(:users).all
     @note = Note.find(params[:id])
+
 
 end
 
@@ -25,7 +28,7 @@ end
   # GET /notes/ne
 
 def new
-    @note = Note.new
+ @note = Note.new
   end
 
 
@@ -38,10 +41,11 @@ correct_user
 
 
 
+
   # POST /notes
   # POST /notes.json
     def create
-    @note = Note.new(note_params)
+    @note = current_user.notes.build(note_params)
 
      file=params[:note][:image_1]
     @note.set_image_1(file)
@@ -53,6 +57,7 @@ correct_user
          render :new
       end
     end
+
 
 
 
@@ -91,7 +96,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:user_id)
+      params.require(:note,:user).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:user_id)
     end
        def user_params
       params.require(:user, :note).permit(:user_name, :profile_pic, :profile, :area, :email)
@@ -103,6 +108,10 @@ end
       redirect_to root_path if @note.nill?
     end
 end
+
+
+
+
 
 
 
