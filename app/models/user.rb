@@ -24,10 +24,7 @@ end
 def mailboxer_email(object)
   self.email
 end
-
     mount_uploader :profile_pic
-
-
 
 def self.find_for_facebook_oauth(auth)
     user = User.where(provider: auth.provider, uid: auth.uid).first
