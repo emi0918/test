@@ -73,18 +73,12 @@ margin: 0 110px 0;
 
 .logo a{
   float: left;
-  font-size: 27px;
-
+  font-size: 30px;
   padding: 12px 50px;
   letter-spacing: -1px;
-<<<<<<< HEAD
   margin-left:-40px;
-=======
-  margin-left:-40px;
->>>>>>> 33a49fdae6c57b7f4713ea0b9affbd7efb7e783f
   font-weight: bold;
   text-decoration:none;
-
 }
 
 
@@ -96,10 +90,15 @@ text-decoration:none;
 @media screen and  ( max-width:640px )
 {
   /* ボディ */
-  .logo a
+  header
   {
-    font-size: 24px ;
-    margin-left:-70px;/* 文字サイズ */
+    margin: 0 10px 0;
+    width:250%;
+  }
+
+  .logo{
+    width:13%;
+    height:50px;
   }
 }
 
@@ -374,15 +373,6 @@ text-decoration: none;
 
 /*ユーザーログイン*/
 
-.user_content {
-  width: 440px;
-  height: 100%;
-
- border:1px solid gray;
-  margin:30px 440px;
-  border-radius: 8px;
-
-}
 
 .field{
   margin-bottom: 29px;
@@ -391,7 +381,7 @@ text-decoration: none;
 
 
 .field input{
-  font-size: 20px;
+  font-size: 19px;
 
 }
 
@@ -420,7 +410,7 @@ width:0px;
 
 .content_in_user{
 margin-left: 460px;
-  width: 333px;
+  width: 303px;
   padding-top: 53px;
   padding-bottom: 90px;
 }
