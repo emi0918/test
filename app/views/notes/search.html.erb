@@ -68,7 +68,15 @@
      <div class="title"><h2> <%= link_to note.title, note_path(note) %></h2>
 
        <div class="service-price"><h3> ¥<%= note.price %></h3> </div>
-          <div class="provider_image"><%= image_tag("a")%> </div>
+
+
+     <% if note.user.profile_pic? %>
+    <%= image_tag note.user.profile_pic.url, :class => 'provider_image'%>
+  <% else %>
+    <%= image_tag 'logo.png', :class => 'provider_image'%>
+  <% end %>
+
+
           </div>
        </div>
     <% end %>

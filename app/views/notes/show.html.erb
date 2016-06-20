@@ -29,19 +29,19 @@
 
 
 
-<div class="provider-introduction">
+  <div class="provider-introduction">
 
-   <div class="face_pic">
-     <%= @note.user.profile_pic %>
-   </div>
+  <% if @note.user.profile_pic? %>
+    <%= image_tag @note.user.profile_pic.url, :class => 'face_pic'%>
+     <% else %>
+       <%= image_tag 'logo.png', :class => 'face_pic'%>
+     <% end %>
 
-     <h1>  <%= @note.title %></h1>
-
-      提供者：<%= @note.user.user_name %><br />
-      エリア：<%= @note.user.area %><br />
-      サービスカテゴリー： <%= @note.category %>
-
-</div>
+         <h1>  <%= @note.title %></h1>
+          提供者：<%= @note.user.user_name %><br />
+          エリア：<%= @note.user.area %><br />
+          サービスカテゴリー： <%= @note.category %>
+  </div>
 
 
 

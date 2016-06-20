@@ -19,7 +19,8 @@ include ApplicationHelper
   end
 
   def search
-   @notes = Note.page(params[:page]).per(6).order(:id)
+
+   @notes = Note.includes(:user).page(params[:page]).per(6).order(:id)
   end
 
   # GET /notes/ne
@@ -28,15 +29,11 @@ include ApplicationHelper
    @note = Note.new
   end
 
-
   # GET /notes/1/sedit
   def edit
     @note = Note.find(params[:id])
     correct_user
   end
-
-
-
 
 
   # POST /notes
@@ -54,8 +51,6 @@ include ApplicationHelper
          render :new
       end
     end
-
-
 
 
 
