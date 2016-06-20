@@ -22,19 +22,17 @@
                <%= link_to @note.likes.count(@note.id), id: "like-count" %>人がキープしています。
           </small>
     </div>
- </div>
-
-
+  </div>
 </div>
-
 
 
   <div class="provider-introduction">
 
   <% if @note.user.profile_pic? %>
-    <%= image_tag @note.user.profile_pic.url, :class => 'face_pic'%>
+    <%= link_to image_tag(@note.user.profile_pic.url, :class => 'face_pic'), users_path(@user) %>
+
      <% else %>
-       <%= image_tag 'logo.png', :class => 'face_pic'%>
+       <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
      <% end %>
 
          <h1>  <%= @note.title %></h1>
@@ -42,9 +40,6 @@
           エリア：<%= @note.user.area %><br />
           サービスカテゴリー： <%= @note.category %>
   </div>
-
-
-
 
 
  <div class="service_explain">
@@ -72,7 +67,3 @@
 
 
 </div>
-
-
-
-
