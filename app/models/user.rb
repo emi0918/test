@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
- has_many :notes
-   has_many :likes
+ has_many :notes, dependent: :destroy
+   has_many :likes, dependent: :destroy
   has_many :like_notes, through: :likes, source: :note
 
   # Include default devise modules. Others available are:
@@ -25,17 +25,8 @@ def mailboxer_email(object)
   self.email
 end
 
+    mount_uploader :profile_pic
 
-  # userオブジェクトから呼び出せるインスタンスメソッドとして定義
-  def set_image(file)
-    if !file.nil?
-      file_name = file.original_filename
-      File.open("public/user_images/#{file_name}", 'wb') { |f|
-        f.write(file.read)
-      }
-      self.plofile_pic = file_name
-    end
-  end
 
 
 def self.find_for_facebook_oauth(auth)
@@ -48,9 +39,8 @@ def self.find_for_facebook_oauth(auth)
                           token:    auth.credentials.token,
                           password: Devise.friendly_token[0,20] )
     end
-
-
-
   user
 end
+
+
 end

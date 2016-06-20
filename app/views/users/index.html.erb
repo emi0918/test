@@ -21,9 +21,13 @@
 <div class="mypage-all_wrapper">
 <div class="left-wrapper">
 
-<div class="mypage-picture">
-<%= image_for(@user) %>
- </div>
+
+  <% if current_user.profile_pic? %>
+    <%= image_tag current_user.profile_pic.url, :class => 'mypage-picture'%>
+  <% else %>
+    <%= image_tag 'logo.png', :class => 'mypage-picture'%>
+  <% end %>
+
 
 
  <div class="security-wrapper">
@@ -62,8 +66,6 @@
   </div>
 
 <div class="mypage_wrapper">
-
-
 
 
  <h1><%= current_user.user_name %>さんのページ</h1>

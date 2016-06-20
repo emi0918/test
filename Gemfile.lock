@@ -238,6 +238,9 @@ GEM
     remotipart (1.2.1)
     responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rmagick (2.15.4)
     safe_yaml (1.0.4)
     sass (3.4.22)
     sass-rails (5.0.4)
@@ -264,6 +267,8 @@ GEM
     sshkit (1.10.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    stripe (1.43.1)
+      rest-client (~> 1.4)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
@@ -302,6 +307,7 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails
   capistrano-rbenv!
+  carrierwave
   chosen-rails
   coffee-rails (~> 4.1.0)
   devise
@@ -322,10 +328,12 @@ DEPENDENCIES
   rails (= 4.2.5)
   rails_admin
   rb-readline
+  rmagick
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_calendar (~> 2.0)
   sitemap_generator
+  stripe
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)

@@ -13,29 +13,26 @@ include ApplicationHelper
 
   # GET /notes/1
   # GET /notes/1.json
-def show
-
+  def show
    @notes = Note.includes(:users).all
    @note = Note.find(params[:id])
+  end
 
-
-end
-
-def search
+  def search
    @notes = Note.page(params[:page]).per(6).order(:id)
-end
+  end
 
   # GET /notes/ne
 
-def new
- @note = Note.new
+  def new
+   @note = Note.new
   end
 
 
   # GET /notes/1/sedit
   def edit
     @note = Note.find(params[:id])
-correct_user
+    correct_user
   end
 
 
