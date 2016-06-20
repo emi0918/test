@@ -4,7 +4,7 @@
  <div class="upper-menu">
     <div class="wrapper" >
     <ul>
-     <li><a href='/users/index'>マイページ</a></li>
+     <li><a href='/users'>マイページ</a></li>
      <li><%= link_to '掲載中', notes_path %></li>
      <li><a href='/dashboard/transaction'>取引方法</a></li>
      <li><a href='/users/edit'>設定</a></li>
@@ -26,7 +26,8 @@
 </div>
 
 
-<div class="listing-wrapper">
+
+ <div class="listing-wrapper">
  <div class="provider-listings">
   <div class="provider-listings-heading">
     <h2>あなたのサービス</h2>
@@ -34,34 +35,34 @@
 
 
 
+
+
 <div class="bootstrap">
-  <ul>
-    <% @notes.each do |note| %>
+
+    <% @notes.each do |note|  %>
+    <% if note.user==current_user %>
+ <ul>
+
     <li> <div class="panel panel-default">
        <div class="panel-heading">
         <%= link_to note.title, note_path(note) %>
        </div>
           <div class="panel-body-list">
-             <%= image_tag("Buq4YUxCcAAISFu.jpg", class: "service_image")%>
+             <%= image_tag "/note_images/#{note.image_1}" ,class: "service_image"%>
              <%= link_to '編集する', edit_note_path(note) %>
+                     <%= note.likes.count %>人からキープされています。
           </div>
       </div>
     </li>
+</ul>
+
      <% end %>
-  </ul>
-</div>
+     <% end %>
 
 </div>
 
-
-
-<div class="bootstrap">
- <div class="list-number-2">
-  <%= paginate(@notes) %>
-  </div>
-  </div>
-  </div>
 </div>
+
 
 
 

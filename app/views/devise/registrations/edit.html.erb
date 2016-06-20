@@ -8,7 +8,7 @@
      <li><%= link_to '掲載中', notes_path %></li>
      <li><a href='/dashboard/transaction'>取引方法</a></li>
      <li><a href='/users/edit'>設定</a></li>
-     <li><a href='/conversations/new'>受信トレイ</a></li>
+     <li><a href='/conversations/new'>メッセージ</a></li>
     </ul>
     </div>
   </div>
@@ -21,7 +21,6 @@
 <div class="customize-setting">
 
 
-
 <h2>一般アカウント設定</h2>
   </div>
 
@@ -32,8 +31,8 @@
 <br />
 
 <div class="field">
- <%= f.label :プロフィール画像 %><br />
-<%= f.file_field :image, class: "form-control image-field" %>
+ <%= f.label :プロフィール写真 %><br />
+<%= f.file_field :profile_pic, class: "form-control image-field" %>
   </div>
 
 
@@ -49,15 +48,16 @@
   </div>
 
 
+
 <div class="field">
  <%= f.label :自己紹介 %><br />
-    <%= f.text_area :profile, autofocus: true %>
+    <%= f.text_area :profile, autofocus: true, class: 'profile_field' %>
+</div>
 
-  </div>
 
   <div class="field">
-    <%= f.label :メールアドレス %><br />
-    <%= f.email_field :email, autofocus: true %>
+     <%= f.label :メールアドレス %><br />
+     <%= f.email_field :email, autofocus: true %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -83,6 +83,7 @@
      <%= f.submit '保存する', class: 'btn btn-default', data:{ disable_with: "保存中・・・"} %>
   </div>
 <% end %>
+
 
 <h3>アカウントを削除する</h3>
 

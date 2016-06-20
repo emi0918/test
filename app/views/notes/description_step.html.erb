@@ -13,13 +13,11 @@
 
  <ul>
    <li> <a href="#"><i class="fa fa-plus-square-o"></i>  サービスについて</a></li>
-   <li> <a href="/service_setting/description"><i class="fa fa-plus-square-o"></i>  顧客へのお願い</a></li>
-   <li><a href="/service_setting/pictures"><i class="fa fa-plus-square-o"></i>  写真</a></li>
-   <li><i class="fa fa-plus-square-o"></i>  料金</li>
-
-
-  </ul>
+   <li> <a href="/notes/description"><i class="fa fa-plus-square-o"></i>  料金とお願い</a></li>
+   <li><a href="/notes/images"><i class="fa fa-plus-square-o"></i>  写真</a></li>
+ </ul>
   </div>
+
 
 
 <div class="bootstrap">
@@ -30,8 +28,17 @@
   </div>
 
 
-<%= form_for @note, url: wizard_path do |f| %>
+
+<%= form_for @note do |f| %>
+
+
 <% if @note.errors.any? %>
+
+
+
+
+
+
   <div class="error_messages">
     <h2><%= pluralize(@note.errors.count, "error") %>  prohibited this user from being saved:</h2>
     <ul>
@@ -56,18 +63,6 @@
   </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="customize-setting">
 <h2>カスタマーに伝えておこう</h2>
   <p>あなたのサービスを求めるカスタマーの決め手になるようなタイトルや内容を考えよう</p>
@@ -79,10 +74,12 @@
   </div>
 
 
+
+
   <div class="actions">
- <%= f.submit '作成する', class: 'btn btn-default', data:{ disable_with: "作成中・・・"} %>
+ <%= f.submit '保存する', class: 'btn btn-default', data:{ disable_with: "保存中・・・"} %>
 <% end %>
-  or <%= link_to "skip this step", next_wizard_path %>
+  or <%= link_to "skip this step", images_note_path %>
 </div>
 
   </div>

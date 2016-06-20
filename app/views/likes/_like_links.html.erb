@@ -1,0 +1,7 @@
+<% if current_user.likes.find_by(note_id: note.id) %>
+  <%= link_to 'キープを取り消す', unlike_path(note.id), method: :delete, remote: true %>
+<% else %>
+  <%= link_to 'キープする', like_path(note.id), method: :post, remote: true %>
+<% end %>
+
+

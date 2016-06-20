@@ -13,6 +13,7 @@
 
 
 
+
 @media only screen and  ( max-width:640px )
 {
   .body{
@@ -172,15 +173,15 @@ margin-top:12px;
   .reasons {
     font-size:60%;
     clear:both;
-    padding-top: -20px;
-    padding-left:43px;
+    padding-top: 20px;
+    padding-right:21px;
 
   }
   .reason  {
     display: inline-block;
     font-size: 10px;
      line-height:14px;
-      width:90%;
+      width:110%;
 
   }
 
@@ -191,6 +192,7 @@ margin-top:12px;
 
 
 }
+
 
 
 @media screen and (max-width:479px)
@@ -311,5 +313,6 @@ padding-left:0px;
   font-size: 18px;
   padding-right: 10px;
 }
+
 
 

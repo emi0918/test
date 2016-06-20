@@ -77,11 +77,11 @@ margin: 0 110px 0;
 
   padding: 12px 50px;
   letter-spacing: -1px;
-
+<<<<<<< HEAD
   margin-left:-40px;
-
+=======
   margin-left:-40px;
-
+>>>>>>> 33a49fdae6c57b7f4713ea0b9affbd7efb7e783f
   font-weight: bold;
   text-decoration:none;
 
@@ -110,11 +110,7 @@ text-decoration:none;
 
 .header-right {
   float: right;
-<<<<<<< Updated upstream
-  margin-right:270px;
-=======
   margin-right:225px;
->>>>>>> Stashed changes
   text-decoration:none;
 }
 
@@ -141,7 +137,7 @@ text-decoration:none;
   .header-right a{
     font-size: 10px ;
     margin-top:-60px;
-
+<<<<<<< HEAD
     float:right;
 
 
@@ -160,9 +156,10 @@ text-decoration:none;
   .header-right a{
     font-size: 10px ;
     margin-top:-60px;
-
+=======
     float:right;
 
+>>>>>>> 33a49fdae6c57b7f4713ea0b9affbd7efb7e783f
 
   }
 
@@ -198,6 +195,7 @@ text-decoration:none;
 
   }
 }
+
 
 
 
@@ -459,6 +457,9 @@ color: white;
 #login:hover, #sign:hover {
     background-color:   #FFA07A;
 }
+
+
+
 
 
 

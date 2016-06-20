@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
- has_many :notes
-   has_many :likes
+ has_many :notes, dependent: :destroy
+   has_many :likes, dependent: :destroy
   has_many :like_notes, through: :likes, source: :note
    has_many :likes
   has_many :like_notes, through: :likes, source: :note
@@ -28,6 +28,9 @@ end
 def mailboxer_email(object)
   self.email
 end
+<<<<<<< HEAD
+    mount_uploader :profile_pic
+=======
 
   # userオブジェクトから呼び出せるインスタンスメソッドとして定義
   def set_image(file)
@@ -40,6 +43,7 @@ end
     end
   end
 
+>>>>>>> master
 
 def self.find_for_facebook_oauth(auth)
     user = User.where(provider: auth.provider, uid: auth.uid).first
@@ -51,7 +55,8 @@ def self.find_for_facebook_oauth(auth)
                           token:    auth.credentials.token,
                           password: Devise.friendly_token[0,20] )
     end
-
   user
 end
+
+
 end

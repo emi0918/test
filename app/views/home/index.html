@@ -16,17 +16,14 @@
      </div>
       <h1>登録費無料の簡単サービス依頼</h1>
 
-      <p>簡単にあなたの求めるサービスを依頼</p>
+      <p>あなたの求める全てのサービスがここに集まります</p>
 
 
-  <% if user_signed_in? %>
- <div class="bootstrap"><%= link_to "ご利用の流れ", '/home/guide', class: "btn btn-lg btn-primary" %></div>
-   <% else %>
 
-<div class="bootstrap">
-     <%= link_to "アカウントを作成する", new_user_registration_path, class: "btn btn-lg btn-primary" %>
-   </div>
-    <% end %>
+
+ <div class="bootstrap"><%= link_to "プロバイダーとして参加", 'http://goo.gl/forms/y9P0l9bh5OFkPs1J3', class: "btn btn-lg btn-primary" %></div>
+
+
 
 
     </div>
@@ -37,7 +34,6 @@
 
     </div>
 
-<<<<<<< Updated upstream
 
 
 
@@ -60,45 +56,6 @@
       </li>
       <li><a href="/housing/index"><i class="fa fa-list-ul fa-fw"></i>その他</a>
 
-=======
-  <div id="fade-in2" class="dropmenu">
-    <div class="wrapper" >
-    <ul>
-      <li><a href="/housing/index">住まい</a>
-        <ul>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-        </ul>
-      </li>
-      <li><a href="/housing/event">イベント</a>
-        <ul>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-        </ul>
-      </li>
-      <li><a href="/housing/lesson">習い事</a>
-        <ul>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-          <li><a href="#">サブメニュー</a></li>
-        </ul>
-      </li>
-      <li><a href="/housing/health">健康</a>
-        <ul>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-        </ul>
-      </li>
-      <li><a href="/housing/others">その他</a>
-        <ul>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-          </ul>
->>>>>>> Stashed changes
       </li>
     </ul>
     </div>
@@ -118,6 +75,7 @@
 </div>
 
 
+
 <div class="about-seekle-wrapper">
 
    <div class="container">
@@ -135,8 +93,8 @@
        <div class="icons">
           <i class="fa fa-money fa-5x"></i>
         </div>
-        <p class="txt-contents"></p><h2>お手頃な費用で貴重な経験</h2>
-<p>高いお金を払って専門のプロに頼む前に、あなたの周りで求めるサービスを提供するプロバイダーを探すことができます。 </p>
+        <p class="txt-contents"></p><h2>お手頃な費用</h2>
+<p>高いお金を払って専門のプロ、業者に頼む前に、あなたの周りで求めるサービスを提供するプロバイダーを探すことができます。 </p>
         </div>
   </div>
 
@@ -146,7 +104,7 @@
        <i class="fa fa-smile-o fa-5x"></i>
      </div>
         <p class="txt-contents"></p><h2>豊富なジャンル</h2>
-<p>カメラマン、英会話教室、ペットのしつけを頼みたいなど、Seekleは様々なジャンルのプロバイダーと繋がることのできる場です。</p>
+<p>カメラマン、英会話教室、ペットのしつけを頼みたいなど、Seekleは様々なジャンルのプロバイダーを見つけることのできる場です。</p>
         </div>
   </div>
   </div>
@@ -213,7 +171,9 @@
         <h2>あなたもプロバイダーとして参加しませんか？</h2>
         <h3 id="tagline">Let's find customers who need you!</h3>
       </div>
-      <%= link_to "プロバイダーとして参加",'/home/pro', class: "btn message signup-show" %>
+      <div class="join-button">
+      <%= link_to "プロバイダーとして参加",'http://goo.gl/forms/y9P0l9bh5OFkPs1J3', class: "btn message signup-show" %>
+    </div>
     </div>
   </div>
 

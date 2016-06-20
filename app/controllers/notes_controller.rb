@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-
+  before_action :correct_user,   only: :destroy
 include ApplicationHelper
 
 
@@ -8,59 +8,31 @@ include ApplicationHelper
   def index
 
     @notes = current_user.notes.all
-       @notes = Note.page(params[:page]).per(3).order(:id)
-
+       @notes = Note.includes(:user).page(params[:page]).per(3).order(:id)
   end
 
   # GET /notes/1
   # GET /notes/1.json
-def show
-    @note = Note.find(params[:id])
+  def show
+   @notes = Note.includes(:users).all
+   @note = Note.find(params[:id])
+  end
 
-end
-
-def search
+  def search
    @notes = Note.page(params[:page]).per(6).order(:id)
-end
+  end
 
   # GET /notes/ne
 
-def new
-    @note = Note.new
+  def new
+   @note = Note.new
   end
 
 
   # GET /notes/1/sedit
   def edit
     @note = Note.find(params[:id])
-correct_user
-  end
-
-
-  end
-
-  # GET /notes/1
-  # GET /notes/1.json
-def show
-    @note = Note.find(params[:id])
-
-end
-
-def search
-   @notes = Note.page(params[:page]).per(6).order(:id)
-end
-
-  # GET /notes/ne
-
-def new
-    @note = Note.new
-  end
-
-
-  # GET /notes/1/sedit
-  def edit
-    @note = Note.find(params[:id])
-correct_user
+    correct_user
   end
 
 
@@ -70,10 +42,10 @@ correct_user
   # POST /notes
   # POST /notes.json
     def create
-    @note = Note.new(note_params)
+    @note = current_user.notes.build(note_params)
 
      file=params[:note][:image_1]
-    @note.set_image(file)
+    @note.set_image_1(file)
     @note.user_id = current_user.id
    if @note.save
        redirect_to @note
@@ -86,12 +58,13 @@ correct_user
 
 
 
+
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
     correct_user
         @note = Note.find(params[:id])
-              @note.update_attributes (params[:note])
+
       if @note.update(note_params)
         redirect_to @note, notice: '編集完了しました'
       else
@@ -105,11 +78,9 @@ correct_user
   # DELETE /notes/1.json
 
 
-  def destroy
-    correct_user
-    @note.destroy
-    redirect_to root_path
-  end
+
+
+
 
 
 end
@@ -125,38 +96,19 @@ end
       params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:user_id)
     end
        def user_params
-      params.require(:user, :note).permit(:user_name, :profile_pic, :profile, :area, :email)
+      params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
     end
 
    def correct_user
     note = Note.find(params[:id])
     if !current_user?(note.user)
-      redirect_to root_path
+      redirect_to root_path if @note.nill?
     end
 end
 
-end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_note
-        @note = current_user.notes.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def note_params
-      params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:user_id)
-    end
-       def user_params
-      params.require(:user, :note).permit(:user_name, :profile_pic, :profile, :area, :email)
-    end
 
-   def correct_user
-    note = Note.find(params[:id])
-    if !current_user?(note.user)
-      redirect_to root_path
-    end
-end
 
 
 
