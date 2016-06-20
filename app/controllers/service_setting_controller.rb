@@ -1,2 +1,0 @@
-class ServiceSettingController < ApplicationController
-end
