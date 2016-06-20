@@ -28,9 +28,9 @@ end
 def mailboxer_email(object)
   self.email
 end
-<<<<<<< HEAD
+
     mount_uploader :profile_pic
-=======
+
 
   # userオブジェクトから呼び出せるインスタンスメソッドとして定義
   def set_image(file)
@@ -43,7 +43,6 @@ end
     end
   end
 
->>>>>>> master
 
 def self.find_for_facebook_oauth(auth)
     user = User.where(provider: auth.provider, uid: auth.uid).first
