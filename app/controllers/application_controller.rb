@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 
       http_basic_authenticate_with :name => "seekle", :password => "seekleforthetestuser"
 
-    http_basic_authenticate_with :name => "seekle", :password => "seekleforthetestuser"
+
 
   # protect_from_forgery with: :exception
  before_action :configure_permitted_parameters, if: :devise_controller?
