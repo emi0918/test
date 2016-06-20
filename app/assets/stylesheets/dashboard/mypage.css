@@ -11,7 +11,7 @@
 .mypage-picture{
       height:220px;
   width:220px;
-background-color: gray;
+background-color: #F8F8FF;
    float: left;
 margin-left: 46px;
     border-radius:100%;
@@ -22,12 +22,9 @@ margin-left: 46px;
 
 
 .security-wrapper {
-
-     color:  #696969;
-
-      width:320px;
-      list-style: none;
-
+color:  #696969;
+width:320px;
+list-style: none;
 height:320px;
 }
 
