@@ -1,7 +1,6 @@
 
 .top-wrapper {
   margin-top: -90px;
-    background-size: cover;
     color: white;
     background-color: #87CEEB;
     text-align: center;
@@ -12,25 +11,6 @@
 
 
 
-
-
-@media only screen and  ( max-width:640px )
-{
-  .body{
-    position: relative;
-  }
-  /* ボディ */
-  .background-image
-  {
-    float:left;
-  }
-  .top-wrapper{
-    padding: 80px 0 100px 0px;
-  }
-  .top-wrapper h1 {
-   text-shadow: 2px 2px 1px black;
-  }
-}
 
 
 .top-wrapper h1 {
@@ -61,48 +41,12 @@
 }
 
 
-form {
-    display: block;
-    margin-top: 0em;
-}
-
-
 
 .wrapper {
     width: 900px;
     margin: 0px auto;
 }
 
-.jobstyle-row ul li {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 700;
-    width: 20%;
-    float: left;
-    box-sizing: border-box;
-    overflow: hidden;
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
-}
-
-
-
-
-
-@media screen and  ( max-width:640px )
-{
-
-  .wrapper{
-   width:auto;
-  position:relative;
-  margin-left:-22px;
-    max-width:640px;
-  }
-
-  .explain-seekle-wrapper p{
-    font-size:9px;
-  }
-
-}
 
 
 .explain-seekle-wrapper
@@ -167,45 +111,6 @@ margin-top:12px;
 }
 
 
-@media screen and  ( max-width:640px )
-{
-
-  .reasons {
-    font-size:60%;
-    clear:both;
-    padding-top: 20px;
-    padding-right:21px;
-
-  }
-  .reason  {
-    display: inline-block;
-    font-size: 10px;
-     line-height:14px;
-      width:110%;
-
-  }
-
-  .about-seekle-wrapper{
-    height:750px;
-
- }
-
-
-}
-
-
-
-@media screen and (max-width:479px)
-{
-
-.about-seekle-wrapper{
-    height:900px;
-
- }
-}
-
-
-
 
 .lesson-wrapper {
 
@@ -244,37 +149,6 @@ margin-top:12px;
 }
 
 
-@media screen and  ( max-width:640px )
-{
-  .lesson-wrapper{
-    height:1130px;
-
-  }
-  .images{
-    padding-top: 10%;
-
-  }
-
-  .first {
-  clear:both;
-  padding-left: 12%;
-    }
-
-.how-works-explain{
-  width: 300px;
-  padding-bottom: 20px;
-}
-
-}
-
-
-@media screen and (min-width: 320px) and (max-width: 374px)
-{
-.first{
-padding-left:0px;
-}
-}
-
 .txt-contents {
     width: 500%;
     display: inline-block;
@@ -284,9 +158,7 @@ padding-left:0px;
 
 
 .message-wrapper {
-   height: 280px;
-   padding-top:40px;
-    background-color:white;
+   height: 290px;
     text-align: center;
     border-bottom: 1px solid rgb(238, 238, 238);
 }
@@ -298,12 +170,6 @@ padding-left:0px;
     cursor: pointer;
     box-shadow: #4682B4 0px 3px;
     padding: 15px 40px;
-}
-
-.message:active{
-  position: relative;
-  top: 4px;
-  box-shadow: none;
 }
 
 
