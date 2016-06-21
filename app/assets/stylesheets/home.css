@@ -31,9 +31,7 @@ a:hover {
 }
 
 /* フォント ================================ */
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
+
 
 h1 {
   font-size: 32px;
@@ -54,16 +52,15 @@ p {
 /* ヘッダー ================================ */
 header {
    height: 57px;
-    width: 100%;
-margin: 0 110px 0;
-    position:absolute;
-    top: 0px;
-    z-index: 10;
-  text-decoration:none;
-    padding:1px;
-    cursor: pointer;
-
-    }
+   width: 100%;
+   margin: 0 110px 0;
+   position:absolute;
+   top: 0px;
+   z-index: 10;
+   text-decoration:none;
+   padding:1px;
+   cursor: pointer;
+   }
 
 
 .logo{
@@ -117,7 +114,7 @@ text-decoration:none;
  text-decoration:none;
 }
 .header-right a:hover{
-  color: rgba(255,255,255,0.5);
+  color:  #DCDCDC;
 text-decoration:none;
 }
 
@@ -125,7 +122,6 @@ text-decoration:none;
   line-height: 65px;
   padding: 0 25px;
   float: left;
-  color: white;
 }
 
 
@@ -232,7 +228,6 @@ border-top: 1px solid rgb(238, 238, 238);
 }
 
 
-
 .footer-bottom {
   height:42px;
     background-color: rgba(34, 49, 52, 0.901961);
@@ -240,36 +235,6 @@ border-top: 1px solid rgb(238, 238, 238);
     padding: 5px 0px;
 
 }
-
-
-.widget-menu {
-    cursor: pointer;
-    margin: 1px;
-    transition: all 0.5s;
-}
-.widget-menu a{
-  color:  #F5F5F5;
-}
-.widget-menu a:hover{
-  color:  #D3D3D3;
-}
-
-
-.widget-menu li {
-    display: inline-block;
-    margin: 10px;
-}
-
-
-.widget-details li a{
-      text-decoration: none;
-
-}
-
-.footer {
-    padding-top: 0px;
-}
-
 
 
 
@@ -291,17 +256,13 @@ border-top: 1px solid rgb(238, 238, 238);
 
 
 
-
-
 .column-menu a{
     cursor: pointer;
-    margin: 1px;
     color:#fff;
 }
 .column-menu ul {
     color: white;
-    margin: 0px;
-    padding: 0px;
+
 }
 .column-menu li {
     display: inline-block;
@@ -321,6 +282,33 @@ text-decoration: none;
 text-decoration: none;
  color: rgba(255,255,255,0.5);
 }
+
+
+
+
+.widget-menu {
+    cursor: pointer;
+}
+.widget-menu a{
+  color:  #F5F5F5;
+}
+.widget-menu a:hover{
+  color:  #D3D3D3;
+}
+
+
+.widget-menu li {
+    display: inline-block;
+    margin: 10px;
+}
+
+
+.widget-details li a{
+      text-decoration: none;
+
+}
+
+
 
 .copy-right {
     width: 100%;
@@ -366,11 +354,7 @@ text-decoration: none;
 
 .field input{
   font-size: 19px;
-
 }
-
-
-
 
 
 .name_field input{
@@ -390,7 +374,6 @@ text-decoration: none;
 
 width:0px;
 }
-
 
 .content_in_user{
 margin-left: 460px;
@@ -474,11 +457,8 @@ hr{
 
 /*ドロップダウン*/
 .dropmenu{
-  *zoom: 1;
-  list-style-type: none;
   width: 960px;
   margin: auto;
-  padding: 0;
 }
 .dropmenu:before, .dropmenu:after{
   content: "";
@@ -491,7 +471,6 @@ hr{
   position: relative;
   width: 20%;
   float: left;
-
   text-align: center;
 }
 .dropmenu li a{
@@ -502,54 +481,5 @@ hr{
   text-decoration: none;
 }
 
-.dropmenu li ul{
-  list-style: none;
-  position: absolute;
-  z-index: 9999;
-  top: 100%;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-.dropmenu li ul li{
-  width: 100%;
-}
-.dropmenu li ul li a{
-  padding: 13px 15px;
-  text-align: left;
-}
-
-
 /*ログインしました報告*/
 
-.alert-error {
-    width: 100%;
-    background-color: #f2dede;
-    border-color: #eed3d7;
-    color: #b94a48;
-    text-align: left;
- }
-
-.alert-alert {
-    width: 100%;
-    background-color: #f2dede;
-    border-color: #eed3d7;
-    color: #b94a48;
-    text-align: left;
- }
-
-.alert-success {
-    width: 100%;    width: 100%;
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    color: #468847;
-    text-align: left;
- }
-
-.alert-notice {
-    width: 100%;
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    color: #468847;
-    text-align: left;
- }
