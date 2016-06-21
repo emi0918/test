@@ -1,43 +1,41 @@
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="//www.fuelcdn.com/fuelux/3.13.0/css/fuelux.min.css" rel="stylesheet">
+<script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>
 
 
 <div class="bootstrap">
 
 <div class="setting-wrapper">
+ <div class="wizard" data-initialize="wizard" id="myWizard">
+   <div class="steps-container">
+     <ul class="steps">
+       <li data-step="1" data-name="campaign" class="active">
+       <span class="badge">1</span>基本情報
+       <span class="chevron"></span>
+       </li>
+        <li data-step="2">
+         <span class="badge">2</span> 料金
+         <span class="chevron"></span>
+        </li>
+          <li data-step="3" data-name="template">
+           <span class="badge">3</span> 画像
+           <span class="chevron"></span>
+         </li>
+      </ul>
+   </div>
 
+   <div class="actions">
+     <button type="button" class="btn btn-default btn-prev">
+       <i class="fa fa-chevron-left" aria-hidden="true"></i>戻る</button>
+     <button type="button" class="btn btn-primary btn-next" data-last= "掲載する" onclick="document.frm.submit();" >次へ
+       <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+    </button>
+   </div>
 
-<div class="wizard" data-initialize="wizard" id="myWizard">
-<div class="steps-container">
-  <ul class="steps">
-    <li data-step="1" data-name="campaign" class="active">
-      <span class="badge">1</span>基本情報
-      <span class="chevron"></span>
-    </li>
-    <li data-step="2">
-      <span class="badge">2</span> 料金
-      <span class="chevron"></span>
-    </li>
-    <li data-step="3" data-name="template">
-      <span class="badge">3</span> 画像
-      <span class="chevron"></span>
-    </li>
-  </ul>
-</div>
+   <div class="step-content">
+   <div class="step-pane active sample-pane alert" data-step="1">
 
-
-<div class="actions">
-  <button type="button" class="btn btn-default btn-prev">
-<i class="fa fa-chevron-left" aria-hidden="true"></i>戻る</button>
-
-  <button type="button" class="btn btn-primary btn-next" data-last= "掲載する" onclick="document.frm.submit();" >次へ
-<i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-  </button>
-</div>
-
-
-
-<div class="step-content">
-  <div class="step-pane active sample-pane alert" data-step="1">
 
 
 <%= form_for(@note, class: 'form-horizontal', role: 'form' ) do |f| %>
@@ -78,9 +76,7 @@
 <%= f.text_area :content, class: 'content-area' %>
   </div>
 
-
-
-  </div>
+    </div>
  <div class="step-pane active sample-pane alert" data-step="2">
 
 <div class="customize-setting">
@@ -140,13 +136,7 @@
 </div>
 
 
-
-
-
 </div>
-
-
-
 
   </div>
 
