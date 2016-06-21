@@ -8,27 +8,12 @@
   <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-         <script src="jquery.js"></script>
-         <script src="jquery.steps.js"></script>
-           <body class="fuelux">
-         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-          <script src="./jquery.lazyload.js"></script>
-           <link href="//www.fuelcdn.com/fuelux/3.13.0/css/fuelux.min.css" rel="stylesheet">
-          <script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>
-         <script>
-jQuery(function($){
-  $("img.lazy").lazyload();
-});
-</script>
-
  </head>
 <body>
 
 <header>
   <div class="container_head">
     <a href="/"><%= image_tag('logo-min.png',class: 'logo')  %></a>
-
-
 
     <ul class="header-right">
   <% if user_signed_in? %>

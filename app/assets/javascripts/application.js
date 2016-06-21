@@ -13,16 +13,13 @@
 //= require jquery
 
 //= require jquery_ujs
-//= require turbolinks
+
 //= require jquery-ui
 //= require jquery.validate.min
-//= require jquery.steps
 //= require jquery.validate
 //= require jquery.validate.additional-methods
 //= require jquery.form-validator
-//= require jquery.steps.min
 //= require chosen-jquery
-//= require turbolinks
 //= require_tree .
 
 (function(){
