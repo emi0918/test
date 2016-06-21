@@ -1,4 +1,5 @@
 
+
 html {
     overflow: auto;
 }
@@ -104,9 +105,6 @@ text-decoration:none;
 
 
 
-
-
-
 .header-right {
   float: right;
   margin-right:225px;
@@ -130,6 +128,9 @@ text-decoration:none;
   color: white;
 }
 
+
+
+
 @media screen and  ( max-width:640px )
 {
   /* ボディ */
@@ -138,14 +139,10 @@ text-decoration:none;
     margin-top:-60px;
 <<<<<<< HEAD
     float:right;
-
-
   }
 
   .header-right li{
     padding-right: 90px;
-
-
   }
 }
 
@@ -155,17 +152,13 @@ text-decoration:none;
   .header-right a{
     font-size: 10px ;
     margin-top:-60px;
-=======
+
     float:right;
 
->>>>>>> 33a49fdae6c57b7f4713ea0b9affbd7efb7e783f
-
   }
 
   .header-right li{
     padding-right: 90px;
-
-
   }
 }
 
@@ -175,14 +168,10 @@ text-decoration:none;
   .header-right a{
     font-size: 10px ;
     margin-top:-60px;
-
-
   }
 
   .header-right li{
     padding-right: 50px;
-
-
   }
 }
 
@@ -190,12 +179,8 @@ text-decoration:none;
 
   .header-right li{
     padding-right: 50px;
-
-
   }
 }
-
-
 
 
 
@@ -219,7 +204,6 @@ border-top: 1px solid rgb(238, 238, 238);
     padding-top: 20px;
     margin: auto;
 }
-
 
 
 .col-sm-3 {
@@ -507,15 +491,12 @@ hr{
   position: relative;
   width: 20%;
   float: left;
-  margin: 0;
-  padding: 0;
+
   text-align: center;
 }
 .dropmenu li a{
   display: block;
-  margin: 0;
   padding: 15px 0 11px;
-  background: white;
   color: black;
   font-size: 16px;
   text-decoration: none;
@@ -537,25 +518,7 @@ hr{
   padding: 13px 15px;
   text-align: left;
 }
-.dropmenu li:hover > a{
-  background: #F5F5F5;
-}
-.dropmenu li a:hover{
-  background: #F5F5F5;
-}
 
-#fade-in2 li ul{
-  opacity: 0;
-  top: 50%;
-  visibility: hidden;
-  transition: .5s;
-}
-
-#fade-in2 li:hover ul{
-  top: 100%;
-  visibility: visible;
-  opacity: 1;
-}
 
 /*ログインしました報告*/
 
