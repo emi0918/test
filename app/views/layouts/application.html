@@ -5,7 +5,6 @@
    <meta name="viewport" content="width=device-width,initial-scale=1">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
        <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -15,7 +14,6 @@
 <body>
 
 
-
 <header>
   <div class="container_head">
     <a href="/"><%= image_tag('logo-min.png',class: 'logo')  %></a>
@@ -23,8 +21,8 @@
   <% if user_signed_in? %>
   <li> <%= link_to 'ダッシュボード', users_path %></li>
      <li> <%= link_to 'サービスを掲載',home_pro_path %></li>
+       <%= javascript_include_tag "application" %>
   <li> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-
     <% else %>
     <li><%= link_to 'プロバイダーになる',  home_pro_path %></li>
     <li> <%= link_to 'アカウント作成', new_user_registration_path %></li>
