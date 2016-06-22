@@ -14,9 +14,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require jquery.validate.min
-
 //= require jquery.validate.additional-methods
 //= require jquery.form-validator
 //= require chosen-jquery
 //= require_tree .
-
