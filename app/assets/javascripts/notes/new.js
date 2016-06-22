@@ -10,5 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery-ui
+
+//= require jquery
+//= require jquery_ujs
+//= require jquery.validate.min
+//= require jquery.validate.additional-methods
+//= require jquery.form-validator
+//= require chosen-jquery
 //= require_tree .
