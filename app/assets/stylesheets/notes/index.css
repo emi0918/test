@@ -1,5 +1,7 @@
 
 
+
+
 .field input{
     width:610px;
 padding:5px;
@@ -30,7 +32,6 @@ margin:0 0 0px;
 width:600px;
 }
 
-
 .profilelink{
 margin-left: 25px;
 padding-bottom: 22px;
@@ -50,3 +51,121 @@ margin-top: 50px;
  .panel-heading {
  color:   #FFEFD5;
  }
+
+
+
+
+
+
+
+
+.upper-menu-list{
+  background-color: gray;
+}
+
+
+.setting-heading p{
+font-weight: bold;
+padding-left: 10px;
+padding-top: 20px;
+}
+
+.setting-heading{
+  width:270px;
+float:left;
+height:800px;
+background-color:   #F5F5F5;
+}
+
+.setting-heading ul li{
+  font-size:20px;
+  margin-bottom: 20px;
+  color:gray;
+}
+
+
+
+.setting-left-heading{
+    width:270px;
+float:left;
+height:910px;
+background-color:   #F5F5F5;
+}
+
+
+
+.setting-left-heading p{
+font-weight: bold;
+padding-left: 10px;
+padding-top: 20px;
+}
+
+
+
+.setting-left-heading ul li{
+  font-size:20px;
+  margin-bottom: 20px;
+  color:gray;
+}
+
+
+
+
+.setting-wrapper{
+  margin-top: 40px;
+margin-bottom: 100px;
+  float:left;
+  margin-left:130px;
+}
+
+.customize-setting h2  {
+ margin-top: 30px;
+margin-left: -3px;
+ font-weight: normal;
+}
+ .customize-setting p{
+
+  margin-top: -10px;
+
+}
+
+.service-title{
+border:0;
+padding:10px;
+font-size:1.3em;
+font-family:Arial, sans-serif;
+border:solid 1px #ccc;
+margin:0 0 20px;
+width:600px;
+}
+
+.step-pane{
+  width:700px;
+  margin-left: 40px;
+}
+
+.wizard{
+   width:940px;
+}
+
+
+
+.fuelux .wizard .step-content {
+  background-color: white;
+}
+
+.profile_field{
+  height:100px;
+  width:600px;
+}
+
+
+
+
+.fa-chevron-left{
+  margin-right: 10px;
+}
+
+.fa-chevron-right{
+  margin-left: 10px;
+}
