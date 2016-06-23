@@ -26,7 +26,7 @@ helper_method :mailbox, :conversation
   end
 
   def after_sign_in_path_for(resource)
-   users_profile_path
+   users_path
   end
 
 
