@@ -7,3 +7,6 @@
 
 /*利用規約、ポリシー、特定商取引 のcss*/
 .policy-wrapper{margin-top:50px;margin-left:300px;border-radius:5px;background-color:#FFF}.policy-menu-heading,.signage-menu-heading{width:270px;float:left;background-color:#F5F5F5}.policy-menu-heading{height:2400px}.policy-menu-heading ul{margin-top:60px}.policy-menu-heading ul li{margin-top:20px}.signage-menu-heading{height:1000px}.signage-menu-heading ul{margin-top:60px}.signage-menu-heading ul li{margin-top:20px}.policy-contents{margin-top:80px;margin-left:30px;margin-right:50px;font-size:13px}.policy-contents ul li{list-style:none}.signage ul li{font-size:15px;margin-top:15px}
+
+/* 404, 505のエラーページ */
+.error-wrapper{height:300px;} .error-wrapper h1{font-weight: normal; margin-top:80px; margin-left: 130px;}
