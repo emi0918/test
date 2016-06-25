@@ -3,7 +3,9 @@ class ApplicationController < ActionController::Base
       http_basic_authenticate_with :name => "seekle", :password => "seekleforthetestuser"
   # protect_from_forgery with: :exception
  before_action :configure_permitted_parameters, if: :devise_controller?
-
+rescue_from ActiveRecord::RecordNotFound, with: :render_404
+rescue_from ActionController::RoutingError, with: :render_404
+rescue_from Exception, with: :render_500
    #rescue_from ActiveRecord::RecordNotFound,ActionController::RoutingError, with: :error404
    #rescue_from Exception, with: :render_500
 helper_method :mailbox, :conversation
@@ -15,6 +17,16 @@ helper_method :mailbox, :conversation
     # logger.error [e,*e.backtrace].join ("¥n")
      # render 'error500', status: 500, formats: [:html]
   # end
+
+def render_404
+  render template: 'errors/error_404', status: 404, layout: 'application', content_type: 'text/html'
+end
+
+def render500
+  render template: 'errors/error_500', status: 500, layout: 'application', content_type: 'text/html'
+end
+
+
 
     #protect_from_forgery
 
