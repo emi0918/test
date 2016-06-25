@@ -76,7 +76,7 @@ resources :users, only:[:index] do
 end
 end
 
-get '*path', controller: 'application', action: 'render_404'
+
 
 
 
@@ -94,4 +94,6 @@ get '*path', controller: 'application', action: 'render_404'
     end
   end
 
+
+get '*path', controller: 'application', action: 'render_404'
 end
