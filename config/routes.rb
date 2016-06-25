@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
    devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-
+resources :charges
 resources :notes do
   post '/posts/temp',   to: 'posts#create_temp',  as: :temp_post
 collection do
@@ -44,8 +44,6 @@ namespace :service_setting do
   get :price
 end
 
-
-
   namespace :company do
     get :index
     get :philosophy
@@ -73,11 +71,14 @@ end
 
 
 resources :users, only:[:index] do
-  member do
+ member do
     get :like_notes
+end
+end
 
-end
-end
+
+
+
  # mailbox folder routes
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
   get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
