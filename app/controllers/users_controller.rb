@@ -1,21 +1,18 @@
 class UsersController < ApplicationController
  include ApplicationHelper
-   before_action :authenticate_user!
+   before_action :authenticate_user!, only: [:show, :edit,:new,:create,:update, :destroy]
    before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
    @users= User.all
-   @notes = current_user.notes
-
-
-
+   @user = User.includes(:notes)
   end
-
 
   def show
    @notes = @user.notes
    @user = User.find_by(id: params[:id])
   end
+
 
 
   def new
@@ -25,8 +22,6 @@ class UsersController < ApplicationController
   def edit
    @user = User.find(params[:id])
   end
-
-
 
   def create
    @user = User.new(user_params)
@@ -39,9 +34,9 @@ class UsersController < ApplicationController
         redirect_to users_path
       else
        render :new
+
     end
   end
-
 
   def update
     file = params[:user][:profile_pic]
@@ -64,7 +59,6 @@ def like_notes
     @title = "いいね！一覧"
     render :index
   end
-
 
   private
 
@@ -104,12 +98,4 @@ private
 def set_user
       @user = User.includes(:note).where(user_name: params[:id]).first
     end
-
 end
-
-
-
-
-
-
-

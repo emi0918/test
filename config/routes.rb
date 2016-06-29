@@ -8,9 +8,8 @@ collection do
     get :search
   end
   member do
-    get :description
-    get :images
-    get :price
+
+    get :profile
   end
 end
 
@@ -95,5 +94,7 @@ end
   end
 
 
-get '*path', controller: 'application', action: 'render_404'
+
+  get '*path', to: 'application#error_404'
+
 end
