@@ -7,26 +7,22 @@
 
 
 
-
  <div class="provider_wrapper">
-
-
 
   <div class="provider-introduction">
 
   <% if @note.user.profile_pic? %>
-    <%= link_to image_tag(@note.user.profile_pic.url, :class => 'face_pic'), users_path(@user) %>
+    <%= link_to image_tag(@note.user.profile_pic.url, :class => 'face_pic'),  profile_note_path %>
 
      <% else %>
        <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
      <% end %>
 
          <h1>  <%= @note.title %></h1>
-          提供者：<%= @note.user.user_name %><br />
+          提供者：<%= link_to @note.user.user_name, profile_note_path %><br />
           エリア：<%= @note.user.area %><br />
           サービスカテゴリー： <%= @note.category %>
   </div>
-
 
  <div class="service_explain">
    <h2>このサービスについて</h2>
@@ -36,14 +32,12 @@
  </div>
 
 
-
   <div class="rulesfromprovider">
      <h2>プロバイダーからのお願い</h2>
        <ul>
          <%= @note.rule %>
        </ul>
   </div>
-
   <div class="reviews_providers">
      <h2>レビュー (2)</h2>
   </div>
@@ -60,9 +54,13 @@
                <%= link_to "このサービスを依頼", "/charges/new" %>
           </small>
     </div>
+
   </div>
+        <p> <%= link_to "メッセージを送る", new_conversation_path %></p>
 </div>
 
   </div>
+
+
 
 

@@ -1,5 +1,6 @@
 class NotesController < ApplicationController
-  before_action :correct_user,   only: :destroy
+   before_action :correct_user, only: [:edit, :update]
+     before_action :set_note, only: [:show, :edit, :update, :destroy, :profile]
 include ApplicationHelper
 
 
@@ -8,7 +9,7 @@ include ApplicationHelper
   def index
 
     @notes = current_user.notes.all
-       @notes = Note.includes(:user).page(params[:page]).per(3).order(:id)
+
   end
 
   # GET /notes/1
@@ -23,6 +24,12 @@ include ApplicationHelper
    @notes = Note.includes(:user).page(params[:page]).per(6).order(:id)
   end
 
+ def profile
+
+    @notes = current_user.notes.all
+
+ end
+
   # GET /notes/ne
 
   def new
@@ -34,6 +41,8 @@ include ApplicationHelper
     @note = Note.find(params[:id])
     correct_user
   end
+
+
 
 
   # POST /notes
@@ -52,8 +61,6 @@ include ApplicationHelper
       end
     end
 
-
-
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
@@ -67,13 +74,14 @@ include ApplicationHelper
       end
     end
 
-
-
   # DELETE /notes/1
   # DELETE /notes/1.json
 
-
-
+  def destroy
+    @note = Note.find(params[:id])
+    @note.destroy
+    redirect_to root_url
+  end
 
 
 
@@ -83,7 +91,7 @@ end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
-        @note = current_user.notes.find(params[:id])
+         @note = Note.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -100,11 +108,6 @@ end
       redirect_to root_path if @note.nill?
     end
 end
-
-
-
-
-
 
 
 
