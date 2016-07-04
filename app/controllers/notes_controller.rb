@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
    before_action :correct_user, only: [:edit, :update]
      before_action :set_note, only: [:show, :edit, :update, :destroy, :profile]
+       before_action :authenticate_user!, only:[:profile]
 include ApplicationHelper
 
 
@@ -9,7 +10,7 @@ include ApplicationHelper
   def index
 
     @notes = current_user.notes.all
-
+  
   end
 
   # GET /notes/1
