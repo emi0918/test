@@ -10,7 +10,7 @@ include ApplicationHelper
   def index
 
     @notes = current_user.notes.all
-  
+  @notes = Note.includes(:user).page(params[:page]).per(3).order(:id)
   end
 
   # GET /notes/1
@@ -21,14 +21,12 @@ include ApplicationHelper
   end
 
   def search
-
    @notes = Note.includes(:user).page(params[:page]).per(6).order(:id)
+
   end
 
  def profile
-
     @notes = current_user.notes.all
-
  end
 
   # GET /notes/ne
@@ -42,7 +40,6 @@ include ApplicationHelper
     @note = Note.find(params[:id])
     correct_user
   end
-
 
 
 
@@ -109,7 +106,6 @@ end
       redirect_to root_path if @note.nill?
     end
 end
-
 
 
 
