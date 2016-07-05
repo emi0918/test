@@ -83,7 +83,6 @@ include ApplicationHelper
 
 
 
-
 end
 
   private
@@ -106,9 +105,4 @@ end
       redirect_to root_path if @note.nill?
     end
 end
-
-
-
-
-
 
