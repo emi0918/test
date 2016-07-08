@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
 
 
+devise_for :users
+
+
+resources :users, only:[:index] 
+
+
 devise_for :providers, controllers: {
   sessions:      'providers/sessions',
   passwords:     'providers/passwords',
@@ -9,20 +15,7 @@ devise_for :providers, controllers: {
 }
 
 
-resources :providers, only:[:index,:show,:edit,:update] do
- member do
-    get :like_notes
-end
-end
-
-devise_for :users
-
-
-resources :users, only:[:index] do
- member do
-    get :like_notes
-end
-end
+resources :providers, only:[:index,:show,:edit,:update] 
 
 
 resources :charges
@@ -33,7 +26,6 @@ collection do
     get :search
   end
   member do
-
     get :profile
   end
 end
