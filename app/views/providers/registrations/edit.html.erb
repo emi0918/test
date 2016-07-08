@@ -1,0 +1,84 @@
+<div class="up-var">
+  <div class="upper-menu">
+    <div class="wrapper" >
+      <ul>
+        <li><a href='/providers'>マイページ</a></li>
+        <li><a href='/mailbox/inbox'>メッセージ</a></li>
+        <li><%= link_to '掲載中', notes_path %></li>
+        <li><a href='/dashboard/transaction'>取引履歴</a></li>
+        <li><a href='/providers/edit'>基本情報</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="providers_signup">
+
+<h2>店舗の基本情報を編集する</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+ 
+ <div class="field">
+    <h3>営業時間</h3>
+    <%= f.text_field  :hours, autofocus: true %>
+  </div>
+
+  
+ <div class="field">
+    <h3>店舗概要</h3>
+    <%= f.text_area  :about, autofocus: true %>
+  </div>
+
+
+   <div class="field">
+    <h3>定休日</h3>
+    <%= f.text_field  :holiday, autofocus: true %>
+  </div>
+
+  <h2>店舗の基本情報を編集する</h2>
+
+
+   <div class="field">
+    <h3>住所</h3>
+    <%= f.text_field  :address, autofocus: true %>
+  </div>
+
+    <div class="field">
+    <h3>お支払い方法</h3>
+    <%= f.text_field  :payment, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <h3>電話番号</h3>
+    <%= f.text_field  :phonenumber, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <h3>メールアドレス</h3>
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <h3>パスワード  (基本情報をを変更するには現在のパスワードが必要です)</h3>
+    <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "編集を更新する",  :class => 'provider_join_btn'%>
+  </div>
+<% end %>
+
+<h3>アカウントを削除する</h3>
+
+<p>Unhappy? <%= button_to "退会する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete,  :class => 'provider_delete_btn' %></p>
+
+<%= link_to "Back", :back %>
+
+</div>
+
