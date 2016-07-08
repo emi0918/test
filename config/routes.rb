@@ -1,20 +1,14 @@
 Rails.application.routes.draw do
 
-
+  root'home#index'
 
 devise_for :users
-
-
 resources :users, only:[:index] 
-
-
 devise_for :providers, controllers: {
   sessions:      'providers/sessions',
   passwords:     'providers/passwords',
   registrations: 'providers/registrations'
 }
-
-
 resources :providers, only:[:index,:show,:edit,:update] 
 
 
@@ -41,7 +35,7 @@ get 'pay' => 'api#pay'
 
   resources :notes_steps
 
-  root'home#index'
+
 
 namespace :home do
   get :pro
