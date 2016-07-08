@@ -4,11 +4,17 @@ Rails.application.routes.draw do
 
 devise_for :users
 resources :users, only:[:index] 
-devise_for :providers, controllers: {
-  sessions:      'providers/sessions',
-  passwords:     'providers/passwords',
-  registrations: 'providers/registrations'
+
+devise_for :providers, :controllers => {
+  :sessions   =>    'providers/sessions',
+  :passwords   =>   'providers/passwords',
+  :registrations => 'providers/registrations'
 }
+
+
+
+
+
 resources :providers, only:[:index,:show,:edit,:update] 
 
 
