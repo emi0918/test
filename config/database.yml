@@ -11,7 +11,7 @@ default: &default
   encoding: utf8
   username: root
   password: Ggc0918me
-  socket: /var/lib/mysql/mysql.sock
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
