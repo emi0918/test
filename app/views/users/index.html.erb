@@ -6,7 +6,6 @@
     <div class="wrapper" >
       <ul>
         <li><a href='/users'>マイページ</a></li>
-        <li><%= link_to '掲載中', notes_path %></li>
         <li><a href='/dashboard/transaction'>取引履歴</a></li>
         <li><a href='/users/edit'>設定</a></li>
         <li><a href='/mailbox/inbox'>メッセージ
@@ -16,6 +15,7 @@
     </div>
   </div>
 </div>
+
 
 
 
@@ -31,6 +31,9 @@
 
    <p class="rates">レビュー 1000件 ★★★★★</p>
 
+
+<div class="provider-contents">
+
  <div class="left-wrapper">
  <% if current_user.profile_pic? %>
     <%= image_tag current_user.profile_pic.url, :class => 'mypage-picture'%>
@@ -45,19 +48,30 @@
   <table class="sample_03">
    <tbody>
     <tr>
-     <th>所在地：</th>
-      <td><%= current_user.area %></td>
-    </tr>
+    
     <tr>
      <th>営業時間：</th>
       <td><%= current_user.area %></td>
     </tr>
+
      <tr>
      <th>定休日：</th>
-      <td> <%= current_user.area %>　</td>
+      <td> <%= current_user.area %></td>
     </tr>
+
+    <tr>
+    <th>所在地：</th>
+      <td><%= current_user.area %></td>
+    </tr>
+    
+    <tr>
+    <th>お支払い：</th>
+      <td><%= current_user.area %></td>
+    </tr>
+   
   </tbody>
 </table>
+
 
 
 
@@ -74,4 +88,4 @@
 
 </div>
   </div>
-
+  </div>

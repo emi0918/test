@@ -1,7 +1,32 @@
 Rails.application.routes.draw do
 
-   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
+
+devise_for :providers, controllers: {
+  sessions:      'providers/sessions',
+  passwords:     'providers/passwords',
+  registrations: 'providers/registrations'
+}
+
+
+resources :providers, only:[:index,:show,:edit,:update] do
+ member do
+    get :like_notes
+end
+end
+
+devise_for :users
+
+
+resources :users, only:[:index] do
+ member do
+    get :like_notes
+end
+end
+
+
 resources :charges
+
 resources :notes do
   post '/posts/temp',   to: 'posts#create_temp',  as: :temp_post
 collection do
@@ -57,8 +82,9 @@ end
     get :others
     get :move
     get :provider
-
   end
+
+
   namespace :dashboard do
     get :index
     get :listing
@@ -67,13 +93,6 @@ end
     get :messages
     get :transaction
   end
-
-
-resources :users, only:[:index] do
- member do
-    get :like_notes
-end
-end
 
 
 
@@ -98,3 +117,5 @@ end
   get '*path', to: 'application#error_404'
 
 end
+
+

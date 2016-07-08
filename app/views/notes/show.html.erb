@@ -44,7 +44,9 @@
  <div class="service_explain">
    <h2>このサービスについて</h2>
    <ul>
-    <%= @note.content %>
+   
+<p><%= simple_format(@note.content) %></p>
+
   </ul>
  </div>
 
@@ -52,7 +54,7 @@
   <div class="rulesfromprovider">
      <h2>プロバイダーからのお願い</h2>
        <ul>
-         <%= @note.rule %>
+        <p> <%= simple_format(@note.rule) %></p>
        </ul>
   </div>
   <div class="reviews_providers">
