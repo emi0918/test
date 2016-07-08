@@ -1,8 +1,19 @@
-.logo a,a,a:hover,header{text-decoration:none}html{overflow:auto}body{overflow:hidden;position:relative;margin:0}li,ul{list-style-type:none;margin:0}a{color:gray}a:hover{color:#1b7ccd}.main_content{padding-top:57px;margin:0 auto}h1{font-size:32px;letter-spacing:-2px;margin-bottom:30px;}.logo a,h2{letter-spacing:-1px}h2{font-size:20px}p{font-size:16px;line-height:40px}header{height:57px;width:100%;margin:0 110px;position:absolute;top:0;z-index:10;padding:1px;cursor:pointer}.logo{height:70px;width:16%}.logo a{float:left;font-size:30px;padding:12px 50px;margin-left:-40px;font-weight:700}
+
+
+.logo a,a,a:hover,header{text-decoration:none}html{overflow:auto}body{overflow:hidden;position:relative;margin:0}li,ul{list-style-type:none;margin:0}a{color:gray}a:hover{color:#1b7ccd}.main_content{padding-top:57px;margin:0 auto}h1{font-size:32px;letter-spacing:-2px;margin-bottom:30px;}.logo a,h2{letter-spacing:-1px}h2{font-size:20px}p{font-size:16px;line-height:40px}header{height:57px;width:100%;margin:0 120px;position:absolute;top:0;z-index:10;padding:1px;cursor:pointer}.logo{height:70px;width:16%;}.logo a{float:left;font-size:30px;padding:12px 50px;font-weight:700}
 .logo a:hover {
 
 text-decoration:none;
 }
+
+
+.logo_2 a,h2{letter-spacing:-1px}.logo_2{height:70px;width:16%; margin-left: 120px;}.logo_2 a{float:left;font-size:30px;padding:12px 50px;font-weight:700}
+
+.provider-header{text-decoration:none}.provider-header{height:69.6px;width:100%; background-color:#6495ED; position:absolute;top:0;z-index:10;padding:1px;cursor:pointer}
+
+
+
+
 
 @media screen and  ( max-width:640px )
 {
@@ -99,7 +110,7 @@ text-decoration:none;
 
 border-top: 1px solid rgb(238, 238, 238);
     clear: both;
-    height: 260px;
+    height: 250px;
     width: 100%;
     text-align: center;
     padding-top: 20px;
@@ -116,11 +127,9 @@ border-top: 1px solid rgb(238, 238, 238);
     list-style: none;
     margin: 14px 60px;
     font-size:15px;
+    text-align: left;
 }
-.footer p {
-    color: rgb(179, 174, 181);
-    font-size: 12px;
-}
+
 .col-sm-3 ul li:hover{
   color:  #D3D3D3;
 }
@@ -142,10 +151,15 @@ border-top: 1px solid rgb(238, 238, 238);
 }
 
 
-
 .column-menu a{cursor:pointer;color:#fff}.column-menu ul{color:#fff}.column-menu ul li a:hover,.column-menu ul li:hover{color:rgba(255,255,255,.5)}.column-menu li{display:inline-block;margin:10px}.column-menu ul li a:hover{text-decoration:none}
 
-#social-icon i,#social-icon i:before{line-height:50px}#social-icon i,.actions p,.copy-right,.dropmenu li{text-align:center}.dropmenu li a,.widget-details li a{text-decoration:none}.widget-menu{cursor:pointer}.widget-menu a{color:#F5F5F5}.widget-menu a:hover{color:#D3D3D3}.widget-menu li{display:inline-block;margin:10px}.copy-right{width:100%;clear:both;margin-top:12.5px;color:#82888a;font-size:12px;padding-bottom:9px}#social-icon a{display:block;float:left;margin:80px 5px 5px 0;padding:0;color:#fff}.field,.name_field{margin-bottom:29px}#social-icon i{width:50px;height:50px}#social-icon .fa-twitter{background:#00a1e9}#social-icon .fa-facebook{background:#3b5998}#social-icon .fa-instagram{background:#9b6954}#social-icon .fa-pinterest{background:#fb3958}.field input{font-size:19px}.name_field input{width:340px;font-size:20px;padding:7px}.name_field{margin-top:29px}#user_remember_me{width:0}.content_in_user{margin-left:460px;width:303px;padding-top:53px;padding-bottom:90px}.content_in_user a{color:#483D8B}.log_button{border-radius:5px;width:333px;font-size:15px;color:#fff;padding-top:15px;padding-bottom:15px}#face{background-color:#3b5998}#face:hover{background-color:#6495ED}#login,#sign{background-color:coral;margin-top:10px;margin-bottom:0}#login:hover,#sign:hover{background-color:#FFA07A}.actions p{height:20px;margin-top:0}#user_email:focus,#user_password:focus,#user_password_confirmation:focus{outline:0}#user_email,#user_password,#user_password_confirmation,#user_パスワード確認{border:1px solid gray;border-radius:2px;width:333px;padding-top:10px}#pass_for{float:right}hr{margin:10px 0 0;width:100%}#sign{margin-bottom:18px}.dropmenu{width:960px;margin:auto}.dropmenu:after,.dropmenu:before{content:"";display:table}.dropmenu:after{clear:both}.dropmenu li{position:relative;width:20%;float:left}.dropmenu li a{display:block;padding:15px 0 11px;color:#000;font-size:16px}
+.widget-title{margin-left:57px;text-align:left;}
+#social-icon i,#social-icon i:before{line-height:50px}#social-icon i,.actions p,.copy-right,.dropmenu li{text-align:center}.dropmenu li a,.widget-details li a{text-decoration:none}  .dropmenu li a:hover{font-size: 20px;} 
+
+
+.widget-menu{cursor:pointer}.widget-menu a{color:#F5F5F5}.widget-menu a:hover{color:#D3D3D3}.widget-menu li{display:inline-block;margin:10px}.copy-right{width:100%;clear:both;margin-top:12.5px;color:#82888a;font-size:12px;padding-bottom:9px}#social-icon a{display:block;float:left;margin:80px 5px 5px 0;padding:0;color:#fff}.field,.name_field{margin-bottom:29px}#social-icon i{width:50px;height:50px}#social-icon .fa-twitter{background:#00a1e9}#social-icon .fa-facebook{background:#3b5998}#social-icon .fa-instagram{background:#9b6954}#social-icon .fa-pinterest{background:#fb3958}.field input{font-size:19px}.name_field input{width:340px;font-size:20px;padding:7px}.name_field{margin-top:29px}#user_remember_me{width:0}.content_in_user{margin-left:460px;width:303px;padding-top:53px;padding-bottom:90px}.content_in_user a{color:#483D8B}.log_button{border-radius:5px;width:333px;font-size:15px;color:#fff;padding-top:15px;padding-bottom:15px}#face{background-color:#3b5998}#face:hover{background-color:#6495ED}#login,#sign{background-color:coral;margin-top:10px;margin-bottom:0}#login:hover,#sign:hover{background-color:#FFA07A}.actions p{height:20px;margin-top:0}#user_email:focus,#user_password:focus,#user_password_confirmation:focus{outline:0}#user_email,#user_password,#user_password_confirmation,#user_パスワード確認{border:1px solid gray;border-radius:2px;width:333px;padding-top:10px}#pass_for{float:right}hr{margin:10px 0 0;width:100%}#sign{margin-bottom:18px}.dropmenu{width:960px;margin:auto}.dropmenu:after,.dropmenu:before{content:"";display:table}.dropmenu:after{clear:both}.dropmenu li{position:relative;width:20%;float:left}.dropmenu li a{display:block;padding:15px 0 11px;color:#000;font-size:16px}
+
 
 /*ログインしました報告*/
+
 

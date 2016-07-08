@@ -38,13 +38,11 @@
              <li>よくある質問</li>
 
            </ul>
-
          </div>
     </div>
 
-
   <div class="show_providers clearfix">
-    
+    <p><%= Note.count %>件のサービスが見つかりました</p>
        <ul>
        <% @notes.each do |note| %>
       <div class="provider_job ">
@@ -60,20 +58,18 @@
             </div>
           <% end %>
         </ul>
-      <div class="bootstrap">
+       
+<div class="bootstrap">
        <div class="list-number-2 clearfix">
          <%= paginate(@notes) %>
       
       </div>
      </div>
     </div>
+
   </div>
+
 </div>
-
-
-
-
-
 
 
 

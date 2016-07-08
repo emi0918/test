@@ -1,6 +1,6 @@
 class MailboxController < ApplicationController
   before_action :authenticate_user!
-
+layout "providers_layout"
   def inbox
     @inbox = mailbox.inbox
     @active = :inbox
@@ -11,9 +11,6 @@ class MailboxController < ApplicationController
     @active = :sent
   end
 
-  def trash
-    @trash = mailbox.trash
-    @active = :trash
-  end
+
 end
 
