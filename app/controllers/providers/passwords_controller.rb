@@ -1,5 +1,5 @@
 class Providers::PasswordsController < Devise::PasswordsController
-
+layout "providers_layout"
   # GET /resource/password/new
   # def new
   #   super
