@@ -1,9 +1,8 @@
 class Providers::RegistrationsController < Devise::RegistrationsController
 # before_action :configure_sign_up_params, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
-
+ before_action :authenticate_provider!
 layout "providers_layout"
-
   def show
    @provider = Provider.find_by(id: params[:id])
   end
@@ -19,7 +18,7 @@ def create
   @provider = Provider.new(provider_params)
   if @provider.save
     # @userはuser_path(@user) に自動変換される
-    redirect_to providers_path 
+    redirect_to providers_main_path 
   else
     # ValidationエラーなどでDBに保存できない場合 new.html.erb を再表示
     render 'new'
@@ -48,7 +47,7 @@ end
   # def new
   #   super
   # end
-
+  
   # POST /resource
   # def create
   #   super
@@ -90,3 +89,5 @@ end
   #   super(resource)
   # end
 end
+
+
