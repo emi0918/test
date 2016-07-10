@@ -1,6 +1,8 @@
 class Providers::SessionsController < Devise::SessionsController
 # before_action :configure_sign_in_params, only: [:create]
+ before_action :authenticate_provider!
 layout "providers_layout"
+
   # GET /resource/sign_in
   # def new
   #   super
