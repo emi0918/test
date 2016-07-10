@@ -11,8 +11,8 @@
 
   <div class="provider-introduction">
   <h1>  <%= @note.title %></h1>
-  <% if @note.user.profile_pic? %>
-    <%= link_to image_tag(@note.user.profile_pic.url, :class => 'face_pic'),  profile_note_path %>
+  <% if @note.provider.provider_pic? %>
+    <%= link_to image_tag(@note.provider.provider_pic.url, :class => 'face_pic'),  profile_note_path %>
 
      <% else %>
        <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
@@ -22,11 +22,11 @@
    <tbody>
     <tr>
      <th>提供者：</th>
-      <td><%= link_to @note.user.user_name, profile_note_path %></td>
+      <td><%= link_to @note.provider.storename, profile_note_path %></td>
     </tr>
     <tr>
      <th>エリア：</th>
-      <td><%= @note.user.area %></td>
+      <td><%= @note.provider.address %></td>
     </tr>
      <tr>
      <th>カテゴリー：</th>
