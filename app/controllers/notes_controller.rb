@@ -2,26 +2,27 @@ class NotesController < ApplicationController
    before_action :correct_user, only: [:edit, :update]
      before_action :set_note, only: [:show, :edit, :update, :destroy, :profile]
        before_action :authenticate_user!, only:[:profile]
+       before_action :authenticate_provider!, only:[:index, :new, :edit, :create]
 include ApplicationHelper
 
 
   # GET /notes
   # GET /notes.json
   def index
-
-    @notes = current_user.notes.all
-  @notes = Note.includes(:user).page(params[:page]).per(3).order(:id)
+    @notes = current_provider.notes.all
+  @notes = Note.includes(:provider).page(params[:page]).per(3).order(:id)
+   render :layout => 'providers_layout.html'
   end
 
   # GET /notes/1
   # GET /notes/1.json
   def show
-   @notes = Note.includes(:users).all
+   @notes = Note.includes(:provider).all
    @note = Note.find(params[:id])
   end
 
   def search
-   @notes = Note.includes(:user).page(params[:page]).per(6).order(:id)
+   @notes = Note.includes(:provider).page(params[:page]).per(6).order(:id)
 
   end
 
@@ -33,24 +34,25 @@ include ApplicationHelper
 
   def new
    @note = Note.new
+    render :layout => 'providers_layout.html'
   end
 
   # GET /notes/1/sedit
   def edit
     @note = Note.find(params[:id])
-    correct_user
-  end
 
+  end
 
 
   # POST /notes
   # POST /notes.json
     def create
-    @note = current_user.notes.build(note_params)
+
+    @note = current_provider.notes.build(note_params)
 
      file=params[:note][:image_1]
     @note.set_image_1(file)
-    @note.user_id = current_user.id
+   
    if @note.save
        redirect_to @note
 #redirect_to @note で作成されたものが表示される
@@ -62,7 +64,7 @@ include ApplicationHelper
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
-    correct_user
+
         @note = Note.find(params[:id])
 
       if @note.update(note_params)
@@ -82,7 +84,6 @@ include ApplicationHelper
   end
 
 
-
 end
 
   private
@@ -93,16 +94,14 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:user_id)
+      params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:provider_id)
     end
        def user_params
       params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
     end
 
-   def correct_user
-    note = Note.find(params[:id])
-    if !current_user?(note.user)
-      redirect_to root_path if @note.nill?
-    end
-end
+
+
+ 
+
 
