@@ -1,6 +1,8 @@
 class MailboxController < ApplicationController
   before_action :authenticate_user!
-layout "providers_layout"
+
+  layout "providers_layout"
+
   def inbox
     @inbox = mailbox.inbox
     @active = :inbox
@@ -13,4 +15,5 @@ layout "providers_layout"
 
 
 end
+
 
