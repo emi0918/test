@@ -1,6 +1,6 @@
 class ProvidersController < ApplicationController
  before_action :set_provider, only:[:index,:show,:edit,:update, :destroy]
-
+ before_action :authenticate_provider!
 # before_action :configure_sign_up_params, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
 layout "providers_layout"
@@ -8,13 +8,20 @@ layout "providers_layout"
 
  def index
  	@providers= Provider.all
+  @provider = Provider.includes(:notes)
+end
+
+def main
 end
 
 
 
 
-  private
 
+
+
+
+  private
 
   def set_provider
     current_provider  # (1)
@@ -28,13 +35,13 @@ end
       @provider = @current_provider # (5)
     end
   end
-
-
+  
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
     def provider_params
       params.require(:provider).permit(:storename, :email,:phonenumber, :address, :hours, :holiday, :payment, :password,:about, :provider)
     end
+
 
 
   # GET /resource/sign_up
