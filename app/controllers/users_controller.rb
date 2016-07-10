@@ -13,8 +13,6 @@ class UsersController < ApplicationController
    @user = User.find_by(id: params[:id])
   end
 
-
-
   def new
    @user = User.new
   end
@@ -99,3 +97,5 @@ def set_user
       @user = User.includes(:note).where(user_name: params[:id]).first
     end
 end
+
+
