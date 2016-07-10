@@ -1,4 +1,5 @@
 class Providers::ConfirmationsController < Devise::ConfirmationsController
+   before_action :authenticate_provider!
 layout "providers_layout"
   # GET /resource/confirmation/new
   # def new
