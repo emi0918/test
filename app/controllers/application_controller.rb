@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 
-      http_basic_authenticate_with :name => "seekle", :password => "seekleforthetestuser"
+  http_basic_authenticate_with :name => "seekle", :password => "seekleforthetestuser"
+
   # protect_from_forgery with: :exception
  before_action :configure_permitted_parameters, if: :devise_controller?
  before_filter :setup
@@ -29,7 +30,7 @@ def after_sign_in_path_for(resources)
    when User
     users_path
    when Provider
-     providers_path
+     providers_main_path
   end
   end
 
