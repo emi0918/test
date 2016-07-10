@@ -1,20 +1,17 @@
-
-
 <div class="up-var">
- <div class="upper-menu">
+  <div class="upper-menu">
     <div class="wrapper" >
-    <ul>
-     <li><a href='/users/index'>マイページ</a></li>
-     <li><%= link_to '掲載中', notes_path %></li>
-     <li><a href='/dashboard/transaction'>取引方法</a></li>
-     <li><a href='/users/edit'>設定</a></li>
-     <li><a href='/mailbox/inbox'>メッセージ
-<div class="bootstrap">
- <span class="label label-danger pull-right"><%=unread_messages_count%></span></div></a></li>
-    </ul>
+      <ul>
+        <li><a href='/providers/main'>マイページ</a></li>
+        <li><a href='#'>メッセージ</a></li>
+        <li><%= link_to '掲載中', notes_path %></li>
+        <li><a href='/dashboard/transaction'>取引履歴</a></li>
+        <li><a href='/providers'>基本情報</a></li>
+      </ul>
     </div>
   </div>
-  </div>
+</div>
+
 
 
 
@@ -27,3 +24,6 @@
 <%= render partial: 'mailbox/folder_view', locals: { is_conversation: false, messages: @inbox } %>
   </div>
   </div></div></div>
+
+
+
