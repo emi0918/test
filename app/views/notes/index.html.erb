@@ -1,48 +1,49 @@
-
-
 <div class="up-var">
- <div class="upper-menu">
+  <div class="upper-menu">
     <div class="wrapper" >
-    <ul>
-     <li><a href='/users'>マイページ</a></li>
-     <li><%= link_to '掲載中', notes_path %></li>
-     <li><a href='/dashboard/transaction'>取引履歴</a></li>
-     <li><a href='/users/edit'>設定</a></li>
-     <li><a href='/conversations/new'>メッセージ</a></li>
-    </ul>
+      <ul>
+        <li><a href='/providers/main'>マイページ</a></li>
+        <li><a href='/mailbox/inbox'>メッセージ</a></li>
+        <li><a href='#'>掲載中</a></li>
+        <li><a href='/dashboard/transaction'>取引履歴</a></li>
+        <li><a href='/providers'>基本情報</a></li>
+      </ul>
     </div>
   </div>
-  </div>
+</div>
 
 
  <div class="listing-wrapper">
- <div class="provider-listings">
+  <div class="provider-listings">
   <div class="provider-listings-heading">
     <h2>あなたのサービス</h2>
   </div>
 
-
 <div class="bootstrap">
 
-    <% @notes.each do |note|  %>
-    <% if note.user==current_user %>
- <ul>
-
-    <li> <div class="panel panel-default">
-       <div class="panel-heading">
-        <%= link_to note.title, note_path(note) %>
-       </div>
-          <div class="panel-body-list">
+   <ul>
+ <% @notes.each do |note|  %>
+      <li> 
+       <div class="panel panel-default">
+         <div class="panel-heading">
+          <%= link_to note.title, note_path(note) %>
+         </div>
+           <div class="panel-body-list">
              <%= image_tag "/note_images/#{note.image_1}" ,class: "service_image"%>
              <%= link_to '編集する', edit_note_path(note) %>
-                     <%= note.likes.count %>人からキープされています。
-          </div>
-      </div>
-    </li>
-</ul>
+             <%= note.likes.count %>人からキープされています。
+           </div>
+         </div>
+      </li>
+   
 
      <% end %>
-     <% end %>
+
+
+
+     </ul>
+     
+
 
 </div>
 
@@ -52,7 +53,5 @@
 <div class="bootstrap">
        <div class="list-number-2 clearfix">
          <%= paginate(@notes) %>
-      
       </div>
      </div>
-

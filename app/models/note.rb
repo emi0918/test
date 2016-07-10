@@ -1,7 +1,6 @@
 class Note < ActiveRecord::Base
-	belongs_to  :user
 	belongs_to :provider
-	belongs_to :service_provider
+belongs_to :user
 		has_many :likes, dependent: :destroy
 has_many :liking_users, through: :likes, source: :user
 
@@ -13,7 +12,6 @@ has_many :liking_users, through: :likes, source: :user
   validates :content, presence: true
   validates :price, presence: true
   validates :rule, presence: false
-  validates :user_id, presence: true
 
 	def set_image_1(file)
 		 if !file.nil?
