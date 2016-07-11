@@ -3,7 +3,7 @@
 .logo a,a,a:hover,header{text-decoration:none}html{overflow:auto}body{overflow:hidden;position:relative;margin:0}li,ul{list-style-type:none;margin:0}a{color:gray}a:hover{color:#1b7ccd}.main_content{padding-top:57px;margin:0 auto}h1{font-size:32px;letter-spacing:-2px;margin-bottom:30px;}.logo a,h2{letter-spacing:-1px}h2{font-size:20px}p{font-size:16px;line-height:40px}header{height:57px;width:100%;margin:0 120px;position:absolute;top:0;z-index:10;padding:1px;cursor:pointer}.logo{height:70px;width:16%;}.logo a{float:left;font-size:30px;padding:12px 50px;font-weight:700}
 .logo a:hover {
 
-text-decoration:none;
+  text-decoration:none;
 }
 
 
@@ -41,11 +41,11 @@ text-decoration:none;
 .header-right a {
   color: gray;
   display: block;
- text-decoration:none;
+  text-decoration:none;
 }
 .header-right a:hover{
   color:  #DCDCDC;
-text-decoration:none;
+  text-decoration:none;
 }
 
 .header-right li {
@@ -63,7 +63,7 @@ text-decoration:none;
   .header-right a{
     font-size: 10px ;
     margin-top:-60px;
-<<<<<<< HEAD
+    <<<<<<< HEAD
     float:right;
   }
 
@@ -75,7 +75,7 @@ text-decoration:none;
 
 
 @media screen and (min-device-width:320px)
-              and (max-device-width:568px)
+and (max-device-width:568px)
 {
   .header-right a{
     font-size: 10px ;
@@ -87,11 +87,11 @@ text-decoration:none;
   }
 }
 
-  }
+}
 
-  .header-right li{
-    padding-right: 50px;
-  }
+.header-right li{
+  padding-right: 50px;
+}
 }
 
 
@@ -102,32 +102,32 @@ text-decoration:none;
 
 .footer {
   position: absolute;
-    padding-top: 0px;
+  padding-top: 0px;
 }
 
 
 .footer-top {
 
-border-top: 1px solid rgb(238, 238, 238);
-    clear: both;
-    height: 250px;
-    width: 100%;
-    text-align: center;
-    padding-top: 20px;
-    margin: auto;
+  border-top: 1px solid rgb(238, 238, 238);
+  clear: both;
+  height: 250px;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  margin: auto;
 }
 
 
 .col-sm-3 {
-    float: left;
-    cursor: pointer;
-    transition: all 0.5s;
+  float: left;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 .col-sm-3 ul li {
-    list-style: none;
-    margin: 14px 60px;
-    font-size:15px;
-    text-align: left;
+  list-style: none;
+  margin: 14px 60px;
+  font-size:15px;
+  text-align: left;
 }
 
 .col-sm-3 ul li:hover{
@@ -135,18 +135,18 @@ border-top: 1px solid rgb(238, 238, 238);
 }
 
 .col-sm-4{
-    float: left;
-    cursor: pointer;
+  float: left;
+  cursor: pointer;
 
-    margin-left: 100px;
+  margin-left: 100px;
 }
 
 
 .footer-bottom {
   height:42px;
-    background-color: rgba(34, 49, 52, 0.901961);
-    font-size: 0.8125em;
-    padding: 5px 0px;
+  background-color: rgba(34, 49, 52, 0.901961);
+  font-size: 0.8125em;
+  padding: 5px 0px;
 
 }
 
