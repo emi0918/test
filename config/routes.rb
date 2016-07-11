@@ -1,21 +1,21 @@
 Rails.application.routes.draw do
 
+  root'home#index'
 
 devise_for :users
-
 resources :users, only:[:index] 
 
-devise_for :providers, controllers: {
-  sessions:      'providers/sessions',
-  passwords:     'providers/passwords',
-  registrations: 'providers/registrations'
+devise_for :providers, :controllers => {
+  :sessions   =>    'providers/sessions',
+  :passwords   =>   'providers/passwords',
+  :registrations => 'providers/registrations'
 }
 
-resources :providers, only:[:index,:edit,:update] 
 
-namespace :providers do
-  get :main
-end
+
+
+
+resources :providers, only:[:index,:show,:edit,:update] 
 
 
 resources :charges
@@ -31,14 +31,17 @@ collection do
 end
 
     get '/notes/search/:show_id' => "notes#search"
-    get 'pay' => 'api#pay'
+
+
+get 'pay' => 'api#pay'
+
 
   post '/like/:note_id' => 'likes#like', as: 'like'
   delete '/unlike/:note_id' => 'likes#unlike', as: 'unlike'
 
   resources :notes_steps
 
-  root'home#index'
+
 
 namespace :home do
   get :pro
@@ -73,6 +76,7 @@ end
     get :provider
   end
 
+
   namespace :dashboard do
     get :index
     get :listing
@@ -81,6 +85,10 @@ end
     get :messages
     get :transaction
   end
+
+
+
+
 
  # mailbox folder routes
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
@@ -95,6 +103,7 @@ end
       post :untrash
     end
   end
+
 
 
   get '*path', to: 'application#error_404'
