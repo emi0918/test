@@ -27,7 +27,7 @@ include ApplicationHelper
   end
 
  def profile
-    @notes = current_user.notes.all
+   @notes = Note.includes(:provider).all
  end
 
   # GET /notes/ne
@@ -78,13 +78,12 @@ include ApplicationHelper
   # DELETE /notes/1.json
 
   def destroy
-    @note = Note.find(params[:id])
     @note.destroy
     redirect_to root_url
   end
 
 
-end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -99,6 +98,11 @@ end
        def user_params
       params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
     end
+end
+
+ 
+
+
 
 
 
