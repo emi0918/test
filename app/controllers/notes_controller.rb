@@ -23,7 +23,6 @@ class NotesController < ApplicationController
  def search
    @notes = Note.includes(:provider).page(params[:page]).per(6).order(:id)
  end
-
  def profile
    @notes = Note.includes(:provider).all
  end
@@ -95,8 +94,4 @@ end
       params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
     end
   end
-
-
-
-
 

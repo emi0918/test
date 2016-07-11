@@ -50,6 +50,3 @@ class ConversationsController < ApplicationController
 end
 
 
-
-
-
