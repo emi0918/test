@@ -1,5 +1,6 @@
 class ConversationsController < ApplicationController
   before_action :authenticate_user!
+
    layout "providers_layout"
   
   def new
@@ -50,6 +51,6 @@ class ConversationsController < ApplicationController
 end
 
 
-
+s
 
 
