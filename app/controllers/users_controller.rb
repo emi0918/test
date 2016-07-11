@@ -1,74 +1,66 @@
 class UsersController < ApplicationController
  include ApplicationHelper
-   before_action :authenticate_user!
-   before_action :set_user, only: [:show, :edit, :update, :destroy]
+ before_action :authenticate_user!, only: [:show, :edit,:new,:create,:update, :destroy]
+ before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  def index
+ def index
    @users= User.all
-   @notes = current_user.notes
+   @user = User.includes(:notes)
+ end
 
-
-
-  end
-
-
-  def show
+ def show
    @notes = @user.notes
    @user = User.find_by(id: params[:id])
-  end
+ end
 
-
-  def new
+ def new
    @user = User.new
-  end
+ end
 
-  def edit
+ def edit
    @user = User.find(params[:id])
-  end
+ end
 
-
-
-  def create
+ def create
    @user = User.new(user_params)
-    file = params[:user][:profile_pic]
-    @user.set_image(file)
+   file = params[:user][:profile_pic]
+   @user.set_image(file)
 
-    if @user.save
-       UserMailer.welcome_email(@user).deliver
-        session[:user_id] = @user.id
-        redirect_to users_path
-      else
-       render :new
-    end
+   if @user.save
+     UserMailer.welcome_email(@user).deliver
+     session[:user_id] = @user.id
+     redirect_to users_path
+   else
+     render :new
+
+   end
+ end
+
+ def update
+  file = params[:user][:profile_pic]
+  @user.set_image(file)
+
+  if @user.update(user_params)
+    redirect_to users_path, notice: 'ユーザー情報が更新されました'
+  else
+    render :edit
   end
+end
 
-
-  def update
-    file = params[:user][:profile_pic]
-    @user.set_image(file)
-
-    if @user.update(user_params)
-      redirect_to users_path, notice: 'ユーザー情報が更新されました'
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @user.destroy
-    redirect_to users_url, notice: 'ユーザーが削除されました'
-  end
+def destroy
+  @user.destroy
+  redirect_to users_url, notice: 'ユーザーが削除されました'
+end
 
 def like_notes
-    @notes = @user.like_notes
-    @title = "いいね！一覧"
-    render :index
-  end
+  @notes = @user.like_notes
+  @title = "いいね！一覧"
+  render :index
+end
 
+private
 
-  private
-
-  def set_user
+def set_user
     current_user  # (1)
     if params[:user]
       if user = User.find_by_login(params[:user])  # (2)
@@ -81,7 +73,7 @@ def like_notes
     end
   end
 
-private
+  private
 
   # @userが自分かどうか
   def correct_user
@@ -91,25 +83,19 @@ private
     end
   end
 
-    def user_params
-      params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
-    end
+  def user_params
+    params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
+  end
 
-    def sendmail
-      user= User.find(params[:id])
-      @mail =NoticeMailer.sendmail_confirm(user).deliver
+  def sendmail
+    user= User.find(params[:id])
+    @mail =NoticeMailer.sendmail_confirm(user).deliver
 
-    end
+  end
 
-def set_user
-      @user = User.includes(:note).where(user_name: params[:id]).first
-    end
-
+  def set_user
+    @user = User.includes(:note).where(user_name: params[:id]).first
+  end
 end
-
-
-
-
-
 
 

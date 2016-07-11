@@ -1,0 +1,30 @@
+<div class="providers_signup">
+
+<h2>プロバイダー管理画面へログイン</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <h3>メールアドレス</h3>
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <h3>パスワード</h3>
+
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+    ログインを記憶する<%= f.check_box :remember_me %>  
+    </div>
+  <% end -%>
+
+  <div class="actions">
+    <%= f.submit "ログインする" ,:class => 'provider_join_btn' %>
+  </div>
+<% end %>
+
+<%= render "providers/shared/links" %>
+
+</div>

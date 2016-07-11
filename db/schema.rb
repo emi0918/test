@@ -11,9 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20160501131357) do
-
 ActiveRecord::Schema.define(version: 20160521082610) do
 
   create_table "likes", force: :cascade do |t|
@@ -22,7 +19,6 @@ ActiveRecord::Schema.define(version: 20160521082610) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
-
 
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|
     t.integer "unsubscriber_id",   limit: 4
@@ -90,6 +86,37 @@ ActiveRecord::Schema.define(version: 20160521082610) do
     t.text     "rule",        limit: 65535
     t.string   "user_id",     limit: 255
     t.string   "provider_id", limit: 255
+  end
+
+  create_table "providers", force: :cascade do |t|
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+    t.string   "storename",              limit: 255
+    t.string   "phonenumber",            limit: 255
+    t.string   "address",                limit: 255
+    t.string   "hours",                  limit: 255
+    t.string   "holiday",                limit: 255
+    t.string   "payment",                limit: 255
+    t.string   "provider_pic",           limit: 255
+    t.string   "about",                  limit: 255
+  end
+
+  add_index "providers", ["email"], name: "index_providers_on_email", unique: true, using: :btree
+  add_index "providers", ["reset_password_token"], name: "index_providers_on_reset_password_token", unique: true, using: :btree
+
+  create_table "service_providers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

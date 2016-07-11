@@ -1,24 +1,37 @@
 Rails.application.routes.draw do
 
-   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-resources :notes do
-  post '/posts/temp',   to: 'posts#create_temp',  as: :temp_post
-collection do
-    get :search
+  devise_for :users
+
+  resources :users, only:[:index] 
+
+  devise_for :providers, controllers: {
+    sessions:      'providers/sessions',
+    passwords:     'providers/passwords',
+    registrations: 'providers/registrations'
+  }
+
+  resources :providers, only:[:index,:edit,:update] 
+
+  namespace :providers do
+    get :main
   end
-  member do
-    get :description
-    get :images
-    get :price
+
+
+  resources :charges
+
+  resources :notes do
+    post '/posts/temp',   to: 'posts#create_temp',  as: :temp_post
+    collection do
+      get :search
+    end
+    member do
+      get :profile
+    end
   end
-end
 
-    get '/notes/search/:show_id' => "notes#search"
-
-
-get 'pay' => 'api#pay'
-
+  get '/notes/search/:show_id' => "notes#search"
+  get 'pay' => 'api#pay'
 
   post '/like/:note_id' => 'likes#like', as: 'like'
   delete '/unlike/:note_id' => 'likes#unlike', as: 'unlike'
@@ -27,24 +40,22 @@ get 'pay' => 'api#pay'
 
   root'home#index'
 
-namespace :home do
-  get :pro
-  get :signage
-  get :term
-  get :policy
-  get :guide
-  get :newlisting
-  get :service_setting
-end
+  namespace :home do
+    get :pro
+    get :signage
+    get :term
+    get :policy
+    get :guide
+    get :newlisting
+    get :service_setting
+  end
 
-namespace :service_setting do
-  get :basic
-  get :description
-  get :pictures
-  get :price
-end
-
-
+  namespace :service_setting do
+    get :basic
+    get :description
+    get :pictures
+    get :price
+  end
 
   namespace :company do
     get :index
@@ -60,8 +71,8 @@ end
     get :others
     get :move
     get :provider
-
   end
+
   namespace :dashboard do
     get :index
     get :listing
@@ -71,17 +82,10 @@ end
     get :transaction
   end
 
-
-resources :users, only:[:index] do
-  member do
-    get :like_notes
-
-end
-end
  # mailbox folder routes
-  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
-  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
-  get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
+ get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
+ get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
+ get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
 
   # conversations
   resources :conversations do
@@ -92,4 +96,9 @@ end
     end
   end
 
+
+  get '*path', to: 'application#error_404'
+
 end
+
+

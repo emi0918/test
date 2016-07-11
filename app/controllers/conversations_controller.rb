@@ -1,6 +1,7 @@
 class ConversationsController < ApplicationController
   before_action :authenticate_user!
-
+   layout "providers_layout"
+  
   def new
   end
 
@@ -47,4 +48,8 @@ class ConversationsController < ApplicationController
     params.require(:message).permit(:body, :subject)
   end
 end
+
+
+
+
 

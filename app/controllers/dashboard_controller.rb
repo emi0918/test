@@ -3,6 +3,9 @@ class DashboardController < ApplicationController
 
   helper_method :current_user, :logged_in?
 
+def transaction
+  render :layout => 'providers_layout.html'
+end
 
   def show
     @notes = @user.notes
@@ -23,4 +26,3 @@ end
 
 
 end
-

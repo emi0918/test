@@ -1,0 +1,103 @@
+
+
+<div class="up-var">
+  <div class="upper-menu">
+    <div class="wrapper" >
+      <ul>
+        <li><a href='/users'>マイページ</a></li>
+        <li><%= link_to '掲載中', notes_path %></li>
+        <li><a href='/dashboard/transaction'>取引履歴</a></li>
+        <li><a href='/users/edit'>設定</a></li>
+        <li><a href='/mailbox/inbox'>メッセージ
+      <div class="bootstrap">
+        <span class="label label-danger pull-right"><%=unread_messages_count%></span></div></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="mypage-all_wrapper">
+
+
+   <h1><%= @note.provider.storename %></h1>
+   <p class="rates">レビュー 1000件 ★★★★★</p>
+
+<div class="provider-contents">
+
+ <div class="left-wrapper">
+ <% if @note.provider.provider_pic? %>
+   <%= image_tag @note.provider.provider_pic.url, :class => 'mypage-picture'%>
+ <% else %>
+   <%= image_tag 'Seekle_icon.png', :class => 'mypage-picture'%>
+ <% end %>
+</div>
+
+
+ <div class="mypage_wrapper">
+  <table class="sample_03">
+   <tbody>
+    <tr>
+    
+    <tr>
+     <th>営業時間：</th>
+      <td><%= @note.provider.hours %></td>
+    </tr>
+
+     <tr>
+     <th>定休日：</th>
+      <td> <%= @note.provider.holiday %>　</td>
+    </tr>
+
+    <tr>
+    <th>所在地：</th>
+      <td><%= @note.provider.address %></td>
+    </tr>
+    
+    <tr>
+    <th>お支払い：</th>
+      <td><%= @note.provider.payment %></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+  <div class="about-profiles">
+    <h3>店舗紹介：</h3> <p><%= @note.provider.about %>
+     <% if @note.provider.about.blank? %>
+     <p>プロフィールがまだ記入されていません。</p>
+     <%end%>
+    </p>
+      <h3> レビュー：</h3>
+       <ul class="notes">
+      </ul>
+
+<h3>掲載中のサービス：</h3>
+    <% @notes.each do |note|  %>
+    <% if note.provider==current_provider %>
+ <ul>
+
+    <li> <div class="panel panel-default">
+       <div class="panel-heading">
+        <%= link_to note.title, note_path(note) %>
+       </div>
+
+      </div>
+    </li>
+</ul>
+
+     <% end %>
+     <% end %>
+
+</div>
+  </div>
+</div>

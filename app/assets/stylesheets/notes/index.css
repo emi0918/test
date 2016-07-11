@@ -1,13 +1,8 @@
-
-
-
-
 .field input{
     width:610px;
 padding:5px;
 
 }
-
 
 .form-control{
 
@@ -38,7 +33,7 @@ padding-bottom: 22px;
 }
 
 .list-number{
-margin-left: 630px;
+margin-left: 43%;
 margin-top: 50px;
 clear:both;
 }
@@ -46,6 +41,7 @@ clear:both;
 .list-number-2{
   margin-left: 630px;
 margin-top: 50px;
+clear:both;
 }
 
  .panel-heading {
@@ -169,3 +165,12 @@ width:600px;
 .fa-chevron-right{
   margin-left: 10px;
 }
+
+
+.service_text{
+line-height:8px;
+}
+
+
+
+
