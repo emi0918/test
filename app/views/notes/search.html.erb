@@ -49,7 +49,11 @@
     <%= image_tag "/note_images/#{note.image_1}" ,class: "provider_service_image"%>
     <div class="title"><h2> <%= link_to note.title, note_path(note) %></h2>
      <div class="service-price"><h3> ¥<%= note.price %></h3> </div>
-    
+     <% if note.provider.provider_pic? %>
+     <%= image_tag note.provider.provider_pic.url, :class => 'provider_image'%>
+     <% else %>
+     <%= image_tag 'Seekle_icon.png', :class => 'provider_image'%>
+     <% end %>
    </div>
  </div>
  <% end %>
