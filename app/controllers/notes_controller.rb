@@ -5,6 +5,7 @@ class NotesController < ApplicationController
  before_action :authenticate_provider!, only:[:index, :new, :edit, :create]
  include ApplicationHelper
 
+
   # GET /notes
   # GET /notes.json
   def index
@@ -22,6 +23,7 @@ class NotesController < ApplicationController
 
  def search
    @notes = Note.includes(:provider).page(params[:page]).per(6).order(:id)
+
  end
 
  def profile
@@ -95,7 +97,6 @@ end
       params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
     end
   end
-
 
 
 
