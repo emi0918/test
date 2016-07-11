@@ -1,37 +1,37 @@
 Rails.application.routes.draw do
 
 
-devise_for :users
+  devise_for :users
 
-resources :users, only:[:index] 
+  resources :users, only:[:index] 
 
-devise_for :providers, controllers: {
-  sessions:      'providers/sessions',
-  passwords:     'providers/passwords',
-  registrations: 'providers/registrations'
-}
+  devise_for :providers, controllers: {
+    sessions:      'providers/sessions',
+    passwords:     'providers/passwords',
+    registrations: 'providers/registrations'
+  }
 
-resources :providers, only:[:index,:edit,:update] 
+  resources :providers, only:[:index,:edit,:update] 
 
-namespace :providers do
-  get :main
-end
-
-
-resources :charges
-
-resources :notes do
-  post '/posts/temp',   to: 'posts#create_temp',  as: :temp_post
-collection do
-    get :search
+  namespace :providers do
+    get :main
   end
-  member do
-    get :profile
-  end
-end
 
-    get '/notes/search/:show_id' => "notes#search"
-    get 'pay' => 'api#pay'
+
+  resources :charges
+
+  resources :notes do
+    post '/posts/temp',   to: 'posts#create_temp',  as: :temp_post
+    collection do
+      get :search
+    end
+    member do
+      get :profile
+    end
+  end
+
+  get '/notes/search/:show_id' => "notes#search"
+  get 'pay' => 'api#pay'
 
   post '/like/:note_id' => 'likes#like', as: 'like'
   delete '/unlike/:note_id' => 'likes#unlike', as: 'unlike'
@@ -40,22 +40,22 @@ end
 
   root'home#index'
 
-namespace :home do
-  get :pro
-  get :signage
-  get :term
-  get :policy
-  get :guide
-  get :newlisting
-  get :service_setting
-end
+  namespace :home do
+    get :pro
+    get :signage
+    get :term
+    get :policy
+    get :guide
+    get :newlisting
+    get :service_setting
+  end
 
-namespace :service_setting do
-  get :basic
-  get :description
-  get :pictures
-  get :price
-end
+  namespace :service_setting do
+    get :basic
+    get :description
+    get :pictures
+    get :price
+  end
 
   namespace :company do
     get :index
@@ -83,9 +83,9 @@ end
   end
 
  # mailbox folder routes
-  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
-  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
-  get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
+ get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
+ get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
+ get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
 
   # conversations
   resources :conversations do
