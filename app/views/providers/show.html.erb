@@ -1,0 +1,88 @@
+
+<div class="up-var">
+  <div class="upper-menu">
+    <div class="wrapper" >
+      <ul>
+        <li><a href='/users'>マイページ</a></li>
+        <li><a href='/dashboard/transaction'>取引履歴</a></li>
+        <li><a href='/users/edit'>設定</a></li>
+        <li><a href='/mailbox/inbox'>メッセージ
+      <div class="bootstrap">
+        <span class="label label-danger pull-right"><%=unread_messages_count%></span></div></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="mypage-all_wrapper">
+
+
+   <h1 class="user_page_name"><%= current_user.user_name %>さんのページ  </h1>
+
+     <a class="profile_edit" href="/users/edit"><i class="fa fa-pencil" aria-hidden="true"></i>プロフィールを編集</a>
+
+
+
+   <p class="rates">レビュー 1000件 ★★★★★</p>
+
+
+<div class="provider-contents">
+
+ <div class="left-wrapper">
+ <% if current_user.profile_pic? %>
+    <%= image_tag current_user.profile_pic.url, :class => 'mypage-picture'%>
+  <% else %>
+    <%= image_tag 'Seekle_icon-min.png', :class => 'mypage-picture'%>
+  <% end %>
+
+</div>
+
+
+ <div class="mypage_wrapper">
+  <table class="sample_03">
+   <tbody>
+    <tr>
+    
+    <tr>
+     <th>営業時間：</th>
+      <td><%= current_user.area %></td>
+    </tr>
+
+     <tr>
+     <th>定休日：</th>
+      <td> <%= current_user.area %></td>
+    </tr>
+
+    <tr>
+    <th>所在地：</th>
+      <td><%= current_user.area %></td>
+    </tr>
+    
+    <tr>
+    <th>お支払い：</th>
+      <td><%= current_user.area %></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+
+
+  <div class="about-profiles">
+    <h3>自己紹介：</h3> <p><%=current_user.profile %>
+    <% if current_user.profile.blank? %>
+    <%= link_to 'プロフィール編集ページ', '/users/edit' %>から設定してください。
+     <%end%>
+    </p>
+      <h3> レビュー：</h3>
+       <ul class="notes">
+      </ul>
+
+
+</div>
+  </div>
+  </div>
