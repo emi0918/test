@@ -5,66 +5,68 @@
  </div>
 </div>
 
-
-
- <div class="provider_wrapper">
+<div class="provider_wrapper">
 
   <div class="provider-introduction">
-  <h1>  <%= @note.title %></h1>
-  <% if @note.provider.provider_pic? %>
+    <h1>  <%= @note.title %></h1>
+    <% if @note.provider.provider_pic? %>
     <%= link_to image_tag(@note.provider.provider_pic.url, :class => 'face_pic'),  profile_note_path %>
 
-     <% else %>
-       <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
-     <% end %>
+    <% else %>
+    <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
+    <% end %>
 
-  <table class="sample_03">
-   <tbody>
-    <tr>
-     <th>提供者：</th>
-      <td><%= link_to @note.provider.storename, profile_note_path %></td>
-    </tr>
-    <tr>
-     <th>エリア：</th>
-      <td><%= @note.provider.address %></td>
-    </tr>
+    <table class="sample_03">
+     <tbody>
+      <tr>
+       <th>提供者：</th>
+       <td><%= link_to @note.provider.storename, profile_note_path %></td>
+     </tr>
      <tr>
-     <th>カテゴリー：</th>
-      <td><%= @note.category %></td>
-    </tr>
-  </tbody>
-</table>
-            <h2><i class="fa fa-jpy "></i><%= @note.price %>~</h2>
-      
-             <small>
-               <%= link_to "このサービスを依頼", "/charges/new", :class => 'service_order_btn' %>
-          </small>
-  </div>
+       <th>エリア：</th>
+       <td><%= @note.provider.address %></td>
+     </tr>
+     <tr>
+       <th>カテゴリー：</th>
+       <td><%= @note.category %></td>
+     </tr>
+   </tbody>
+ </table>
+ <h2><i class="fa fa-jpy "></i><%= @note.price %>~</h2>
 
- <div class="service_explain">
-   <h2>このサービスについて</h2>
-   <ul>
-   
-<p><%= simple_format(@note.content) %></p>
+<div class="bootstrap">
+<a class="btn btn-default" href="/conversations/new" role="button"><i class="fa fa-pencil" aria-hidden="true"></i>メッセージを送る</a>
+</div>
 
-  </ul>
- </div>
+ <small>
+   <%= link_to "このサービスを依頼", "/charges/new", :class => 'service_order_btn' %>
+ </small>
+</div>
 
+<div class="service_explain">
+ <h2>このサービスについて</h2>
+ <ul>
 
-  <div class="rulesfromprovider">
-     <h2>プロバイダーからのお願い</h2>
-       <ul>
-        <p> <%= simple_format(@note.rule) %></p>
-       </ul>
-  </div>
-  <div class="reviews_providers">
-     <h2>レビュー (2)</h2>
-  </div>
+  <p><%= simple_format(@note.content) %></p>
+
+</ul>
+</div>
 
 
- 
+<div class="rulesfromprovider">
+ <h2>プロバイダーからのお願い</h2>
+ <ul>
+  <p> <%= simple_format(@note.rule) %></p>
+</ul>
+</div>
+<div class="reviews_providers">
+ <h2>レビュー (2)</h2>
+</div>
 
-  </div>
+
+
+
+</div>
 
 
 

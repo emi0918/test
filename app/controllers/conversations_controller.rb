@@ -1,4 +1,6 @@
 class ConversationsController < ApplicationController
+
+
   before_action :authenticate_user!
    layout "providers_layout"
   
@@ -9,33 +11,23 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    recipients = User.where(id: conversation_params[:recipients])
+    recipients = Provider.where(id: conversation_params[:recipients])
     conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
     flash[:notice] = "メッセージが送信されました!"
     redirect_to mailbox_inbox_path
   end
 
   def show
-    @receipts = conversation.receipts_for(current_user).order("created_at ASC")
+    @receipts = conversation.receipts_for(current_provider).order("created_at ASC")
     # mark conversation as read
     conversation.mark_as_read(current_user)
-  end
 
+  end
 
   def reply
-    current_user.reply_to_conversation(conversation, message_params[:body])
+    current_provider.reply_to_conversation(conversation, message_params[:body])
     flash[:notice] = "メッセージが送信されました。"
     redirect_to conversation_path(conversation)
-  end
-
-  def trash
-    conversation.move_to_trash(current_user)
-    redirect_to mailbox_inbox_path
-  end
-
-  def untrash
-    conversation.untrash(current_user)
-    redirect_to mailbox_inbox_path
   end
 
   private
@@ -47,6 +39,13 @@ class ConversationsController < ApplicationController
   def message_params
     params.require(:message).permit(:body, :subject)
   end
-end
+ def mailbox
+    @mailbox ||= current_provider.mailbox
+  end
+
+ def conversation
+    @conversation ||= mailbox.conversations.find(params[:id])
+  end
+  end
 
 

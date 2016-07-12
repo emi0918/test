@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
- before_action :correct_user, only: [:edit, :update]
+ 
  before_action :set_note, only: [:show, :edit, :update, :destroy, :profile]
  before_action :authenticate_user!, only:[:profile]
  before_action :authenticate_provider!, only:[:index, :new, :edit, :create]
@@ -37,7 +37,7 @@ class NotesController < ApplicationController
   # GET /notes/1/sedit
   def edit
     @note = Note.find(params[:id])
-
+ render :layout => 'providers_layout.html'
   end
 
 
@@ -69,6 +69,7 @@ end
     else
       render :edit
     end
+     render :layout => 'providers_layout.html'
   end
 
   # DELETE /notes/1
@@ -77,6 +78,11 @@ end
   def destroy
     @note.destroy
     redirect_to root_url
+  end
+
+
+  def mailbox
+    @mailbox ||= current_user.mailbox
   end
 
 

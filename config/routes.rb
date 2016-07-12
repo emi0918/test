@@ -11,10 +11,11 @@ Rails.application.routes.draw do
     registrations: 'providers/registrations'
   }
 
-  resources :providers, only:[:index,:edit,:update] 
+  resources :providers, only:[:index,:edit,:update ] 
 
   namespace :providers do
     get :main
+    get :inbox
   end
 
 
@@ -85,17 +86,12 @@ Rails.application.routes.draw do
  # mailbox folder routes
  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
- get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
-
   # conversations
   resources :conversations do
     member do
       post :reply
-      post :trash
-      post :untrash
     end
   end
-
 
   get '*path', to: 'application#error_404'
 

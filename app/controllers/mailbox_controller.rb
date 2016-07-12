@@ -1,7 +1,5 @@
 class MailboxController < ApplicationController
-  before_action :authenticate_user!
 
-  layout "providers_layout"
 
   def inbox
     @inbox = mailbox.inbox
@@ -14,6 +12,17 @@ class MailboxController < ApplicationController
   end
 
 
+
+  def mailbox
+    @mailbox ||= current_provider.mailbox
+  end
+
+
+ def conversation
+    @conversation ||= mailbox.conversations.find(params[:id])
+  end
+
+  
 end
 
 

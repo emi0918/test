@@ -44,12 +44,6 @@ def configure_permitted_parameters
 
   private
 
-  def mailbox
-    @mailbox ||= current_user.mailbox
-  end
- def conversation
-    @conversation ||= mailbox.conversations.find(params[:id])
-  end
 end
 
 def setup
