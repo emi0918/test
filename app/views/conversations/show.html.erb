@@ -27,14 +27,7 @@
   <div class="col-md-6">
     <%= link_to "メッセージを作成", new_conversation_path, class: "btn btn-success" %>
   </div>
-  <div class="col-md-6 text-right">
-    <% if conversation.is_trashed?(current_user) %>
-        <%= link_to 'ゴミ箱から復活', untrash_conversation_path(conversation), class: 'btn btn-info', method: :post %>
-    <% else %>
-        <%= link_to 'ゴミ箱に移動', trash_conversation_path(conversation), class: 'btn btn-danger', method: :post,
-                    data: {confirm: 'Are you sure?'} %>
-    <% end %>
-  </div>
+ 
 </div>
 
 
