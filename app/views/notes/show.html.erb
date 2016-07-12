@@ -11,12 +11,7 @@
 
   <div class="provider-introduction">
   <h1>  <%= @note.title %></h1>
-  <% if @note.provider.provider_pic? %>
-    <%= link_to image_tag(@note.provider.provider_pic.url, :class => 'face_pic'),  profile_note_path %>
-
-     <% else %>
-       <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
-     <% end %>
+ 
 
   <table class="sample_03">
    <tbody>
