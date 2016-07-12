@@ -2,7 +2,8 @@ class Provider < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
  has_many :notes, dependent: :destroy
- 
+ has_many :mailboxer_conversations
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -20,3 +21,5 @@ class Provider < ActiveRecord::Base
 
      
 end
+
+

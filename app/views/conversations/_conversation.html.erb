@@ -1,22 +1,22 @@
 
 
 <div class="bootstrap">
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="http://placehold.it/64x64" alt="...">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">
-      <%= conversation.originator.user_name %> <br>
-      <small><b>件名: </b><%= conversation.subject %></small><br>
-      <small><b>日付: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
-    </h4>
-    <%= truncate conversation.messages.last.body, length: 145 %>
-    <%= link_to "開く", conversation_path(conversation)  %>
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="http://placehold.it/64x64" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= conversation.originator.user_name %> <br>
+        <small><b>件名: </b><%= conversation.subject %></small><br>
+        <small><b>日付: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+      </h4>
+      <%= truncate conversation.messages.last.body, length: 145 %>
+      <%= link_to "開く", conversation_path(conversation)  %>
+    </div>
   </div>
 </div>
-  </div>
 
 

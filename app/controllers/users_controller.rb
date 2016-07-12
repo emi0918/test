@@ -13,6 +13,7 @@ class UsersController < ApplicationController
    @user = User.find_by(id: params[:id])
  end
 
+
  def new
    @user = User.new
  end
@@ -58,6 +59,18 @@ def like_notes
   render :index
 end
 
+
+
+
+  def mailbox
+    @mailbox ||= current_user.mailbox
+  end
+
+
+ def conversation
+    @conversation ||= mailbox.conversations.find(params[:id])
+  end
+
 private
 
 def set_user
@@ -72,8 +85,6 @@ def set_user
       @user = @current_user  # (5)
     end
   end
-
-  private
 
   # @userが自分かどうか
   def correct_user

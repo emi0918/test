@@ -8,8 +8,13 @@
     <% end %>
   </li>
 
-  </li>
+<li class="<%= active_page(:sent) %>">
+    <%= link_to mailbox_sent_path do %>
 
+        <em class="fa fa-paper-plane-o fa-lg"></em>
+        <span>送信済み</span>
+    <% end %>
+  </li>
  
 </ul>
   </div>

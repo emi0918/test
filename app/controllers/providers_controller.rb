@@ -14,12 +14,10 @@ end
 def main
 end
 
-
-
-
-
-
-
+def inbox
+   @inbox = mailbox.inbox
+    @active = :inbox
+end
 
   private
 
@@ -43,7 +41,13 @@ end
     end
 
 
+  def mailbox
+    @mailbox ||= current_provider.mailbox
+  end
 
+ def conversation
+    @conversation ||= mailbox.conversations.find(params[:id])
+  end
   # GET /resource/sign_up
   # def new
   #   super
@@ -90,5 +94,7 @@ end
   #   super(resource)
   # end
 end
+
+
 
 
