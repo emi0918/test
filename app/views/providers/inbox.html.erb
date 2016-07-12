@@ -1,0 +1,29 @@
+<div class="up-var">
+  <div class="upper-menu">
+    <div class="wrapper" >
+      <ul>
+        <li><a href='/providers/main'>マイページ</a></li>
+        <li><a href='#'>メッセージ</a></li>
+        <li><%= link_to '掲載中', notes_path %></li>
+        <li><a href='/dashboard/transaction'>取引履歴</a></li>
+        <li><a href='/providers'>基本情報</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="bootstrap">
+<div class="mypage-all_wrapper">
+
+<div class="mailbox_wrapper">
+
+<div class="bootstrap">
+<%= render partial: 'mailbox/provider_view', locals: { is_conversation: false, messages: @inbox } %>
+  </div>
+  </div></div></div>
+
+
+
