@@ -1,11 +1,6 @@
 class ConversationsController < ApplicationController
 
 
-  before_action :authenticate_user!
-   layout "providers_layout"
-  
-  def new
-  end
 
   def index
   end
@@ -47,5 +42,7 @@ class ConversationsController < ApplicationController
     @conversation ||= mailbox.conversations.find(params[:id])
   end
   end
+
+
 
 
