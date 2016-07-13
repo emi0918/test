@@ -21,12 +21,14 @@
         <% if is_conversation %>
             <%= render 'conversations/form' %>
         <% else %>
-            <%= render partial: 'conversations/conversation', collection: messages %>
+            <%= render partial: 'conversations/provider', collection: messages %>
         <% end %>
       </div>
     </div>
   </div>
   </div>
 </div>
+
+
 
 
