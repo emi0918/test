@@ -6,7 +6,6 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    @recipients = Recipient.includes(provider_params[:note]).all
     recipients = Provider.where(id: conversation_params[:recipients])
     conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
     flash[:notice] = "メッセージが送信されました!"
