@@ -35,7 +35,11 @@
   <div class="col-md-4">
     <div class="panel panel-default">
       <div class="panel-body">
+       <% if current_user.try(:user_name?) %>
         <%= render 'mailbox/folders' %>
+        <% else %>
+          <%= render 'mailbox/providers' %>
+          <% end %>
       </div>
     </div>
   </div>
@@ -64,4 +68,5 @@
 
   </div>
   </div>
+
 
