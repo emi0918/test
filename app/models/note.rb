@@ -1,8 +1,10 @@
 class Note < ActiveRecord::Base
 	belongs_to :provider
 	belongs_to :user
+	belongs_to  :mailboxer_conversations
 	has_many :likes, dependent: :destroy
 	has_many :liking_users, through: :likes, source: :user
+   
 
 	validates :image_1, presence: false
 	validates :image_2, presence: false

@@ -85,7 +85,7 @@ end
 
 
   def mailbox
-    @mailbox ||= current_user.mailbox
+       @mailbox ||= current_user or current_provider.mailbox
   end
 
 

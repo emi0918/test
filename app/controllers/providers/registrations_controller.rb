@@ -18,7 +18,7 @@ def create
   @provider = Provider.new(provider_params)
   if @provider.save
     # @userはuser_path(@user) に自動変換される
-    redirect_to providers_main_path 
+    redirect_to main_providers_path
   else
     # ValidationエラーなどでDBに保存できない場合 new.html.erb を再表示
     render 'new'

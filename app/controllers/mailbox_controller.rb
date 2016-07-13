@@ -1,5 +1,5 @@
 class MailboxController < ApplicationController
-
+ 
 
   def inbox
     @inbox = mailbox.inbox
@@ -11,18 +11,13 @@ class MailboxController < ApplicationController
     @active = :sent
   end
 
-
-
-  def mailbox
-    @mailbox ||= current_provider.mailbox
+ def mailbox
+  if current_user.try(:user_name?)
+       @mailbox ||= current_user.mailbox
+  else
+       @mailbox ||= current_provider.mailbox
   end
-
-
- def conversation
-    @conversation ||= mailbox.conversations.find(params[:id])
-  end
-
-  
+end
 end
 
 

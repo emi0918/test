@@ -11,12 +11,16 @@ Rails.application.routes.draw do
     registrations: 'providers/registrations'
   }
 
-  resources :providers, only:[:index,:edit,:update ] 
-
-  namespace :providers do
+  resources :providers, only:[:index,:edit,:update,:show ]  do
+      collection do
     get :main
     get :inbox
   end
+    member do
+      get :conversations
+      post :reply
+  end
+end
 
 
   resources :charges

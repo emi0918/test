@@ -14,7 +14,13 @@
         <small><b>日付: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
       </h4>
       <%= truncate conversation.messages.last.body, length: 145 %>
+
+<% if current_user.try (:user_name?) %>
       <%= link_to "開く", conversation_path(conversation)  %>
+  <%else%>
+      <%= link_to "開く", provider_path(conversation)  %>
+ <% end %>
+
     </div>
   </div>
 </div>
