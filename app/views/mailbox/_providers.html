@@ -1,7 +1,7 @@
 <div class="bootstrap">
 	<ul class="nav nav-pills nav-stacked">
 		<li class="<%= active_page(:inbox) %>">
-			<%= link_to providers_inbox_path do  %>
+			<%= link_to inbox_providers_path do  %>
 			<span class="label label-danger pull-right"><%=unread_messages_count%></span>
 			<em class="fa fa-inbox fa-lg"></em>
 			<span>受信箱</span>
@@ -10,6 +10,5 @@
 	</li>
 </ul>
 </div>
-
 
 
