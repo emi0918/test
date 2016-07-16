@@ -11,7 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712124746) do
+ActiveRecord::Schema.define(version: 20160716051429) do
+
+  create_table "formbuilder_entry_attachments", force: :cascade do |t|
+    t.string   "upload",       limit: 255
+    t.string   "content_type", limit: 255
+    t.integer  "file_size",    limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "formbuilder_forms", force: :cascade do |t|
+    t.integer  "formable_id",   limit: 4
+    t.string   "formable_type", limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "formbuilder_response_fields", force: :cascade do |t|
+    t.integer  "form_id",       limit: 4
+    t.text     "label",         limit: 65535
+    t.string   "type",          limit: 255
+    t.text     "field_options", limit: 65535
+    t.integer  "sort_order",    limit: 4
+    t.boolean  "required",                    default: false
+    t.boolean  "blind",                       default: false
+    t.boolean  "admin_only",                  default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "likes", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -85,6 +113,9 @@ ActiveRecord::Schema.define(version: 20160712124746) do
     t.string   "category",    limit: 255
     t.text     "rule",        limit: 65535
     t.string   "provider_id", limit: 255
+    t.string   "catchcopy",   limit: 255
+    t.string   "salespoint",  limit: 255
+    t.string   "cancelrule",  limit: 255
   end
 
   create_table "providers", force: :cascade do |t|
