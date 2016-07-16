@@ -1,7 +1,7 @@
 class Providers::RegistrationsController < Devise::RegistrationsController
 # before_action :configure_sign_up_params, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
- before_action :authenticate_provider!
+
 layout "providers_layout"
   def show
    @provider = Provider.find_by(id: params[:id])
@@ -29,7 +29,7 @@ end
   def update
    
     if @provider.update(provider_params)
-      redirect_to providers_path
+      redirect_to main_providers_path
     else
       render 'edit'
     end
@@ -40,8 +40,9 @@ end
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
     def provider_params
-      params.require(:provider).permit(:storename, :email,:phonenumber, :address, :hours, :holiday, :payment, :password,:about, :provider)
+      params.require(:provider).permit(:storename, :email,:phonenumber, :address, :hours, :holiday, :payment, :password,:about, :provider, :provider_pic)
     end
+    
 
   # GET /resource/sign_up
   # def new

@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
     self.email
   end
 
-  mount_uploader :profile_pic
+  mount_uploader :profile_pic, ProfilePicUploader
 
 
   # userオブジェクトから呼び出せるインスタンスメソッドとして定義

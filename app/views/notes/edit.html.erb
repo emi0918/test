@@ -9,14 +9,8 @@
 </div>
 </div>
 
-
-<div class="bootstrap">
-  <div class="setting-wrapper">
-    <div class="customize-setting">
-      <h2>掲載サービスを編集する</h2>
-    </div>
-
-
+<div class="providers_new_post">
+  <div class="bootstrap">
     <%= form_for(@note, class: 'form-horizontal', role: 'form' ) do |f| %>
     <% if @note.errors.any? %>
     <div class="alert alert-danger">
@@ -28,69 +22,92 @@
    </div>
    <% end %>
 
-   <div class="form-group">
-    <p>タイトル</p>
-    <%= f.text_field :title, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <p>カテゴリー </p>
-
-    <%= f.radio_button :category, "住まい" %>住まい
-    <%= f.radio_button :category, "イベント" %>イベント
-    <%= f.radio_button :category, "習い事" %>習い事
-    <%= f.radio_button :category, "健康" %>健康
-    <%= f.radio_button :category, "その他" %>その他
-
-  </div>
 
 
-
-  <div class="form-group">
-    <p>サービスについて </p>
-    <%= f.text_area :content, class: 'content-area' %>
-  </div>
+    <h2>掲載内容を編集する</h2>
+    <p>あなたのサービスを求めるカスタマーの決め手になるようなタイトルや内容を考えよう</p>
+  
 
 
-  <div class="form-group">
-    <p>料金</p>
-    <div class="input-group">
+  <table class="newpost">
 
-     <%= f.text_field :price, class: 'form-control' %>
-     <span class="input-group-addon">円</span>
-   </div>
+  
+    <tr>
+     <th> <p>カテゴリー <span class="form-label required">必須</span></p></th>
+     <td>
+     <%= f.select :category, ['便利屋','増設、リモデル', 'コンクリート','ペインティング','屋根、雨漏り','壁、階段','ドア、窓','クリーニング','引っ越し','大工、木工','配管工事','イベントメイクアップ','結婚司会','バーテンディング','フラワーデザイナー','マジシャン','イベントカメラマン','フェイスペインティング','ヘアスタイリング','バルーンアーティスト','コメディアン','DJ','歌','語学','料理','ピアノ','武道','ウェブ','ダンス','勉学','絵','パーソナルトレーニング','編み物','マッサージ','エステ','サイクリング','ヨガ','栄養士','セラピー','パーソナルシェフ','人生相談','カウンセリング','座禅','ストレッチ','その他'], { include_blank: '選択してください'} , class: "chosen-select"  %>
+     </td>
+  <tr>
 
- </div>
+
+  <tr>
+   <th> <p>サービスのタイトル<span class="form-label required">必須</span></p></th>
+   <td>
+    <%= f.text_field :title, class: 'form-control',placeholder:"サービス内容がわかるタイトルにしましょう" %>
+  </td>
+</tr>
 
 
- <div class="form-group">
-  <p>カスタマーへのおねがい </p>
+
+<tr>
+ <th> <p>キャッチコピー<span class="form-label required">必須</span> </p></th>
+ <td>
+  <%= f.text_area :content, class: 'content-area',placeholder:"このサービスならではの取り柄をアピールしましょう" %>
+</td>
+</tr>
+
+
+<tr>
+ <th> <p>セールスポイント<span class="form-label required">必須</span></p></th>
+ <td>
+  <%= f.text_field :title, class: 'form-control', placeholder:"お客様にとって嬉しいポイントをアピールしましょう具体的にアピールしましょう" %>
+</td>
+</tr>
+
+
+
+<tr>
+ <th> <p>お客様へのお願い<span class="form-label required">必須</span></p></th>
+ <td>
   <%= f.text_area :rule, class: 'content-area' %>
-</div>
+</td>
+</tr>
 
+<tr>
+ <th> <p>変更とキャンセル<span class="form-label optional">任意</span></p></th>
+ <td>
+  <%= f.text_area :rule, class: 'content-area', placeholder:"あなたのサービスについて詳しく説明しよう" %>
+</td>
+</tr>
 
-<div class="form-group">
-  <p>写真1</p>
+<tr>
+ <th> <p>詳しいサービスの内容<span class="form-label optional">任意</span></p></th>
+ <td>
+  <%= f.text_area :price, class: 'content-area', placeholder:"あなたのサービスについて詳しく説明しよう" %>
+</td>
+</tr>
 
+<tr>
+ <th> <p>写真<span class="form-label required">必須</span></p></th>
+ <td>
   <%= f.file_field :image_1, class: "form-control image-field" %>
+</td>
+</tr>
 </div>
-
-<div class="form-group">
-  <p>写真2</p>
-  <%= f.file_field :image_2, class: "form-control image-field" %>
+</table>
 </div>
-
-<div class="form-group">
-  <p>写真3</p>
-  <%= f.file_field :image_3, class: "form-control image-field" %>
-</div>
-
-
-
-<%= f.submit '保存', class: 'btn btn-default', data:{ disable_with: "保存中・・・"} %>
+<%= f.submit '保存する', class: 'btn btn-default', data:{ disable_with: "保存中・・・"} %>
 
 
 <% end %>
+</div>
+</div>
+
+
+
+
+
+
 
 
 <%= link_to 'サービスページ', @note %> |
