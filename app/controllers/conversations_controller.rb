@@ -1,6 +1,12 @@
 class ConversationsController < ApplicationController
 
 
+  before_action :authenticate_user!
+   layout "providers_layout"
+  
+  def new
+  end
+
   def index
   end
 
@@ -51,8 +57,6 @@ def conversation
 end
 
 end 
-
-
 
 
 
