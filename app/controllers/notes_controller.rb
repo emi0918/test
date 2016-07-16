@@ -22,8 +22,8 @@ class NotesController < ApplicationController
  end
 
  def search
-   @notes = Note.includes(:provider).page(params[:page]).per(6).order(:id)
 
+   @notes = Note.includes(:provider).page(params[:page]).per(6).order(:id)
  end
 
  def profile
@@ -61,6 +61,7 @@ else
 end
 end
 
+
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
@@ -72,7 +73,7 @@ end
     else
       render :edit
     end
-     render :layout => 'providers_layout.html'
+   
   end
 
   # DELETE /notes/1
@@ -97,7 +98,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:provider_id)
+      params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:provider_id,:cancelrule, :salespoint, :catchcopy)
     end
     def user_params
       params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
