@@ -63,6 +63,7 @@ gem 'sitemap_generator'
 gem 'stripe'
 gem 'carrierwave'
 gem 'rmagick'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -8,8 +8,38 @@ layout "providers_layout"
 
  def index
  	@providers= Provider.all
-  @provider = Provider.includes(:notes)
+  @provisder = Provider.includes(:notes)
 end
+
+def show
+     @receipts = conversation.receipts_for(current_provider).order("created_at ASC")
+    # mark conversation as read
+    conversation.mark_as_read(current_provider)
+end
+
+
+
+
+def reply
+  
+  current_provider.reply_to_conversation(conversation, message_params[:body])
+  flash[:notice] = "メッセージが送信されました。"
+  redirect_to provider_path(conversation)
+ 
+end
+
+
+  def create
+    recipients = Provider.where(id: conversation_params[:recipients])
+    conversation = current_provider.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
+    flash[:notice] = "メッセージが送信されました!"
+    redirect_to inbox_providers_path
+  end
+
+
+
+
+
 
 def main
 end
@@ -41,58 +71,32 @@ end
     end
 
 
-  def mailbox
-    @mailbox ||= current_provider.mailbox
+
+ def mailbox
+  if current_user.try(:user_name?)
+       @mailbox ||= current_user.mailbox
+  else
+       @mailbox ||= current_provider.mailbox
   end
+end
 
- def conversation
-    @conversation ||= mailbox.conversations.find(params[:id])
-  end
-  # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+def conversation_params
+  params.require(:conversation).permit(:subject, :body,recipients:[])
+end
 
-  # POST /resource
-  # def create
-  #   super
-  # end
 
-  # DELETE /resource
-  # def destroy
-  #   super
-  # end
+def conversation
+  @conversation ||= mailbox.conversations.find(params[:id])
+end
 
-  # GET /resource/cancel
-  # Forces the session data which is usually expired after sign
-  # in to be expired now. This is useful if the user wants to
-  # cancel oauth signing in/up in the middle of the process,
-  # removing all OAuth session data.
-  # def cancel
-  #   super
-  # end
 
-  # protected
 
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
-  # end
+def message_params
+  params.require(:message).permit(:body, :subject)
+end
 
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
-  # end
 
-  # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
 
-  # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
 end
 
 

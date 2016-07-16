@@ -30,7 +30,7 @@ def after_sign_in_path_for(resources)
    when User
     users_path
    when Provider
-     providers_main_path
+    main_providers_path
   end
   end
 

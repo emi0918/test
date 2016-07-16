@@ -9,6 +9,11 @@
 <!--bodyタグ内のコンテンツの表示はhead内にあるjsの処理が完了してから行われるので、表示が遅くなる   なるべくheadに不要なjs入れない bodyにいれる-->
 
 <body>
+
+<script src='https://cdn.slaask.com/chat.js'></script>
+<script>
+    _slaask.init('e82bd97e2f19e5c3820785f34a397d1c');
+</script>
 <%= stylesheet_link_tag "application", media: "all" %>
 <header> <div class="container_head"> <a href="/"><%= image_tag('logo-min.png',class: 'logo') %></a> <ul class="header-right"> <% if user_signed_in? %> <li> <%= link_to 'ダッシュボード',users_path %></li>  <%= javascript_include_tag "application" %> <li> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li> <% else %> <li><%= link_to 'プロバイダーになる', home_pro_path %></li> <li> <%= link_to 'アカウント作成', new_user_registration_path %></li> <li><%= link_to 'ログイン', new_user_session_path %></li> <% end %> </ul> </div></header> <div class="main_content"> <%= yield %> </div><div class="container"> 
 <footer class="footer"> <div class="footer-top"> <div class="row">
