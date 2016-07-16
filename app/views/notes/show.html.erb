@@ -10,7 +10,7 @@
   <div class="provider-introduction">
     <h1>  <%= @note.title %></h1>
     <% if @note.provider.provider_pic? %>
-    <%= link_to image_tag(@note.provider.provider_pic.url, :class => 'face_pic'),  profile_note_path %>
+    <%=  image_tag(@note.provider.provider_pic.url, :class => 'face_pic')%>
 
     <% else %>
     <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
@@ -43,6 +43,13 @@
  </small>
 </div>
 
+
+<div class="service_explain">
+<h1><%= @note.catchcopy %></h1>
+</div>
+
+
+
 <div class="service_explain">
  <h2>このサービスについて</h2>
  <ul>
@@ -53,8 +60,27 @@
 </div>
 
 
+<div class="service_explain">
+ <h2>セールスポイント</h2>
+ <ul>
+
+  <p><%= simple_format(@note.salespoint) %></p>
+
+</ul>
+</div>
+
+<div class="service_explain">
+ <h2>変更とキャンセルについて</h2>
+ <ul>
+
+  <p><%= simple_format(@note.cancelrule) %></p>
+
+</ul>
+</div>
+
+
 <div class="rulesfromprovider">
- <h2>プロバイダーからのお願い</h2>
+ <h2>お客様へのお願い</h2>
  <ul>
   <p> <%= simple_format(@note.rule) %></p>
 </ul>
@@ -63,10 +89,9 @@
  <h2>レビュー (2)</h2>
 </div>
 
-
-
-
 </div>
+
+
 
 
 

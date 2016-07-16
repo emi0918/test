@@ -2,7 +2,7 @@
   <div class="upper-menu">
     <div class="wrapper" >
       <ul>
-        <li><a href='/providers'>マイページ</a></li>
+        <li><a href='/providers/main'>マイページ</a></li>
         <li><a href='/providers/inbox'>メッセージ</a></li>
         <li><%= link_to '掲載中', notes_path %></li>
         <li><a href='/dashboard/transaction'>取引履歴</a></li>
@@ -28,7 +28,7 @@
   
  <div class="field">
     <h3>店舗概要</h3>
-    <%= f.text_area  :about, autofocus: true %>
+    <%= f.text_area  :about, autofocus: true ,:size => "100x10" %>
   </div>
 
 
@@ -81,4 +81,6 @@
 <%= link_to "Back", :back %>
 
 </div>
+
+
 
