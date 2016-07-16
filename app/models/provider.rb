@@ -4,10 +4,13 @@ class Provider < ActiveRecord::Base
  has_many :notes, dependent: :destroy
  has_many :mailboxer_conversations
 
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
 
+ mount_uploader :provider_pic, ProviderPicUploader
+ 
 
           acts_as_messageable
 

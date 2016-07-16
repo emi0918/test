@@ -6,14 +6,22 @@ class Note < ActiveRecord::Base
 	has_many :liking_users, through: :likes, source: :user
    
 
-	validates :image_1, presence: false
-	validates :image_2, presence: false
-	validates :image_3, presence: false
+  validates_acceptance_of :confirming
+  after_validation :check_confirming
+
+  def check_confirming
+    errors.delete(:confirming)
+    self.confirming = errors.empty? ? '1' : ''
+  end
+
 	validates :title, presence:  true
 	validates :category, presence: true
 	validates :content, presence: true
 	validates :price, presence: true
-	validates :rule, presence: false
+	validates :rule, presence: true
+	validates :salespoint, presence: true
+	validates :catchcopy, presence: true
+	validates :cancelrule, presence: true
 
 	def set_image_1(file)
 		if !file.nil?
@@ -23,3 +31,5 @@ class Note < ActiveRecord::Base
 		end
 	end
 end
+
+
