@@ -45,11 +45,12 @@ def message_params
 end
 
 def mailbox
-  if current_user.try(:profile_pic?)
-   @mailbox ||= current_user.mailbox
- else
-   @mailbox ||= current_provider.mailbox
- end
+  if current_user.try(:provider_pic?)
+       @mailbox ||= current_provider.mailbox
+  else
+      
+        @mailbox ||= current_user.mailbox
+  end
 end
 
 def conversation
@@ -57,11 +58,4 @@ def conversation
 end
 
 end 
-
-
-
-
-
-
-
 
