@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en">
+ <head>
+
+  <title>Seekle</title>  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <%= csrf_meta_tags %>
+
+
+<!-- jQuery.jsの読み込み -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
+
+
+ </head>
+
+
+<!--bodyタグ内のコンテンツの表示はhead内にあるjsの処理が完了してから行われるので、表示が遅くなる   なるべくheadに不要なjs入れない bodyにいれる-->
+
+<body>
+
+<script src='https://cdn.slaask.com/chat.js'></script>
+<script>
+    _slaask.init('e82bd97e2f19e5c3820785f34a397d1c');
+</script>
+<%= stylesheet_link_tag "application", media: "all" %>
+
+
+<header> <div class="container_head"> <a href="/"><%= image_tag('logo-min.png',class: 'logo') %></a> 
+<ul class="header-right"> 
+  <%= javascript_include_tag "application" %> 
+  <li><a href="#1">About</a></li>
+
+  <li><a href="#2">Company</a></li>
+   <li><a href="#3">Recruit</a></li>
+   </ul> </div></header> <div class="main_content"> <%= yield %> </div>
+
+
+
+<footer class="footer"> <div class="footer-top"> <div class="row">
+<div class="footer-bottom"> <div class="footer-menu pull-left"> <div class="widget widget_menu"> <nav class="widget-menu"> <ul> <li><a href="/home/term">利用規約</a></li> <li><a href="/home/policy">プライバシポリシー</a></li> <li><a href="/home/signage">特定商取引に基づく表記</a></li> </ul> </nav> </div> </div></div> <div class="copy-right">© Seekle inc., All Rights Reseved.</div></body>
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</html>
+
+
