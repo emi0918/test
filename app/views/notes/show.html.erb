@@ -20,7 +20,7 @@
      <tbody>
       <tr>
        <th>提供者：</th>
-       <td><%= link_to @note.provider.storename, profile_note_path %></td>
+       <td><%= link_to @note.provider.name, profile_note_path %></td>
      </tr>
      <tr>
        <th>エリア：</th>
@@ -30,10 +30,15 @@
        <th>カテゴリー：</th>
        <td><%= @note.category %></td>
      </tr>
+       <tr>
+       <th>料金：</th>
+       <td><%= @note.price%>円 〜</td>
+     </tr>
+
    </tbody>
  </table>
- <h2><i class="fa fa-jpy "></i><%= @note.price %>~</h2>
 
+<div class="message_reservetion">
 <div class="bootstrap">
 <a class="btn btn-default" href="/conversations/new" role="button"><i class="fa fa-pencil" aria-hidden="true"></i>メッセージを送る</a>
 </div>
@@ -42,6 +47,8 @@
    <%= link_to "このサービスを依頼", "/charges/new", :class => 'service_order_btn' %>
  </small>
 </div>
+</div>
+
 
 
 <div class="service_explain">
