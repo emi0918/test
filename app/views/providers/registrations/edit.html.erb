@@ -12,75 +12,87 @@
   </div>
 </div>
 
-<div class="providers_signup">
+<div class="providers_new_post">
+<div class="bootstrap">
 
-  <h2>店舗の基本情報を編集する</h2>
+<h2>店舗の基本情報を編集する</h2>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  
-  <div class="field">
-    <h3>営業時間</h3>
-    <%= f.text_field  :hours, autofocus: true %>
-  </div>
+  <table class="newpost">
+ 
+   <tr>
+   <th> <p>営業時間<span class="form-label required">必須</span></p></th>
+   <td>
+    <%= f.text_field :hours, class: 'form-control',placeholder:"8時～15時受付まで対応可" %>
+  </td>
+</tr>
 
-  
-  <div class="field">
-    <h3>店舗概要</h3>
-    <%= f.text_area  :about, autofocus: true ,:size => "100x10" %>
-  </div>
+ <tr>
+   <th> <p>定休日<span class="form-label required">必須</span></p></th>
+   <td>
+    <%= f.text_field :holiday, class: 'form-control',placeholder:"不定休" %>
+  </td>
+</tr>
+
+  <tr>
+   <th> <p>住所<span class="form-label required">必須</span></p></th>
+   <td>
+    <%= f.text_field :address, class: 'form-control',placeholder:"〒123-4567 
+〇〇県 〇〇市 1-2-3" %>
+  </td>
+</tr>
+
+  <tr>
+   <th> <p>お支払い方法<span class="form-label required">必須</span></p></th>
+   <td>
+    <%= f.text_field :payment, class: 'form-control',placeholder:"現金・クレジットカード" %>
+  </td>
+</tr>
+
+  <tr>
+   <th> <p>電話番号<span class="form-label required">必須</span></p></th>
+   <td>
+    <%= f.text_field :phonenumber, class: 'form-control',placeholder:"1234-56-7890" %>
+  </td>
+</tr>
 
 
-  <div class="field">
-    <h3>定休日</h3>
-    <%= f.text_field  :holiday, autofocus: true %>
-  </div>
+<tr>
+ <th> <p>店舗概要<span class="form-label required">必須</span> </p></th>
+ <td>
+  <%= f.text_area :about, class: 'content-area',placeholder:"お店の特徴、オススメポイントなどを紹介しましょう" %>
+</td>
+</tr>
 
-  <h2>店舗の基本情報を編集する</h2>
+
+<tr>
+ <th> <p>店舗写真<span class="form-label required">必須</span> </p></th>
+ <td>
+  <%= f.file_field :provider_pic, class: "form-control image-field" %>
+</td>
+</tr>
 
 
-  <div class="field">
-    <h3>住所</h3>
-    <%= f.text_field  :address, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <h3>お支払い方法</h3>
-    <%= f.text_field  :payment, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <h3>電話番号</h3>
-    <%= f.text_field  :phonenumber, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <h3>メールアドレス</h3>
-    <%= f.email_field :email, autofocus: true %>
-  </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-  <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
-
-  <div class="field">
-    <h3>パスワード  (基本情報をを変更するには現在のパスワードが必要です)</h3>
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "編集を更新する",  :class => 'provider_join_btn'%>
-  </div>
-  <% end %>
-
-  <h3>アカウントを削除する</h3>
-
-  <p>Unhappy? <%= button_to "退会する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete,  :class => 'provider_delete_btn' %></p>
-
-  <%= link_to "Back", :back %>
 
 </div>
+</table>
+</div>
 
+    <%= f.submit "編集を更新する",  :class => 'btn btn-default'%>
 
+<% end %>
 
+<h3>アカウントを削除する</h3>
+
+<p>Unhappy? <%= button_to "退会する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete,  :class => 'provider_delete_btn' %></p>
+
+<%= link_to "Back", :back %>
+
+</div>
+</div>

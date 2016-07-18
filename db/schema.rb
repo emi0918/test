@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160716051429) do
+ActiveRecord::Schema.define(version: 20160718100338) do
 
   create_table "formbuilder_entry_attachments", force: :cascade do |t|
     t.string   "upload",       limit: 255
@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(version: 20160716051429) do
     t.datetime "created_at",                                         null: false
     t.boolean  "global",                             default: false
     t.datetime "expires"
+    t.string   "sender_name",          limit: 255
   end
 
   add_index "mailboxer_notifications", ["conversation_id"], name: "index_mailboxer_notifications_on_conversation_id", using: :btree
@@ -131,7 +132,7 @@ ActiveRecord::Schema.define(version: 20160716051429) do
     t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
-    t.string   "storename",              limit: 255
+    t.string   "name",                   limit: 255
     t.string   "phonenumber",            limit: 255
     t.string   "address",                limit: 255
     t.string   "hours",                  limit: 255
@@ -160,7 +161,7 @@ ActiveRecord::Schema.define(version: 20160716051429) do
     t.text     "profile_pic",            limit: 65535
     t.text     "profile",                limit: 65535
     t.string   "area",                   limit: 255
-    t.string   "user_name",              limit: 255
+    t.string   "name",                   limit: 255
     t.integer  "uid",                    limit: 8
     t.string   "provider",               limit: 255
     t.string   "token",                  limit: 255
