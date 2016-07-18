@@ -64,7 +64,7 @@ end
 
  
  def mailbox
-  if current_user.try(:user_name?)
+  if current_user.try(:profile_pic?)
        @mailbox ||= current_user.mailbox
   else
        @mailbox ||= current_provider.mailbox
@@ -99,7 +99,7 @@ def set_user
   end
 
   def user_params
-    params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
+    params.require(:user).permit(:name, :profile_pic, :profile, :area, :email)
   end
 
   def sendmail
@@ -109,7 +109,7 @@ def set_user
   end
 
   def set_user
-    @user = User.includes(:note).where(user_name: params[:id]).first
+    @user = User.includes(:note).where(name: params[:id]).first
   end
 end
 

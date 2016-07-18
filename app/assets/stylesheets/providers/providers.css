@@ -1,7 +1,7 @@
 
 .providers_signup{
 
-
+width:60%;
     margin-top:6%;
     margin-left:25%;
     margin-bottom: 10%;
@@ -22,6 +22,34 @@ clear:both;
 
 }
 
+
+.providers_info_show{
+
+width:65%;
+    margin-top:6%;
+    margin-left:19%;
+    margin-bottom: 10%;
+}
+
+.providers_info_show h3{
+  font-weight: normal;
+  padding-left: 10px;
+    border-left: solid 3px #6495ED;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+
+.providers_info_show h2{
+    font-weight:normal;
+    font-size: 30px;
+clear:both;
+
+}
+
+
+
 .providerfield{
     background-color: #fff;
     border-radius: 5px;
@@ -36,6 +64,10 @@ clear:both;
     width: 40%;
 }
 
+
+.message_reservetion{margin-top: 6%;}
+
+
 .provider_join_btn{margin-top:10%;margin-left:20%;font-size:16px;font-weight:700;text-decoration:none;display:block;text-align:center;padding:9px;cursor:pointer;border:1px solid #333;color:#fff;background-color: #FA8072
 ;box-shadow:2px 2px #808080;width:26%; border-radius:3%; margin-top:2%;}
 .provider_join_btn:active{box-shadow:0 0 ;margin-top:4%; }
@@ -45,6 +77,10 @@ clear:both;
 .provider_delete_btn:active{box-shadow:0 0 ;margin-top:4%; }
 
 
-.edit-button{margin-left:50%}
+.edit-button{margin-left:81%}
+
+
+.bootstrap .btn-default{float:left;margin:23px 10px;}
+
 
 

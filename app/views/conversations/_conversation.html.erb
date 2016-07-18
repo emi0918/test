@@ -4,18 +4,18 @@
   <div class="media">
     <div class="media-left">
       <a href="#">
-        <img class="media-object" src="http://placehold.it/64x64" alt="...">
+        <%= image_tag conversation.originator.profile_pic, :class => 'media-object' , :size => '64x64'  %>
       </a>
     </div>
     <div class="media-body">
       <h4 class="media-heading">
-        <%= conversation.originator.user_name %> <br>
+        <%= conversation.originator.name %> <br>
         <small><b>件名: </b><%= conversation.subject %></small><br>
         <small><b>日付: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
       </h4>
       <%= truncate conversation.messages.last.body, length: 145 %>
 
-<% if current_user.try (:user_name?) %>
+<% if current_user.try (:name?) %>
       <%= link_to "開く", conversation_path(conversation)  %>
   <%else%>
       <%= link_to "開く", provider_path(conversation)  %>

@@ -37,9 +37,9 @@ def after_sign_in_path_for(resources)
 private
 
 def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :user_name << :area << :profile << :profile_pic
+    devise_parameter_sanitizer.for(:sign_up) << :name << :area << :profile << :profile_pic
 
-     devise_parameter_sanitizer.for(:account_update) << :user_name << :area << :profile << :profile_pic
+     devise_parameter_sanitizer.for(:account_update) << :name << :area << :profile << :profile_pic
   end
 
   private
