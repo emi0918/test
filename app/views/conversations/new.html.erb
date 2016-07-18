@@ -14,59 +14,16 @@
 </div>
 
 
+
 <div class="bootstrap">
 <div class="mypage-all_wrapper">
 
 <div class="mailbox_wrapper">
-<div class="bootstrap">
-<div class="row">
-  <div class="spacer"></div>
-  <div class="col-md-6">
-    <% if provider_signed_in? %>
-   <% else %> 
-    <%= link_to "メッセージを作成", new_conversation_path, class: "btn btn-success" %>
-    <% end %> 
-  </div>
-</div>
 
-<div class="bootstrap">
-<div class="row">
-  <div class="spacer"></div>
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-body">
-       <% if current_user.try(:profile_pic?) %>
-        <%= render 'mailbox/folders' %>
-        <% else %>
-          <%= render 'mailbox/providers' %>
-          <% end %>
-      </div>
-    </div>
-  </div>
+<%= render partial: 'mailbox/folder_view', locals: { is_conversation: true } %>
 
-
-  <div class="col-md-8">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <%= render partial: 'messages' %>
-      </div>
-      <div class="panel-footer">
-        <!-- Reply Form -->
-        <%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
-            <div class="form-group">
-              <%= f.text_area :body, placeholder: "返信する", rows: 4, class: "form-control" %>
-            </div>
-            <%= f.submit "送信", class: 'btn btn-danger pull-right' %>
-        <% end %>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </div>
-
-  </div></div>
-  </div>
 
   </div>
   </div>
-
+  </div>
 
