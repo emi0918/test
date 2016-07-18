@@ -62,15 +62,14 @@ end
 
 
 
- 
- def mailbox
-   if current_user.try(:provider_pic?)
-       @mailbox ||= current_provider.mailbox
+def mailbox
+  if current_user.try(:id?)
+    @mailbox ||= current_user.mailbox
   else
-      
-        @mailbox ||= current_user.mailbox
+      @mailbox ||= current_provider.mailbox
   end
 end
+
 
  def conversation
     @conversation ||= mailbox.conversations.find(params[:id])

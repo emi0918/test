@@ -70,16 +70,15 @@ end
       params.require(:provider).permit(:name, :email,:phonenumber, :address, :hours, :holiday, :payment, :password,:about, :provider, :provider_pic)
     end
 
- def mailbox
-  if current_user.try(:provider_pic?)
-       @mailbox ||= current_provider.mailbox
+def mailbox
+  if current_user.try(:id?)
+    @mailbox ||= current_user.mailbox
   else
-      
-        @mailbox ||= current_user.mailbox
+      @mailbox ||= current_provider.mailbox
   end
-
-  
 end
+
+
 
 def conversation_params
   params.require(:conversation).permit(:subject, :body,recipients:[])
