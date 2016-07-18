@@ -12,10 +12,11 @@ class MailboxController < ApplicationController
   end
 
  def mailbox
-  if current_user.try(:profile_pic?)
-       @mailbox ||= current_user.mailbox
-  else
+  if current_user.try(:provider_pic?)
        @mailbox ||= current_provider.mailbox
+  else
+      
+        @mailbox ||= current_user.mailbox
   end
 end
 end
