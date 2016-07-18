@@ -1,0 +1,39 @@
+/usr/local/rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20160716-5201-cbgyxk.rb extconf.rb
+checking for main() in -lpthread... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling signature.cc
+compiling backref.cc
+compiling array.cc
+compiling locker.cc
+compiling script.cc
+compiling date.cc
+compiling function.cc
+compiling init.cc
+compiling constants.cc
+compiling v8.cc
+compiling message.cc
+compiling gc.cc
+compiling constraints.cc
+compiling accessor.cc
+compiling external.cc
+compiling value.cc
+compiling invocation.cc
+compiling exception.cc
+compiling stack.cc
+compiling string.cc
+compiling object.cc
+compiling handles.cc
+compiling context.cc
+compiling primitive.cc
+compiling template.cc
+compiling heap.cc
+compiling rr.cc
+compiling trycatch.cc
+linking shared-object v8/init.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 init.so ./.gem.20160716-5201-tb54u3/v8

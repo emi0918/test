@@ -3,4 +3,5 @@ module MailboxHelper
     mailbox.inbox(:unread => true).count(:id, :distinct => true)
   end
 
+
 end

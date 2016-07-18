@@ -9,7 +9,7 @@ end
 
   def show
     @notes = @user.notes
-    @user_name = User.find(params[:id])
+    @name = User.find(params[:id])
     @area = User.find(params[:id])
   end
 

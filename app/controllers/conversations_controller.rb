@@ -8,19 +8,25 @@ class ConversationsController < ApplicationController
   end
 
   def index
+
   end
 
   def create
+
     recipients = Provider.where(id: conversation_params[:recipients])
-    conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
+    conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation or  
+    current_provider.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation 
+
+
+
     flash[:notice] = "メッセージが送信されました!"
     redirect_to mailbox_inbox_path
   end
 
   def show
-     @receipts = conversation.receipts_for(current_user).order("created_at ASC")
+     @receipts = conversation.receipts_for(current_user).order("created_at ASC") or conversation.receipts_for(current_provider).order("created_at ASC")
     # mark conversation as read
-    conversation.mark_as_read(current_user)
+    conversation.mark_as_read(current_user)or conversation.mark_as_read(current_provider)
 end
 
 def new
@@ -45,7 +51,7 @@ def message_params
 end
 
 def mailbox
-  if current_user.try(:user_name?)
+  if current_user.try(:profile_pic?)
    @mailbox ||= current_user.mailbox
  else
    @mailbox ||= current_provider.mailbox

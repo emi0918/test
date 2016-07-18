@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
  
- before_action :set_note, only: [:show, :edit, :update, :destroy, :profile]
+ before_action :set_note, only: [:show,:edit, :update, :destroy, :profile]
  before_action :authenticate_user!, only:[:profile]
  before_action :authenticate_provider!, only:[:index, :new, :edit, :create]
  include ApplicationHelper
@@ -19,6 +19,11 @@ class NotesController < ApplicationController
    @notes = Note.includes(:provider).all
    @note = Note.find(params[:id])
  end
+
+ def search
+   @notes = Note.includes(:provider).page(params[:page]).per(6).order(:id)
+ end
+
 
  def search
    @notes = Note.includes(:provider).page(params[:page]).per(6).order(:id)
@@ -51,7 +56,7 @@ class NotesController < ApplicationController
     @note.set_image_1(file)
 
     if @note.save
-     redirect_to @note
+     redirect_to  @note
 #redirect_to @note で作成されたものが表示される
 else
  render :new
@@ -66,6 +71,7 @@ end
     @note = Note.find(params[:id])
 
     if @note.update(note_params)
+
       redirect_to @note, notice: '編集完了しました'
     else
       render :edit
@@ -95,10 +101,10 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :user_name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:provider_id,:cancelrule, :salespoint, :catchcopy)
+      params.require(:note).permit(:title, :name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:provider_id,:cancelrule, :salespoint, :catchcopy)
     end
     def user_params
-      params.require(:user).permit(:user_name, :profile_pic, :profile, :area, :email)
+      params.require(:user).permit(:name, :profile_pic, :profile, :area, :email)
     end
   end
 
