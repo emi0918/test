@@ -34,9 +34,6 @@
 
 
 
-
-
-
  <div class="about-company">
   <div id="2">
    <div class="company-head">
@@ -52,17 +49,23 @@
 
      <tr>
       <td>設立</td>
-      <td>2016年</td>
+      <td>2016/05/27</td>
     </tr>
+
+  <tr>
+      <td>所在地</td>
+      <td>東京都渋谷区道玄坂2-10-12 新大宗ビル3号館5階531</td>
+     </tr>
+
 
      <tr>
       <td>資本金</td>
-      <td></td>
+      <td>1万円</td>
     </tr>
 
      <tr>
       <td>事業内容</td>
-      <td></td>
+      <td>オンラインサービスプラットフォームの開発と運営</td>
     </tr>
 
      <tr>
@@ -71,27 +74,13 @@
     </tr>
 
 
-     <tr>
-      <td>株主</td>
-      <td></td>
-    </tr>
-
-
-     <tr>
-      <td>主要取引先</td>
-      <td></td>
-    </tr>
-
-
+   
     </tbody>
 </table>
 
 
   </div>
 </div>
-
-
-
 
 
   <div id="3">
@@ -101,12 +90,10 @@
    </div>
 
    <div class="company_service_mission">
-    <h2>始まったばかりのサービスを伸ばしていく、会社の立ち上げに興味ある方を募集！</h2>
+    <h2>始まったばかりのサービスを共に伸ばしていく、会社の立ち上げに興味ある方を募集！</h2>
     <p>会社にいるのは現在、代表の私だけです。本当に初期のメンバーとしてジョインしてくださる方を募集しています！
    </p>
  </div>
-
-
 </div>
 
 
@@ -115,17 +102,31 @@
 
 
 
+<p id="page-top"><a href="#wrap">PAGE TOP</a></p>
 
-<a class="button" href="#">page top</a>
 
  </div>
 
 
+<script>
+$(function() {
+    var topBtn = $('#page-top');    
+    topBtn.hide();
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    //スクロールしてトップ
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
 
- 
-
-
-
-
-
-
+</script>
