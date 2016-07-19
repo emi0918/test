@@ -9,8 +9,8 @@
 
   <div class="provider-introduction">
     <h1>  <%= @note.title %></h1>
-    <% if @note.provider.provider_pic? %>
-    <%=  image_tag(@note.provider.provider_pic.url, :class => 'face_pic')%>
+    <% if @note.image_1? %>
+    <%=  image_tag(@note.image_1, :class => 'face_pic')%>
 
     <% else %>
     <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
