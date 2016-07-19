@@ -16,26 +16,16 @@
 
 
 <div class="mypage-all_wrapper">
-
-
-
-
    <h1 class="user_page_name"><%= current_user.name %>さんのページ  </h1>
-      
-
-
 <div class="notification_user">
-<ul>
-  <li><em class="fa fa-inbox fa-lg"></em></li>
-  <li></li>
-</ul>
+<em class="fa fa-inbox fa-lg"></em><a href='/mailbox/inbox'> <%=unread_messages_count%></a>件の未読メッセージがあります！
+
 
 
 </div>
-
-
-
   </div>
+
+
 
 
 
