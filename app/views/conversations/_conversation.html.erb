@@ -15,7 +15,7 @@
       </h4>
       <%= truncate conversation.messages.last.body, length: 145 %>
 
-<% if current_user.try (:name?) %>
+<% if current_user.try (:id?) %>
       <%= link_to "開く", conversation_path(conversation)  %>
   <%else%>
       <%= link_to "開く", provider_path(conversation)  %>

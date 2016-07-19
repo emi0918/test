@@ -2,11 +2,13 @@
 .company_content{height:0 auto;color:#fff;     -webkit-font-smoothing: antialiased;}
 
 
-.company_explanation{height:350px;border-bottom:1px solid #696969; background-color:white;color:gray}
+.company_explanation{height:100px; background-color:white;color:#333}
 
-.company_explanation h2{font-size:40px;text-align:center;color:#696969;font-weight: normal;}
+.company_explanation h2{font-size:40px;text-align:center;-webkit-font-smoothing: antialiased; padding-top:2%;letter-spacing: 1px;}
 
-.company_explanation h2{padding-top:40px}
+
+
+
 
 .company_service{height:0 auto; }
 
@@ -34,6 +36,7 @@
 }
 
 
+
 .company_question{height:1000px}
 
 .left-menu{margin-top:90px;float:left;text-align:left}
@@ -46,11 +49,31 @@
 
 .question{width:600px;text-align:left;margin:70px 500px}.question p{font-size:14.8px;line-height:28px}
 
-.company_content .button{clear:both; float:right;}
+
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    padding: 20px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
 
 
 
-.about-company  h1{text-align: center}
+.about-company h1{text-align: center}
 
 .about-company{color:#333; margin-top:550px;clear:both; text-align: center}
 
@@ -60,7 +83,6 @@
 
 
 .company-table tr td:nth-of-type(odd) {
-
     /* vertical-align: top; */
     white-space: nowrap;
 }
