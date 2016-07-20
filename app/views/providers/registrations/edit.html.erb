@@ -1,16 +1,4 @@
-<div class="up-var">
-  <div class="upper-menu">
-    <div class="wrapper" >
-      <ul>
-        <li><a href='/providers/main'>マイページ</a></li>
-        <li><a href='/providers/inbox'>メッセージ</a></li>
-        <li><%= link_to '掲載中', notes_path %></li>
-        <li><a href='/dashboard/transaction'>取引履歴</a></li>
-        <li><a href='/providers/edit'>基本情報</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+<%= render 'providers/header' %>
 
 <div class="providers_new_post">
 <div class="bootstrap">
@@ -22,6 +10,14 @@
 
   <table class="newpost">
  
+
+     <tr>
+   <th> <p>店舗名<span class="form-label required">必須</span></p></th>
+   <td>
+    <%= f.text_field :name, class: 'form-control',placeholder:"〇〇〇〇サービス" %>
+  </td>
+</tr>
+
    <tr>
    <th> <p>営業時間<span class="form-label required">必須</span></p></th>
    <td>
