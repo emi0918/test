@@ -1,18 +1,4 @@
-<div class="up-var">
-  <div class="upper-menu">
-    <div class="wrapper" >
-      <ul>
-        <li><a href='#'>マイページ</a></li>
-        <li><a href='/providers/inbox'>メッセージ</a></li>
-        <li><%= link_to '掲載中', notes_path %></li>
-        <li><a href=''>取引履歴</a></li>
-        <li><a href='/providers'>基本情報</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
+<%= render 'providers/header' %>
 
 
 <div class="mypage-all_wrapper">
@@ -27,10 +13,11 @@
  <% if current_provider.provider_pic? %>
     <%= image_tag current_provider.provider_pic.url, :class => 'mypage-picture'%>
   <% else %>
-    <%= image_tag 'Seekle_icon-min.png', :class => 'mypage-picture'%>
+    <%= image_tag 'Seekle_icon.png', :class => 'mypage-picture'%>
   <% end %>
 
 </div>
+
 
 
  <div class="mypage_wrapper">
@@ -61,9 +48,6 @@
   </tbody>
 </table>
 
-
-
-
   <div class="about-profiles">
     <h3>自己紹介：</h3> <p><%= current_provider.about %>
     <% if current_provider.about.blank? %>
@@ -73,8 +57,6 @@
       <h3> レビュー：</h3>
        <ul class="notes">
       </ul>
-
-
 </div>
   </div>
   </div>
