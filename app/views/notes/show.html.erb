@@ -17,7 +17,6 @@
     <% if @note.image_1? %>
    
     <%= image_tag "/note_images/#{@note.image_1}" ,class: "face_pic"%>
-    <%=  image_tag(@note.image_1, :class => 'face_pic')%>
 
     <% else %>
     <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
