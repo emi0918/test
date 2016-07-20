@@ -9,8 +9,9 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = current_provider.notes.all
-    @notes = Note.includes(:provider).page(params[:page]).per(3).order(:id)
+     
+    @notes = current_provider.notes.all.page(params[:page]).per(3).order(:id)
+
     render :layout => 'providers_layout.html'
   end
 
