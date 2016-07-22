@@ -4,7 +4,8 @@ class Provider < ActiveRecord::Base
  has_many :notes, dependent: :destroy
  has_many :mailboxer_conversations
 
-
+  has_many :reservations
+ has_many :contacts
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 

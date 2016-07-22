@@ -64,6 +64,11 @@ end
     end
   end
   
+
+
+
+
+
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
     def provider_params

@@ -2,9 +2,11 @@ class Note < ActiveRecord::Base
 	belongs_to :provider
 	belongs_to :user
 	belongs_to  :mailboxer_conversations
+
+	has_many :reservations
 	has_many :likes, dependent: :destroy
 	has_many :liking_users, through: :likes, source: :user
-   
+   has_many :reviews
 
   validates_acceptance_of :confirming
   after_validation :check_confirming

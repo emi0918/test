@@ -14,9 +14,9 @@
 .provider_wrapper .sample_03{width:50%;} .provider_wrapper .sample_03 th{width:15%; }  .provider_wrapper .sample_03 td{width:35%;}
 
 .provider_wrapper{width:100%;margin-top:0;height:1400px}
-.provider-introduction{width:73%;height:420px;border-bottom:1px solid #dce0e0;display:block; margin-left:14%;}
+.provider-introduction{width:73%;height:470px;border-bottom:1px solid #dce0e0;display:block; margin-left:14%;}
 .provider-introduction p{float:left;padding-right:80px;padding-top:50px}
-.face_pic{width:45%;height:75%;margin-right:40px;float:left;border-radius:2%;}
+.face_pic{width:45%;height:72%;margin-right:40px;margin-top:20px;float:left;border-radius:2%;}
 
 .service_order_btn{font-size:22px;font-weight:700;text-decoration:none;display:block;text-align:center;padding:9px;cursor:pointer;border:1px solid #333;color:#fff;background-color:#6495ED;box-shadow:2px 2px #555;margin-left:71%;width:26%; border-radius:3%; margin-top:2%;}
 .service_order_btn:active{box-shadow:0 0 #555;margin-top:3%; }
@@ -29,8 +29,6 @@
 
 
 .provider_introduction h3{margin-left: 30%; width:20%;}
-
-.provider-contents{margin-top: 40px;}
 
 
 .service-price_provider h1{color:#fff;text-align:center;font-size:40px;padding-top:28px}

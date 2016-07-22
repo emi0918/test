@@ -26,5 +26,3 @@ layout "providers_layout"
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
 end
-
-
