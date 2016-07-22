@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>日程</strong>
+  <%= @reservation.date %>
+</p>
+
+<p>
+  <strong>サービス名</strong>
+  <%= @reservation.note.title %>
+</p>
+
+<p>
+  <strong>サービス提供者:</strong>
+  <%= @reservation.note.provider.name %>
+</p>
+
+<p>
+  <strong>電話番号:</strong>
+  <%= @reservation.phone_number %>
+</p>
+
+<p>
+  <strong>カテゴリー:</strong>
+  <%= @reservation.note.price %>円
+</p>
