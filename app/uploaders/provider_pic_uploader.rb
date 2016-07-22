@@ -3,7 +3,7 @@ class ProviderPicUploader < CarrierWave::Uploader::Base
  include CarrierWave::RMagick
 
 
-process :resize_to_limit => [100, 100]
+  process :resize_to_limit => [700, 700]
 
   # 保存形式をJPGにする
   process :convert => 'jpg'
