@@ -1,0 +1,37 @@
+
+.mypage-all_wrapper{
+	padding-top:18px;width:100%; padding-bottom: 60px;
+}
+
+.mypage-all_wrapper h1{
+	float:left;margin-left: 180px; font-weight: 500;  line-height: 1.3em; width:56%; 
+}
+
+
+.mypage-all_wrapper h3{
+	margin-top:50px
+} 
+
+
+.notification_user{
+	clear:both;margin-left: 180px; 
+}
+
+.notification_header{
+width: 84%;
+border-bottom: 2px solid	#FDF5E6;
+}
+
+.notification_user h2{
+	padding-left: 9px;
+	padding-top: 4px;
+	height:36px;
+	margin-top: 40px;
+	margin-bottom: 0px;
+	font-weight: normal;
+	background-color: 		#FFE4C4;
+}
+
+.notification_content{
+	margin-top: 20px;
+}
