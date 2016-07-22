@@ -5,9 +5,7 @@
 .left-wrapper{margin-left:160px;margin-top:20px;float:left;padding-right:20px}
 .right-wrapper{margin-top:140px;margin-right:150px;float:left}
 .security-heading{width:241px;height:44px;background-color:#A9A9A9;color:#fff;font-weight:700;clear:left;margin-top:-16px;border-radius:2px} 
-.mypage-all_wrapper h1{float:left;margin-left: 180px; font-weight: 500;  line-height: 1.3em; width:56%; }
-.mypage-all_wrapper{padding-top:18px;width:100%; padding-bottom: 60px;}
-.mypage-all_wrapper h3{margin-top:50px} 
+
 
 .mypage-picture{height:260px;width:270px;margin-left:50px;border-radius:9%;}
 .mypage_wrapper{height:100%;margin-top:30px; margin-bottom:30px;float:left;width:49%}.mypage_wrapper h1{font-weight:400; }
@@ -67,25 +65,3 @@
 .payment-page h1{font-weight: normal;}
 .payment-page p{font-size: 15px; line-height: 17px; margin-left: 60px;}
 .paymethod{margin-left: 190px;}
-
-.notification_user{
-	clear:both;margin-left: 180px; }
-
-.notification_header{
-width: 84%;
-border-bottom: 2px solid	#FDF5E6;
-}
-
-.notification_user h2{
-	padding-left: 9px;
-	padding-top: 4px;
-	height:36px;
-	margin-top: 40px;
-	margin-bottom: 0px;
-	font-weight: normal;
-	background-color: 		#FFE4C4;
-}
-
-.notification_content{
-	margin-top: 20px;
-}
