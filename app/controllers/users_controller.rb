@@ -4,8 +4,13 @@ class UsersController < ApplicationController
  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
  def index
-   @users= User.all
+  @users= User.all
    @user = User.includes(:notes)
+      @user = User.includes(:reservation)
+ end
+
+ def history
+
  end
 
  def show
@@ -111,6 +116,9 @@ def set_user
   def set_user
     @user = User.includes(:note).where(name: params[:id]).first
   end
+
+  
+
 end
 
 

@@ -1,43 +1,38 @@
-<div class="up-var">
-  <div class="upper-menu">
-    <div class="wrapper" >
-      <ul>
-        <li><a href='/users'>マイページ</a></li>
-         <li><a href='/mailbox/inbox'>メッセージ<div class="bootstrap">
- <span class="label label-danger pull-right"><%=unread_messages_count%></span></div></a></li>
-        <li><a href=''>取引履歴</a></li>
-        <li><a href='/users/edit'>基本設定</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
+<%= render 'users/header' %>
 
 
 <div class="mypage-all_wrapper">
-
-
-
-
-   <h1 class="user_page_name"><%= current_user.name %>さんのページ  </h1>
-      
-
-
+   <h1><%= current_user.name %>さんのページ  </h1>
 <div class="notification_user">
-<ul>
-  <li><em class="fa fa-inbox fa-lg"></em></li>
-  <li></li>
-</ul>
 
 
+<div class="notification_header">
+<h2>新着メッセージ</h2>
 </div>
 
+<div class="notification_content">
+<em class="fa fa-inbox fa-lg"></em><a href='/mailbox/inbox'> <%=unread_messages_count%></a>件の未読メッセージがあります！
+</div>
 
+<div class="notification_header">
+<h2>予約中サービス</h2>
+</div>
 
-  </div>
+<div class="notification_content">
+  現在<a href='/users/history'> <%= current_user.reservations.count %></a>件の予約をしています。
 
+<br>
+   <% current_user.reservations.each do |reservation| %>
+   <tr>
+     <td><%= reservation.date %></td>
+     <td><%= reservation.note.title%></td>
+     <td><%= reservation.phone_number %></td>
+     <td><%= reservation.user_id %></td>
+   </tr>
+   <% end %>
 
-
+ </div>
+</div>
+</div>
 
 

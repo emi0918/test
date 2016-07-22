@@ -22,6 +22,10 @@
     <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
     <% end %>
 
+
+        <div class="star-rating" data-score= <%= @avg_review %> ></div>
+        <em><%= "#{@reviews.length} 件の口コミ" %></em>
+
     <table class="sample_03">
      <tbody>
       <tr>
@@ -50,7 +54,7 @@
 </div>
 
  <small>
-   <%= link_to "このサービスを依頼", "/charges/new", :class => 'service_order_btn' %>
+   <%= link_to "このサービスを依頼", new_note_reservation_path(@note), :class => 'service_order_btn' %>
  </small>
 </div>
 </div>
@@ -99,7 +103,24 @@
 </ul>
 </div>
 <div class="reviews_providers">
- <h2>レビュー (2)</h2>
+ <h2>レビュー (<%= "#{@reviews.length}" %>)</h2>
+ <ul>
+<% if @reviews.blank? %>
+<p>レビューはまだありません</p>
+<% else %>
+
+<div class="review-wrapper">
+ <% @reviews.each do |review| %>
+
+  <div class="reviews">
+          <%= review.user.name %>さん
+                      <div class="star-rating" data-score= <%= review.rating %> ></div>
+              <p><%= review.comment %></p>
+            </div>
+  <% end %>
+ <% end %>
+ </div>
+</ul>
 </div>
 
 </div>
@@ -107,5 +128,14 @@
 
 
 
+<script>
+    $('.star-rating').raty({
+      path: '/assets/',
+      readOnly: true,
+      score: function() {
+            return $(this).attr('data-score');
+    }
+  });
+</script>
 
 

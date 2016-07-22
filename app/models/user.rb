@@ -1,11 +1,15 @@
 class User < ActiveRecord::Base
- has_many :notes, dependent: :destroy
+
  has_many :likes, dependent: :destroy
  has_many :like_notes, through: :likes, source: :note
  has_many :likes
  has_many :like_notes, through: :likes, source: :note
  has_many :mailboxer_conversations
+ has_many :contacts
+has_many :reviews, dependent: :destroy
+has_many :notes
 
+  has_many :reservations
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

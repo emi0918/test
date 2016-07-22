@@ -14,11 +14,7 @@
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-    ログインを記憶する<%= f.check_box :remember_me %>  
-    </div>
-  <% end -%>
+
 
   <div class="actions">
     <%= f.submit "ログインする" ,:class => 'provider_join_btn' %>
@@ -28,3 +24,5 @@
 <%= render "providers/shared/links" %>
 
 </div>
+
+

@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
- 
+
  before_action :set_note, only: [:show,:edit, :update, :destroy, :profile]
  before_action :authenticate_user!, only:[:profile]
  before_action :authenticate_provider!, only:[:index, :new, :edit, :create]
@@ -9,9 +9,7 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-     
     @notes = current_provider.notes.all.page(params[:page]).per(3).order(:id)
-
     render :layout => 'providers_layout.html'
   end
 
@@ -19,65 +17,60 @@ class NotesController < ApplicationController
   # GET /notes/1.json
   def show
    @notes = Note.includes(:provider).all
+    @notes = Note.includes(:user).all
    @note = Note.find(params[:id])
- end
 
+   @reviews = Review.where(note_id: @note.id).order("created_at DESC")
+   if @reviews.blank?
+      @avg_review = 0
+    else
+      @avg_review = @reviews.average(:rating).round(2)
+   end
+  end
 
-
- def search
+  def search
    @notes = Note.includes(:provider).page(params[:page]).per(6).order(:id)
- end
+  end
 
-
- def profile
+  def profile
    @notes = Note.includes(:provider).all
- end
+  end
 
   # GET /notes/ne
-
   def new
    @note = Note.new
    render :layout => 'providers_layout.html'
- end
+  end
 
   # GET /notes/1/sedit
   def edit
     @note = Note.find(params[:id])
- render :layout => 'providers_layout.html'
+    render :layout => 'providers_layout.html'
   end
-
 
   # POST /notes
   # POST /notes.json
   def create
-
     @note = current_provider.notes.build(note_params)
-
     file=params[:note][:image_1]
     @note.set_image_1(file)
-
     if @note.save
      redirect_to  @note
 #redirect_to @note で作成されたものが表示される
-else
- render :new
-end
-end
-
+    else
+      render :new
+    end
+   end
 
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
-
     @note = Note.find(params[:id])
-
     if @note.update(note_params)
-
       redirect_to @note, notice: '編集完了しました'
     else
       render :edit
     end
-   
   end
 
   # DELETE /notes/1
@@ -88,25 +81,24 @@ end
     redirect_to root_url
   end
 
-
   def mailbox
-       @mailbox ||= current_user or current_provider.mailbox
+   @mailbox ||= current_user or current_provider.mailbox
   end
 
-
-  private
+   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
-     @note = Note.find(params[:id])
-   end
+      @note = Note.find(params[:id])
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
       params.require(:note).permit(:title, :name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:provider_id,:cancelrule, :salespoint, :catchcopy)
     end
+
     def user_params
       params.require(:user).permit(:name, :profile_pic, :profile, :area, :email)
     end
-  end
+end
 
 
