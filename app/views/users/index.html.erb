@@ -21,15 +21,6 @@
 <div class="notification_content">
   現在<a href='/users/history'> <%= current_user.reservations.count %></a>件の予約をしています。
 
-<br>
-   <% current_user.reservations.each do |reservation| %>
-   <tr>
-     <td><%= reservation.date %></td>
-     <td><%= reservation.note.title%></td>
-     <td><%= reservation.phone_number %></td>
-     <td><%= reservation.user_id %></td>
-   </tr>
-   <% end %>
 
  </div>
 </div>
