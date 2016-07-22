@@ -10,7 +10,7 @@ class UsersController < ApplicationController
  end
 
  def history
-
+@reservations = current_user.reservations.all.page(params[:page]).per(3).order(:id)
  end
 
  def show
