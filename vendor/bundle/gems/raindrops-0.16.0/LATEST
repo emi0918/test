@@ -1,0 +1,28 @@
+=== raindrops 0.16.0 - minor fixes and workarounds / 2016-02-29 12:36 UTC
+
+  There's mainly a fix/workaround for Ruby 2.3 now returning
+  locale-aware strings for File.readlink and our test suite
+  using strange paths allowed by *nix.
+
+      https://bugs.ruby-lang.org/issues/12034
+
+  tcp_listener_stats won't return "true" object placeholders
+  if stats are configured for a non-existent listener.
+
+  There are also minor optimizations for Ruby 2.2+ (at the expense
+  of 2.1 and earlier).
+
+  And the usual round of minor tweaks and doc updates.
+
+  10 changes since v0.15.0:
+        gemspec: avoid circular dependency on unicorn
+        remove optimizations which made sense for older rubies
+        linux: workaround Ruby 2.3 change
+        linux: remove Pathname stdlib dependency
+        add .gitattributes for Ruby method detection
+        middleware: minor bytecode size reduction
+        doc: update URLs and references
+        README: remove indentation from URLs in RDoc
+        linux: tcp_listener_stats drops "true" placeholders
+        build: use '--local' domain for dev gem install
+
