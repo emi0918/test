@@ -44,7 +44,6 @@ class NotesController < ApplicationController
 
   # GET /notes/1/sedit
   def edit
-    @note = Note.find(params[:id])
     render :layout => 'providers_layout.html'
   end
 
@@ -52,9 +51,7 @@ class NotesController < ApplicationController
   # POST /notes.json
   def create
     @note = current_provider.notes.build(note_params)
-    file=params[:note][:image_1]
-    @note.set_image_1(file)
-    if @note.save
+       if @note.save
      redirect_to  @note
 #redirect_to @note で作成されたものが表示される
     else
@@ -65,13 +62,14 @@ class NotesController < ApplicationController
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
-    @note = Note.find(params[:id])
+  
     if @note.update(note_params)
       redirect_to @note, notice: '編集完了しました'
     else
-      render :edit
+      render 'edit'
     end
   end
+
 
   # DELETE /notes/1
   # DELETE /notes/1.json
@@ -93,11 +91,11 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :name, :content, :price, :image_1, :image_2, :image_3, :category, :rule,:provider_id,:cancelrule, :salespoint, :catchcopy)
+      params.require(:note).permit(:title, :name, :content, :price, :service_image1,:service_image2,:service_image3, :category, :rule,:provider_id,:cancelrule, :salespoint, :catchcopy)
     end
 
     def user_params
-      params.require(:user).permit(:name, :profile_pic, :profile, :area, :email)
+      params.require(:user).permit(:name,  :profile, :area, :email)
     end
 end
 
