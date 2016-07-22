@@ -47,8 +47,9 @@
   <ul>
    <% @notes.each do |note| %>
    <div class="provider_job ">
-     <% if note.image_1.present? %>
-    <%= image_tag "/note_images/#{note.image_1}" ,class: "provider_service_image"%>
+     
+     <% if note.service_image1.present? %>
+    <%= image_tag note.service_image1_url ,class: "provider_service_image"%>
      <% else %>
      <%= image_tag 'Seekle_icon.png', :class => 'provider_service_image'%>
      <% end %>

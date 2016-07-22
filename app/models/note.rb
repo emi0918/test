@@ -8,13 +8,8 @@ class Note < ActiveRecord::Base
 	has_many :liking_users, through: :likes, source: :user
    has_many :reviews
 
-  validates_acceptance_of :confirming
-  after_validation :check_confirming
 
-  def check_confirming
-    errors.delete(:confirming)
-    self.confirming = errors.empty? ? '1' : ''
-  end
+ mount_uploader :service_image1, ServiceImage1Uploader
 
 	validates :title, presence:  true
 	validates :category, presence: true
@@ -25,13 +20,8 @@ class Note < ActiveRecord::Base
 	validates :catchcopy, presence: true
 	validates :cancelrule, presence: true
 
-	def set_image_1(file)
-		if !file.nil?
-			file_name = file.original_filename
-			File.open("public/note_images/#{file_name}", 'wb'){|f| f.write(file.read)}
-			self.image_1 = file_name
-		end
-	end
+
+
 end
 
 
