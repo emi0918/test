@@ -24,6 +24,7 @@ class UsersController < ApplicationController
  end
 
  def edit
+  @user.profile_pic.cache! unless @user.profile_pic.blank?
    @user = User.find(params[:id])
  end
 
@@ -43,6 +44,7 @@ class UsersController < ApplicationController
  end
 
  def update
+    @user.profile_pic.cache! unless @user.profile_pic.blank?
   file = params[:user][:profile_pic]
   @user.set_image(file)
 

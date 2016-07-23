@@ -27,6 +27,7 @@
      <th> <p>プロフィール写真 <span class="form-label required">必須</span></p></th>
      <td>
      <%= f.file_field :profile_pic, class: "form-control image-field" %>
+      <%= f.hidden_field :profile_pic_cache %>
     </td>
   </tr>
 

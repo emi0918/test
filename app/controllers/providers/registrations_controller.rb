@@ -12,6 +12,7 @@ def new
 end
 
   def edit
+    @provider.provider_pic.cache! unless @provider.provider_pic.blank?
   end
 
 def create
@@ -27,7 +28,7 @@ end
 
 
   def update
-   
+   @provider.provider_pic.cache! unless @provider.provider_pic.blank?
     if @provider.update(provider_params)
       redirect_to main_providers_path
     else

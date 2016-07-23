@@ -44,6 +44,7 @@ class NotesController < ApplicationController
 
   # GET /notes/1/sedit
   def edit
+    @note.service_image1.cache! unless @note.service_image1.blank?
     render :layout => 'providers_layout.html'
   end
 
@@ -62,7 +63,7 @@ class NotesController < ApplicationController
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
-  
+   @note.service_image1.cache! unless @note.service_image1.blank?
     if @note.update(note_params)
       redirect_to @note, notice: '編集完了しました'
     else

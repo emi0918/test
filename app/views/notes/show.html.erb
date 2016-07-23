@@ -6,28 +6,18 @@
 </div>
 
 
-
-
-
-
 <div class="provider_wrapper">
 
   <div class="provider-introduction">
     <h1>  <%= @note.title %></h1>
     <% if @note.service_image1? %>
-   
-
-<%= image_tag @note.service_image1.thumb.url ,class: "face_pic"%>
-
-  
-
+    <%= image_tag @note.service_image1.thumb.url ,class: "face_pic"%>
     <% else %>
     <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
     <% end %>
 
-
-        <div class="star-rating" data-score= <%= @avg_review %> ></div>
-        <em><%= "#{@reviews.length} 件の口コミ" %></em>
+    <div class="star-rating" data-score= <%= @avg_review %> ></div>
+    <em><%= "#{@reviews.length} 件の口コミ" %></em>
 
     <table class="sample_03">
      <tbody>
@@ -43,7 +33,7 @@
        <th>カテゴリー：</th>
        <td><%= @note.category %></td>
      </tr>
-       <tr>
+     <tr>
        <th>料金：</th>
        <td><%= @note.price%>円 〜</td>
      </tr>
@@ -51,12 +41,12 @@
    </tbody>
  </table>
 
-<div class="message_reservetion">
-<div class="bootstrap">
-<a class="btn btn-default" href="/conversations/new" role="button"><i class="fa fa-pencil" aria-hidden="true"></i>メッセージを送る</a>
-</div>
+ <div class="message_reservetion">
+  <div class="bootstrap">
+    <a class="btn btn-default" href="/conversations/new" role="button"><i class="fa fa-pencil" aria-hidden="true"></i>メッセージを送る</a>
+  </div>
 
- <small>
+  <small>
    <%= link_to "このサービスを依頼", new_note_reservation_path(@note), :class => 'service_order_btn' %>
  </small>
 </div>
@@ -65,7 +55,7 @@
 
 
 <div class="service_explain">
-<h1><%= @note.catchcopy %></h1>
+  <h1><%= @note.catchcopy %></h1>
 </div>
 
 
@@ -101,44 +91,40 @@
 
 <div class="rulesfromprovider">
  <h2>お客様へのお願い</h2>
- <ul>
-  <p> <%= simple_format(@note.rule) %></p>
-</ul>
+  <ul>
+   <p> <%= simple_format(@note.rule) %></p>
+  </ul>
 </div>
+
 <div class="reviews_providers">
  <h2>レビュー (<%= "#{@reviews.length}" %>)</h2>
- <ul>
-<% if @reviews.blank? %>
-<p>レビューはまだありません</p>
-<% else %>
-
-<div class="review-wrapper">
- <% @reviews.each do |review| %>
-
-  <div class="reviews">
-          <%= review.user.name %>さん
-                      <div class="star-rating" data-score= <%= review.rating %> ></div>
-              <p><%= review.comment %></p>
-            </div>
-  <% end %>
- <% end %>
+  <ul>
+   <% if @reviews.blank? %>
+     <p>レビューはまだありません</p>
+   <% else %>
+     <div class="review-wrapper">
+      <% @reviews.each do |review| %>
+       <div class="reviews">
+        <%= review.user.name %>さん
+         <div class="star-rating" data-score= <%= review.rating %> ></div>
+           <p><%= review.comment %></p>
+         </div>
+     <% end %>
+    <% end %>
+    </div>
+   </ul>
  </div>
-</ul>
-</div>
 
 </div>
-
 
 
 
 <script>
-    $('.star-rating').raty({
-      path: '/assets/',
-      readOnly: true,
-      score: function() {
-            return $(this).attr('data-score');
+  $('.star-rating').raty({
+    path: '/assets/',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
     }
   });
 </script>
-
-
