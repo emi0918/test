@@ -1,0 +1,105 @@
+ja:
+  activerecord:
+    models:
+      like: "以下のような"  #g
+      note: "注意"  #g
+      provider: "プロバイダー"  #g
+      reservation: "予約"  #g
+      review: "レビュー"  #g
+      user: "ユーザー"  #g
+
+    attributes:
+      like:
+        note: :activerecord.models.note  #g
+        user: :activerecord.models.user  #g
+
+      note:
+        cancelrule: 変更とキャンセルについて #g
+        catchcopy: キャッチコピー  #g
+        category: "カテゴリー"  #g
+        content: "コンテンツ"  #g
+        likes: "いいね！"  #g
+        liking_users: "好きなユーザー"  #g
+        mailboxer_conversations: :activerecord.models.mailboxer_conversations  #g
+        price: "価格"  #g
+        provider: :activerecord.models.provider  #g
+        reservations: "予約"  #g
+        reviews: "レビュー"  #g
+        rule: "ルール"  #g
+        salespoint: セールスポイント  #g
+        service_image1: "サービスイメージ1"  #g
+        service_image2: "サービス画像2"  #g
+        service_image3: "サービス画像3"  #g
+        title: "タイトル"  #g
+        user: :activerecord.models.user  #g
+
+      provider:
+        about: "約"  #g
+        address: "住所"  #g
+        contacts: "コンタクト"  #g
+        current_sign_in_at: "現在の兆候"  #g
+        current_sign_in_ip: "腹腔内の現在の兆候"  #g
+        email: Eメール  #g
+        encrypted_password: "暗号化されたパスワード"  #g
+        holiday: "休日"  #g
+        hours: "営業時間"  #g
+        last_sign_in_at: "最後の記号"  #g
+        last_sign_in_ip: "腹腔内の最後の記号"  #g
+        mailboxer_conversations: Mailboxerの会話  #g
+        messages: "メッセージ"  #g
+        name: "名"  #g
+        notes: "ノート"  #g
+        password: "パスワード"
+        payment: "支払い"  #g
+        phonenumber: "電話番号"  #g
+        provider_pic: "プロバイダーPIC"  #g
+        receipts: "領収書"  #g
+        remember_created_at: "で作成されたことを覚えておいてください"  #g
+        reservations: "予約"  #g
+        reset_password_sent_at: "で送信されたパスワードをリセット"  #g
+        reset_password_token: "パスワードトークンをリセット"  #g
+
+      reservation:
+        date: "日付"  #g
+        first_name: "ファーストネーム"  #g
+        last_name: "苗字"  #g
+        message: "メッセージ"  #g
+        name: "お名前"  #g
+        note: :activerecord.models.note  #g
+        phone_number: "電話番号"  #g
+        provider: :activerecord.models.provider  #g
+        user: :activerecord.models.user  #g
+
+      review:
+        comment: "コメント"  #g
+        note: :activerecord.models.note  #g
+        rating: "評価"  #g
+        user: :activerecord.models.user  #g
+
+      user:
+        area: "エリア"  #g
+        contacts: "コンタクト"  #g
+        current_sign_in_at: "現在の兆候"  #g
+        current_sign_in_ip: "腹腔内の現在の兆候"  #g
+        email: Eメール  #g
+        encrypted_password: "暗号化されたパスワード"  #g
+        last_sign_in_at: "最後の記号"  #g
+        last_sign_in_ip: "腹腔内の最後の記号"  #g
+        like_notes: "ノートのように"  #g
+        likes: "いいね！"  #g
+        mailboxer_conversations: Mailboxerの会話  #g
+        messages: "メッセージ"  #g
+        name: "名"  #g
+        notes: "ノート"  #g
+        password: "パスワード"
+        profile: "プロフィール"  #g
+        profile_pic: "プロフィールPIC"  #g
+        provider: "プロバイダー"  #g
+        receipts: "領収書"  #g
+        remember_created_at: "で作成されたことを覚えておいてください"  #g
+        reservations: "予約"  #g
+        reset_password_sent_at: "で送信されたパスワードをリセット"  #g
+        reset_password_token: "パスワードトークンをリセット"  #g
+        reviews: "レビュー"  #g
+        token: "トークン"  #g
+        uid: UID  #g
