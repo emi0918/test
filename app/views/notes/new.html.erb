@@ -20,13 +20,13 @@
    <table class="newpost">
 
     <tr>
-     <th> <p>カテゴリー <span class="form-label required">必須</span></p></th>
+     <th> <p>  <%= f.label Note.human_attribute_name 'カテゴリー' %> <span class="form-label required">必須</span></p></th>
      <td>
      <%= f.select :category, ['便利屋','増設、リモデル', 'コンクリート','ペインティング','屋根、雨漏り','壁、階段','ドア、窓','クリーニング','引っ越し','大工、木工','配管工事','イベントメイクアップ','結婚司会','バーテンディング','フラワーデザイナー','マジシャン','イベントカメラマン','フェイスペインティング','ヘアスタイリング','バルーンアーティスト','コメディアン','DJ','歌','語学','料理','ピアノ','武道','ウェブ','ダンス','勉学','絵','パーソナルトレーニング','編み物','マッサージ','エステ','サイクリング','ヨガ','栄養士','セラピー','パーソナルシェフ','人生相談','カウンセリング','座禅','ストレッチ','その他'], { include_blank: '選択してください'} , class: "chosen-select"  %>
      </td>
   <tr>
 
-   <th> <p>サービスのタイトル<span class="form-label required">必須</span></p></th>
+   <th> <p><%= f.label Note.human_attribute_name 'サービスのタイトル' %> <span class="form-label required">必須</span></p></th>
    <td>
     <%= f.text_field :title, class: 'form-control',placeholder:"サービス内容がわかるタイトルにしましょう" %>
   </td>
@@ -37,7 +37,7 @@
 
 <tr>
  <th>
-  <p>料金<span class="form-label required">必須</span></p></th>
+  <p><%= f.label Note.human_attribute_name '価格' %><span class="form-label required">必須</span></p></th>
   <td>
     <div class="input-group">
      <%= f.text_field :price, class: 'form-control' %>
@@ -48,7 +48,7 @@
 
 
 <tr>
- <th> <p>キャッチコピー<span class="form-label required">必須</span> </p></th>
+ <th> <p><%= f.label Note.human_attribute_name 'キャッチコピー' %><span class="form-label required">必須</span> </p></th>
  <td>
   <%= f.text_field :catchcopy, class: 'form-control',placeholder:"このサービスならではの取り柄をアピールしましょう" %>
 </td>
@@ -57,7 +57,7 @@
 
 
 <tr>
- <th> <p>セールスポイント<span class="form-label required">必須</span></p></th>
+ <th> <p><%= f.label Note.human_attribute_name 'セールスポイント' %><span class="form-label required">必須</span></p></th>
  <td>
   <%= f.text_area :salespoint, class: 'form-control', placeholder:"お客様にとって嬉しいポイントを具体的にアピールしましょう" %>
 </td>
@@ -65,28 +65,28 @@
 
 
 <tr>
- <th> <p>お客様へのお願い<span class="form-label required">必須</span></p></th>
+ <th> <p><%= f.label Note.human_attribute_name 'お客様へのお願い' %><span class="form-label required">必須</span></p></th>
  <td>
   <%= f.text_area :rule, class: 'content-area' %>
 </td>
 </tr>
 
 <tr>
- <th> <p>変更とキャンセル<span class="form-label optional">任意</span></p></th>
+ <th> <p><%= f.label Note.human_attribute_name '変更とキャンセル' %><span class="form-label optional">任意</span></p></th>
  <td>
   <%= f.text_area :cancelrule, class: 'content-area', placeholder:"あなたのサービスについて詳しく説明しよう" %>
 </td>
 </tr>
 
 <tr>
- <th> <p>詳しいサービスの内容<span class="form-label optional">任意</span></p></th>
+ <th> <p><%= f.label Note.human_attribute_name '詳しいサービス内容' %><span class="form-label optional">任意</span></p></th>
  <td>
   <%= f.text_area :content, class: 'content-area', placeholder:"あなたのサービスについて詳しく説明しよう" %>
 </td>
 </tr>
 
 <tr>
- <th> <p>写真<span class="form-label required">必須</span></p></th>
+ <th> <p><%= f.label Note.human_attribute_name '写真' %><span class="form-label required">必須</span></p></th>
  <td>
   <%= f.file_field :service_image1, class: "form-control image-field" %>
 </td>

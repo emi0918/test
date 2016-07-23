@@ -4,7 +4,13 @@
   <div class="media">
     <div class="media-left">
       <a href="#">
-        <%= image_tag provider.originator.profile_pic, :class => 'media-object' , :size => '64x64'  %>
+       
+    <% if provider.originator.profile_pic? %>
+   
+   <%= image_tag provider.originator.profile_pic, :class => 'media-object' , :size => '64x64'  %>
+ <% else %>
+    <%= image_tag 'Seekle_icon.png', :class => 'media-object' , :size => '64x64'  %>
+    <% end %>
       </a>
     </div>
     <div class="media-body">
@@ -21,5 +27,4 @@
     </div>
   </div>
 </div>
-
 

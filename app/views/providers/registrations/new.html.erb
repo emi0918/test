@@ -34,7 +34,7 @@
     <h3>パスワード</h3>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <% end %>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
