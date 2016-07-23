@@ -21,8 +21,9 @@ padding-bottom: 22px;
 }
 
 .list-number{
-margin-left: 43%;
+margin-left: 42%;
 margin-top: 50px;
+margin-bottom: 50px;
 clear:both;
 }
 
@@ -30,6 +31,7 @@ clear:both;
   margin-left: 630px;
 margin-top: 50px;
 clear:both;
+
 }
 
  .panel-heading {

@@ -1,12 +1,12 @@
 class Note < ActiveRecord::Base
-	belongs_to :provider
-	belongs_to :user
-	belongs_to  :mailboxer_conversations
+	belongs_to :provider, dependent: :destroy
+	belongs_to :user, dependent: :destroy
+	belongs_to  :mailboxer_conversations, dependent: :destroy
 
-	has_many :reservations
+	has_many :reservations, dependent: :destroy
 	has_many :likes, dependent: :destroy
 	has_many :liking_users, through: :likes, source: :user
-   has_many :reviews
+   has_many :reviews, dependent: :destroy
 
 
  mount_uploader :service_image1, ServiceImage1Uploader
