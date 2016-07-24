@@ -49,10 +49,24 @@
 
 
 
+
+    <tr>
+     <th>
+      <p><p>価格<span class="form-label required">必須</span></p></th>
+      <td>
+        <div class="input-group">
+         <%= f.text_field :price, class: 'form-control' %>
+         <span class="input-group-addon">円</span>
+       </div>
+     </td>
+   </tr> 
+
+
+
 <tr>
  <th> <p>キャッチコピー<span class="form-label required">必須</span> </p></th>
  <td>
-  <%= f.text_area :content, class: 'content-area',placeholder:"このサービスならではの取り柄をアピールしましょう" %>
+  <%= f.text_area :catchcopy, class: 'content-area',placeholder:"このサービスならではの取り柄をアピールしましょう" %>
 </td>
 </tr>
 
@@ -60,7 +74,7 @@
 <tr>
  <th> <p>セールスポイント<span class="form-label required">必須</span></p></th>
  <td>
-  <%= f.text_field :title, class: 'form-control', placeholder:"お客様にとって嬉しいポイントをアピールしましょう具体的にアピールしましょう" %>
+  <%= f.text_field :salespoint, class: 'form-control', placeholder:"お客様にとって嬉しいポイントをアピールしましょう具体的にアピールしましょう" %>
 </td>
 </tr>
 
@@ -76,7 +90,7 @@
 <tr>
  <th> <p>変更とキャンセル<span class="form-label optional">任意</span></p></th>
  <td>
-  <%= f.text_area :rule, class: 'content-area', placeholder:"あなたのサービスについて詳しく説明しよう" %>
+  <%= f.text_area :cancelrule, class: 'content-area', placeholder:"あなたのサービスについて詳しく説明しよう" %>
 </td>
 </tr>
 
