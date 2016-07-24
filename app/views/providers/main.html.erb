@@ -49,14 +49,12 @@
 </table>
 
   <div class="about-profiles">
-    <h3>自己紹介：</h3> <p><%= current_provider.about %>
+    <h3>店舗紹介：</h3> <p><%= current_provider.about %>
     <% if current_provider.about.blank? %>
     <%= link_to 'プロフィール編集ページ', '/providers/edit' %>から設定してください。
      <%end%>
     </p>
-      <h3> レビュー：</h3>
-       <ul class="notes">
-      </ul>
+   
 </div>
 
   </div>

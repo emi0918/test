@@ -10,22 +10,22 @@
       </ul>
     </div>
   <% end %>
-
+<div class="bootstrap">
   <div class="field">
     <div id="star-rating"></div>
   </div>
 
   <div class="field">
-    <%= f.label :comment %><br>
-    <%= f.text_area :comment %>
+   <p>コメント</p>
+    <%= f.text_area :comment, class: 'content-area'%>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+  <%= f.submit 'レビューを投稿する', class: 'btn btn-default', data:{ disable_with: "作成中・・・"} %>
   </div>
 <% end %>
 
-
+</div>
 
 <script>
   $('#star-rating').raty({
