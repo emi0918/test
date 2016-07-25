@@ -25,17 +25,10 @@ test:
   database: Seekle
 
 production:
-
-  adapter: mysql2
-  host: 160.16.205.112
-  port: 61111
-  timeout: 5000
-  encoding: utf8
+  <<: *default
   username: root
-  password: Ggc0918me
-  username: seekle
   database: Seekle_production
-  socket: /tmp/mysql.sock
+
 
 
 
