@@ -50,7 +50,7 @@
 	height:50px;width:50px;background-color:gray;float:left;margin-left:11px;border-radius:100%;
 }
 
-.listing-wrapper{height:830px;background-color:#FFF;margin-top:-17px} 
+.listing-wrapper{height:0 auto;background-color:#FFF;} 
 .listing-wrapper p{margin-left:300px;}
 
 .about-profiles{
@@ -99,19 +99,19 @@
 
 
 .provider-listings-heading h2{
-	float:center;margin-left:300px;padding-top:60px;font-weight:normal; 
+	float:center;margin-left:200px;padding-top:40px;font-weight:normal; 
 }
 
 .provider-listings ul li{
-	background-color:#fff;margin-top:50px;float:center;margin-left:20%;height:150px;width:700px;border-radius:5px;
+	background-color:#fff;margin-top:30px;float:center;margin-left:14%;height:150px;width:800px;border-radius:5px;margin-bottom:12%;
 }
 
 .panel-body-list{
-	height:130px;
+	height:200px;
 }
 
 .service_image{
-	height:100px;width:170px;margin-top:16px;margin-left:20px;
+	height:83%;width:34%;margin-top:16px;margin-left:20px;
 }
 
 .panel-heading{
