@@ -15,7 +15,6 @@ has_many :notes
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable, :omniauthable # other devise options
 
- 
   validates :profile, length:{maximum:1000}, presence:false
   validates :area, presence:false
 
@@ -30,19 +29,5 @@ has_many :notes
   end
 
   mount_uploader :profile_pic, ProfilePicUploader
-
-
-  # userオブジェクトから呼び出せるインスタンスメソッドとして定義
-  def set_image(file)
-    if !file.nil?
-      file_name = file.original_filename
-      File.open("public/user_images/#{file_name}", 'wb') { |f|
-        f.write(file.read)
-      }
-      self.image = file_name
-    end
-  end
-
-
 
 end

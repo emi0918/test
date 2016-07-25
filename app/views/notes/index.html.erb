@@ -8,6 +8,11 @@
 
 <div class="bootstrap">
 
+
+  <% if @notes.blank? %>
+     <p>予約はまだありません</p>
+
+   <% else %>
    <ul>
  <% @notes.each do |note|  %>
       <li> 
@@ -26,6 +31,7 @@
       </li>   
      <% end %>
      </ul>
+  <% end %>
   </div>
 </div>
 

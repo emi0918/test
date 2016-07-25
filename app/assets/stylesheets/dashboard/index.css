@@ -51,7 +51,8 @@
 }
 
 .listing-wrapper{height:0 auto;background-color:#FFF;} 
-.listing-wrapper p{margin-left:300px;}
+
+.listing-wrapper .bootstrap p{margin-left:40%;}
 
 .about-profiles{
 	margin-top: 40px; margin-left: -320px; float:left;
