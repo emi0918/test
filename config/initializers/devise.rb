@@ -103,7 +103,7 @@ Devise.setup do |config|
 
   # Setup a pepper to generate the encrypted password.
   # config.pepper = 'c377a89789fe8f22169dc89a2d877894af71cf1fb089f5a51f3058d4465f73f4c37097e5a5fd48543a1ceead72e7551804c516190dd4aa98f2ad9bd32b519913'
- config.secret_key = '6b4f0951f3d0b8fbe40333516b351555c63c7c9e3456192e431b32a6bb655381e811f4e2608f7ea33d692e348b390c43f2a8d6efaec90619a6b670ad050bf9ff'
+ 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
 
