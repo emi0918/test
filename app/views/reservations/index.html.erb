@@ -1,32 +1,42 @@
 <p id="notice"><%= notice %></p>
 
+<div class="reservations_list">
 <h1> <%= @note.title %>にされている予約一覧</h1>
+<div class="bootstrap">
 
-<table>
+  <% if @note.reservations.blank? %>
+     <p>予約はまだありません</p>
+
+   <% else %>
+
+<table class="table">
+
   <thead>
     <tr>
-      <th>Date</th>
-      <th>Last name</th>
-      <th>First name</th>
-      <th>Phone number</th>
+      <th>希望日程</th>
+      <th>お名前</th>
+      <th>電話番号</th>
+      <th>お問い合わせ</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-  
-    <% current_user.reservations.each do |reservation| %>
+
+    <% @note.reservations.each do |reservation| %>
       <tr>
         <td><%= reservation.date %></td>
-        <td><%= reservation.last_name %></td>
-        <td><%= reservation.first_name %></td>
+        <td><%= reservation.name %></td>
         <td><%= reservation.phone_number %></td>
-        <td><%= reservation.user_id %></td>
-
-
+        <td><%= reservation.message %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+  <% end %>
+</td>
 
 <br>
+
+</div>
+</div>
