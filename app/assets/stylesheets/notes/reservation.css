@@ -2,3 +2,10 @@
 
 .complete_reservatio_wrapper{margin: 10% 10%;}
 .complete_reservatio_wrapper h1{font-weight: normal;}
+
+.reservations_list{width:90%; margin-left: 4%;height:0 auto;margin-top: 6%; margin-bottom: 6%;}
+.reservations_list h1{font-size:20px; font-weight: normal;}
+
+.reservations_list .bootstrap .table td{padding:30px;}
+
+.listing-wrapper .bootstrap .btn-default{ margin-top:18%;float:right;font-size: 20px;}

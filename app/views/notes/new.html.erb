@@ -12,8 +12,6 @@
    </div>
    <% end %>
 
-
-
    <h2>あなたのサービスを紹介しよう</h2>
    <p>あなたのサービスを求めるカスタマーの決め手になるようなタイトルや内容を考えよう</p>
 
@@ -22,17 +20,20 @@
     <tr>
      <th> <p>  <%= f.label Note.human_attribute_name 'カテゴリー' %> <span class="form-label required">必須</span></p></th>
      <td>
-       <%= f.select :category, ['便利屋','増設、リモデル', 'コンクリート','ペインティング','屋根、雨漏り','壁、階段','ドア、窓','クリーニング','引っ越し','大工、木工','配管工事','イベントメイクアップ','結婚司会','バーテンディング','フラワーデザイナー','マジシャン','イベントカメラマン','フェイスペインティング','ヘアスタイリング','バルーンアーティスト','コメディアン','DJ','歌','語学','料理','ピアノ','武道','ウェブ','ダンス','勉学','絵','パーソナルトレーニング','編み物','マッサージ','エステ','サイクリング','ヨガ','栄養士','セラピー','パーソナルシェフ','人生相談','カウンセリング','座禅','ストレッチ','その他'], { include_blank: '選択してください'} , class: "chosen-select"  %>
+
+    <%= f.select(:category_id, Category.all.collect {|p| [ p.title, p.id ] }, {}, { multiple: false, class: "chosen-select form-control" })%>
      </td>
      <tr>
+
+
+
+
 
        <th> <p><%= f.label Note.human_attribute_name 'サービスのタイトル' %> <span class="form-label required">必須</span></p></th>
        <td>
         <%= f.text_field :title, class: 'form-control',placeholder:"サービス内容がわかるタイトルにしましょう" %>
       </td>
     </tr>
-
-
 
 
     <tr>
@@ -53,8 +54,6 @@
       <%= f.text_field :catchcopy, class: 'form-control',placeholder:"このサービスならではの取り柄をアピールしましょう" %>
     </td>
   </tr>
-
-
 
   <tr>
    <th> <p><%= f.label Note.human_attribute_name 'セールスポイント' %><span class="form-label required">必須</span></p></th>

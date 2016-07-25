@@ -34,11 +34,13 @@ Rails.application.routes.draw do
    resources :reviews, except: [:show,:index]
   resources :reservations do
     collection do
+       :detail_categories_select
       post 'confirm'
       get 'complete'
     end
 end
    collection do
+    get :reservations
     get :search
   end
   member do

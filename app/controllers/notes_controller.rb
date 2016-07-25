@@ -13,6 +13,11 @@ class NotesController < ApplicationController
     render :layout => 'providers_layout.html'
   end
 
+
+  def reservations
+ @notes = current_provider.notes.all.page(params[:page]).per(3).order(:id)
+    render :layout => 'providers_layout.html'
+  end
   # GET /notes/1
   # GET /notes/1.json
   def show
@@ -39,6 +44,7 @@ class NotesController < ApplicationController
   # GET /notes/ne
   def new
    @note = Note.new
+
    render :layout => 'providers_layout.html'
   end
 
@@ -84,6 +90,8 @@ class NotesController < ApplicationController
    @mailbox ||= current_user or current_provider.mailbox
   end
 
+
+
    private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
@@ -92,12 +100,10 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :name, :content, :price, :service_image1,:service_image2,:service_image3, :category, :rule,:provider_id,:cancelrule, :salespoint, :catchcopy)
+      params.require(:note).permit(:title, :name, :content, :price, :service_image1,:service_image2,:service_image3, :category, :rule,:provider_id,:cancelrule, :salespoint, :catchcopy,:category_id)
     end
 
     def user_params
       params.require(:user).permit(:name,  :profile, :area, :email)
     end
 end
-
-
