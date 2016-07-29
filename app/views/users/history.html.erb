@@ -1,13 +1,8 @@
 <%= render 'users/header' %>
 
-
-
-
 <div class="reservation_history_wrapper">
 
 	<h1><%= current_user.name %>さんの予約中サービス </h1>
-
-
 
 <% if current_user.reservations.blank? %>
 <p>予約中のサービスはまだありません</p>
@@ -19,15 +14,17 @@
 
   <div class="panel-body">
   	<table class="newpost">
+
 		<tr>
 			<td><%= reservation.date %></td>
            <td><%= reservation.note.title %></td>
            <td><%= reservation.note.provider.name %></td>
+          
 		</tr>
-		</table>
-	</div></div>
-		<% end %>
-		<% end %>
-</div>
-</div>
 
+		 </table>
+	    </div></div>
+	  <% end %>
+    <% end %>
+  </div>
+</div>

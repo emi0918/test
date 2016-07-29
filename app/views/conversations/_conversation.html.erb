@@ -4,12 +4,12 @@
   <div class="media">
     <div class="media-left">
       <a href="#">
-      <% if conversation.originator.profile_pic? %>
-   
-   <%= image_tag conversation.originator.profile_pic, :class => 'media-object' , :size => '64x64'  %>
- <% else %>
-    <%= image_tag 'Seekle_icon.png', :class => 'media-object' , :size => '64x64'  %>
-    <% end %>
+        <% if conversation.originator.profile_pic? %>
+        
+        <%= image_tag conversation.originator.profile_pic, :class => 'media-object' , :size => '64x64'  %>
+        <% else %>
+        <%= image_tag 'Seekle_icon.png', :class => 'media-object' , :size => '64x64'  %>
+        <% end %>
       </a>
     </div>
     <div class="media-body">
@@ -20,14 +20,12 @@
       </h4>
       <%= truncate conversation.messages.last.body, length: 145 %>
 
-<% if current_user.try (:id?) %>
+      <% if current_user.try (:id?) %>
       <%= link_to "開く", conversation_path(conversation)  %>
-  <%else%>
+      <%else%>
       <%= link_to "開く", provider_path(conversation)  %>
- <% end %>
+      <% end %>
 
     </div>
   </div>
 </div>
-
-

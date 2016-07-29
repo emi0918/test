@@ -31,13 +31,12 @@
      </tr>
      <tr>
        <th>カテゴリー：</th>
-       <td><%= @note.category %></td>
+       <td><%= @note.category.title %></td>
      </tr>
      <tr>
        <th>料金：</th>
        <td><%= @note.price%>円 〜</td>
      </tr>
-
    </tbody>
  </table>
 
@@ -114,9 +113,7 @@
     </div>
    </ul>
  </div>
-
 </div>
-
 
 
 <script>
