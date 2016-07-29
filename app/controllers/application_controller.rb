@@ -5,9 +5,6 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_filter :setup
-  
-  before_filter :set_locale
-
    #rescue_from ActiveRecord::RecordNotFound,ActionController::RoutingError, with: :error404
    #rescue_from Exception, with: :render_500
    helper_method :mailbox, :conversation
@@ -20,15 +17,7 @@ class ApplicationController < ActionController::Base
      # render 'error500', status: 500, formats: [:html]
   # end
 
-# 全リンクにlocale情報をセットする
-def default_url_options(options={})
-  { :locale => I18n.locale }
-end
-
-# リンクの多言語化に対応する
-def set_locale
-  I18n.locale = params[:locale] || I18n.default_locale
-end
+  
 
   def render_404
     render template: 'errors/error_404', status: 404, layout: 'application', content_type: 'text/html'
