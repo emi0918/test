@@ -1,20 +1,11 @@
 <%= render 'users/header' %>
 
-
+<div class="bootstrap">
+ <div class="mypage-all_wrapper">
+  <div class="mailbox_wrapper">
+   <div class="bootstrap">
+     <%= render partial: 'mailbox/folder_view', locals: { is_conversation: false, messages: @sent } %>
+   </div>
+  </div>
+ </div>
 </div>
-
-<div class="bootstrap">
-<div class="mypage-all_wrapper">
-
-<div class="mailbox_wrapper">
-
-
-<div class="bootstrap">
-<%= render partial: 'mailbox/folder_view', locals: { is_conversation: false, messages: @sent } %>
-  </div>
-
-  </div>
-  </div>
-  </div>
-
-  

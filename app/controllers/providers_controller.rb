@@ -69,12 +69,11 @@ end
 
 
 def mailbox
-  if current_user.try(:id?)
-    @mailbox ||= current_user.mailbox
-  else
+
       @mailbox ||= current_provider.mailbox
   end
-end
+
+
 
 
 def conversation_params
