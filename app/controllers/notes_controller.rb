@@ -13,19 +13,16 @@ class NotesController < ApplicationController
     render :layout => 'providers_layout.html'
   end
 
-
   def reservations
- @notes = current_provider.notes.all.page(params[:page]).per(3).order(:id)
+    @notes = current_provider.notes.all.page(params[:page]).per(3).order(:id)
     render :layout => 'providers_layout.html'
   end
-  # GET /notes/1
-  # GET /notes/1.json
+ 
   def show
-   @notes = Note.includes(:provider).all
+    @notes = Note.includes(:provider).all
     @notes = Note.includes(:user).all
-   @note = Note.find(params[:id])
-
-   @reviews = Review.where(note_id: @note.id).order("created_at DESC")
+    @note = Note.find(params[:id])
+    @reviews = Review.where(note_id: @note.id).order("created_at DESC")
    if @reviews.blank?
       @avg_review = 0
     else
@@ -34,18 +31,17 @@ class NotesController < ApplicationController
   end
 
   def search
-   @notes = Note.includes(:provider).page(params[:page]).per(6).order(:id)
+    @notes = Note.includes(:provider).page(params[:page]).per(6).order(:id)
   end
 
   def profile
-   @notes = Note.includes(:provider).all
+    @notes = Note.includes(:provider).all
   end
 
   # GET /notes/ne
   def new
-   @note = Note.new
-
-   render :layout => 'providers_layout.html'
+    @note = Note.new
+    render :layout => 'providers_layout.html'
   end
 
   # GET /notes/1/sedit
@@ -58,13 +54,13 @@ class NotesController < ApplicationController
   # POST /notes.json
   def create
     @note = current_provider.notes.build(note_params)
-       if @note.save
-     redirect_to  @note
+     if @note.save
+      redirect_to  @note
 #redirect_to @note で作成されたものが表示される
-    else
+     else
       render :new
-    end
-   end
+     end
+  end
 
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
@@ -77,7 +73,6 @@ class NotesController < ApplicationController
     end
   end
 
-
   # DELETE /notes/1
   # DELETE /notes/1.json
 
@@ -89,8 +84,6 @@ class NotesController < ApplicationController
   def mailbox
    @mailbox ||= current_user or current_provider.mailbox
   end
-
-
 
    private
     # Use callbacks to share common setup or constraints between actions.

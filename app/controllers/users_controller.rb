@@ -18,7 +18,6 @@ class UsersController < ApplicationController
    @user = User.find_by(id: params[:id])
  end
 
-
  def new
    @user = User.new
  end
@@ -32,14 +31,12 @@ class UsersController < ApplicationController
    @user = User.new(user_params)
    file = params[:user][:profile_pic]
    @user.set_image(file)
-
    if @user.save
      UserMailer.welcome_email(@user).deliver
      session[:user_id] = @user.id
      redirect_to users_path
    else
      render :new
-
    end
  end
 
@@ -65,9 +62,6 @@ def like_notes
   @title = "いいね！一覧"
   render :index
 end
-
-
-
 
 def mailbox
   if current_user.try(:id?)
@@ -119,8 +113,4 @@ def set_user
     @user = User.includes(:note).where(name: params[:id]).first
   end
 
-  
-
 end
-
-
