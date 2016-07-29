@@ -1,16 +1,17 @@
-
-
 <div class="bootstrap">
   <div class="media">
     <div class="media-left">
       <a href="#">
        
-    <% if provider.originator.profile_pic? %>
-   
-   <%= image_tag provider.originator.profile_pic, :class => 'media-object' , :size => '64x64'  %>
- <% else %>
-    <%= image_tag 'Seekle_icon.png', :class => 'media-object' , :size => '64x64'  %>
-    <% end %>
+        <% if provider.originator.profile_pic? %>
+        
+        <%= image_tag provider.originator.profile_pic, :class => 'media-object' , :size => '64x64'  %>
+        <% else %>
+
+        <%= image_tag 'Seekle_icon.png', :class => 'media-object' , :size => '64x64'  %>
+
+        <% end %>
+
       </a>
     </div>
     <div class="media-body">
@@ -20,11 +21,7 @@
         <small><b>日付: </b><%= provider.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
       </h4>
       <%= truncate provider.messages.last.body, length: 145 %>
-
-
       <%= link_to "開く", provider_path(provider)  %>
-
     </div>
   </div>
 </div>
-

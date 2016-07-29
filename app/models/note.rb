@@ -2,7 +2,7 @@ class Note < ActiveRecord::Base
 	belongs_to :provider, dependent: :destroy
 	belongs_to :user, dependent: :destroy
 	belongs_to  :mailboxer_conversations, dependent: :destroy
-
+    belongs_to :category
 	has_many :reservations, dependent: :destroy
 	has_many :likes, dependent: :destroy
 	has_many :liking_users, through: :likes, source: :user
@@ -21,5 +21,6 @@ class Note < ActiveRecord::Base
 	validates :salespoint, presence: true
 	validates :catchcopy, presence: true
 	validates :cancelrule, presence: true
+	
 end
 
