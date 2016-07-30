@@ -18,7 +18,7 @@
       <h4 class="media-heading">
         <%= provider.originator.name %> <br>
         <small><b>件名: </b><%= provider.subject %></small><br>
-        <small><b>日付: </b><%= provider.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+        <small><b>日付: </b><%= provider.messages.last.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[provider.messages.last.created_at.wday]})  %I:%M%p") %></small>
       </h4>
       <%= truncate provider.messages.last.body, length: 145 %>
       <%= link_to "開く", provider_path(provider)  %>
