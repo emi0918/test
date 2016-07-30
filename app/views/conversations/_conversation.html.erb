@@ -1,5 +1,4 @@
 
-
 <div class="bootstrap">
   <div class="media">
     <div class="media-left">
@@ -16,7 +15,7 @@
       <h4 class="media-heading">
         <%= conversation.originator.name %> <br>
         <small><b>件名: </b><%= conversation.subject %></small><br>
-        <small><b>日付: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+        <small><b>日付: </b><%=  conversation.messages.last.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[conversation.messages.last.created_at.wday]})  %I:%M%p") %></small>
       </h4>
       <%= truncate conversation.messages.last.body, length: 145 %>
 
