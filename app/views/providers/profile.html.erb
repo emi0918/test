@@ -1,0 +1,58 @@
+<%= render 'providers/header' %>
+
+
+<div class="mypage-all_wrapper">
+   <h1><%= current_provider.name %>さんのページ  </h1>
+
+     <a class="profile_edit" href="/providers">
+     <i class="fa fa-pencil" aria-hidden="true"></i>プロフィールを編集</a>
+
+
+ <div class="left-wrapper">
+ <% if current_provider.provider_pic? %>
+    <%= image_tag current_provider.provider_pic.url, :class => 'mypage-picture'%>
+  <% else %>
+    <%= image_tag 'Seekle_icon.png', :class => 'mypage-picture'%>
+  <% end %>
+
+</div>
+
+
+ <div class="mypage_wrapper">
+  <table class="sample_03">
+   <tbody>
+    <tr>
+    
+    <tr>
+     <th>営業時間：</th>
+      <td><%= current_provider.hours %></td>
+    </tr>
+
+     <tr>
+     <th>定休日：</th>
+      <td> <%= current_provider.holiday %></td>
+    </tr>
+
+    <tr>
+    <th>所在地：</th>
+      <td><%= current_provider.address %></td>
+    </tr>
+    
+    <tr>
+    <th>お支払い：</th> 
+      <td><%= current_provider.payment %></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+  <div class="about-profiles">
+    <h3>店舗紹介：</h3> <p><%= current_provider.about %>
+    <% if current_provider.about.blank? %>
+    <%= link_to 'プロフィール編集ページ', '/providers/edit' %>から設定してください。
+     <%end%>
+    </p>
+
+  </div>
+ </div>
+
