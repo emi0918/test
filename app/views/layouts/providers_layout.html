@@ -15,7 +15,7 @@
 <%= stylesheet_link_tag "application", media: "all" %>
 <div class="provider-header">
  <div class="container_head"> 
-<a href="/providers/main"><%= image_tag('whitelogo.png', class: 'logo_2') %></a> 
+<a href="/providers/profile"><%= image_tag('whitelogo.png', class: 'logo_2') %></a> 
 
 <ul class="header-right"> <% if provider_signed_in? %>  <%= javascript_include_tag "application" %>
  <li> <%= link_to 'サービスを掲載', new_note_path %></li>
@@ -27,4 +27,6 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 </html>
+
+
 
