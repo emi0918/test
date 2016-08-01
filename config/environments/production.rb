@@ -54,13 +54,15 @@ Rails.application.configure do
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
  config.action_mailer.default_url_options = { :host => 'seekle.jp' }
+
+
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.raise_delivery_errors = true
 config.action_mailer.smtp_settings = {
   :enable_starttls_auto => true,
   :address => 'smtp.gmail.com',
   :port => '587',
-  :domain => 'seekle.jp',
+  :domain => 'gmail.com',
   :authentication => 'plain',
   :user_name => 'seekle.info@gmail.com',
   :password => 'Ggc0918meSeekle'
