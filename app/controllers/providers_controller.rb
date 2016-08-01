@@ -19,7 +19,7 @@ def show
 end
 
 def reply
-  current_provider.reply_to_conversation(conversation, messgae_params[:body])
+  current_provider.reply_to_conversation(conversation, message_params[:body])
   flash[:notice] = "メッセージが送信されました。"
   redirect_to provider_path(conversation)
 end
@@ -38,6 +38,7 @@ end
 
 
 def mypage
+  
 end
 
 def inbox
