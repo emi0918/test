@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
+ default_url_options :host => "seekle.jp"
 
-  devise_for :users
+
+  devise_for :users 
+
+  
 
   resources :users, only:[:index] do
     collection do
@@ -16,21 +20,19 @@ Rails.application.routes.draw do
   }
 
   resources :providers, only:[:index,:edit,:update,:show ]  do
-    collection do
-      get :main
-      get :inbox
+   collection do
+     get :profile
+     get :inbox
+   end
+   member do
+     get :mypage
+     get :conversations
+     post :reply
+   end
+ end
 
-    end
-    member do
-      get :conversations
-      post :reply
-    end
-  end
-
-
-
-  resources :notes do
-   resources :reviews, except: [:show,:index]
+resources :notes do
+ resources :reviews, except: [:show,:index]
    resources :reservations do
      collection do
        post 'confirm'
@@ -46,10 +48,7 @@ Rails.application.routes.draw do
    end
  end
 
-get '/notes/search/:note_id' => "notes#search"
-
-
-
+ get '/notes/search/:note_id' => "notes#search"
 
 root'home#index'
 
@@ -60,8 +59,6 @@ namespace :home do
   get :policy
   get :guide
 end
-
-
 
 namespace :company do
   get :index 
@@ -76,14 +73,7 @@ namespace :category do
   get :others
 end
 
-namespace :dashboard do
-  get :index
-  get :listing
-  get :account
-  get :mypage
-  get :messages
-  get :transaction
-end
+
 
  # mailbox folder routes
  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
@@ -96,8 +86,4 @@ end
   end
 
 end
-
-
-
-
 
