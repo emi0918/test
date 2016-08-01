@@ -53,8 +53,18 @@ Rails.application.configure do
 
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
- config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-
+ config.action_mailer.default_url_options = { :host => 'seekle.jp' }
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.smtp_settings = {
+  :enable_starttls_auto => true,
+  :address => 'smtp.gmail.com',
+  :port => '587',
+  :domain => 'seekle.jp',
+  :authentication => 'plain',
+  :user_name => 'seekle.info@gmail.com',
+  :password => 'Ggc0918meSeekle'
+}
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
