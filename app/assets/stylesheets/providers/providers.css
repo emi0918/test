@@ -1,28 +1,4 @@
 
-.providers_signup{
-
-width:60%;
-    margin-top:6%;
-    margin-left:25%;
-    margin-bottom: 10%;
-}
-
-.providers_signup h3{
-  font-weight: normal;
-  padding-left: 10px;
-    border-left: solid 3px #6495ED;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.providers_signup h2{
-    font-weight:normal;
-    font-size: 30px;
-clear:both;
-
-}
-
-
 .providers_info_show{
 
 width:65%;
@@ -82,5 +58,41 @@ clear:both;
 
 .bootstrap .btn-default{float:left;margin:23px 10px;}
 
+
+
+
+.forgot-password-wrapper h2{
+    text-align: center
+}
+
+.forgot-password-wrapper{   
+    width: 50% !important;
+    min-width: 600px !important;
+    padding: 60px 20px !important;
+    background-color: #f6f8fa !important;
+    border: 1px solid #e3e4e8 !important;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+text-align: center
+}
+
+.forgot-password-wrapper p{
+  
+    line-height:20px;
+}
+.providers_signup .forgot-password-wrapper .field {
+    padding:20px;
+}
+
+.providers_signup .forgot-password-wrapper .field input{
+    width:70%;
+   
+}
+
+.forgot-password-wrapper .provider_join_btn{
+margin-left: 33%;
+}
 
 
