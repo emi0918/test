@@ -1,23 +1,36 @@
+<div class="providers_signup">
 
-<div class="bootstrap1">
-
-  <div class="content_in_user">
-
+<div class="forgot-password-wrapper">
 <h2>パスワードを忘れた</h2>
+<p>登録されているメールアドレスをご入力ください。<br />
+再設定用のURLをメールにて送信させていただきます。
+</p>
+<div class="bootstrap">
 
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
+
+
+
   <div class="field">
-    <%= f.label :メールアドレス %><br />
-    <%= f.email_field :email, autofocus: true %>
+
+    <%= f.email_field :email, autofocus: true ,placeholder: "abcd@seekle.com" %>
   </div>
 
+
+
   <div class="actions">
-    <%= f.submit "パスワード変更のメールを送信" %>
+    <%= f.submit "送信" ,class: "provider_join_btn" %>
   </div>
 <% end %>
 
+
+
+
+</div></div>
 <%= render "devise/shared/links" %>
-  </div></div>
+  </div>
+
+
