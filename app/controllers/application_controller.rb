@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
       when User
         users_path
       when Provider
-        main_providers_path
+       profile_providers_path
       end
     end
 

@@ -19,18 +19,17 @@ def create
   @provider = Provider.new(provider_params)
   if @provider.save
     # @userはuser_path(@user) に自動変換される
-    redirect_to main_providers_path
+    redirect_to profile_providers_path
   else
     # ValidationエラーなどでDBに保存できない場合 new.html.erb を再表示
     render 'new'
   end
 end
 
-
   def update
    @provider.provider_pic.cache! unless @provider.provider_pic.blank?
     if @provider.update(provider_params)
-      redirect_to main_providers_path
+      redirect_to profile_providers_path
     else
       render 'edit'
     end
@@ -91,5 +90,3 @@ end
   #   super(resource)
   # end
 end
-
-
