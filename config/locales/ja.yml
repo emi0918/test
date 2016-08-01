@@ -9,8 +9,6 @@ ja:
           has_many: "%{record}が存在しているので削除できません"
 
 
-
-
   date:
     abbr_day_names:
     - 日
@@ -214,3 +212,5 @@ ja:
       previous: "&lsaquo;"
       next: "&rsaquo;"
       truncate: "..."
+ 
+
