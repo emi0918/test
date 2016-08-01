@@ -46,11 +46,12 @@ config.action_mailer.smtp_settings = {
   :enable_starttls_auto => true,
   :address => 'smtp.gmail.com',
   :port => '587',
-  :domain => 'seekle.jp',
+  :domain =>'gmail.com',
   :authentication => 'plain',
   :user_name => 'seekle.info@gmail.com',
-  :password => 'Ggc0918meSeekle'
+  :password => 'yngchtyqtkmtmcha'
 }
+
 
 
 
