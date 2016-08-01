@@ -58,7 +58,7 @@
 <tr>
  <th> <p>店舗概要<span class="form-label required">必須</span> </p></th>
  <td>
-  <%= f.text_area :about, class: 'content-area',placeholder:"お店の特徴、オススメポイントなどを紹介しましょう" %>
+  <%= f.text_area :about, class: 'content-area',placeholder:"お店の特徴、提供サービスへの思い、オススメポイントなどを紹介しましょう" %>
 </td>
 </tr>
 
@@ -70,9 +70,6 @@
    <%= f.hidden_field :provider_pic_cache %>
 </td>
 </tr>
-
-
-
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

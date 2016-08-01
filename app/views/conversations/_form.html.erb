@@ -1,11 +1,10 @@
 
-
 <div class="bootstrap">
 
 <%= form_for :conversation, url: :conversations, html: { class: "" } do |f| %>
     <div class="form-group">
       <%= f.label :宛先 %>
-      <%= f.select(:recipients, Provider.all.collect {|p| [ p.name, p.id ] }, {}, { multiple: true , class: "chosen-select form-control" })%>
+      <%= f.select(:recipients, Provider.all.collect {|p| [ p.name, p.id ] }, {}, { multiple: false , class: "chosen-select form-control" })%>
     </div>
     <div class="form-group">
       <%= f.label :件名 %>
@@ -30,4 +29,3 @@
 <script>
 $(".chosen-select").chosen()
 </script>
-
