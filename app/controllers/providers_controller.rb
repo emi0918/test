@@ -12,16 +12,14 @@ def index
   @provisder = Provider.includes(:notes)
 end
 
-
 def show
      @receipts = conversation.receipts_for(current_provider).order("created_at ASC")
     # mark conversation as read
     conversation.mark_as_read(current_provider)
 end
 
-
 def reply
-  current_provider.reply_to_conversation(conversation, message_params[:body])
+  current_provider.reply_to_conversation(conversation, messgae_params[:body])
   flash[:notice] = "メッセージが送信されました。"
   redirect_to provider_path(conversation)
 end
@@ -35,18 +33,19 @@ def create
 end
 
 
-def main
+def profile
 end
 
+
+def mypage
+end
 
 def inbox
    @inbox = mailbox.inbox
     @active = :inbox
 end
 
-
   private
-
 
 def set_provider
   current_provider  # (1)
@@ -61,19 +60,17 @@ def set_provider
   end
 end
 
+
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
- def provider_params
-   params.require(:provider).permit(:name, :email,:phonenumber, :address, :hours, :holiday, :payment, :password,:about, :provider, :provider_pic)
- end
+def provider_params
+  params.require(:provider).permit(:name, :email,:phonenumber, :address, :hours, :holiday, :payment, :password,:about, :provider, :provider_pic)
+end
 
 
 def mailbox
-
-      @mailbox ||= current_provider.mailbox
-  end
-
-
+  @mailbox ||= current_provider.mailbox
+end
 
 
 def conversation_params
