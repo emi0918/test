@@ -1,6 +1,6 @@
 
 <div class="bootstrap">
-<%=  @note.provider.name %>さんの<%= @note.title %>予約フォーム
+<%=  @note.provider.name %>さんの"<%= @note.title %>"予約フォーム
 
 <%= form_for([@note, @reservation], url: {action: 'confirm'} ) do |f| %>
   <% if @reservation.errors.any? %>

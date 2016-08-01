@@ -5,6 +5,7 @@ ja:
       confirmed: "アカウントの確認が成功しました。"
       send_instructions: "アカウントの確認方法をメールでご連絡します。"
       send_paranoid_instructions: "あなたのメールアドレスが登録済みの場合、アカウントの確認方法をメールでご連絡します。"
+      
     failure:
       already_authenticated: "既にログイン済みです。"
       inactive: 'アカウントが有効になっていません。'
@@ -19,7 +20,7 @@ ja:
       confirmation_instructions:
         subject: "アカウントの登録方法"
       reset_password_instructions:
-        subject: "パスワードの再設定"
+        subject: "【Seekle】パスワードの再設定"
       unlock_instructions:
         subject: "アカウントのロック解除"
     omniauth_callbacks:
@@ -57,3 +58,4 @@ ja:
         one: "1つのエラーにより、%{resource} を保存できませんでした："
         other: "%{count} 個のエラーにより、%{resource} を保存できませんでした："
      
+    

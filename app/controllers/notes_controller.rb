@@ -56,6 +56,7 @@ class NotesController < ApplicationController
     @note = current_provider.notes.build(note_params)
      if @note.save
       redirect_to  @note
+     NoteMailer.note_email(@provider, @note).deliver
 #redirect_to @note で作成されたものが表示される
      else
       render :new
