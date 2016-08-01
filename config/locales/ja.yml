@@ -7,10 +7,6 @@ ja:
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
-
-
-
-
   date:
     abbr_day_names:
     - 日
@@ -181,10 +177,10 @@ ja:
         format: "%n%u"
         units:
           byte: バイト
-          gb: ギガバイト
-          kb: キロバイト
-          mb: メガバイト
-          tb: テラバイト
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
     percentage:
       format:
         delimiter: ''
@@ -204,13 +200,3 @@ ja:
       long: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
       short: "%y/%m/%d %H:%M"
     pm: 午後
-
-
-  ja:
-  views:
-    pagination:
-      first: "&laquo;"
-      last: "&raquo;"
-      previous: "&lsaquo;"
-      next: "&rsaquo;"
-      truncate: "..."
