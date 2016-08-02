@@ -29,7 +29,4 @@ module ApplicationHelper
     when :warning then "alert alert-warning"
     end
   end
-
 end
-
-

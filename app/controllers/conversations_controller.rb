@@ -7,10 +7,10 @@ class ConversationsController < ApplicationController
 
   def create
 
-    recipients = Provider.where(id: conversation_params[:recipients])
-    conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation or  
-    current_provider.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation 
+ @note = Note.find(params[:note_id])
 
+    recipients = @note.provider
+    conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation 
 
 
     flash[:notice] = "メッセージが送信されました!"
@@ -18,12 +18,15 @@ class ConversationsController < ApplicationController
   end
 
   def show
+
      @receipts = conversation.receipts_for(current_user).order("created_at ASC") or conversation.receipts_for(current_provider).order("created_at ASC")
     # mark conversation as read
     conversation.mark_as_read(current_user)or conversation.mark_as_read(current_provider)
 end
 
 def new
+     @note = Note.find(params[:note_id])
+
  authenticate_user!
 end
 
@@ -55,6 +58,7 @@ end
 
 
 def conversation
+
   @conversation ||= mailbox.conversations.find(params[:id])
 end
 

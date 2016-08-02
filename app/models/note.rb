@@ -7,7 +7,7 @@ class Note < ActiveRecord::Base
 	has_many :likes, dependent: :destroy
 	has_many :liking_users, through: :likes, source: :user
    has_many :reviews, dependent: :destroy
-
+has_many :mailboxer_conversations
   has_many :category_notes
   has_many :categories, through: :category_notes
 
