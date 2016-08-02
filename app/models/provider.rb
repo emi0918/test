@@ -21,9 +21,5 @@ class Provider < ActiveRecord::Base
 
      def mailboxer_email(object)
        self.email
-     end
-
-     
+     end  
 end
-
-
