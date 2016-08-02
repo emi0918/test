@@ -1,85 +1,71 @@
-
-
 <div class="up-var">
   <div class="upper-menu">
 
   </div>
 </div>
 
-
 <div class="mypage-all_wrapper">
+ <h1><%= @note.provider.name %></h1>
 
+ <div class="provider-contents">
 
-   <h1><%= @note.provider.name %></h1>
+   <div class="left-wrapper">
+     <% if @note.provider.provider_pic? %>
+     <%= image_tag @note.provider.provider_pic.url, :class => 'mypage-picture'%>
+     <% else %>
+     <%= image_tag 'Seekle_icon.png', :class => 'mypage-picture'%>
+     <% end %>
+   </div>
 
+   <div class="mypage_wrapper">
+    <table class="sample_03">
+     <tbody>
+      <tr>
 
-<div class="provider-contents">
+        <tr>
+         <th>営業時間：</th>
+         <td><%= @note.provider.hours %></td>
+       </tr>
 
- <div class="left-wrapper">
- <% if @note.provider.provider_pic? %>
-   <%= image_tag @note.provider.provider_pic.url, :class => 'mypage-picture'%>
- <% else %>
-   <%= image_tag 'Seekle_icon.png', :class => 'mypage-picture'%>
- <% end %>
-</div>
+       <tr>
+         <th>定休日：</th>
+         <td> <%= @note.provider.holiday %>　</td>
+       </tr>
 
- <div class="mypage_wrapper">
-  <table class="sample_03">
-   <tbody>
-    <tr>
-    
-    <tr>
-     <th>営業時間：</th>
-      <td><%= @note.provider.hours %></td>
-    </tr>
+       <tr>
+        <th>所在地：</th>
+        <td><%= @note.provider.address %></td>
+      </tr>
 
-     <tr>
-     <th>定休日：</th>
-      <td> <%= @note.provider.holiday %>　</td>
-    </tr>
-
-    <tr>
-    <th>所在地：</th>
-      <td><%= @note.provider.address %></td>
-    </tr>
-    
-    <tr>
-    <th>お支払い：</th>
-      <td><%= @note.provider.payment %></td>
-    </tr>
-   
-  </tbody>
-</table>
-
+      <tr>
+        <th>お支払い：</th>
+        <td><%= @note.provider.payment %></td>
+      </tr>
+    </tbody>
+  </table>
 
   <div class="about-profiles">
     <h3>店舗紹介：</h3> <p><%= @note.provider.about %>
-     <% if @note.provider.about.blank? %>
-     <p>プロフィールがまだ記入されていません。</p>
-     <%end%>
-    </p>
+    <% if @note.provider.about.blank? %>
+    <p>プロフィールがまだ記入されていません。</p>
+    <%end%>
+  </p>
 
-
-<h3>掲載中のサービス：</h3>
-    <% @notes.each do |note|  %>
-    <% if note.provider==current_provider %>
- <ul>
+  <h3>掲載中のサービス：</h3>
+  <% @notes.each do |note|  %>
+  <% if note.provider==current_provider %>
+  <ul>
 
     <li> <div class="panel panel-default">
-       <div class="panel-heading">
-        <%= link_to note.title, note_path(note) %>
-       </div>
+     <div class="panel-heading">
+      <%= link_to note.title, note_path(note) %>
+    </div>
 
-      </div>
-    </li>
-</ul>
-
-     <% end %>
-     <% end %>
-
-</div>
   </div>
+</li>
+</ul>
+<% end %>
+<% end %>
 </div>
-
-
-
+</div>
+</div>
