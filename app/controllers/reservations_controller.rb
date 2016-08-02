@@ -38,6 +38,7 @@ class ReservationsController < ApplicationController
     elsif @reservation.save
      redirect_to complete_note_reservations_path
       ReservationMailer.reservation_email(@provider, @reservation).deliver
+      ReservationMailer.myreservation_email(@user, @reservation).deliver
    else
      render :new 
    end
