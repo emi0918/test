@@ -1,4 +1,5 @@
 
+<div class="reservation-confirm">
 <div class="bootstrap">
 <%=  @note.provider.name %>さんの"<%= @note.title %>"予約フォーム
 
@@ -57,7 +58,8 @@
     </tr>
   </table>
 
-<%= f.submit '予約内容を確認する', class: 'btn btn-default', data:{ disable_with: "・・・"} %>
+<%= f.submit '予約内容を確認する', class:'shadow_btn', data:{ disable_with: "・・・"} %>
+</div>
 <% end %>
 
 </div>

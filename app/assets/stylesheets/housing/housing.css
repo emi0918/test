@@ -61,8 +61,12 @@
 .provider-introduction p{float:left;padding-right:80px;padding-top:50px}
 .face_pic{width:45%;height:72%;margin-right:40px;margin-top:20px;float:left;border-radius:2%;}
 
-.service_order_btn{font-size:22px;font-weight:700;text-decoration:none;display:block;text-align:center;padding:9px;cursor:pointer;border:1px solid #333;color:#fff;background-color:#6495ED;box-shadow:2px 2px #555;margin-left:71%;width:26%; border-radius:3%; margin-top:2%;}
-.service_order_btn:active{box-shadow:0 0 #555;margin-top:3%; }
+.shadow_btn{font-size:22px;font-weight:700;text-decoration:none;display:block;text-align:center;padding:9px;cursor:pointer;border:1px solid #333;color:#fff;box-shadow:2px 2px #555;width:26%; border-radius:3%; }
+.shadow_btn:active{box-shadow:0 0 #555;margin-top:3%; }
+
+.provider-introduction .shadow_btn{background-color:#6495ED; border-radius:3%; margin-top:2%; margin-left:71%;}
+.provider-introduction .shadow_btn:active{box-shadow:0 0 #555;margin-top:3%; }
+
 
 .provider_service_pictures,.reviews_providers,.rulesfromprovider{float:left;}
 
