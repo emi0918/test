@@ -1,7 +1,7 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:show, :edit, :update, :destroy]
   before_action :set_note
-
+ before_action :authenticate_user!
   # GET /reservations
   # GET /reservations.json
   def index
@@ -9,8 +9,6 @@ class ReservationsController < ApplicationController
     @note = Note.find(params[:note_id])
     @notes = current_provider.notes.all.page(params[:page]).per(3).order(:id)
     render :layout => 'providers_layout.html'
-
-    
   end
 
   # GET /reservations/1
@@ -18,7 +16,6 @@ class ReservationsController < ApplicationController
   def show
   end
 
-  
   # GET /reservations/new
   def new
     @reservation = Reservation.new
@@ -36,22 +33,20 @@ class ReservationsController < ApplicationController
     @reservation.user_id = current_user.id
     @reservation.note_id = @note.id
 
-    if params[:back]
+    if params[:back]          
       render :new
     elsif @reservation.save
      redirect_to complete_note_reservations_path
+      ReservationMailer.reservation_email(@provider, @reservation).deliver
    else
      render :new 
    end
  end
- 
 
- def confirm
+def confirm
   @reservation = Reservation.new(reservation_params) # <=POSTされたパラメータを取得
-    render :new if @reservation.invalid? # <=バリデーションチェックNGなら戻す
-    
-  end
-
+  render :new if @reservation.invalid? # <=バリデーションチェックNGなら戻す  
+end
 
   def complete
     @reservations = Reservation.all
@@ -73,7 +68,6 @@ class ReservationsController < ApplicationController
     @reservation.destroy
     redirect_to reservations_url
   end
-
 
   private
     # Use callbacks to share common setup or constraints between actions.
