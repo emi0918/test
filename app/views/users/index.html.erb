@@ -2,28 +2,31 @@
 
 
 <div class="mypage-all_wrapper">
-   <h1><%= current_user.name %>さんのページ  </h1>
-<div class="notification_user">
+  <h1><%= current_user.name %>さんのページ  </h1>
+	<div class="notification_user">
+	 <div class="notification_header">
+	   <h2>新着メッセージ</h2>
+	 </div>
 
+	   <div class="notification_content">
+		 <% if unread_messages.blank? %>
+		   <p>未読メッセージはありません。</p>
+         <% else %>
+			<p><em class="fa fa-inbox fa-lg"></em><a href='/mailbox/inbox'> <%=unread_messages_count%>件の未読メッセージがあります！</a></p>
+		 <% end %>
+       </div>
 
-<div class="notification_header">
-<h2>新着メッセージ</h2>
-</div>
-
-<div class="notification_content">
-<em class="fa fa-inbox fa-lg"></em><a href='/mailbox/inbox'> <%=unread_messages_count%></a>件の未読メッセージがあります！
-</div>
-
-<div class="notification_header">
-<h2>予約中サービス</h2>
-</div>
-
-<div class="notification_content">
-  現在<a href='/users/history'> <%= current_user.reservations.count %></a>件の予約をしています。
-
-
- </div>
-</div>
+	 <div class="notification_header">
+		<h2>予約中サービス</h2>
+	 </div>
+        <div class="notification_content">
+         <% if current_user.reservations.blank? %>
+          <p>予約中のサービスはありません。</p>
+         <% else %>
+			<p>現在<a href='/users/history'> <%= current_user.reservations.count %></a>件の予約をしています。</p>
+		 <% end %>
+		</div>
+	 </div>
 </div>
 
 
