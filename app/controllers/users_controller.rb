@@ -10,7 +10,7 @@ class UsersController < ApplicationController
  end
 
  def history
-@reservations = current_user.reservations.all.page(params[:page]).per(3).order(:id)
+@reservations = current_user.reservations.all.page(params[:page]).per(4).order(:id)
  end
 
  def show
@@ -67,14 +67,14 @@ def mailbox
   if current_user.try(:id?)
     @mailbox ||= current_user.mailbox
   else
-      @mailbox ||= current_provider.mailbox
+    @mailbox ||= current_provider.mailbox
   end
 end
-
 
  def conversation
     @conversation ||= mailbox.conversations.find(params[:id])
   end
+
 
 private
 
