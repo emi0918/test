@@ -1,5 +1,10 @@
 
-<div class="complete_reservatio_wrapper">
+<div class="complete_reservation_wrapper">
+
 <h1>ご予約が完了しました！</h1>
 <%= @note.provider.name %>さんから連絡が来るのを待ちましょう！
+
+
+<%= link_to "予約中のサービスを確認",  history_users_path, class: "shadow_btn"%>
+
 </div>

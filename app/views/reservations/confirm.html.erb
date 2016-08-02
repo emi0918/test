@@ -38,7 +38,7 @@
     <%= f.submit '予約内容を変更する', name: 'back',class: 'btn btn-default' %>
 </div>
   <div class="actions">
-    <%= f.submit '仮予約する' ,class: 'btn btn-default' %>
+    <%= f.submit '仮予約する' ,:class => 'shadow_btn',data:{ disable_with: "予約中・・・"} %>
 </div>
 <% end %>
 
