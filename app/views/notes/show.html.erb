@@ -42,7 +42,10 @@
 
  <div class="message_reservetion">
   <div class="bootstrap">
-    <a class="btn btn-default" href="/conversations/new" role="button"><i class="fa fa-pencil" aria-hidden="true"></i>メッセージを送る</a>
+
+
+   <%= link_to "メッセージを送る",  new_note_conversation_path(@note),:class =>'btn btn-default' %>
+
   </div>
 
   <small>

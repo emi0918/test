@@ -11,10 +11,7 @@
 <div class="row">
   <div class="spacer"></div>
   <div class="col-md-6">
-    <% if provider_signed_in? %>
-   <% else %> 
-    <%= link_to "メッセージを作成", new_conversation_path, class: "btn btn-success" %>
-    <% end %> 
+
   </div>
 </div>
 
@@ -41,7 +38,7 @@
       </div>
       <div class="panel-footer">
         <!-- Reply Form -->
-        <%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
+        <%= form_for :message, url:  reply_conversation_path(conversation) do |f| %>
             <div class="form-group">
               <%= f.text_area :body, placeholder: "返信する", rows: 4, class: "form-control" %>
             </div>

@@ -1,6 +1,5 @@
 <%= render 'users/header' %>
 
-
 <div class="mypage-all_wrapper">
   <h1><%= current_user.name %>さんのページ  </h1>
 	<div class="notification_user">
@@ -23,10 +22,8 @@
          <% if current_user.reservations.blank? %>
           <p>予約中のサービスはありません。</p>
          <% else %>
-			<p>現在<a href='/users/history'> <%= current_user.reservations.count %></a>件の予約をしています。</p>
+			<a href='/users/history'><p>現在 <%= current_user.reservations.count %>件の予約をしています。</a></p>
 		 <% end %>
 		</div>
 	 </div>
 </div>
-
-
