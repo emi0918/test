@@ -15,6 +15,9 @@
 .providers_info_show .bootstrap .shadow_btn{margin-left: 35%; margin-bottom:9%; margin-top:6%;font-size: 20px;padding:9px; background-color:	#FFD700; }
 
 
-.providers_info_show .bootstrap .btn-default{margin-top: 36px; border:none;}
+.providers_info_show .bootstrap .btn-default{margin-top:5%; border:none;float:left;}
 
 .complete_reservation_wrapper .shadow_btn{margin-left: 35.3%; background-color: #CD5C5C; margin-top: 5%;}
+
+
+

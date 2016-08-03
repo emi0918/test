@@ -3,7 +3,7 @@
 
 <%= form_for :conversation, url: note_conversations_path, html: { class: "" } do |f| %>
     <div class="form-group">
-    <p><%=  @note.provider.name %>さんにメッセージを送る</p>
+    <p class="message-title"><%=  @note.provider.name %>さんの<br>「<%=  @note.title %>」<br>についてお問い合わせします</p>
     </div>
     <div class="form-group">
       <%= f.label :お問い合わせ内容 %>
