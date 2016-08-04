@@ -5,16 +5,17 @@
  </div>
 </div>
 
-
 <div class="provider_wrapper">
-
   <div class="provider-introduction">
     <h1>  <%= @note.title %></h1>
-    <% if @note.service_image1? %>
-    <%= image_tag @note.service_image1.thumb.url ,class: "face_pic"%>
-    <% else %>
-    <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
-    <% end %>
+
+
+
+  <% if @note.service_image1.present? %>
+    <%= image_tag @note.service_image1_url ,class: "face_pic"%>
+     <% else %>
+     <%= image_tag 'Seekle_icon.png', :class => 'face_pi'%>
+     <% end %>
 
     <div class="star-rating" data-score= <%= @avg_review %> ></div>
     <em><%= "#{@reviews.length} 件の口コミ" %></em>
