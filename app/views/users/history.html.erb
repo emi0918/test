@@ -13,16 +13,17 @@
 <div class="panel panel-default">
 
   <div class="panel-body">
-  	<table class="newpost">
-
-		<tr>
-			<td><%= reservation.date %></td>
-           <td><%= reservation.note.title %></td>
-           <td><%= reservation.note.provider.name %></td>
-          
-		</tr>
-
-		 </table>
+   <% if reservation.note.service_image1? %>
+    <%= image_tag reservation.note.service_image1.thumb.url ,class: "reservation_note_pic"%>
+      <% else %>
+      <%= image_tag 'Seekle_icon.png', :class => 'reservation_note_pic'%>
+    <% end %>
+	         <h5>「<%= reservation.note.title %>」<h5>
+         <div class="reservation_content">
+           <p> <strong>日程：</strong><%= reservation.date %></p>
+         <p><strong>サービス提供者：</strong> <%= reservation.note.provider.name %></p>
+           </div>
+	
 	    </div></div>
 	  <% end %>
     <% end %>
