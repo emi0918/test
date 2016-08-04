@@ -1,4 +1,9 @@
 .reservation_history_wrapper{width:75%;margin:4% 13%; height:0 auto;}
 .reservation_history_wrapper h1{margin-bottom:30px;font-weight:normal;}
 
-.reservation_history_wrapper .bootstrap .panel-body{padding:15px;}
+.reservation_history_wrapper .bootstrap .panel-body{height:230px;}
+
+.reservation_note_pic{width:32%;height:100%; float:left;border-radius:3px;}
+
+.reservation_history_wrapper p{line-height: 20px;}
+.reservation_content{margin-top:50px; }
