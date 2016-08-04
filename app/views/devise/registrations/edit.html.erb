@@ -12,8 +12,9 @@
   </div>
 </div>
 
-<div class="edit_profile_wrapper">
-  <div class="bootstrap">
+
+<div class="providers_new_post">
+<div class="bootstrap">
 <h2>一般アカウント設定</h2>
 </br>
  
@@ -34,7 +35,7 @@
     <tr>
      <th> <p>ユーザーネーム <span class="form-label required">必須</span></p></th>
      <td>
-     <%= f.text_field :name, class: "form-control image-field" %>
+     <%= f.text_field :name, class: 'form-control' %>
     </td>
   </tr>
 
@@ -42,17 +43,19 @@
    <tr>
      <th> <p>自己紹介 <span class="form-label required">必須</span></p></th>
      <td>
-     <%= f.text_area :profile, class: "form-control image-field" %>
+ 
+<%= f.text_area :profile, class: 'content-area',placeholder:"お店の特徴、提供サービスへの思い、オススメポイントなどを紹介しましょう" %>
     </td>
-
   </tr>
+
+
 
 
  
    <tr>
      <th> <p>メールアドレス <span class="form-label required">必須</span></p></th>
      <td>
-     <%= f.email_field :email, class: "form-control image-field" %>
+     <%= f.email_field :email, class: "form-control" %>
     </td>
   </tr>
 
@@ -60,26 +63,6 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-     <tr>
-     <th> <p>パスワード <span class="form-label required">必須</span></p></th>
-     <td>
-     <%= f.password_field :password_confirmation, class: "form-control image-field" %>
-    </td>
-  </tr>
-
-    <tr>
-     <th> <p>新規パスワード(再入力) <span class="form-label required">必須</span></p></th>
-     <td>
-     <%= f.password_field :password_confirmation, class: "form-control image-field" %>
-    </td>
-  </tr>
-  
-    <tr>
-     <th> <p>現在使用中のパスワード<span class="form-label required">必須</span></p></th>
-     <td>
-     <%= f.password_field :current_password, class: "form-control image-field" %>
-    </td>
-  </tr>
 
 </table></div>
 
@@ -96,13 +79,8 @@
 <%= link_to "Back", :back %>
 
 
-
   </div>
-
 </div>
-
-
-
 
 
 
