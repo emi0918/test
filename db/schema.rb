@@ -11,34 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718100338) do
+ActiveRecord::Schema.define(version: 20160722112856) do
 
-  create_table "formbuilder_entry_attachments", force: :cascade do |t|
-    t.string   "upload",       limit: 255
-    t.string   "content_type", limit: 255
-    t.integer  "file_size",    limit: 4
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "formbuilder_forms", force: :cascade do |t|
-    t.integer  "formable_id",   limit: 4
-    t.string   "formable_type", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "formbuilder_response_fields", force: :cascade do |t|
-    t.integer  "form_id",       limit: 4
-    t.text     "label",         limit: 65535
-    t.string   "type",          limit: 255
-    t.text     "field_options", limit: 65535
-    t.integer  "sort_order",    limit: 4
-    t.boolean  "required",                    default: false
-    t.boolean  "blind",                       default: false
-    t.boolean  "admin_only",                  default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "categories", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "likes", force: :cascade do |t|
@@ -79,7 +57,6 @@ ActiveRecord::Schema.define(version: 20160718100338) do
     t.datetime "created_at",                                         null: false
     t.boolean  "global",                             default: false
     t.datetime "expires"
-    t.string   "sender_name",          limit: 255
   end
 
   add_index "mailboxer_notifications", ["conversation_id"], name: "index_mailboxer_notifications_on_conversation_id", using: :btree
@@ -103,20 +80,22 @@ ActiveRecord::Schema.define(version: 20160718100338) do
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type", using: :btree
 
   create_table "notes", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.text     "content",     limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.string   "price",       limit: 255
-    t.text     "image_1",     limit: 65535
-    t.text     "image_2",     limit: 65535
-    t.text     "image_3",     limit: 65535
-    t.string   "category",    limit: 255
-    t.text     "rule",        limit: 65535
-    t.string   "provider_id", limit: 255
-    t.string   "catchcopy",   limit: 255
-    t.string   "salespoint",  limit: 255
-    t.string   "cancelrule",  limit: 255
+    t.string   "title",          limit: 255
+    t.text     "content",        limit: 65535
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.string   "price",          limit: 255
+    t.string   "category",       limit: 255
+    t.text     "rule",           limit: 65535
+    t.string   "user_id",        limit: 255
+    t.string   "provider_id",    limit: 255
+    t.integer  "category_id",    limit: 4
+    t.text     "service_image1", limit: 65535
+    t.text     "service_image2", limit: 65535
+    t.text     "service_image3", limit: 65535
+    t.string   "catchcopy",      limit: 255
+    t.string   "salespoint",     limit: 255
+    t.string   "cancelrule",     limit: 255
   end
 
   create_table "providers", force: :cascade do |t|
@@ -140,10 +119,38 @@ ActiveRecord::Schema.define(version: 20160718100338) do
     t.string   "payment",                limit: 255
     t.string   "provider_pic",           limit: 255
     t.string   "about",                  limit: 255
+    t.string   "storename",              limit: 255
   end
 
   add_index "providers", ["email"], name: "index_providers_on_email", unique: true, using: :btree
   add_index "providers", ["reset_password_token"], name: "index_providers_on_reset_password_token", unique: true, using: :btree
+
+  create_table "reservations", force: :cascade do |t|
+    t.date     "date"
+    t.string   "last_name",    limit: 255
+    t.string   "first_name",   limit: 255
+    t.string   "phone_number", limit: 255
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.text     "message",      limit: 65535
+    t.string   "note_id",      limit: 255
+    t.string   "user_id",      limit: 255
+    t.string   "name",         limit: 255
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "rating",     limit: 4
+    t.text     "comment",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "user_id",    limit: 4
+    t.integer  "note_id",    limit: 4
+  end
+
+  create_table "service_providers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255,   default: "", null: false
@@ -165,7 +172,6 @@ ActiveRecord::Schema.define(version: 20160718100338) do
     t.integer  "uid",                    limit: 8
     t.string   "provider",               limit: 255
     t.string   "token",                  limit: 255
-    t.string   "unique_session_id",      limit: 20
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
