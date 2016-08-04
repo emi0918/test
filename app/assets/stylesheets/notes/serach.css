@@ -1,0 +1,36 @@
+
+ .genre{margin-top:20px;width:100%;height:40px;border-bottom:1px solid #F5F5F5}
+.genre p{padding-left:20px;font-size:14px}
+
+ .left-other-housing{float:left;height:1400px;display:block;clear:both;}
+ .other-jobs-menu{margin-left:110px;line-height:30px}
+ .other-jobs-menu ul li{color:#696969}
+ .find-wrapper{float:right}
+ .search-provider{margin-right:30px;margin-top:26px;float:left;width:1000px;height:1800px}
+ .create_requirement{margin-top:10px;margin-left:32px}
+
+ .provider_service_image{
+ 	border-radius: 16px;width:30%;height:180px;float:left;padding:10px;
+ 	}
+ .provider_job{
+ 	height:200px;border:1px solid gray;width:60%;position:relative;margin-top:10px;margin-bottom:18px;margin-left:110px;float:left;border-radius: 6px;
+ 	}
+ 	.provider_image{border-radius:100%;float:left}.provider_job h3{margin-top:30px;float:left}.provider_job p{font-size:13px;line-height:20px;text-align:center}
+
+.title h2{margin-top:10px;font-size:16px;}
+.provider_image{height:74px;width:74px;margin-left:140px;margin-top:58px}.show_providers{margin-top:50px;margin-bottom:90px}.service-price{font-weight:1px}.clearfix:after{content:"";display:block;clear:both}.footer-bottom{clear:both}
+
+/*  note/show のcss */
+ 
+
+
+.provider-introduction h1{margin-top:40px;width:100%; font-weight: normal; font-size:25px;}
+
+.provider_wrapper p{line-height: 1.5; font-size: 14px;}
+
+.provider_wrapper .sample_03{width:50%;} .provider_wrapper .sample_03 th{width:15%; }  .provider_wrapper .sample_03 td{width:35%;}
+
+.provider_wrapper{width:100%;margin-top:0;height:1400px}
+.provider-introduction{width:73%;height:470px;border-bottom:1px solid #dce0e0;display:block; margin-left:14%;}
+.provider-introduction p{float:left;padding-right:80px;padding-top:50px}
+.face_pic{width:45%;height:72%;margin-right:40px;margin-top:20px;float:left;border-radius:2%;}

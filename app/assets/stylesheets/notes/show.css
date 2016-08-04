@@ -1,0 +1,32 @@
+
+
+
+.shadow_btn{font-size:22px;font-weight:700;text-decoration:none;display:block;text-align:center;padding:9px;cursor:pointer;border:1px solid #333;color:#fff;box-shadow:2px 2px #555;width:26%; border-radius:3%; }
+.shadow_btn:active{box-shadow:0 0 #555;margin-top:3%; }
+
+.provider-introduction .shadow_btn{background-color:#6495ED; border-radius:3%; margin-top:2%; margin-left:71%;}
+.provider-introduction .shadow_btn:active{box-shadow:0 0 #555;margin-top:3%; }
+
+
+.provider_service_pictures,.reviews_providers,.rulesfromprovider{float:left;}
+
+.provider_wrapper h2{
+  font-weight: normal;padding-left: 10px;border-left: solid 3px  #f18d00;font-size: 18px;font-weight: 700;
+}
+
+
+.provider_introduction h3{margin-left: 30%; width:20%;}
+
+
+.service-price_provider h1{color:#fff;text-align:center;font-size:40px;padding-top:28px}
+.service-price_provider{background-color:orange;margin-top:-27px;height:100px}
+.fa-jpy{padding-right:16px;font-size:46px}
+
+.provider_service_pictures{width:73%;height:420px; margin-left:1%}
+.service_pic{float:left;width:270px;height:300px;margin-top:60px;margin-left:15px}
+.rulesfromprovider{width:73%;height:0 auto;margin-left:14%; margin-bottom:20px;}
+
+
+.reviews_providers{width:73%;height:0 auto;margin-left:14%; }
+.main-image{background-color:gray;height:360px;}
+
