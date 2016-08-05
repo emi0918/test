@@ -14,7 +14,7 @@
   <% if @note.service_image1.present? %>
     <%= image_tag @note.service_image1_url ,class: "face_pic"%>
      <% else %>
-     <%= image_tag 'Seekle_icon.png', :class => 'face_pi'%>
+     <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
      <% end %>
 
     <div class="star-rating" data-score= <%= @avg_review %> ></div>
