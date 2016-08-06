@@ -18,21 +18,23 @@ class UsersController < ApplicationController
    @user = User.find_by(id: params[:id])
  end
 
+
  def new
    @user = User.new
  end
 
  def edit
-  @user.profile_pic.cache! unless @user.profile_pic.blank?
+  @user.mainpic.cache! unless @user.mainpic.blank?
    @user = User.find(params[:id])
  end
 
+
  def create
    @user = User.new(user_params)
-   file = params[:user][:profile_pic]
+   file = params[:user][:mainpic]
    @user.set_image(file)
    if @user.save
-     UserMailer.welcome_email(@user).deliver
+    
      session[:user_id] = @user.id
      redirect_to users_path
    else
@@ -41,8 +43,8 @@ class UsersController < ApplicationController
  end
 
  def update
-    @user.profile_pic.cache! unless @user.profile_pic.blank?
-  file = params[:user][:profile_pic]
+    @user.mainpic.cache! unless @user.mainpic.blank?
+  file = params[:user][:mainpic]
   @user.set_image(file)
 
   if @user.update(user_params)
@@ -100,7 +102,7 @@ def set_user
   end
 
   def user_params
-    params.require(:user).permit(:name, :profile_pic, :profile, :area, :email)
+    params.require(:user).permit(:name, :mainpic, :profile, :area, :email)
   end
 
   def sendmail

@@ -39,9 +39,9 @@ class ApplicationController < ActionController::Base
     private
 
     def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:sign_up) << :name << :area << :profile << :profile_pic
+      devise_parameter_sanitizer.for(:sign_up) << :name << :area << :profile << :mainpic
 
-      devise_parameter_sanitizer.for(:account_update) << :name << :area << :profile << :profile_pic
+      devise_parameter_sanitizer.for(:account_update) << :name << :area << :profile << :mainpic
     end
 
     private

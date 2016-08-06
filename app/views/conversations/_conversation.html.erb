@@ -3,9 +3,9 @@
   <div class="media">
     <div class="media-left">
       <a href="#">
-        <% if conversation.originator.profile_pic? %>
+        <% if conversation.last_sender.mainpic? %>
         
-        <%= image_tag conversation.originator.profile_pic, :class => 'media-object' , :size => '64x64'  %>
+        <%= image_tag conversation.last_sender.mainpic, :class => 'media-object' , :size => '64x64'  %>
         <% else %>
         <%= image_tag 'Seekle_icon.png', :class => 'media-object' , :size => '64x64'  %>
         <% end %>

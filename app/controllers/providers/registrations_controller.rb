@@ -12,7 +12,7 @@ def new
 end
 
   def edit
-    @provider.provider_pic.cache! unless @provider.provider_pic.blank?
+    @provider.mainpic.cache! unless @provider.mainpic.blank?
   end
 
 def create
@@ -27,7 +27,7 @@ def create
 end
 
   def update
-   @provider.provider_pic.cache! unless @provider.provider_pic.blank?
+   @provider.mainpic.cache! unless @provider.mainpic.blank?
     if @provider.update(provider_params)
       redirect_to profile_providers_path
     else
@@ -40,7 +40,7 @@ end
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
     def provider_params
-      params.require(:provider).permit(:name, :email,:phonenumber, :address, :hours, :holiday, :payment, :password,:about, :provider, :provider_pic)
+      params.require(:provider).permit(:name, :email,:phonenumber, :address, :hours, :holiday, :payment, :password,:about, :provider, :mainpic)
     end
     
 
