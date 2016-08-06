@@ -10,8 +10,8 @@
  <div class="provider-contents">
 
    <div class="left-wrapper">
-     <% if @note.provider.provider_pic? %>
-     <%= image_tag @note.provider.provider_pic.url, :class => 'mypage-picture'%>
+     <% if @note.provider.mainpic? %>
+     <%= image_tag @note.provider.mainpic.url, :class => 'mypage-picture'%>
      <% else %>
      <%= image_tag 'Seekle_icon.png', :class => 'mypage-picture'%>
      <% end %>

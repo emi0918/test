@@ -9,11 +9,9 @@ class Provider < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-
- mount_uploader :provider_pic, ProviderPicUploader
+ mount_uploader :mainpic, MainpicUploader
  
-
-          acts_as_messageable
+   acts_as_messageable
 
      def mailboxer_name
        self.name
@@ -21,5 +19,6 @@ class Provider < ActiveRecord::Base
 
      def mailboxer_email(object)
        self.email
-     end  
+     end 
+     
 end

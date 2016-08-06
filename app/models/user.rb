@@ -28,6 +28,6 @@ has_many :notes
     self.email
   end
 
-  mount_uploader :profile_pic, ProfilePicUploader
+  mount_uploader :mainpic, MainpicUploader
 
 end
