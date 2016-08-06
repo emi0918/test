@@ -7,4 +7,21 @@
 .mailbox_wrapper{
 	margin-top: 2%;
 }
-.message-title{margin-top:30%;font-size:14px; line-height: 20px;}
+.message-title{
+	margin-top:30%;
+	font-size:14px; 
+	line-height: 20px;
+}
+
+.bootstrap .media-body p{
+	line-height: 22px;
+	font-size: 14px;
+}
+
+.mailbox_wrapper .bootstrap .col-md-4{
+	width:28%;
+}
+
+.mailbox_wrapper .bootstrap .col-md-8{
+	width:72%;
+}
