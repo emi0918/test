@@ -5,20 +5,23 @@
 	<h1><%= current_user.name %>さんの予約中サービス </h1>
 
 <% if current_user.reservations.blank? %>
+
 <p>予約中のサービスはまだありません</p>
+
 <% else %>
+
 <div class="bootstrap">
+
 		<% @reservations.each do |reservation| %>
 
 <div class="panel panel-default">
-
   <div class="panel-body">
    <% if reservation.note.service_image1.present? %>
     <%= image_tag reservation.note.service_image1.url ,class: "reservation_note_pic"%>
       <% else %>
       <%= image_tag 'Seekle_icon.png', :class => 'reservation_note_pic'%>
-    <% end %>
-	         <h5>「<%= reservation.note.title %>」<h5>
+    <% end%>
+	         <h5><%= link_to reservation.note.title, note_path(reservation.note) %><h5>
          <div class="reservation_content">
            <p> <strong>日程：</strong><%= reservation.date %></p>
          <p><strong>サービス提供者：</strong> <%= reservation.note.provider.name %></p>
@@ -35,5 +38,3 @@
    <%= paginate(@reservations) %>
  </div>
 </div>
-
-
