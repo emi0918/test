@@ -84,4 +84,6 @@ end
  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
 
+
+get '*path', controller: 'application', action: 'render_404'
 end
