@@ -3,10 +3,15 @@
 
 .reservation_history_wrapper .bootstrap .panel-body{height:230px;}
 
+.reservation_history_wrapper .bootstrap .btn-default{
+	margin-left: 70%;
+	margin-top: 6%;
+}
+
 .reservation_note_pic{width:32%;height:100%; float:left;border-radius:3px;}
 
 .reservation_history_wrapper p{line-height: 27px;}
-.reservation_content{margin-top:47px; width:58%;margin-left: 37%;}
+.reservation_content{margin-top:30px; width:58%;margin-left: 37%;}
 
 .reservation_content p{margin-left: 50px;}
 

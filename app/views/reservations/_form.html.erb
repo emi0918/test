@@ -1,62 +1,62 @@
 
 <div class="reservation-confirm">
-<div class="bootstrap">
-<%=  @note.provider.name %>さんの"<%= @note.title %>"予約フォーム
+  <div class="bootstrap">
+    <%=  @note.provider.name %>さんの"<%= @note.title %>"予約フォーム
 
-<%= form_for([@note, @reservation], url: {action: 'confirm'} ) do |f| %>
-  <% if @reservation.errors.any? %>
+    <%= form_for([@note, @reservation], url: {action: 'confirm'} ) do |f| %>
+    <% if @reservation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+     
 
       <ul>
-      <% @reservation.errors.full_messages.each do |message| %>
+        <% @reservation.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %>
 
-<table class="newpost">
+    <table class="newpost">
 
-    <tr>
-     <th> <p>ご希望の日程 <span class="form-label required">必須</span></p></th>
-     <td>
-      <%= f.date_select :date %>
+      <tr>
+       <th> <p>ご希望の日程 <span class="form-label required">必須</span></p></th>
+       <td>
+        <%= f.date_select :date %>
       </td>
     </tr>
 
     <tr>
-        <th> <p>お名前 <span class="form-label required">必須</span></p></th>
-       <td>
+      <th> <p>お名前 <span class="form-label required">必須</span></p></th>
+      <td>
         <div class="row row-20">
          <div class="col-xs-5">
           <%= f.text_field :name,  class: 'form-control',placeholder:"山田 太郎" %>
         </div>
-       </div>
-      </td>
-    </tr>
+      </div>
+    </td>
+  </tr>
 
 
-   <tr>
-     <th> <p>電話番号<span class="form-label required">必須</span></p></th>
-     <td>
+  <tr>
+   <th> <p>電話番号<span class="form-label required">必須</span></p></th>
+   <td>
 
-<div class="row row-20">
+    <div class="row row-20">
       <div class="col-xs-5">
-<%= f.text_field :phone_number,  class: 'form-control' ,  placeholder:"1234567890"%>
+        <%= f.text_field :phone_number,  class: 'form-control' ,  placeholder:"1234567890"%>
 
-</div>
-</div>
-      </td>
-    </tr>
+      </div>
+    </div>
+  </td>
+</tr>
 
-      <tr>
-     <th> <p>その他 <span class="form-label required">必須</span></p></th>
-     <td>
+<tr>
+ <th> <p>その他 <span class="form-label required">必須</span></p></th>
+ <td>
    <%= f.text_area :message , class: 'content-area', placeholder:"質問等があれば事前に聞いておきましょう"%>
-      </td>
-    </tr>
-  </table>
+ </td>
+</tr>
+</table>
 
 <%= f.submit '予約内容を確認する', class:'shadow_btn', data:{ disable_with: "・・・"} %>
 <%= link_to "サービスページへ戻る", :back %>
