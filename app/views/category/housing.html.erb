@@ -9,7 +9,6 @@
     <h1>住まい</h1>
      <h3>暮らしを変えるSeekleでの住まいサービス</h3>
 
-
    </div>
 
   <div class="home-category-wrapper">
@@ -23,23 +22,30 @@
       <div class="panel-heading">
         <h3 class="panel-title"><%= link_to "便利屋 修復","/notes/search" %></h3>
       </div>
-  <%= image_tag 'housing/repair.png', :class => 'panel-body-housing', :size => 'cover'%>
+
+  <%= link_to image_tag( 'housing/repair.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
     </div>
      </li>
+
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
     <h3 class="panel-title"><%= link_to "増設、リモデル","/notes/search" %></h3>
   </div>
-       <%= image_tag 'housing/blueprint.png', :class => 'panel-body-housing', :size => 'cover'%>
+      
+  <%= link_to image_tag('housing/blueprint.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
+     
     </div>
   </li>
+
+
+     
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
      <h3 class="panel-title"><%= link_to "コンクリート","/notes/search" %></h3>
      </div>
-        <%= image_tag 'housing/concrete.png', :class => 'panel-body-housing', :size => 'cover'%>
+  <%= link_to image_tag('housing/concrete.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
     </div>
   </li>
 
@@ -47,15 +53,23 @@
    <div class="panel-heading">
    <h3 class="panel-title"><%= link_to "ペインティング","/notes/search" %></h3>
  </div>
-   <%= image_tag 'housing/painting.png', :class => 'panel-body-housing', :size => 'cover'%>
+
+
+  <%= link_to image_tag('housing/painting.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
+
     </div>
   </li>
+
+
+
+
+
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
      <h3 class="panel-title"><%= link_to "屋根、雨漏り","/notes/search" %></h3>
      </div>
-      <%= image_tag 'housing/roof.png', :class => 'panel-body-housing', :size => 'cover'%>
+  <%= link_to image_tag('housing/roof.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
     </div>
   </li>
 
@@ -63,7 +77,9 @@
    <div class="panel-heading">
      <h3 class="panel-title"><%= link_to "壁、階段、フレーミング","/notes/search" %></h3>
      </div>
- <%= image_tag 'housing/floor.png', :class => 'panel-body-housing', :size => 'cover'%>
+ 
+  <%= link_to image_tag('housing/floor.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
+
     </div>
   </li>
 
@@ -71,7 +87,9 @@
    <div class="panel-heading">
      <h3 class="panel-title"><%= link_to "ドア、窓","/notes/search" %></h3>
      </div>
-    <%= image_tag 'housing/window.png', :class => 'panel-body-housing', :size => 'cover'%>
+  
+  <%= link_to image_tag('housing/window.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
+
     </div>
   </li>
 
@@ -79,7 +97,9 @@
    <div class="panel-heading">
      <h3 class="panel-title"><%= link_to "クリーニング","/notes/search" %></h3>
      </div>
-    <%= image_tag 'housing/cleaning.png', :class => 'panel-body-housing', :size => 'cover'%>
+ 
+  <%= link_to image_tag('housing/cleaning.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
+
     </div>
   </li>
 
@@ -87,7 +107,7 @@
    <div class="panel-heading">
      <h3 class="panel-title"><%= link_to "引っ越し","/notes/search" %></h3>
      </div>
-    <%= image_tag 'housing/moving.png', :class => 'panel-body-housing', :size => 'cover'%>
+      <%= link_to image_tag('housing/moving.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
     </div>
   </li>
 
@@ -96,7 +116,10 @@
    <div class="panel-heading">
      <h3 class="panel-title"><%= link_to "大工、木工","/notes/search" %></h3>
      </div>
-   <%= image_tag 'housing/crosscut.png', :class => 'panel-body-housing', :size => 'cover'%>
+ 
+
+  <%= link_to image_tag('housing/crosscut.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
+
     </div>
   </li>
 
@@ -105,19 +128,21 @@
    <div class="panel-heading">
      <h3 class="panel-title"><%= link_to "配管工事","/notes/search" %></h3>
      </div>
-   <%= image_tag 'housing/plumber.png', :class => 'panel-body-housing', :size => 'cover'%>
+  
+  <%= link_to image_tag( 'housing/plumber.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
+
     </div>
   </li>
 
-
-
-
+  
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
      <h3 class="panel-title"><%= link_to "その他","/notes/search" %></h3>
      </div>
-    <%= image_tag 'pigeon.png', :class => 'panel-body-housing', :size => 'cover'%>
+    
+  <%= link_to image_tag( 'pigeon.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/search" %>
+
     </div>
   </li>
  </ul>
