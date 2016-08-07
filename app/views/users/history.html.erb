@@ -25,8 +25,12 @@
          <div class="reservation_content">
            <p> <strong>日程：</strong><%= reservation.date %></p>
          <p><strong>サービス提供者：</strong> <%= reservation.note.provider.name %></p>
-           </div>	
-	    </div></div>
+         
+         <%= link_to "お問い合わせする",  new_note_conversation_path(reservation.note),:class =>'btn btn-default' %>
+
+         </div> 
+	     </div>
+      </div>
 	  <% end %>
     <% end %>
   </div>
