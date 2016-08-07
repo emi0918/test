@@ -5,45 +5,46 @@ class UsersController < ApplicationController
 
  def index
   @users= User.all
-   @user = User.includes(:notes)
-      @user = User.includes(:reservation)
+  @user = User.includes(:notes)
+  @user = User.includes(:reservation)
+end
+
+def history
+  @reservations = current_user.reservations.all.page(params[:page]).per(4).order(:id)
  end
 
- def history
-@reservations = current_user.reservations.all.page(params[:page]).per(4).order(:id)
- end
+def show
+ @notes = @user.notes
+ @user = User.find_by(id: params[:id])
 
- def show
-   @notes = @user.notes
-   @user = User.find_by(id: params[:id])
- end
+end
 
+def new
+ @user = User.new
+end
 
- def new
-   @user = User.new
- end
-
- def edit
+def edit
   @user.mainpic.cache! unless @user.mainpic.blank?
-   @user = User.find(params[:id])
+  @user = User.find(params[:id])
+end
+
+
+def create
+ @user = User.new(user_params)
+ file = params[:user][:mainpic]
+
+ if @user.save
+   UserMailer.complete_registration(@user).deliver_now
+   session[:user_id] = @user.id
+   redirect_to users_path
+ else
+   render :new
  end
+end
 
 
- def create
-   @user = User.new(user_params)
-   file = params[:user][:mainpic]
-   @user.set_image(file)
-   if @user.save
-    
-     session[:user_id] = @user.id
-     redirect_to users_path
-   else
-     render :new
-   end
- end
-
- def update
-    @user.mainpic.cache! unless @user.mainpic.blank?
+def update
+  @user.mainpic.cache! unless @user.mainpic.blank?
   file = params[:user][:mainpic]
   @user.set_image(file)
 
@@ -73,9 +74,9 @@ def mailbox
   end
 end
 
- def conversation
-    @conversation ||= mailbox.conversations.find(params[:id])
-  end
+def conversation
+  @conversation ||= mailbox.conversations.find(params[:id])
+end
 
 
 private
@@ -101,14 +102,15 @@ def set_user
     end
   end
 
+
   def user_params
     params.require(:user).permit(:name, :mainpic, :profile, :area, :email)
   end
 
+
   def sendmail
     user= User.find(params[:id])
     @mail =NoticeMailer.sendmail_confirm(user).deliver
-
   end
 
   def set_user
