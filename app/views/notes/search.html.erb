@@ -42,6 +42,7 @@
 </div>
 
 
+
 <div class="show_providers clearfix">
   <p><%= Note.count %>件のサービスが見つかりました</p>
   <ul>
@@ -49,11 +50,10 @@
    <div class="provider_job ">
      
      <% if note.service_image1.present? %>
-    <%= image_tag note.service_image1_url ,class: "provider_service_image"%>
+  <%= link_to image_tag( note.service_image1_url, { :class => "provider_service_image"}), note_path(note) %>
      <% else %>
-     <%= image_tag 'Seekle_icon.png', :class => 'provider_service_image'%>
-     <% end %>
-     
+      <%= link_to image_tag( 'Seekle_icon.png', { :class => "provider_service_image"}), note_path(note) %>
+         <% end %>
     <div class="title"><h2> <%= link_to note.title, note_path(note) %></h2>
      <div class="service-price"><h3> ¥<%= note.price %></h3> </div>
      <% if note.provider.mainpic.present? %>
@@ -65,6 +65,7 @@
  </div>
  <% end %>
 </ul>
+
 
 <div class="bootstrap">
  <div class="list-number-2 clearfix">
