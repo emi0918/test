@@ -1,29 +1,28 @@
 <div class="bootstrap">
-<% @receipts.each do |receipt| %>
-    <% message = receipt.message %>
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-                <% if message.sender.mainpic? %>
+  <% @receipts.each do |receipt| %>
+  <% message = receipt.message %>
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <% if message.sender.mainpic? %>
         
         <%= image_tag message.sender.mainpic, :class => 'media-object' , :size => '64x64'  %>
         <% else %>
         <%= image_tag 'Seekle_icon.png', :class => 'media-object' , :size => '64x64'  %>
         <% end %>
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">
-            <%= message.sender.name %><br>
-          <small><b>件名: </b><%= message.subject %></small><br>
-          <small><b>日付: </b><%=  message.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[message.created_at.wday]})  %I:%M%p") %></small>
-        </h4>
-    <p> <%= simple_format(message.body) %></p>
-      </div>
+      </a>
     </div>
-<% end %>
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= message.sender.name %><br>
+        <small><b>件名: </b><%= message.subject %></small><br>
+        <small><b>日付: </b><%=  message.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[message.created_at.wday]})  %I:%M%p") %></small>
+      </h4>
+      <p> <%= simple_format(message.body) %></p>
+    </div>
   </div>
+  <% end %>
+</div>
 
 
 
- 
