@@ -1,14 +1,16 @@
-
+<div class="bootstrap">
  <div class="content_in_user">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-<div class="bootstrap1">
+
   <h1>アカウント作成</h1>
+
+
 
  <div class="name_field">
     <%= f.label :ユーザーネーム %><br />
-    <%= f.text_field :name,  autofocus: true%>
+    <%= f.text_field :name,  autofocus: true  %>
   </div>
 
 
@@ -39,7 +41,7 @@
   <div class="actions">
     <%= f.submit "アカウントを作成する" , class: "log_button", id: "sign" %>
   </div>
-  </div>
+
 <% end %>
 
 

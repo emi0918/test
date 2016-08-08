@@ -1,7 +1,7 @@
 /* タブレット向けレイアウト */
 
 /* ブレイクポイントが1000px以下の時のメディアクエリを設定してください*/
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
   /* lessonクラスのwidthを50%に変更し、margin-bottom: 50px;を追加してください */
   .lesson{
     width:50%;
@@ -85,7 +85,6 @@
 }
 
 
-}
 
 
 
@@ -141,7 +140,7 @@ padding-left:0px;
   }
 
   .about-seekle-wrapper{
-    height:700px;
+    height:750px;
 
  }
 
