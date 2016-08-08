@@ -1,18 +1,49 @@
-.reservation_history_wrapper{width:75%;margin:4% 13%; height:0 auto; }
-.reservation_history_wrapper h1{margin-bottom:30px;font-weight:normal;}
+.reservation_history_wrapper{
+	width:75%;
+	margin:4% 13%;
+	 height:0 auto; 
+	}
 
-.reservation_history_wrapper .bootstrap .panel-body{height:230px;}
+.reservation_history_wrapper h1{
+	margin-bottom:30px;
+	font-weight:normal;
+}
+
+.reservation_history_wrapper .bootstrap .panel-body{
+	height:230px;
+}
 
 .reservation_history_wrapper .bootstrap .btn-default{
 	margin-left: 70%;
 	margin-top: 6%;
 }
 
-.reservation_note_pic{width:32%;height:100%; float:left;border-radius:3px;}
+.reservation_note_pic{
+	width:32%;
+	height:100%; 
+	float:left;
+	border-radius:3px;
+}
 
-.reservation_history_wrapper p{line-height: 27px;}
-.reservation_content{margin-top:30px; width:58%;margin-left: 37%;}
+.reservation_history_wrapper p{
+	line-height: 27px;
+}
 
-.reservation_content p{margin-left: 50px;}
+.reservation_content{
+	margin-top:30px; 
+	width:58%;
+	margin-left: 37%;
+}
 
-.reservation_history_wrapper .bootstrap a{text-decoration: none; color:black; border-left:3px solid #F47503;font-size: 16px; margin-left:28px; padding-left: 9px;}
+.reservation_content p{
+	margin-left: 50px;
+}
+
+.reservation_history_wrapper .bootstrap a{
+	text-decoration: none; 
+	color:black;
+	 border-left:3px solid #F47503;
+	 font-size: 16px; 
+	 margin-left:28px; 
+	 padding-left: 9px;
+	}

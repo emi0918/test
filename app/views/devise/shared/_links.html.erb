@@ -1,9 +1,12 @@
 <%- if controller_name != 'sessions' %>
   <%= link_to "ログイン", new_session_path(resource_name) %><br />
+
 <% end -%>
 
+
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "サインアップ", new_registration_path(resource_name) , id: "sign_up"%><br />
+  <%= link_to "アカウントを作成する", new_registration_path(resource_name) , id: "sign_up"%><br />
+
 <% end -%>
 
 
