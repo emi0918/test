@@ -23,11 +23,11 @@
  .services_right_wrapper{
     width:75%;
     float:right;
-    
+    margin-left: 24px;
  }
 
  .other-jobs-menu{
- 	margin-left:110px;
+ 	margin-left:137px;
  	line-height:30px
  }
 
@@ -36,7 +36,7 @@
  }
 
  .find-wrapper{
- 	float:right
+ 	float:right;
  }
 
  .search-provider{

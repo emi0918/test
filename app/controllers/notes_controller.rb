@@ -1,5 +1,7 @@
 class NotesController < ApplicationController
 
+
+
  before_action :set_note, only: [:show,:edit, :update, :destroy, :profile]
  before_action :authenticate_user!, only:[:profile]
  before_action :authenticate_provider!, only:[:index, :new, :edit, :create]
@@ -30,9 +32,25 @@ class NotesController < ApplicationController
    end
   end
 
-  def search
-    @notes = Note.includes(:provider).page(params[:page]).per(6).order(:id)
+
+
+  def housing
+    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => 1 )
   end
+
+  def event
+    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => 2)
+  end
+
+  def lesson
+    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => 3 )
+  end
+
+  def health
+    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => 4 )
+  end
+
+
 
   def profile
     @notes = Note.includes(:provider).all

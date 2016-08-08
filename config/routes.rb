@@ -23,9 +23,10 @@ resources :providers, only:[:index,:edit,:update,:show ]  do
  collection do
    get :profile
    get :inbox
+     get :mypage
  end
  member do
-   get :mypage
+
    get :conversations
    post :reply
  end
@@ -42,14 +43,18 @@ resources :notes do
  end
  collection do
    get :reservations
-   get :search
+   get :housing
+   get :event
+   get :lesson 
+   get :health
+   get :others
  end
  member do
    get :profile
  end
 end
 
-get '/notes/search/:note_id' => "notes#search"
+
 
 root'home#index'
 
