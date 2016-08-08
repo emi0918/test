@@ -11,6 +11,10 @@
   display:none;
 }
 
+.Seekle_heading{
+  display:none;
+}
+
 .dropmenu{
   display:none;
 }
@@ -69,7 +73,7 @@
   }
 
 .message-wrapper{
-  margin-top: 100px;
+
   width:80%;
   padding-left: 38px;
 }
@@ -137,7 +141,7 @@ padding-left:0px;
   }
 
   .about-seekle-wrapper{
-    height:750px;
+    height:700px;
 
  }
 
@@ -169,7 +173,8 @@ padding-left:0px;
   }
 
   .explain-seekle-wrapper p{
-    font-size:9px;
+    font-size:14px;
+    text-align: left;
   }
 
 }
