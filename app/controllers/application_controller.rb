@@ -30,15 +30,7 @@ class ApplicationController < ActionController::Base
 
 
     #protect_from_forgery
-    def after_sign_in_path_for(resources)
-      case resources
-      when User
-        users_path
-      when Provider
-       profile_providers_path
-      end
-    end
-
+ 
     private
 
     def configure_permitted_parameters

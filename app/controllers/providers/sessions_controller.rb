@@ -7,6 +7,11 @@ layout "providers_layout"
   # def new
   #   super
   # end
+   def after_sign_in_path_for(resources)
+     
+       profile_providers_path
+ 
+    end
 
 
   # POST /resource/sign_in
