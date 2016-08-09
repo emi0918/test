@@ -59,6 +59,15 @@
     </td>
   </tr>
 
+
+   <tr>
+     <th> <p>現在のパスワード <span class="form-label required">必須</span></p></th>
+     <td>
+     <%= f.password_field :current_password, class: "form-control" %>
+    </td>
+  </tr>
+
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
