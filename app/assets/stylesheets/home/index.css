@@ -41,7 +41,19 @@
 .message{background-color:#6495ED;box-shadow:#4682B4 0 3px;padding:15px 40px}
 .fa-fw{font-size:18px;padding-right:10px}
 /*プロバイダーページ */
-.pro-top-wrapper{margin-top:-90px;background-size:cover;color:#fff;background-image:url(https://pixabay.com/static/uploads/photo/2015/06/08/15/06/woman-801872_960_720.jpg);text-align:center;padding:90px 0}.pro-container{height:300px}
+.pro-top-wrapper{
+	margin-top:-90px;
+	  background-image: url(/images/businesswoman.jpg);
+	background-size:cover;
+	color:#fff;
+	text-align:center;
+	padding:90px 0;
+
+	
+}
+
+
+.pro-container{height:300px}
 .pro-top-wrapper h1{padding-top:70px;opacity:.9;font-size:42px;letter-spacing:2px}
 .pro-top-wrapper p{opacity:.7;font-size:16px;margin-bottom:35px}
 .btn{color:#fff;opacity:.8;padding:10px 24px;border-radius:3px}
