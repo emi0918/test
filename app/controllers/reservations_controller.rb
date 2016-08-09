@@ -32,6 +32,23 @@ class ReservationsController < ApplicationController
 
     @reservation.user_id = current_user.id
     @reservation.note_id = @note.id
+    
+
+    recipients = @note.provider
+    confirm_subject= "予約が来ました！"
+
+    confirm_message= 
+    "
+     希望日程は#{reservation_params[:date]}で、#{reservation_params[:name]}さんからご予約が来ました。
+    -------------------------------------------------------------------------------------------
+     お問い合わせ内容：
+
+      #{reservation_params[:message]}"
+
+
+conversation = current_user.send_message(recipients, confirm_message, confirm_subject).conversation 
+
+
 
     if params[:back]          
       render :new
