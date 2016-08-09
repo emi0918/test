@@ -9,7 +9,7 @@ layout "providers_layout"
   # end
    def after_sign_in_path_for(resources)
      
-       profile_providers_path
+      mypage_providers_path
  
     end
 
