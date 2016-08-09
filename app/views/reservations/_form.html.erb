@@ -1,7 +1,7 @@
 
 <div class="reservation-confirm">
   <div class="bootstrap">
-    <%=  @note.provider.name %>さんの"<%= @note.title %>"予約フォーム
+    <%=  @note.provider.name %>さんの"<%= @note.title %>"仮予約フォーム
 
     <%= form_for([@note, @reservation], url: {action: 'confirm'} ) do |f| %>
     <% if @reservation.errors.any? %>
@@ -51,9 +51,9 @@
 </tr>
 
 <tr>
- <th> <p>その他 <span class="form-label required">必須</span></p></th>
+ <th> <p>詳細予約内容 <span class="form-label required">必須</span></p></th>
  <td>
-   <%= f.text_area :message , class: 'content-area', placeholder:"質問等があれば事前に聞いておきましょう"%>
+   <%= f.text_area :message , class: 'content-area', placeholder:"詳細のご要望内容、ご予約内容、事前に相談しておきたいこと等を書きましょう"%>
  </td>
 </tr>
 </table>
