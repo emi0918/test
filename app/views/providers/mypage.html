@@ -1,0 +1,27 @@
+<%= render 'providers/header' %>
+
+
+<div class="mypage-all_wrapper">
+   <h1><%= current_provider.name %>さんのページ  </h1>
+
+        <a class="profile_edit" href="/providers/profile">
+プロフィールを見る</a>
+
+<div class="notification_user">
+
+
+<div class="notification_header">
+<h2>新着メッセージ</h2>
+</div>
+
+<div class="notification_content">
+  <% if unread_messages.blank? %>
+	 <p>未読メッセージはありません。</p>
+  <% else %>
+     <em class="fa fa-inbox fa-lg"></em><a href='/providers/inbox'> <%=unread_messages_count%>件の未読メッセージがあります！</a>
+ <% end %>
+</div>
+
+
+</div>
+</div>
