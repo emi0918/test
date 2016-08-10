@@ -14,10 +14,10 @@
 {
 
 .media-body{
-	font-size: 10px;
+	font-size: 11px;
 }
 .media-body p{
-	font-size: 10px;
+	font-size: 11px;
 	line-height: 16px;
 }
 
@@ -38,11 +38,8 @@
 @media (min-width: 375px) 
 {
 
-.media-body{
-	font-size: 10px;
-}
 .media-body p{
-	font-size: 10px;
+	font-size: 12px;
 	line-height: 16px;
 }
 
@@ -63,11 +60,8 @@
 @media screen and (min-width: 414px) {
 
 
-.media-body{
-	font-size: 10px;
-}
 .media-body p{
-	font-size: 10px;
+
 	line-height: 16px;
 }
 
@@ -88,6 +82,12 @@
 
 /* ipad タブレットのレスポンシブデザイン */
 @media (min-width: 767px) {
+
+	.media-body p{
+	font-size: 15px;
+	line-height: 16px;
+}
+
   .mailbox_wrapper .bootstrap .col-md-4 {
    width:720px;
 }
