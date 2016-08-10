@@ -49,3 +49,92 @@ border-bottom: 2px solid	#FDF5E6;
 .notification_content p{
 	font-size:18px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ipad タブレットのレスポンシブデザイン */
+@media (max-width: 767px) {
+
+.mypage-all_wrapper h1{
+	float:left;
+	margin-left: 10px; 
+
+	font-weight: 500; 
+	 line-height: 1.3em; 
+	 width:100%; 
+	 font-size: 20px;
+}
+
+.notification_header{
+	width:100%;
+}
+
+
+.notification_user{
+	clear:both;
+	margin-left: 0px; 
+}
+
+
+.notification_user h2{
+	padding-left: 13px;
+	padding-top: 8px;
+	padding-bottom: 4px;
+	font-size: 15px;
+	height:28px;
+	margin-top: 40px;
+	margin-bottom: 0px;
+	font-weight: normal;
+	background-color: 		#FFE4C4;
+}
+
+
+
+.profile_edit{
+	float: left; 
+	margin-top: -20px;
+	 margin-left: 62%;
+	 font-size: 13px;
+	}
+
+	.notification_content {
+	margin-left: 18px;
+	
+	}
+
+}
+
+
+
+
+
+
+/* MAC */
+@media screen and (min-width: 800px) {
+
+
+.mypage-all_wrapper h1{
+		float:left;
+	margin-left: 180px; 
+	font-weight: 500; 
+	 line-height: 1.3em; 
+	 width:56%; 
+	 font-size: 27px;
+	 }
+}
+
+
+
+
+
+
