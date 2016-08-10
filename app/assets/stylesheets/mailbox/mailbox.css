@@ -1,12 +1,124 @@
 .bootstrap .media{
-	margin-bottom:20px;
-    margin-top:80px;
+	margin-bottom:30px;
+
   }
+
+.mailbox_wrapper .bootstrap{
+	margin:0px;
+}
+
+
+
+/* ipad iphone4と5のレスポンシブデザイン */
+@media screen and (min-width: 320px) and (max-width: 374px)
+{
+
+.media-body{
+	font-size: 10px;
+}
+.media-body p{
+	font-size: 10px;
+	line-height: 16px;
+}
+
+  .mailbox_wrapper .bootstrap .col-md-4 {
+   width:270px;
+}
+.mailbox_wrapper .bootstrap .col-md-8{
+   width:270px;
+}
+
+}
+
+
+
+
+/* ipad iphone6のレスポンシブデザイン */
+
+@media (min-width: 375px) 
+{
+
+.media-body{
+	font-size: 10px;
+}
+.media-body p{
+	font-size: 10px;
+	line-height: 16px;
+}
+
+ .mailbox_wrapper .bootstrap .col-md-4 {
+   width:328px;
+}
+.mailbox_wrapper .bootstrap .col-md-8{
+   width:328px;
+}
+
+
+
+}
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (min-width: 414px) {
+
+
+.media-body{
+	font-size: 10px;
+}
+.media-body p{
+	font-size: 10px;
+	line-height: 16px;
+}
+
+
+ .mailbox_wrapper .bootstrap .col-md-4 {
+   width:370px;
+
+}
+.mailbox_wrapper .bootstrap .col-md-8{
+   width:370px;
+}
+
+}
+
+
+
+
+
+/* ipad タブレットのレスポンシブデザイン */
+@media (min-width: 767px) {
+  .mailbox_wrapper .bootstrap .col-md-4 {
+   width:720px;
+}
+.mailbox_wrapper .bootstrap .col-md-8{
+   width:720px;
+
+}
+
+}
+
+
+
+/* MAC */
+@media screen and (min-width: 800px) {
+
 
 
 .mailbox_wrapper{
 	margin-top: 2%;
+	margin-left: 6%;
+	margin-right: 7%;
 }
+
+.mailbox_wrapper .bootstrap .panel-body{
+	padding-left: 6%;
+	padding-right: 6%;
+
+	padding-top: 20px;
+
+}
+
 .message-title{
 	margin-top:30%;
 	font-size:14px; 
@@ -18,6 +130,13 @@
 	font-size: 15px;
 }
 
+
+.bootstrap .media-body {
+	line-height: 22px;
+	font-size: 12px;
+}
+
+
 .mailbox_wrapper .bootstrap .col-md-4{
 	width:28%;
 }
@@ -25,3 +144,6 @@
 .mailbox_wrapper .bootstrap .col-md-8{
 	width:72%;
 }
+}
+
+
