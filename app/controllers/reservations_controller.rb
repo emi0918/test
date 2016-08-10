@@ -1,7 +1,7 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:show, :edit, :update, :destroy]
   before_action :set_note
- before_action :authenticate_user!
+
   # GET /reservations
   # GET /reservations.json
   def index
@@ -19,6 +19,7 @@ class ReservationsController < ApplicationController
   # GET /reservations/new
   def new
     @reservation = Reservation.new
+   authenticate_user!
   end
 
   # GET /reservations/1/edit
@@ -60,6 +61,8 @@ conversation = current_user.send_message(recipients, confirm_message, confirm_su
      render :new 
    end
  end
+
+ 
 
 def confirm
   @reservation = Reservation.new(reservation_params) # <=POSTされたパラメータを取得
