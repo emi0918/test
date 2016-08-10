@@ -1,0 +1,82 @@
+
+<div class="genre">
+  <div class="bootstrap1">
+    <ol class="breadcrumb">
+
+    </ol>
+  </div>
+</div>
+
+
+<div class="published_service_wrapper">
+
+ <div class="left-other-housing">
+  <div class="other-jobs-menu">
+
+
+   <h2>住まい</h2>
+  <ul>
+   <li>不用品回収</li>
+   <li>リモデル</li>
+   <li>畳張替え</li>
+    <li>障子張替え</li>
+   <li>網戸張替え</li>
+   <li>大工、木工</li>
+   <li>遺品整理</li>
+   <li>家事代行</li>
+   <li>屋根、雨漏り</li>
+   <li>エアコン</li>
+   <li>ハウス</li>
+   <li>お風呂</li>
+   <li>水回り</li>
+   <li>庭お手入れ</li>
+   <li>その他</li>
+ </ul>
+ <br><br>
+ <h2>ご利用にあたって</h2>
+ <ul>
+   <li>ご利用の流れ</li>
+   <li>よくある質問</li>
+ </ul>
+</div>
+</div>
+
+
+
+<div class="services_right_wrapper">
+
+<div class="show_providers clearfix">
+  <p><%= @notes.count %>件のサービスが見つかりました</p>
+  <ul>
+   <% @notes.each do |note| %>
+   <div class="provider_job ">
+     
+     <% if note.service_image1.present? %>
+  <%= link_to image_tag( note.service_image1_url, { :class => "provider_service_image"}), note_path(note) %>
+     <% else %>
+      <%= link_to image_tag( 'Seekle_icon.png', { :class => "provider_service_image"}), note_path(note) %>
+         <% end %>
+    <div class="title"><h2> <%= link_to note.title, note_path(note) %></h2>
+     <div class="service-price"><h3> ¥<%= note.price %></h3> </div>
+     <% if note.provider.mainpic.present? %>
+     <%= image_tag note.provider.mainpic.url, :class => 'provider_image'%>
+     <% else %>
+     <%= image_tag 'Seekle_icon.png', :class => 'provider_image'%>
+     <% end %>
+   </div>
+ </div>
+ <% end %>
+</ul>
+
+<div class="bootstrap">
+ <div class="list-number-2 clearfix">
+   <%= paginate(@notes) %>
+ </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+

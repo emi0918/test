@@ -1,0 +1,86 @@
+
+<div class="genre">
+  <div class="bootstrap1">
+    <ol class="breadcrumb">
+
+    </ol>
+  </div>
+</div>
+
+
+
+
+<div class="published_service_wrapper">
+
+<div class="left-other-housing">
+
+ <div class="other-jobs-menu">
+  <h2>習い事</h2>
+
+  <ul>
+   <li>語学</li>
+   <li>音楽</li>
+   <li>Web・デザイン</li>
+   <li>パソコン教室</li>
+   <li>資格取得</li>
+   <li>趣味</li>
+   <li>プログラミング</li>
+   <li>ダンス</li>
+   <li>ビジネススキル</li>
+   <li>美容</li>
+   <li>ファッション</li>
+   <li>ものづくり</li>
+  </ul>
+ <br>
+ <br>
+
+ <h2>ご利用にあたって</h2>
+ <ul>
+   <li>ご利用の流れ</li>
+   <li>よくある質問</li>
+ </ul>
+</div>
+</div>
+
+<div class="services_right_wrapper">
+
+<div class="show_providers clearfix">
+  <p><%= @notes.count %>件のサービスが見つかりました</p>
+  <ul>
+   <% @notes.each do |note| %>
+   <div class="provider_job ">
+     
+     <% if note.service_image1.present? %>
+  <%= link_to image_tag( note.service_image1_url, { :class => "provider_service_image"}), note_path(note) %>
+     <% else %>
+      <%= link_to image_tag( 'Seekle_icon.png', { :class => "provider_service_image"}), note_path(note) %>
+         <% end %>
+    <div class="title"><h2> <%= link_to note.title, note_path(note) %></h2>
+     <div class="service-price"><h3> ¥<%= note.price %></h3> </div>
+     <% if note.provider.mainpic.present? %>
+     <%= image_tag note.provider.mainpic.url, :class => 'provider_image'%>
+     <% else %>
+     <%= image_tag 'Seekle_icon.png', :class => 'provider_image'%>
+     <% end %>
+   </div>
+ </div>
+ <% end %>
+</ul>
+
+
+
+
+<div class="bootstrap">
+ <div class="list-number-2 clearfix">
+   <%= paginate(@notes) %>
+   
+ </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
