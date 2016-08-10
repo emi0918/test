@@ -10,3 +10,54 @@
     </div>
   </div>
 </div>
+
+
+<header id="top-head">
+    <div class="inner">
+        <div id="mobile-head">
+           
+          <%= image_tag('whitelogo.png', class: 'logo_2') %>
+            <div id="nav-toggle">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <nav id="global-nav">
+            <ul>
+               <li><a href='/providers/mypage'>マイページ</a></li>
+        <li><a href='/providers/inbox'>メッセージ</a></li>
+        <li><%= link_to 'サービス管理', notes_path %></li>
+        <li><a href='/providers'>基本情報</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+(function($) {
+    $(function() {
+        var $header = $('#top-head');
+        // Nav Fixed
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 350) {
+                $header.addClass('fixed');
+            } else {
+                $header.removeClass('fixed');
+            }
+        });
+        // Nav Toggle Button
+        $('#nav-toggle').click(function(){
+            $header.toggleClass('open');
+        });
+    });
+})(jQuery);
+</script>
+
+
+
+
+
