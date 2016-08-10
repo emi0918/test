@@ -71,7 +71,7 @@ border-bottom: 2px solid	#FDF5E6;
 
 	font-weight: 500; 
 	 line-height: 1.3em; 
-	 width:100%; 
+	 width:75%; 
 	 font-size: 20px;
 }
 
@@ -102,14 +102,15 @@ border-bottom: 2px solid	#FDF5E6;
 
 .profile_edit{
 	float: left; 
-	margin-top: -20px;
-	 margin-left: 62%;
-	 font-size: 13px;
+	margin-top: -40px;
+	 margin-left: 80%;
+	 font-size: 6px;
+	 width:20%;
 	}
 
 	.notification_content {
 	margin-left: 18px;
-	
+
 	}
 
 }
