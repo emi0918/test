@@ -27,7 +27,8 @@
 
  <div class="field">
     <h3>その他</h3> 
-    <%= @reservation.message %>
+    <%= simple_format( @reservation.message) %>
+    
     <%= f.hidden_field :message %>
 </div>
 
