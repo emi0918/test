@@ -1,4 +1,30 @@
 
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+ <link type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+
+
+
+
+<script type="text/javascript">
+$(function(){
+
+　$("#datepicker").datepicker({
+ 
+Format: 'yy年mm月dd日', //表示フォーマット
+ minDate: '+2', //現在から２日後から選択可能にする
+ 
+　onClose : function(){
+　this.focus();
+　　}
+　})
+});
+ </script>
+
+
+
 <div class="reservation-confirm">
   <div class="bootstrap">
     <%=  @note.provider.name %>さんの"<%= @note.title %>"仮予約フォーム
@@ -21,7 +47,7 @@
       <tr>
        <th> <p>ご希望の日程 <span class="form-label required">必須</span></p></th>
        <td>
-        <%= f.date_select :date %>
+       <%= f.text_field :date, :id => 'datepicker' %>
       </td>
     </tr>
 
@@ -65,6 +91,8 @@
 <% end %>
 
 </div>
+
+
 
 
 
