@@ -1,4 +1,4 @@
-.reservation-form{margin-top:5%; margin-left:18%; margin-bottom: 7%}
+.reservation-form{margin-top:5%; margin-left:17%; margin-bottom: 7%}
 
 .complete_reservation_wrapper{margin: 10% 10%;text-align: center;}
 .complete_reservation_wrapper h1{font-weight: normal;}
@@ -8,7 +8,7 @@
 
 .reservations_list .bootstrap .table td{padding:30px;}
 
-.listing-wrapper .bootstrap .btn-default{margin-right:10px;  margin-top:18%;float:right;font-size: 20px;}
+
 
 .reservation-confirm .bootstrap .shadow_btn{margin-left: 26%;  margin-top:6%;font-size: 20px;padding:20px; background-color:	#FFD700; }
 
