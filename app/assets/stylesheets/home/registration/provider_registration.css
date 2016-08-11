@@ -1,0 +1,78 @@
+
+.providers_signup{
+    width:60%;
+    margin-top:6%;
+    margin-left:28%;
+    margin-bottom: 10%;
+}
+
+.providers_signup h3{
+    font-weight: normal;
+    padding-left: 10px;
+    border-left: solid 3px #6495ED;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.providers_signup h2{
+    font-weight:normal;
+    font-size: 30px;
+    clear:both;
+}  
+
+
+.field input{
+	font-size:19px;
+}
+
+.name_field input{
+	width:340px;
+	font-size:20px
+	;padding:7px;
+}
+.name_field{
+	margin-top:29px;
+}
+
+.field,.name_field{
+	margin-bottom:29px;
+}
+
+
+
+
+/* ipad iphone4と5のレスポンシブデザイン */
+@media screen and (min-width: 320px) and (max-width: 374px)
+{
+
+}
+
+
+
+
+/* ipad iphone6のレスポンシブデザイン */
+
+@media (min-width: 375px) 
+{
+
+
+
+}
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (min-width: 414px) {
+
+
+}
+
+
+
+
+
+/* ipad タブレットのレスポンシブデザイン */
+@media (min-width: 767px) {
+
+
+}

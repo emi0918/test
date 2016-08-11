@@ -1,0 +1,36 @@
+
+.forgot-password-wrapper h2{
+    text-align: center;
+}
+
+.forgot-password-wrapper{   
+    width: 50% !important;
+    min-width: 600px !important;
+    padding: 60px 20px !important;
+    background-color: #f6f8fa !important;
+    border: 1px solid #e3e4e8 !important;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+text-align: center
+}
+
+.forgot-password-wrapper p{
+  
+    line-height:20px;
+}
+.providers_signup .forgot-password-wrapper .field {
+    padding:20px;
+}
+
+.providers_signup .forgot-password-wrapper .field input{
+    width:70%;
+   
+}
+
+.forgot-password-wrapper .provider_join_btn{
+margin-left: 33%;
+}
+
+
