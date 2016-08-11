@@ -26,6 +26,41 @@ clear:both;
 
 
 
+
+
+
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
+
+
+.providers_info_show{
+    margin-left:4%;
+}
+
+
+.providers_info_show h2{
+    font-size: 25px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .providerfield{
     background-color: #fff;
     border-radius: 5px;
@@ -74,41 +109,5 @@ border-radius:3%;
 
 .message_reservetion .bootstrap .btn-default{float:left;margin:23px 40px; }
 
-
-
-
-.forgot-password-wrapper h2{
-    text-align: center;
-}
-
-.forgot-password-wrapper{   
-    width: 50% !important;
-    min-width: 600px !important;
-    padding: 60px 20px !important;
-    background-color: #f6f8fa !important;
-    border: 1px solid #e3e4e8 !important;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-text-align: center
-}
-
-.forgot-password-wrapper p{
-  
-    line-height:20px;
-}
-.providers_signup .forgot-password-wrapper .field {
-    padding:20px;
-}
-
-.providers_signup .forgot-password-wrapper .field input{
-    width:70%;
-   
-}
-
-.forgot-password-wrapper .provider_join_btn{
-margin-left: 33%;
-}
 
 
