@@ -161,36 +161,6 @@ width:600px;
 line-height:8px;
 }
 
-
-.providers_new_post{
-        margin-top:6%;
-    margin-left:16%;
-    margin-bottom: 10%;
-}
-
-table.newpost {
-    
-    
-    border-collapse: separate;
-    border-spacing: 0px 1px;
-}
- 
- 
-table.newpost  td {
-padding-top: 26px;
-padding-bottom: 26px;
-    padding-left:28px;
-    vertical-align: middle;
-    text-align: left;
- 
-}
-
-
-table.newpost tr{
-        border-bottom: 1px solid #e6e9e3;
-}
-
-
 .required {
     background-color: #FFDDD0;
     color: #F33;
@@ -209,23 +179,7 @@ table.newpost tr{
     padding: 3px 5px;
 }
 
-.providers_new_post .btn{
-  margin:4% 27%;
-  font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    padding: 16px;
-    cursor: pointer;
-    border: 1px solid #333;
-    color: #fff;
-    background-color: #FF7F50;
-    box-shadow: 2px 2px #808080;
-    width: 26%;
-    border-radius: 3%;
 
-}
 
 .service_explain{height:0 auto;width:73%; margin-left:14%;margin-bottom:15px;margin-top:20px;float:left;}
 .service_explain h3{margin-left:750px;margin-top:60px;}

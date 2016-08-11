@@ -12,9 +12,9 @@ class ConversationsController < ApplicationController
    recipients = @note.provider
    conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation 
 
-
    flash[:notice] = "メッセージが送信されました!"
    redirect_to mailbox_inbox_path
+  
  end
 
  def show
@@ -23,13 +23,13 @@ class ConversationsController < ApplicationController
     conversation.mark_as_read(current_user)or conversation.mark_as_read(current_provider)
   end
 
+
   def new
    @note = Note.find(params[:note_id])
    authenticate_user!
- end
+  end
 
  def reply
-  
   current_user.reply_to_conversation(conversation, message_params[:body])
   flash[:notice] = "メッセージが送信されました。"
   redirect_to conversation_path(conversation)
@@ -53,7 +53,6 @@ def mailbox
     @mailbox ||= current_provider.mailbox
   end
 end
-
 
 def conversation
 

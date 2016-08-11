@@ -1,24 +1,4 @@
 
-.providers_signup{
-    width:60%;
-    margin-top:6%;
-    margin-left:28%;
-    margin-bottom: 10%;
-}
-
-.providers_signup h3{
-    font-weight: normal;
-    padding-left: 10px;
-    border-left: solid 3px #6495ED;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.providers_signup h2{
-    font-weight:normal;
-    font-size: 30px;
-    clear:both;
-}  
 
 
 .edit_profile_wrapper{

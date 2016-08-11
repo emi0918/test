@@ -173,31 +173,8 @@ and (max-device-width:568px)
 #social-icon .fa-facebook{background:#3b5998}
 #social-icon .fa-instagram{background:#9b6954}
 #social-icon .fa-pinterest{background:#fb3958}
-.field input{font-size:19px}
-.name_field input{width:340px;font-size:20px;padding:7px}
-.name_field{margin-top:29px}
+
 #user_remember_me{width:0}
-
-.content_in_user{
-  margin-left:434px;
-  width:303px;
-  padding-top:53px;
-  padding-bottom:90px
-}
-
-.content_in_user a{
-  color:#483D8B;
-}
-
-
-
-@media screen and  ( max-width:640px )
-{
- .content_in_user{
-  margin-left:0px;
-    width:303px;
- }
-}
 
 
 
@@ -262,5 +239,27 @@ hr{
 
 
 /*ログインしました報告*/
+
+.content_in_user{
+  margin-left:434px;
+  width:303px;
+  padding-top:53px;
+  padding-bottom:90px
+}
+
+.content_in_user a{
+  color:#483D8B;
+}
+
+
+
+@media screen and  ( max-width:640px )
+{
+ .content_in_user{
+  margin-left:0px;
+    width:303px;
+ }
+}
+
 
 
