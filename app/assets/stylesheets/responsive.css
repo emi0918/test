@@ -1,4 +1,3 @@
-/* タブレット向けレイアウト */
 
 /* ブレイクポイントが1000px以下の時のメディアクエリを設定してください*/
 @media (max-width: 1050px) {
@@ -12,7 +11,7 @@
 }
 
 .Seekle_heading{
-  display:none;
+
 }
 
 .dropmenu{
