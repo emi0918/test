@@ -62,8 +62,6 @@ table.newpost tr{
 
 
 
-
-
 /* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
 @media screen and (max-width: 414px) {
 
@@ -71,7 +69,7 @@ table.newpost tr{
 
 .providers_new_post{
 
-    margin-left:0%;
+    margin-left:8%;
    
 }
 
@@ -130,4 +128,39 @@ table.newpost tr{
 
 
 
+
+
+
+
+
+
+
+
+/* ipad iphone4と5のレスポンシブデザイン */
+@media screen and  (max-width: 374px)
+{
+
+
+.providers_new_post{
+
+    margin-right:3%;
+   
+}
+
+
+}
+
+
+
+/* ipad iphone6のレスポンシブデザイン */
+
+@media (max-width: 375px) 
+{
+
+    .providers_new_post{
+
+    margin-left:3%;
+   
+}
+}
 
