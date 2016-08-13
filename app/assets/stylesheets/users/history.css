@@ -47,3 +47,82 @@
 	 margin-left:28px; 
 	 padding-left: 9px;
 	}
+
+
+
+
+
+
+/* ipad iphone4と5のレスポンシブデザイン */
+@media screen and (min-width: 320px) and (max-width: 374px)
+{
+
+
+}
+
+
+
+
+/* ipad iphone6のレスポンシブデザイン */
+
+@media (min-width: 375px) 
+{
+
+
+
+}
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
+
+.reservation_history_wrapper{
+	width:100%;
+	margin:9% 0%;
+ 
+	}
+
+
+.reservation_history_wrapper h1{
+	font-size: 23px;
+	margin-left: 5%;
+}
+
+
+
+.reservation_history_wrapper .bootstrap a{
+font-size: 6px;
+	 padding-left: 9px;
+	 	 margin-left:10px; 
+	 	
+	}
+
+
+.reservation_content{
+	margin-top:50px; 
+	width:80%;
+	margin-left: 0%;
+}
+
+
+.reservation_content p{
+	line-height: 14px;
+	font-size: 10px;
+}
+
+.reservation_note_pic{
+	width:45%;
+	height:38%; 
+}
+
+
+
+.reservation_history_wrapper .bootstrap .btn-default{
+	margin-left: 0%;
+	margin-top: 6%;
+	font-size: 12px;
+}
+
+
+}
