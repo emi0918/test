@@ -1,8 +1,4 @@
-.field input{
-    width:610px;
-padding:5px;
 
-}
 
 .content-area{
 border:0;
@@ -161,6 +157,7 @@ width:600px;
 line-height:8px;
 }
 
+
 .required {
     background-color: #FFDDD0;
     color: #F33;
@@ -172,13 +169,6 @@ line-height:8px;
     color: #898989;
       border-radius: 3px;
 }
-
-.form-label {
-    margin-left: 10px;
-    font-size: 10px;
-    padding: 3px 5px;
-}
-
 
 
 .service_explain{height:0 auto;width:73%; margin-left:14%;margin-bottom:15px;margin-top:20px;float:left;}
