@@ -6,6 +6,9 @@
 }
 
 
+
+
+
 .mypage-all_wrapper h1{
 	float:left;
 	margin-left: 180px; 
@@ -65,10 +68,10 @@ border-bottom: 2px solid	#FDF5E6;
 .mypage-all_wrapper h1{
 	float:left;
 	margin-left: 10px; 
-	padding-right: 20px; 
+
 	font-weight: 500; 
 	 line-height: 1.3em; 
-	 width:87%; 
+	 width:100%; 
 	 font-size: 20px;
 }
 
@@ -98,12 +101,15 @@ border-bottom: 2px solid	#FDF5E6;
 
 
 .profile_edit{
-	display:none;
+	float: left; 
+	margin-top: -20px;
+	 margin-left: 62%;
+	 font-size: 13px;
 	}
 
 	.notification_content {
 	margin-left: 18px;
-
+	
 	}
 
 }
