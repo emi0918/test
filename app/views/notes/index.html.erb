@@ -7,8 +7,6 @@
     </div>
 
     <div class="bootstrap">
-
-
       <% if @notes.blank? %>
       <p>掲載中のサービスはまだありません</p>
 
@@ -21,12 +19,17 @@
             <%= link_to note.title, note_path(note) %> 　 <%= note.reservations.count %>件の予約があります！
           </div>
           <div class="panel-body-list">
-           <%= image_tag note.service_image1_url ,class: "service_image"%>
+
+            <% if note.service_image1.present? %>
+             <%= image_tag note.service_image1_url ,class: "service_image"%>
+            <% else %>
+             <%= image_tag 'Seekle_icon.png', :class => 'service_image'%>
+            <% end %>
+
+
         
            <%= link_to '予約を確認する', note_reservations_path(note), class:"btn btn-default" %>
-           <%= link_to '編集する', edit_note_path(note), class:"btn btn-default" %>
-           
-         </div>
+           <%= link_to '編集する', edit_note_path(note), class:"btn btn-default" %>       </div>
        </div>
      </li>   
      <% end %>
