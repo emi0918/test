@@ -2,7 +2,7 @@
 <head>
 
 	<title>Seekle</title>  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <%= csrf_meta_tags %>
-
+<%= favicon_link_tag('favicon.ico') %>
 </head>
 
 <script src='https://cdn.slaask.com/chat.js'></script>
@@ -10,6 +10,8 @@
 	_slaask.init('e82bd97e2f19e5c3820785f34a397d1c');
 </script>
 <!--bodyタグ内のコンテンツの表示はhead内にあるjsの処理が完了してから行われるので、表示が遅くなる   なるべくheadに不要なjs入れない bodyにいれる-->
+
+
 
 <body>
 
