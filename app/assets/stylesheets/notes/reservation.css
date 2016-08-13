@@ -3,12 +3,6 @@
 .complete_reservation_wrapper{margin: 10% 10%;text-align: center;}
 .complete_reservation_wrapper h1{font-weight: normal;}
 
-.reservations_list{width:90%; margin-left: 4%;height:0 auto;margin-top: 6%; margin-bottom: 6%;}
-.reservations_list h1{font-size:20px; font-weight: normal;}
-
-.reservations_list .bootstrap .table td{padding:30px;}
-
-
 
 .reservation-confirm .bootstrap .shadow_btn{margin-left: 26%;  margin-top:6%;font-size: 20px;padding:20px; background-color:	#FFD700; }
 
@@ -18,4 +12,6 @@
 .providers_info_show .bootstrap .btn-default{margin-top:5%; border:none;float:left;}
 
 .complete_reservation_wrapper .shadow_btn{margin-left: 35.3%; background-color: #CD5C5C; margin-top: 5%;}
+
+
 
