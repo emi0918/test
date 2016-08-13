@@ -9,13 +9,13 @@
 }
 
 
+
 .logo_2 a,h2{letter-spacing:-1px}
 .logo_2{height:70px;width:16%; margin-left: 120px;}
 .logo_2 a{float:left;font-size:30px;padding:12px 50px;font-weight:700}
 
 .provider-header{text-decoration:none}
 .provider-header{height:69.6px;width:100%; background-color:#6495ED; position:absolute;top:0;z-index:10;padding:1px;cursor:pointer}
-
 
 
 
@@ -167,12 +167,13 @@ and (max-device-width:568px)
 .widget-menu a:hover{color:#D3D3D3}
 .widget-menu li{display:inline-block;margin:10px}
 .copy-right{width:100%;clear:both;margin-top:12.5px;color:#82888a;font-size:12px;padding-bottom:9px}#social-icon a{display:block;float:left;margin:80px 5px 5px 0;padding:0;color:#fff}
-.field,.name_field{margin-bottom:29px}
+
 #social-icon i{width:50px;height:50px}
 #social-icon .fa-twitter{background:#00a1e9}
 #social-icon .fa-facebook{background:#3b5998}
 #social-icon .fa-instagram{background:#9b6954}
 #social-icon .fa-pinterest{background:#fb3958}
+.field input{font-size:19px}
 
 #user_remember_me{width:0}
 
@@ -182,7 +183,7 @@ and (max-device-width:568px)
 
 .log_button{
   border-radius:5px;
-  width:333px;
+  width:100%;
   font-size:15px;
   color:#fff;
   padding-top:15px;
@@ -209,16 +210,6 @@ and (max-device-width:568px)
   margin-top:0
 }
 
-#user_email:focus,#user_password:focus,#user_password_confirmation:focus{
-  outline:0
-  }
-
-#user_email,#user_password,#user_password_confirmation,#user_パスワード確認{
-  border:1px solid gray;
-  border-radius:2px;
-  width:333px;
-  padding-top:10px
-}
 
 hr{
     margin:10px 0 0;
@@ -240,26 +231,15 @@ hr{
 
 /*ログインしました報告*/
 
-.content_in_user{
-  margin-left:434px;
-  width:303px;
-  padding-top:53px;
-  padding-bottom:90px
+#user_email:focus,#user_password:focus,#user_password_confirmation:focus{
+  outline:0
+  }
+
+#user_email,#user_password,#user_password_confirmation,#user_パスワード確認{
+  border:1px solid gray;
+  border-radius:2px;
+  width:100%;
+  padding-top:10px
 }
-
-.content_in_user a{
-  color:#483D8B;
-}
-
-
-
-@media screen and  ( max-width:640px )
-{
- .content_in_user{
-  margin-left:0px;
-    width:303px;
- }
-}
-
 
 
