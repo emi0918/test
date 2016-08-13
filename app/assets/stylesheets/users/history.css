@@ -57,58 +57,6 @@
 @media screen and (min-width: 320px) and (max-width: 374px)
 {
 
-.reservation_history_wrapper .bootstrap .panel-body{
-	height:190px;
-}
-
-
-.reservation_history_wrapper{
-	width:100%;
-	margin:9% 0%;
- 
-	}
-
-
-.reservation_history_wrapper h1{
-	font-size: 23px;
-	margin-left: 5%;
-}
-
-
-
-.reservation_history_wrapper .bootstrap a{
-font-size: 6px;
-	 padding-left: 9px;
-	 	 margin-left:10px; 
-	 	
-	}
-
-
-.reservation_content{
-	margin-top:20px; 
-	width:80%;
-	margin-left: 0%;
-}
-
-
-.reservation_content p{
-	line-height: 14px;
-	font-size: 10px;
-}
-
-.reservation_note_pic{
-	display:none;
-}
-
-
-
-.reservation_history_wrapper .bootstrap .btn-default{
-
-	margin-top: 7%;
-	font-size: 12px;
-		margin-left: 25%;
-}
-
 
 }
 
@@ -121,10 +69,13 @@ font-size: 6px;
 {
 
 
-.reservation_history_wrapper .bootstrap .panel-body{
-	height:190px;
+
 }
 
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
 
 .reservation_history_wrapper{
 	width:100%;
@@ -149,7 +100,7 @@ font-size: 6px;
 
 
 .reservation_content{
-	margin-top:20px; 
+	margin-top:50px; 
 	width:80%;
 	margin-left: 0%;
 }
@@ -161,20 +112,17 @@ font-size: 6px;
 }
 
 .reservation_note_pic{
-	display:none;
+	width:45%;
+	height:38%; 
 }
 
 
 
 .reservation_history_wrapper .bootstrap .btn-default{
-
-	margin-top: 7%;
+	margin-left: 0%;
+	margin-top: 6%;
 	font-size: 12px;
-		margin-left: 32%;
 }
 
 
-
 }
-
-
