@@ -1,3 +1,4 @@
+<%= render 'home/header/dashboardhead' %>
 <div class="bootstrap">
  <div class="content_in_user">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -6,19 +7,15 @@
 
   <h1>アカウント作成</h1>
 
-
-
  <div class="name_field">
     <%= f.label :ユーザーネーム %><br />
     <%= f.text_field :name,  autofocus: true  %>
   </div>
 
 
-
 <%= f.hidden_field :mainpic, autofocus: true %>
-
-
 <%= f.hidden_field :profile, autofocus: true %>
+
 
   <div class="field">
     <%= f.label :メールアドレス %><br />
@@ -44,11 +41,6 @@
 
 <% end %>
 
-
-
-
 <%= render "devise/shared/links"%>
   </div>
 </div>
-
-
