@@ -92,7 +92,7 @@
 
 
 .reservation_history_wrapper .bootstrap a{
-font-size: 6px;
+font-size: 13px;
 	 padding-left: 9px;
 	 	 margin-left:10px; 
 	 	
@@ -100,7 +100,7 @@ font-size: 6px;
 
 
 .reservation_content{
-	margin-top:50px; 
+	margin-top:28px; 
 	width:80%;
 	margin-left: 0%;
 }
@@ -112,8 +112,8 @@ font-size: 6px;
 }
 
 .reservation_note_pic{
-	width:45%;
-	height:38%; 
+
+display:none;
 }
 
 
