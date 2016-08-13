@@ -54,3 +54,91 @@ clear:both;
 .message_reservetion .bootstrap .btn-default{float:left;margin:23px 40px; }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ipad iphone4と5のレスポンシブデザイン */
+@media screen and (min-width: 320px) and (max-width: 374px)
+{
+
+
+
+.providers_info_show{
+    width:100%;
+    margin-left:3%;
+    margin-bottom: 10%;
+}
+
+.edit-button{
+    margin-left:40%
+}
+
+
+.providers_info_show h2{
+    font-size: 20px;
+}
+
+.providers_info_show h3{
+
+    font-size: 14px;
+
+}
+
+
+
+
+}
+
+
+
+
+/* ipad iphone6のレスポンシブデザイン */
+
+@media (min-width: 375px) 
+{
+
+
+.providers_info_show{
+    width:100%;
+    margin-left:5%;
+    margin-bottom: 10%;
+}
+
+.edit-button{
+    margin-left:45%
+}
+
+
+}
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (min-width: 414px) {
+
+
+.providers_info_show{
+
+width:100%;
+    margin-top:4%;
+    margin-left:7%;
+    margin-bottom: 10%;
+}
+
+.edit-button{
+    margin-left:45%
+}
+
+
+}
+
+
