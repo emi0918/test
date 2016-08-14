@@ -1,21 +1,101 @@
-.reservation-form{margin-top:5%; margin-left:17%; margin-bottom: 7%}
+.reservation-form{
+	margin-top:5%;
+	 margin-left:17%; 
+	 margin-bottom: 7%
+	}
 
-.complete_reservation_wrapper{margin: 10% 10%;text-align: center;}
-.complete_reservation_wrapper h1{font-weight: normal;}
-
-.reservations_list{width:90%; margin-left: 4%;height:0 auto;margin-top: 6%; margin-bottom: 6%;}
-.reservations_list h1{font-size:20px; font-weight: normal;}
-
-.reservations_list .bootstrap .table td{padding:30px;}
-
-
-
-.reservation-confirm .bootstrap .shadow_btn{margin-left: 26%;  margin-top:6%;font-size: 20px;padding:20px; background-color:	#FFD700; }
-
-.providers_info_show .bootstrap .shadow_btn{margin-left: 35%; margin-bottom:9%; margin-top:6%;font-size: 20px;padding:9px; background-color:	#FFD700; }
+.complete_reservation_wrapper{
+	margin: 10% 10%;
+	text-align: center;
+}
+.complete_reservation_wrapper h1{
+	font-weight: normal;
+}
 
 
-.providers_info_show .bootstrap .btn-default{margin-top:5%; border:none;float:left;}
+.reservation-confirm .bootstrap .shadow_btn{
+	margin-left: 26%; 
+	 margin-top:6%;
+	 font-size: 20px;
+	 padding:20px; 
+	 background-color:	#FFD700;
+	}
 
-.complete_reservation_wrapper .shadow_btn{margin-left: 35.3%; background-color: #CD5C5C; margin-top: 5%;}
+.providers_info_show .bootstrap .shadow_btn{
+	margin-left: 35%; 
+	margin-bottom:9%;
+	 margin-top:6%;
+	 font-size: 20px;
+	 padding:9px; 
+	 background-color:	#FFD700; 
+	}
+
+
+.providers_info_show .bootstrap .btn-default{
+	margin-top:5%;
+	 border:none;
+	 float:left;
+	}
+
+.complete_reservation_wrapper .shadow_btn{
+	margin-left: 35.3%; 
+	background-color: #CD5C5C; 
+	margin-top: 5%;
+}
+
+
+
+
+
+
+
+
+/*レスポンシブ
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
+
+.reservation-form{
+	margin-top:5%;
+	 margin-left:0%; 
+	 margin-bottom: 2%
+	}
+
+	.reservation-form h1{
+		font-size: 17px;
+		margin-left: 9%;
+	}
+	.reservation-form p{
+		font-size: 14px;
+		line-height: 17px;
+		}
+
+
+}
+
+
+
+/* ipad iphone4と5のレスポンシブデザイン */
+@media screen and (min-width: 320px) and (max-width: 374px)
+{
+
+
+
+}
+
+
+
+
+/* ipad iphone6のレスポンシブデザイン */
+
+@media (min-width: 375px) 
+{
+
+
+}
+
+
+
+
 
