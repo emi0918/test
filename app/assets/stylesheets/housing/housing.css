@@ -47,25 +47,44 @@
  }
 
  
- .services-detail-wrapper{margin:39px}
- .services-detail-wrapper h2{border-bottom:1px solid #006400;margin:60px;padding-top:10px}.dynamic-row{padding:10px 0 20px;display:block;width:100%;margin:30px}
- .dynamic-row li{line-height:17px}
- .details{display:inline;height:200px;width:30%}
+ .services-detail-wrapper{
+ 	margin:39px;
+ }
+
+ .services-detail-wrapper h2{
+ 	border-bottom:1px solid #006400;
+ 	margin:60px;
+ 	padding-top:10px
+ 	}
+ .dynamic-row{
+ 	padding:10px 0 20px;
+	display:block;
+	width:100%;
+	margin:30px;
+}
+
+ .dynamic-row li{
+ 	line-height:17px;
+ }
+ 
+ .details{
+ 	display:inline;
+ 	height:200px;
+ 	width:30%
+ }
 
 
 
-
-.shadow_btn{font-size:22px;font-weight:700;text-decoration:none;display:block;text-align:center;padding:9px;cursor:pointer;border:1px solid #333;color:#fff;box-shadow:2px 2px #555;width:26%; border-radius:3%; }
-.shadow_btn:active{box-shadow:0 0 #555;margin-top:3%; }
-
-.provider-introduction .shadow_btn{background-color:#6495ED; border-radius:3%; margin-top:2%; margin-left:71%;}
-.provider-introduction .shadow_btn:active{box-shadow:0 0 #555;margin-top:3%; }
-
-
-.provider_service_pictures,.reviews_providers,.rulesfromprovider{float:left;}
+.provider_service_pictures,.reviews_providers,.rulesfromprovider{
+	float:left;
+}
 
 .provider_wrapper h2{
-  font-weight: normal;padding-left: 10px;border-left: solid 3px  #f18d00;font-size: 18px;font-weight: 700;
+  font-weight: normal;
+  padding-left: 10px;
+  border-left: solid 3px  #f18d00;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 
