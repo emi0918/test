@@ -7,3 +7,16 @@
 
 .new_review_wrapper{margin-left: 20%;margin-top:5%; margin-bottom:10%;}
 .new_review_wrapper h1{font-weight: normal;}
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
+
+.star-rating{
+	float:left; 
+    width:100%;
+    margin-top: 40px;
+	}
+
+}
