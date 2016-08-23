@@ -27,7 +27,7 @@ Format: 'yy年mm月dd日', //表示フォーマット
 
 <div class="reservation-confirm">
   <div class="bootstrap">
-    <%=  @note.provider.name %>さんの"<%= @note.title %>"仮予約フォーム
+  
 
     <%= form_for([@note, @reservation], url: {action: 'confirm'} ) do |f| %>
     <% if @reservation.errors.any? %>
@@ -47,9 +47,17 @@ Format: 'yy年mm月dd日', //表示フォーマット
       <tr>
        <th> <p>ご希望の日程 <span class="form-label required">必須</span></p></th>
        <td>
-       <%= f.text_field :date, :id => 'datepicker' %>
+       第一希望　<%= f.text_field :date, :id => 'datepicker', placeholder: 'YYYY/MM/DD' %>
       </td>
     </tr>
+
+
+
+
+
+
+
+
 
     <tr>
       <th> <p>お名前 <span class="form-label required">必須</span></p></th>
