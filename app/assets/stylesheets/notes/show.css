@@ -148,10 +148,8 @@
 
 
 .reviews_providers{
-	width:73%;
 	height:0 auto;
-	margin-left:14%;
-	 }
+}
 
 .provider_service_pictures,.reviews_providers,.rulesfromprovider{
 	float:left;
@@ -160,6 +158,18 @@
 .main-image{
 	background-color:gray;
 	height:360px;
+}
+
+
+.photo-gallery{
+	width:180px;
+	height:120px;
+	margin-left: 9px;
+	float:left;
+}
+
+figure{
+	float:bottom;
 }
 
 
