@@ -1,8 +1,31 @@
+
+
+
 <div class="reservation-form">
 
-<h1>ご予約フォーム</h1>
+<h1>  <%=  @note.provider.name %>さんの<br/>"<%= @note.title %>"　仮予約フォーム</h1>
 
+
+<div class="before_reservation_explain">
+
+<div class="provider_info_for_reservation">
+
+
+
+<h3>《営業時間と定休日》</h3>
+<p>
+◆営業時間：<%=  @note.provider.hours %>　 ◆定休日：<%=  @note.provider.holiday %>
+</p>
+
+
+<h3>《変更とキャンセル》</h3>
+<p><%=  @note.cancelrule %></p>
+
+
+</div>
+</div>
 <%= render 'form' %>
 
 
 </div>
+
