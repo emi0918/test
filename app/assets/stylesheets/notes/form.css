@@ -1,3 +1,16 @@
+.providers_new_post .bootstrap .middleform .form-control{
+    width:580px;
+    height:120px;
+    font-size: 15px;
+}
+
+
+.providers_new_post .bootstrap .largeform .form-control{
+    width:580px;
+    height:360px;
+    font-size: 15px;
+}
+
 
 
 .providers_new_post{
@@ -20,7 +33,6 @@ padding-bottom: 26px;
     padding-left:28px;
     vertical-align: middle;
     text-align: left;
- 
 }
 
 
@@ -52,9 +64,6 @@ table.newpost tr{
     border-radius: 3%;
 
 }
-
-
-
 
 
 
