@@ -1,17 +1,85 @@
-.reservation-form{margin-top:5%; margin-left:17%; margin-bottom: 7%}
+.reservation-form{
+	   width:70%;
+	margin-top:5%;
+	 margin-left:15%; 
+	 margin-bottom: 7%
+  
+	}
+
+.reservation-form h1{
+font-weight: 400;
+font-size: 20px;
+  
+	}
+
+.reservation-confirm{
+	margin-top: -4%;
+	margin-left: 1%;
+}
 
 .complete_reservation_wrapper{margin: 10% 10%;text-align: center;}
 .complete_reservation_wrapper h1{font-weight: normal;}
 
 
-.reservation-confirm .bootstrap .shadow_btn{margin-left: 26%;  margin-top:6%;font-size: 20px;padding:20px; background-color:	#FFD700; }
+.reservation-confirm .bootstrap .shadow_btn{
+	margin-left: 33%; 
+	 margin-top:6%;
+	 font-size: 20px;
+	 padding:10px; 
+	 background-color:	#FFD700;
+	  }
 
-.providers_info_show .bootstrap .shadow_btn{margin-left: 35%; margin-bottom:9%; margin-top:6%;font-size: 20px;padding:9px; background-color:	#FFD700; }
+
+.providers_info_show .bootstrap .shadow_btn{
+	margin-left: 35%;
+	 margin-bottom:9%; 
+	 margin-top:6%;
+	 font-size: 20px;
+	 padding:9px; 
+	 background-color:	#FFD700;
+	  }
 
 
 .providers_info_show .bootstrap .btn-default{margin-top:5%; border:none;float:left;}
 
-.complete_reservation_wrapper .shadow_btn{margin-left: 35.3%; background-color: #CD5C5C; margin-top: 5%;}
+.complete_reservation_wrapper .shadow_btn{
+	margin-left: 35.3%; 
+	background-color: #CD5C5C;
+	 margin-top: 3%;
+	}
 
 
 
+.before_reservation_explain{
+	border-radius: 6px;
+	border:1px solid 	#808080;
+	background-color: #FFF8DC;
+	font-weight: normal;
+width:100%;
+	margin-top:0%;
+
+	 margin-bottom: 7%
+}
+
+
+.before_reservation_explain h1{
+font-size:17px;
+	font-weight: normal;
+}
+
+.before_reservation_explain h3{
+	font-size: 16px;
+}
+
+.before_reservation_explain p{
+line-height: 24px;
+font-size: 13px;
+margin-left: 3%;
+}
+
+
+
+
+.provider_info_for_reservation{
+	padding:1%;
+}
