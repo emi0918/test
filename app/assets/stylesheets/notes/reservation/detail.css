@@ -1,3 +1,4 @@
+
 .customer_info_about_reservation{
     padding-top: 18px;
 
@@ -46,3 +47,62 @@
 	  border-radius: 4px;
 	  background-color:#F5F5F5;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
+
+.customer_reservation_provider_info{
+	padding:1%;
+	   margin-left: 12%;
+	  width: 74%;
+	  float:left;
+	
+
+}
+
+.customer_info_about_reservation h1{
+display:none;
+
+}
+
+.customer_info_about_reservation{
+	clear: both;
+	margin-top: 0%;
+}
+
+
+.reservations_infomations_wrapper{
+	  width: 100%;
+
+	margin-top: 0%;
+    margin-left: 0px;
+
+}
+
+
+
+}
+
+
+
+
+
+/* ipad タブレットのレスポンシブデザイン */
+@media (min-width: 767px) {
+
+
+
+}
+
+
