@@ -1,0 +1,48 @@
+<div class="up-var">
+  <div class="upper-menu">
+    <div class="wrapper" >
+      <ul>
+        <li><a href='/users'>マイページ</a></li>
+         <li><a href='/mailbox/inbox'>メッセージ
+        <li><a href='/reservations/list'>取引履歴</a></li>
+        <li><a href='/users/edit'>基本設定</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<%= render 'home/header/dashboardhead' %>
+
+<div class="reservation_history_wrapper">
+
+	<h1><%= current_user.name %>さんの予約中サービス </h1>
+
+ 
+<div class="customer_reservations_wrapper">
+
+ <% if current_user.reservations.blank? %>
+  <h3>予約中のサービスはまだありません</h3>
+ <% else %>
+    <div class="bootstrap">
+
+		<% @reservations.each do |reservation| %>
+
+<div class="reservation_info">
+	    <h4><%= link_to reservation.note.title,detail_note_reservations_path(reservation.note) %></h4>
+        <p><%= reservation.note.provider.name %></p>
+        <%= link_to "お問い合わせする",  new_note_conversation_path(reservation.note),:class =>'btn btn-default' %>   
+
+</div>
+	  <% end %>
+    
+ <% end %>    
+</div>
+
+
+<div class="bootstrap">
+ <div class="list-number clearfix">
+
+ </div>
+</div>
+
+
+</div>

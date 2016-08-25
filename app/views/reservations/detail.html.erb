@@ -1,0 +1,60 @@
+<div class="up-var">
+  <div class="upper-menu">
+    <div class="wrapper" >
+      <ul>
+        <li><a href='/users'>マイページ</a></li>
+         <li><a href='/mailbox/inbox'>メッセージ
+        <li><a href='/reservations/list'>取引履歴</a></li>
+        <li><a href='/users/edit'>基本設定</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="customer_reservation_provider_info">
+<h4><%= link_to @note.title,  note_path(@note) %></h4>
+<%= @note.price%>円 （税込）
+<p><%= @note.provider.payment%></p>
+<p><%= @note.catchcopy %></p>
+</div>
+
+
+<div class="customer_info_about_reservation">
+
+
+	<h1><%= @note.title%>の予約内容 </h1>
+
+
+ 
+<% @note.reservations.each do |reservation| %>
+<div class="bootstrap">
+
+	<div class="reservations_infomations_wrapper">
+		ご予約受付日：<%= reservation.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+		<p><%= @note.provider.name %>へのお申し込み</p>
+		<p><i class="fa fa-envelope-o" aria-hidden="true"></i><%= link_to "お問い合わせする",  new_note_conversation_path(reservation.note) %> </p>
+
+		<h5>予約候補日</h5>
+		<p>候補１：<%= reservation.date.strftime("%Y年%m月%d日") %></p>
+		<p>候補１：<%= reservation.date.strftime("%Y年%m月%d日") %></p>
+		<p>候補１：<%= reservation.date.strftime("%Y年%m月%d日") %></p>
+		<h5>お客様のご連絡先</h5>
+		<p>氏名：<%= reservation.name %></p>
+		<p>電話：<%= reservation.phone_number %></p>
+		<p>お問い合わせ内容：<%= reservation.message %></p>
+
+</div>
+<% end %>    
+
+
+
+
+<div class="bootstrap">
+ <div class="list-number clearfix">
+
+ </div>
+</div>
+
+
+</div>
