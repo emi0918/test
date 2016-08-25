@@ -17,7 +17,7 @@
             <% if user_signed_in? %> 
                      <li><a href='/users'>マイページ</a></li>
          <li><a href='/mailbox/inbox'>メッセージ</a></li>
-          <li><a href='/users/history'>取引履歴</a></li>
+          <li><a href='/reservations/list'>取引履歴</a></li>
        
        <li> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
 
