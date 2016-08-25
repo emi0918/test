@@ -1,25 +1,38 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:show, :edit, :update, :destroy]
-  before_action :set_note
+  before_action :set_note ,except:[:list]
 
   # GET /reservations
   # GET /reservations.json
   def index
     @reservations = Reservation.all
-    @note = Note.find(params[:note_id])
+
     @notes = current_provider.notes.all.page(params[:page]).per(3).order(:id)
     render :layout => 'providers_layout.html'
   end
 
+
+def list
+   @reservations = current_user.reservations
+
+
+end
   # GET /reservations/1
   # GET /reservations/1.json
   def show
+
   end
 
+def detail
+  @reservations = Reservation.all
+  
+end
   # GET /reservations/new
   def new
     @reservation = Reservation.new
    authenticate_user!
+
+    @times = ["いつでも良い" ,"07:00","08:00","09:00", "10:00", "11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","特に決まっていない"]
   end
 
   # GET /reservations/1/edit
