@@ -1,0 +1,48 @@
+.customer_info_about_reservation{
+    padding-top: 18px;
+
+
+}
+.customer_info_about_reservation h1{
+	 float: left;
+    margin-left: 180px;
+    font-weight: 500;
+    line-height: 1.3em;
+    width: 49%;
+    font-size: 27px;
+
+}
+
+.reservations_infomations_wrapper{
+	    width: 50%;
+	    height:0 auto;
+	    padding:1%;
+	border:1px solid gray;
+	border-radius: 4px;
+	margin-top: 10%;
+    margin-left: 146px;
+    background-color: #FFFAF0;
+}
+
+.customer_info_about_reservation p{
+	line-height: 25px;
+}
+
+.customer_info_about_reservation .bootstrap .reservations_infomations_wrapper h5{
+	margin-top: 40px;
+}
+
+
+
+.customer_reservation_provider_info{
+	padding:1%;
+	height:0 auto;
+	clear:both;
+	    margin-top: 40px;
+	  width: 20%;
+	  margin-right: 180px;
+    	border:1px solid gray;
+	  float:right;
+	  border-radius: 4px;
+	  background-color:#F5F5F5;
+}
