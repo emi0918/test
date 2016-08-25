@@ -7,11 +7,15 @@ Rails.application.routes.draw do
 
 
 
- resources :users, only:[:index] do
+
+ resources :users, only:[:index] 
+
+ resources :reservations ,only: [:show] do 
   collection do
-    get :history
+    get :list
   end
 end
+
 
 devise_for :providers, controllers: {
   sessions:      'providers/sessions',
@@ -35,10 +39,11 @@ end
 resources :notes do
    resources :conversations ,except: [:show] 
  resources :reviews, except: [:show,:index]
- resources :reservations do
+ resources :reservations ,except: [:show] do
    collection do
      post 'confirm'
      get 'complete'
+     get :detail
    end
  end
  collection do
