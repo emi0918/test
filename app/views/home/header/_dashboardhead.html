@@ -1,0 +1,66 @@
+
+<header id="top-head">
+    <div class="inner">
+        <div id="main_mobile-head">
+           
+        <a href="/">  <%= image_tag('logo-min.png',class: 'logo_2') %></a>
+            <div id="nav-toggle">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <nav id="global-nav">
+            <ul>
+            <% if user_signed_in? %> 
+                     <li><a href='/users'>マイページ</a></li>
+         <li><a href='/mailbox/inbox'>メッセージ</a></li>
+          <li><a href='/reservations/list'>取引履歴</a></li>
+       
+       <li> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+
+        <% else %> 
+                
+       <li> <%= link_to 'アカウント作成', new_user_registration_path %></li> 
+                <li><%= link_to 'ログイン', new_user_session_path %></li>
+                    <li><%= link_to 'プロバイダーログイン',  new_provider_session_path %></li> 
+                <% end %> 
+
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+(function($) {
+    $(function() {
+        var $header = $('#top-head');
+        // Nav Fixed
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 350) {
+                $header.addClass('fixed');
+            } else {
+                $header.removeClass('fixed');
+            }
+        });
+        // Nav Toggle Button
+        $('#nav-toggle').click(function(){
+            $header.toggleClass('open');
+        });
+    });
+})(jQuery);
+</script>
+
+
+
+
+
