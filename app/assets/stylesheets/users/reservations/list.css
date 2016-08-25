@@ -1,0 +1,240 @@
+.reservation_history_wrapper {
+    padding-top: 18px;
+}
+
+.reservation_history_wrapper h1 {
+    float: left;
+    margin-left: 180px;
+    font-weight: 500;
+    line-height: 1.3em;
+    width: 100%;
+    font-size: 27px;
+}
+
+
+
+
+
+
+
+
+/* ipad iphone4と5のレスポンシブデザイン */
+@media screen and (min-width: 320px) and (max-width: 374px)
+{
+
+.reservation_history_wrapper h1 {
+
+    margin-left: 10px; 
+     font-size: 18px;
+
+}
+
+.customer_reservations_wrapper p{
+    margin-left: 12px; 
+        width: 90%;
+    padding: 1%;
+    border-radius: 4px;
+    background-color: #FFFAF0;
+    margin-top: 20%;
+
+}
+
+.reservation_info {
+    width: 100%;
+    padding: 1%;
+    border-radius: 4px;
+    background-color: #FFFAF0;
+    margin-top: 20%;
+    border: 1px solid #808080;
+    margin-left: 0px;
+}
+
+.reservation_history_wrapper .bootstrap a {
+    font-size: 12px;
+}
+
+.reservation_history_wrapper .bootstrap p {
+    font-size: 13px;
+    line-height: 21px;
+}
+
+
+}
+
+
+
+
+/* ipad iphone6のレスポンシブデザイン */
+
+@media (max-width: 375px) 
+{
+
+
+.reservation_history_wrapper h1 {
+
+    margin-left: 10px; 
+     font-size: 20px;
+
+}
+
+
+
+.customer_reservations_wrapper p{
+    margin-left: 15px; 
+        width: 90%;
+    padding: 1%;
+    border-radius: 4px;
+    background-color: #FFFAF0;
+    margin-top: 20%;
+      line-height: 22px;
+
+}
+.reservation_info {
+    width: 100%;
+    padding: 2%;
+    border-radius: 4px;
+    background-color: #FFFAF0;
+    margin-top: 20%;
+    border: 1px solid #808080;
+    margin-left: 0px;
+}
+
+.reservation_history_wrapper .bootstrap .btn-default {
+    margin-left: 25%;
+        margin-bottom: 10%;
+}
+
+
+}
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
+
+
+ .reservation_history_wrapper h3{
+    font-size: 16px;
+    height:50px;
+     margin-left: 14px; 
+        width: 90%;
+  padding: 1%;
+    border-radius: 4px;
+    background-color: #FFFAF0;
+    margin-top: 18%;
+    border: 1px solid #808080;
+}
+
+}
+
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (min-width: 414px) {
+
+
+
+.reservation_history_wrapper h1 {
+
+    margin-left: 10px; 
+     font-size: 20px;
+
+}
+
+
+
+.customer_reservations_wrapper p{
+  line-height: 22px;
+
+}
+
+.reservation_info {
+    width: 100%;
+    padding: 2%;
+    border-radius: 4px;
+    background-color: #FFFAF0;
+    margin-top: 20%;
+    border: 1px solid #808080;
+    margin-left: 0px;
+}
+
+.reservation_history_wrapper .bootstrap .btn-default {
+    margin-left: 28%;
+        margin-bottom: 8%;
+}
+
+}
+
+
+
+
+
+
+/* ipad タブレットのレスポンシブデザイン */
+@media (min-width: 767px) {
+
+
+
+}
+
+
+
+
+/* MAC */
+@media screen and (min-width: 800px) {
+    .reservation_history_wrapper {
+    padding-top: 18px;
+
+}
+
+
+.reservation_history_wrapper h1 {
+    float: left;
+    margin-left: 180px;
+    font-weight: 500;
+    line-height: 1.3em;
+    width: 100%;
+    font-size: 27px;
+}
+
+.customer_reservations_wrapper p{
+      margin-left: 180px;
+       width: 70%;
+    padding: 1%;
+    border-radius: 4px;
+    background-color: #FFFAF0;
+    margin-top: 0%;
+  
+}
+
+.customer_reservations_wrapper {
+    margin-top: 7%;
+}
+.reservation_info {
+    width: 76%;
+    padding: 2%;
+    border-radius: 4px;
+    background-color: #FFFAF0;
+    margin-top: 30px;
+    border: 1px solid #808080;
+    margin-left: 146px;
+}
+.reservation_history_wrapper .bootstrap .btn-default {
+    margin-left: 80%;
+            margin-bottom: 0%;
+}
+ .reservation_history_wrapper h3{
+    font-size: 16px;
+     margin-left: 180px;
+}
+
+
+
+}
+
+
+
+
+
+
