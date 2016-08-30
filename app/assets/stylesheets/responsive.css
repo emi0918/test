@@ -3,8 +3,11 @@
 @media (max-width: 1050px) {
   /* lessonクラスのwidthを50%に変更し、margin-bottom: 50px;を追加してください */
   .lesson{
-    width:50%;
+    width:100%;
     margin-bottom:50px;
+  }
+    .web-menu-var{
+    display: none;
   }
   
 .column-menu{
@@ -16,7 +19,7 @@
 }
 
 .dropmenu{
-  display:none;
+
 }
 
 .header-right {
@@ -51,7 +54,7 @@
 
 
 
-@media only screen and  ( max-width:640px )
+@media only screen and  ( max-width:414px )
 {
   .body{
     position: relative;
@@ -64,22 +67,16 @@
 
 .message-wrapper{
 
-  width:80%;
-  padding-left: 38px;
+  width:90%;
+  padding-left: 4%;
 }
 
 .explain-seekle-wrapper{
-  margin-bottom: 110px;
-  width:80%;
-  padding-left: 45px;
+  margin-top: 0px;
+  width:100%;
+  padding-left: 0px;
 }
 
-
-
-
-
-@media screen and  ( max-width:640px )
-{
   .lesson-wrapper{
     height:1130px;
 
@@ -99,77 +96,59 @@
   padding-bottom: 20px;
 }
 
+.reason p{
+
+  width:100%;
+
+}
+
 }
 
 
-@media screen and (min-width: 320px) and (max-width: 374px)
-{
-.first{
-padding-left:0px;
-}
-}
 
-
-
-@media screen and  ( max-width:640px )
+@media screen and  ( max-width:414px )
 {
 
   .reasons {
     font-size:60%;
     clear:both;
-    padding-top: 20px;
-    padding-right:21px;
+    padding-top: 10px;
+    padding-right:0px;
 
   }
   .reason  {
     display: inline-block;
     font-size: 10px;
      line-height:14px;
-      width:110%;
+      width:100%;
 
   }
 
   .about-seekle-wrapper{
-    height:750px;
-
- }
-
-
-}
-
-
-
-@media screen and (max-width:479px)
-{
-
-.about-seekle-wrapper{
     height:900px;
 
  }
-}
-
-
-
-
-@media screen and  ( max-width:640px )
-{
 
   .wrapper{
    width:auto;
   position:relative;
-  margin-left:-22px;
+  margin-left:0px;
     max-width:640px;
   }
 
   .explain-seekle-wrapper p{
     font-size:14px;
-    text-align: left;
+    text-align: center;
   }
+
 
 }
 
 
-@media only screen and  ( max-width:640px )
+
+
+
+@media only screen and  ( max-width:414px )
 {
   .body{
     position: relative;
@@ -181,4 +160,157 @@ padding-left:0px;
   }
 
 }
+
+
+
+
+
+/* ipad iphone4と5のレスポンシブデザイン */
+@media screen and (min-width: 320px) and (max-width: 374px){
+
+
+#scroll-menu {
+    height: 56px;/*メニューの縦幅*/
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#scroll-menu a {
+    display: block;
+    height: 100%;
+    font-size: 70%;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 40px;/*メニューの縦幅*/
+}
+
+#scroll-menu .scroll-menu-inner {
+
+    width: 1000px;/*メニューの横幅*/
+    height: 100%;
+    margin-left: -30px;
+    text-align: center;
+}
+
+#scroll-menu li {
+  margin-top: -4px;
+    float: left;
+    font-size: 25px;
+    width: 13%;
+    height: 100%;
+        margin-left: 0px;
+}
+
+
+
+}
+
+
+
+
+
+
+/* ipad iphone6のレスポンシブデザイン */
+@media (min-width: 375px) 
+{
+
+#scroll-menu {
+    height: 65px;/*メニューの縦幅*/
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+#scroll-menu a {
+    display: block;
+    height: 100%;
+    font-size: 70%;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 40px;/*メニューの縦幅*/
+}
+#scroll-menu .scroll-menu-inner {
+
+    width: 980px;/*メニューの横幅*/
+    height: 100%;
+    margin-left: -30px;
+    text-align: center;
+}
+#scroll-menu li {
+    float: left;
+    font-size: 26px;
+    width: 14%;
+    height: 100%;
+        margin-left: 0px;
+}
+
+
+
+}
+
+
+@media screen and  ( min-width:414px )
+{
+
+
+#scroll-menu {
+    height: 63px;/*メニューの縦幅*/
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+#scroll-menu a {
+    display: block;
+    height: 100%;
+    font-size: 70%;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 40px;/*メニューの縦幅*/
+}
+
+#scroll-menu .scroll-menu-inner {
+    list-style-type: none;
+    width: 1000px;/*メニューの横幅*/
+    height: 100%;
+    margin-left: 6px;
+    padding: 0;
+    text-align: center;
+}
+#scroll-menu li {
+    float: left;
+    font-size: 26px;
+    width: 15%;
+    height: 100%;
+}
+
+
+
+
+}
+
+
+.responsive-menu-var .dropmenu{
+
+border-top: 1px solid #f5f5f5;
+}
+
+.dropmenu{
+
+  width:960px;
+  margin:auto
+}
+.dropmenu:after,.dropmenu:before{content:"";display:table}
+.dropmenu:after{clear:both}
+
+/* MAC */
+@media screen and (min-width: 800px) {
+.responsive-menu-var {
+display:none;
+}
+}
+
+
+
 
