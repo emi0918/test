@@ -21,11 +21,15 @@
 	line-height: 16px;
 }
 
-  .mailbox_wrapper .bootstrap .col-md-4 {
-   width:270px;
+ .mailbox_wrapper{
+margin-left:10%;
+ }
+
+ .mailbox_wrapper .bootstrap .col-md-4 {
+	width:90%;
 }
 .mailbox_wrapper .bootstrap .col-md-8{
-   width:270px;
+	width:90%;
 }
 
 }
@@ -43,11 +47,15 @@
 	line-height: 16px;
 }
 
+ .mailbox_wrapper{
+margin-left:9%;
+ }
+
  .mailbox_wrapper .bootstrap .col-md-4 {
-   width:328px;
+	width:90%;
 }
 .mailbox_wrapper .bootstrap .col-md-8{
-   width:328px;
+	width:90%;
 }
 
 
@@ -65,15 +73,18 @@
 	line-height: 16px;
 }
 
+ .mailbox_wrapper{
+margin-left:9%;
+ }
 
  .mailbox_wrapper .bootstrap .col-md-4 {
-   width:370px;
-
+	width:90%;
 }
 .mailbox_wrapper .bootstrap .col-md-8{
-   width:370px;
+	width:90%;
 }
 
+ 
 }
 
 
@@ -87,6 +98,12 @@
 	font-size: 15px;
 	line-height: 16px;
 }
+
+
+.mailbox_wrapper{
+	margin-left:5%;
+}
+
 
   .mailbox_wrapper .bootstrap .col-md-4 {
    width:720px;
@@ -107,8 +124,10 @@
 
 .mailbox_wrapper{
 	margin-top: 2%;
-	margin-left: 6%;
-	margin-right: 7%;
+
+	width:73%;
+	margin-left:13.8%;
+	margin-right: 0%;
 }
 
 .mailbox_wrapper .bootstrap .panel-body{
@@ -117,6 +136,10 @@
 
 	padding-top: 20px;
 
+}
+
+.mailbox_wrapper .bootstrap.panel-default{
+		width:73%;
 }
 
 .message-title{
@@ -142,7 +165,7 @@
 }
 
 .mailbox_wrapper .bootstrap .col-md-8{
-	width:72%;
+	width:71%;
 }
 }
 
