@@ -23,6 +23,36 @@ Format: 'yy年mm月dd日', //表示フォーマット
 });
  </script>
 
+<script type="text/javascript">
+$(function(){
+
+　$("#datepicker2").datepicker({
+ 
+Format: 'yy年mm月dd日', //表示フォーマット
+ minDate: '+2', //現在から２日後から選択可能にする
+ 
+　onClose : function(){
+　this.focus();
+　　}
+　})
+});
+ </script>
+
+<script type="text/javascript">
+$(function(){
+
+　$("#datepicker3").datepicker({
+ 
+Format: 'yy年mm月dd日', //表示フォーマット
+ minDate: '+2', //現在から２日後から選択可能にする
+ 
+　onClose : function(){
+　this.focus();
+　　}
+　})
+});
+ </script>
+
 
 
 <div class="reservation-confirm">
@@ -47,13 +77,30 @@ Format: 'yy年mm月dd日', //表示フォーマット
       <tr>
        <th> <p>ご希望の日程 <span class="form-label required">必須</span></p></th>
        <td>
-       第一希望　<%= f.text_field :date, :id => 'datepicker', placeholder: 'YYYY/MM/DD' %>
+       第１候補　<%= f.text_field :date, :id => 'datepicker', placeholder: ' YYYY/MM/DD' , readonly:"true" %>
+
+           希望時間  <%= select :p, :times, @times, include_blank: '選択してください'%>
+      </td>
+    </tr>
+
+
+      <tr>
+       <th></th>
+       <td>
+       第２候補　<%= f.text_field :date, :id => 'datepicker2', placeholder: 'YYYY/MM/DD' , readonly:"true" %>
+         希望時間  <%= select :p, :times, @times, include_blank: '選択してください'%>
       </td>
     </tr>
 
 
 
-
+ <tr>
+       <th></th>
+       <td>
+       第３候補　<%= f.text_field :date, :id => 'datepicker3', placeholder: 'YYYY/MM/DD' , readonly:"true" %>
+        希望時間  <%= select :p, :times, @times, include_blank: '選択してください'%>
+      </td>
+    </tr>
 
 
 
