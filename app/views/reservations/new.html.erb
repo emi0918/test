@@ -1,25 +1,24 @@
 
-
+ 
 
 <div class="reservation-form">
-
-<h1>  <%=  @note.provider.name %>さんの<br/>"<%= @note.title %>"　仮予約フォーム</h1>
+<% @note.note_revisions.each do |note_revision| %>
+<h1>  <%=  @note.provider.name %>さんの<br/>"<%=  note_revision.title %>"　仮予約フォーム</h1>
 
 
 <div class="before_reservation_explain">
 
 <div class="provider_info_for_reservation">
-
-
+<% @note.provider.store_infos.each do |s| %>
 
 <h3>《営業時間と定休日》</h3>
 <p>
-◆営業時間：<%=  @note.provider.hours %>　 ◆定休日：<%=  @note.provider.holiday %>
+◆営業時間：<%=  s.hours %>　 ◆定休日：<%=  s.holiday %>
 </p>
 
 
 <h3>《変更とキャンセル》</h3>
-<p><%=  @note.cancelrule %></p>
+<p><%=  note_revision.cancelrule %></p>
 
 
 </div>
@@ -28,4 +27,4 @@
 
 
 </div>
-
+   <% end %>   <% end %>
