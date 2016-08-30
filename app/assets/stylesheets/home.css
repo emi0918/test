@@ -3,7 +3,9 @@
   font-family:'ヒラギノ丸ゴ Pro W4','Hiragino Maru Gothic Pro';
 }
 
-.logo a,a,a:hover,header{text-decoration:none}html{overflow:auto}body{overflow:hidden;position:relative;margin:0}li,ul{list-style-type:none;margin:0}a{color:gray}a:hover{color:#1b7ccd}.main_content{padding-top:57px;margin:0 auto}h1{font-size:32px;letter-spacing:-2px;margin-bottom:30px;}
+.logo a,a,a:hover,header{text-decoration:none}html{overflow:auto}body{overflow:hidden;position:relative;margin:0}li,ul{list-style-type:none;margin:0}a{color:gray}a:hover{color:#1b7ccd}.main_content{padding-top:57px;margin:0 auto}
+
+h1{font-size:32px;letter-spacing:-2px;margin-bottom:0px;}
 .logo a,h2{letter-spacing:-1px}h2{font-size:20px}p{font-size:16px;line-height:40px}header{height:57px;width:100%;margin:0 120px;position:absolute;top:0;z-index:10;padding:1px;cursor:pointer}.logo{height:70px;width:16%;}
 .logo a{float:left;font-size:30px;padding:12px 50px;font-weight:700}
 .logo a:hover {
