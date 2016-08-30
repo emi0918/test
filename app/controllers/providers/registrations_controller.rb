@@ -41,19 +41,20 @@ end
 private
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
-  def provider_params
-      params.require(:provider).permit(:name,:provider_id,:mainpic,:email,:password,
+    def provider_params
+      params.require(:provider).permit(:name,:address,:provider_id,:mainpic,:email,:password,
       provider_accounts_attributes: [:phonenumber, :staffname],
       store_infos_attributes: [:hours,:holiday,:payment,:about]
       )
     end
 
     def update_provider_params
-      params.require(:provider).permit(:name,:provider_id,:mainpic,:email,
+      params.require(:provider).permit(:name,:address,:provider_id,:mainpic,:email,
       provider_accounts_attributes: [:phonenumber, :staffname,:id, :_destroy],
       store_infos_attributes: [:hours,:holiday,:payment,:about,:id, :_destroy]
       )
     end
+
 
 
     
