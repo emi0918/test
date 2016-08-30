@@ -29,11 +29,20 @@
 
 
 
+
+.provider_wrapper{
+	width:100%;
+	margin-left:13.8%;
+	height:0 auto;
+}
+
+
 .provider-introduction h1{
 	margin-top:40px;
 	width:100%; 
 	font-weight: normal; 
 	font-size:25px;
+	margin-bottom: 30px;
 }
 
 .provider_wrapper p{
@@ -53,18 +62,13 @@
  	width:35%;
  }
 
-.provider_wrapper{
-	width:100%;
-	margin-top:0;
-	height:1400px
-}
 
 .provider-introduction{
 	width:73%;
 	height:470px;
 	border-bottom:1px solid #dce0e0;
 	display:block; 
-	margin-left:14%;
+
 }
 
 .provider-introduction p{
@@ -81,6 +85,27 @@
 	float:left;
 	border-radius:2%;
 }
+
+
+.service_explain{
+	height:0 auto;
+	width:73%; 
+	margin-left:0%;
+	margin-bottom:15px;
+	margin-top:20px;
+	float:left;
+}
+.service_explain h3{
+	margin-left:750px;
+	margin-top:60px;
+}
+
+.service_explain h1{
+	font-weight: normal;
+	font-size: 22px;
+	margin-bottom: -20px;
+}
+
 
 
 .provider-introduction .shadow_btn{
@@ -106,7 +131,7 @@
 
 
 .provider_introduction h3{
-	margin-left: 30%; 
+
 	width:20%;
 }
 
@@ -116,6 +141,7 @@
 	text-align:center;
 	font-size:40px;
 	padding-top:28px
+	margin-bottom:30px;
 }
 .service-price_provider{
 	background-color:orange;
@@ -130,19 +156,19 @@
 .provider_service_pictures{
 	width:73%;
 	height:420px; 
-	margin-left:1%
+	
 }
 .service_pic{
 	float:left;
 	width:270px;
 	height:300px;
 	margin-top:60px;
-	margin-left:15px
+	
 }
 .rulesfromprovider{
 	width:73%;
 	height:0 auto;
-	margin-left:14%; 
+
 	margin-bottom:20px;
 }
 
@@ -164,7 +190,7 @@
 .photo-gallery{
 	width:180px;
 	height:120px;
-	margin-left: 9px;
+
 	float:left;
 }
 
@@ -282,6 +308,7 @@ float:left;
 
 .provider-introduction h1{
 	font-size:17px;
+	margin-bottom: 30px;
 }
 
 
