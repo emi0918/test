@@ -1,26 +1,37 @@
-<p id="notice"><%= notice %></p>
+<%= render 'users/header' %>
+<%= render 'home/header/dashboardhead' %>
 
-<p>
-  <strong>日程</strong>
-  <%= @reservation.date %>
-</p>
+<div class="reservation_history_wrapper">
 
-<p>
-  <strong>サービス名</strong>
-  <%= @reservation.note.title %>
-</p>
+  <h1><%= current_user.name %>さんの予約中サービス </h1>
 
-<p>
-  <strong>サービス提供者:</strong>
-  <%= @reservation.note.provider.name %>
-</p>
+ 
+<div class="customer_reservations_wrapper">
 
-<p>
-  <strong>電話番号:</strong>
-  <%= @reservation.phone_number %>
-</p>
+ <% if current_user.reservations.blank? %>
+  <p>予約中のサービスはまだありません</p>
+ <% else %>
+    <div class="bootstrap">
 
-<p>
-  <strong>カテゴリー:</strong>
-  <%= @reservation.note.price %>円
-</p>
+    <% @reservations.each do |reservation| %>
+
+<div class="reservation_info">
+      <h4><%= link_to reservation.note.title, note_path(reservation.note) %></h4>
+        <p><%= reservation.note.provider.name %></p>
+        <%= link_to "お問い合わせする",  new_note_conversation_path(reservation.note),:class =>'btn btn-default' %>   
+
+</div>
+    <% end %>
+    
+ <% end %>    
+</div>
+
+
+<div class="bootstrap">
+ <div class="list-number clearfix">
+   <%= paginate(@reservations) %>
+ </div>
+</div>
+
+
+</div>
