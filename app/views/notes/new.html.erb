@@ -1,6 +1,6 @@
 <div class="providers_new_post">
   <div class="bootstrap">
-    <%= form_for(@note, class: 'form-horizontal', role: 'form' ) do |f| %>
+    <%= form_for(@note,  class: 'form-horizontal', role: 'form' ) do |f| %>
     <% if @note.errors.any? %>
     <div class="alert alert-danger">
      <ul>
@@ -22,10 +22,15 @@
 
       <%= f.select(:category_id, Category.all.collect {|p| [ p.title, p.id ] }, {}, { multiple: false, class: "chosen-select form-control" })%>
     </td>
+
+
+ <%= f.fields_for :note_revisions do |b| %>
+       
+
     <tr>
      <th> <p><%= f.label Note.human_attribute_name 'サービスのタイトル' %> <span class="form-label required">必須</span></p></th>
      <td>
-      <%= f.text_field :title, class: 'form-control',placeholder:"サービス内容がわかるタイトルにしましょう" %>
+      <%= b.text_field :title, class: 'form-control',placeholder:"サービス内容がわかるタイトルにしましょう" %>
     </td>
   </tr>
 
@@ -35,7 +40,7 @@
     <p><%= f.label Note.human_attribute_name '価格' %><span class="form-label required">必須</span></p></th>
     <td>
       <div class="input-group">
-       <%= f.text_field :price, class: 'form-control', placeholder:"5000" %>
+       <%= b.text_field :price, class: 'form-control', placeholder:"5000" %>
        <span class="input-group-addon">円</span>
      </div>
    </td>
@@ -45,8 +50,7 @@
  <tr>
    <th> <p><%= f.label Note.human_attribute_name 'キャッチコピー' %><span class="form-label required">必須</span> </p></th>
    <td>
-    <%= f.text_field :catchcopy, class: 'form-control',placeholder:"このサービスの売りをお客様にアピールするキャッチコピーをつけましょう" %>
-
+    <%= b.text_field :catchcopy, class: 'form-control',placeholder:"このサービスの売りをお客様にアピールするキャッチコピーをつけましょう" %>
   </td>
 </tr>
 
@@ -55,7 +59,7 @@
  <td>
    
   <div class="middleform">
-   <textarea class="form-control"  name="note[salespoint]" id="note_salespoint">
+   <textarea class="form-control"  name="note[note_revisions_attributes][0][salespoint]" id="note_note_revisions_attributes_0_salespoint">
 《-----------》
   ◆
   ◆
@@ -70,14 +74,12 @@
 
 
 
-
-
 <tr>
  <th> <p><%= f.label Note.human_attribute_name '詳しいサービス内容' %><span class="form-label required">必須</span> </p></th>
  <td>
 
 <div class="largeform">
-<textarea class="form-control" placeholder="必須のサービス内容に加えて、お客様に提供しているサービスや特典をアピールして他者と差別化を図りましょう" name="note[content]" id="note_content" >
+<textarea class="form-control" placeholder="必須のサービス内容に加えて、お客様に提供しているサービスや特典をアピールして他者と差別化を図りましょう" name="note[note_revisions_attributes][0][content]" id="note_note_revisions_attributes_0_content" >
 </textarea>
    </div>
 
@@ -88,7 +90,7 @@
  <th> <p><%= f.label Note.human_attribute_name 'お客様へのお願い' %><span class="form-label required">必須</span> </p></th>
  <td>
    <div class="middleform">
-<textarea class="form-control"  name="note[rule]" id="note_rule">
+<textarea class="form-control"  name="note[note_revisions_attributes][0][rule]" id="note_note_revisions_attributes_0_rule">
 ・追加料金が発生する場合には事前にお知らせします。
 ・
 ・
@@ -109,7 +111,7 @@
  <th> <p><%= f.label Note.human_attribute_name '変更とキャンセル' %><span class="form-label optional">任意</span></p></th>
  <td>
    <div class="middleform">
-    <textarea class="form-control" placeholder="あなたのサービスについて詳しく説明しよう" name="note[cancelrule]" id="note_cancelrule">
+    <textarea class="form-control" placeholder="あなたのサービスについて詳しく説明しよう" name="note[note_revisions_attributes][0][cancelrule]" id="note_note_revisions_attributes_0_cancelrule">
 予約成立後の変更・キャンセルは、作業の6日前まで承ります。
 期限を過ぎてのキャンセルは、5日前から2日前までは予約金額の25%、前日までは50%、それ以降は100%のキャンセル料が発生することがございますので、ご了承ください。</textarea>
     </div>
@@ -117,19 +119,77 @@
 </td>
 </tr>
 
-
-
+<%= f.fields_for :note_images do |i| %>
 <tr>
- <th> <p><%= f.label Note.human_attribute_name '写真' %><span class="form-label required">必須</span></p></th>
+ <th> <p><%= f.label Note.human_attribute_name '写真(9枚まで)' %><span class="form-label required">必須</span></p></th>
  <td>
-   <%= f.file_field :service_image1, class: "form-control image-field" %>
+   <%= i.file_field :image1, class: "form-control image-field" %>
  </td>
 </tr>
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image2, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image3, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image4, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image5, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image6, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image7, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image8, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image9, class: "form-control image-field" %>
+ </td>
+</tr>
+
+
 </div>
 </table>
 </div>
 <%= f.submit '作成する', class: 'btn btn-default', data:{ disable_with: "作成中・・・"} %>
 
+<% end %>
+<% end %>
 <% end %>
 </div>
 </div>
