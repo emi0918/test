@@ -1,8 +1,8 @@
 <%= render 'providers/header' %>
 
 <div class="menu-back-head">
-<%= link_to 'サービスページ', @note %> |
-<%= link_to '掲載サービス一覧', notes_path %>
+  <%= link_to 'サービスページ', @note %> |
+  <%= link_to '掲載サービス一覧', notes_path %>
 </div>
 
 <div class="providers_new_post">
@@ -20,95 +20,84 @@
 
 
 
-    <h2>掲載内容を編集する</h2>
-    <p>あなたのサービスを求めるカスタマーの決め手になるようなタイトルや内容を考えよう</p>
-  
-
-
-  <table class="newpost">
-
-  
-    <tr>
-     <th> <p>カテゴリー <span class="form-label required">必須</span></p></th>
-     <td>
+   <h2>掲載内容を編集する</h2>
+   <p>あなたのサービスを求めるカスタマーの決め手になるようなタイトルや内容を考えよう</p>
    
-    <%= f.select(:category_id, Category.all.collect {|p| [ p.title, p.id ] }, {}, { multiple: false, class: "chosen-select form-control" })%>
-     </td>
-  <tr>
 
 
-  <tr>
-   <th> <p>サービスのタイトル<span class="form-label required">必須</span></p></th>
-   <td>
-    <%= f.text_field :title, class: 'form-control',placeholder:"サービス内容がわかるタイトルにしましょう" %>
-  </td>
-</tr>
-
-
-
+ 
+   <table class="newpost">
 
     <tr>
-     <th>
-      <p><p>価格<span class="form-label required">必須</span></p></th>
-      <td>
-        <div class="input-group">
-         <%= f.text_field :price, class: 'form-control' %>
-         <span class="input-group-addon">円</span>
-       </div>
-     </td>
-   </tr> 
-
- <tr>
-     <th> <p><%= f.label Note.human_attribute_name 'キャッチコピー' %><span class="form-label required">必須</span> </p></th>
+     <th> <p>  <%= f.label Note.human_attribute_name 'カテゴリー' %> <span class="form-label required">必須</span></p></th>
      <td>
-      <%= f.text_field :catchcopy, class: 'form-control',placeholder:"このサービスの売りをお客様にアピールするキャッチコピーをつけましょう" %>
 
+      <%= f.select(:category_id, Category.all.collect {|p| [ p.title, p.id ] }, {}, { multiple: false, class: "chosen-select form-control" })%>
+    </td>
+
+
+ <%= f.fields_for :note_revisions do |b| %>
+       
+
+    <tr>
+     <th> <p><%= f.label Note.human_attribute_name 'サービスのタイトル' %> <span class="form-label required">必須</span></p></th>
+     <td>
+      <%= b.text_field :title, class: 'form-control',placeholder:"サービス内容がわかるタイトルにしましょう" %>
     </td>
   </tr>
 
-  <tr>
-   <th> <p><%= f.label Note.human_attribute_name 'セールスポイント' %><span class="form-label required">必須</span></p></th>
-   <td>
-   
-<div class="middleform">
- <textarea class="form-control"  name="note[salespoint]" id="note_salespoint">
-《-----------》
-◆
-◆
-◆
-◆
 
-</textarea>
+  <tr>
+   <th>
+    <p><%= f.label Note.human_attribute_name '価格' %><span class="form-label required">必須</span></p></th>
+    <td>
+      <div class="input-group">
+       <%= b.text_field :price, class: 'form-control', placeholder:"5000" %>
+       <span class="input-group-addon">円</span>
+     </div>
+   </td>
+ </tr> 
+
+
+ <tr>
+   <th> <p><%= f.label Note.human_attribute_name 'キャッチコピー' %><span class="form-label required">必須</span> </p></th>
+   <td>
+    <%= b.text_field :catchcopy, class: 'form-control',placeholder:"このサービスの売りをお客様にアピールするキャッチコピーをつけましょう" %>
+  </td>
+</tr>
+
+<tr>
+ <th> <p><%= f.label Note.human_attribute_name 'セールスポイント' %><span class="form-label required">必須</span></p></th>
+ <td>
+   
+
+   <%= b.text_area :salespoint ,class: 'content-area',placeholder:"このサービスの売りをお客様にアピールするキャッチコピーをつけましょう" %>
+
 </div>
 
-  </td>
+</td>
 </tr>
 
 
 
 <tr>
  <th> <p><%= f.label Note.human_attribute_name '詳しいサービス内容' %><span class="form-label required">必須</span> </p></th>
-  <td>
+ <td>
 
- <div class="largeform">
- <textarea class="form-control" placeholder="必須のサービス内容に加えて、お客様に提供しているサービスや特典をアピールして他者と差別化を図りましょう" name="note[content]" id="note_content" >
-</textarea>
-</div>
 
-  </td>
+   <%= b.text_area :content ,class: 'content-area',placeholder:"必須のサービス内容に加えて、お客様に提供しているサービスや特典をアピールして他者と差別化を図りましょう" %>
+
+ </td>
 </tr>
 
 <tr>
  <th> <p><%= f.label Note.human_attribute_name 'お客様へのお願い' %><span class="form-label required">必須</span> </p></th>
-  <td>
+ <td>
    <div class="middleform">
- <textarea class="form-control"  name="note[rule]" id="note_rule">
-・追加料金が発生する場合には事前にお知らせします。
-・
-・
-</textarea>
-</div>
-  </td>
+   <%= b.text_area :rule ,class: 'content-area',placeholder:"当日必要なもの、注意点などを事前に伝えておきましょう。" %>
+
+  </div>
+</td>
 </tr>
 
 
@@ -121,47 +110,91 @@
 
 <tr>
  <th> <p><%= f.label Note.human_attribute_name '変更とキャンセル' %><span class="form-label optional">任意</span></p></th>
-  <td>
-     <div class="middleform">
-  <textarea class="form-control" placeholder="あなたのサービスについて詳しく説明しよう" name="note[cancelrule]" id="note_cancelrule">
-予約成立後の変更・キャンセルは、作業の6日前まで承ります。
-期限を過ぎてのキャンセルは、5日前から2日前までは予約金額の25%、前日までは50%、それ以降は100%のキャンセル料が発生することがございますので、ご了承ください。</textarea>
-</div>
-</td>
+ <td>
+     <%= b.text_area :cancelrule ,class: 'content-area',placeholder:"キャンセルや、日付変更の詳細説明をしましょう。" %>
+
   </td>
+</td>
 </tr>
 
-
+<%= f.fields_for :note_images do |i| %>
+<tr>
+ <th> <p><%= f.label Note.human_attribute_name '写真' %><span class="form-label required">必須</span></p></th>
+ <td>
+   <%= i.file_field :image1, class: "form-control image-field" %>
+ </td>
+</tr>
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image2, class: "form-control image-field" %>
+ </td>
+</tr>
 
 <tr>
- <th> <p>写真<span class="form-label required">必須</span></p></th>
+ <th> </th>
  <td>
-  <%= f.file_field :service_image1, class: "form-control image-field" %>
-  <%= f.hidden_field :service_image1_cache %>
-</td>
+   <%= i.file_field :image3, class: "form-control image-field" %>
+ </td>
 </tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image4, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image5, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image6, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image7, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image8, class: "form-control image-field" %>
+ </td>
+</tr>
+
+<tr>
+ <th> </th>
+ <td>
+   <%= i.file_field :image9, class: "form-control image-field" %>
+ </td>
+</tr>
+
+
 </div>
 </table>
 </div>
-<%= f.submit '保存する', class: 'btn btn-default', data:{ disable_with: "保存中・・・"} %>
+<%= f.submit '作成する', class: 'btn btn-default', data:{ disable_with: "作成中・・・"} %>
 
-
+<% end %>
+<% end %>
 <% end %>
 </div>
 </div>
 
-
-
-
-
-
-
-
-</div>
-
-
-
 <link rel="stylesheet" href="chosen.css">
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script>/* Chosen v1.6.1 | (c) 2011-2016 by Harvest | MIT License, https://github.com/harvesthq/chosen/blob/master/LICENSE.md */
