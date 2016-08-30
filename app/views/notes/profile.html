@@ -4,68 +4,71 @@
   </div>
 </div>
 
-<div class="mypage-all_wrapper">
- <h1><%= @note.provider.name %></h1>
 
- <div class="provider-contents">
+<div class="provider_wrapper">
+  <div class="provider-introduction_profile">
+    <h1>  <%= @note.provider.name %></h1>
 
-   <div class="left-wrapper">
-     <% if @note.provider.mainpic? %>
-     <%= image_tag @note.provider.mainpic.url, :class => 'mypage-picture'%>
-     <% else %>
-     <%= image_tag 'Seekle_icon.png', :class => 'mypage-picture'%>
-     <% end %>
-   </div>
+    <% if @note.provider.mainpic? %>
+    <%= image_tag @note.provider.mainpic.url,class: "provider_main_pic"%>
+    <% else %>
+    <%= image_tag 'Seekle_icon.png', :class => 'provider_main_pic'%>
+    <% end %>
 
-   <div class="mypage_wrapper">
+ <% @note.provider.store_infos.each do |s| %>
     <table class="sample_03">
      <tbody>
-      <tr>
+     
+   <tr>
+     <th>営業時間：</th>
+      <td><%= s.hours %></td>
+    </tr>
 
-        <tr>
-         <th>営業時間：</th>
-         <td><%= @note.provider.hours %></td>
-       </tr>
+     <tr>
+     <th>定休日：</th>
+      <td> <%=s.holiday %></td>
+    </tr>
 
-       <tr>
-         <th>定休日：</th>
-         <td> <%= @note.provider.holiday %>　</td>
-       </tr>
+    <tr>
+    <th>所在地：</th>
+      <td><%= @note.provider.address %></td>
+    </tr>
+    
+    <tr>
+    <th>お支払い：</th> 
+      <td><%=s.payment %></td>
+    </tr>
 
-       <tr>
-        <th>所在地：</th>
-        <td><%= @note.provider.address %></td>
-      </tr>
+   </tbody>
+ </table>
 
-      <tr>
-        <th>お支払い：</th>
-        <td><%= @note.provider.payment %></td>
-      </tr>
-    </tbody>
-  </table>
 
-  <div class="about-profiles">
-    <h3>店舗紹介：</h3> <p><%= @note.provider.about %>
-    <% if @note.provider.about.blank? %>
-    <p>プロフィールがまだ記入されていません。</p>
-    <%end%>
-  </p>
-
-  <h3>掲載中のサービス：</h3>
-  <% @notes.each do |note|  %>
+<div class="service_explain">
+    <h2>店舗紹介：</h2> 
+<%= s.about %>  
  
-  <ul>
+    <% if s.about.blank? %>
+ プロフィールがまだ記入されていません。
+    <%end%>
 
-    <li> <div class="panel panel-default">
-     <div class="panel-heading">
-      <%= link_to note.title, note_path(note) %>
-    </div>
 
-  </div>
-</li>
-</ul>
-
-<% end %>
 </div>
+    <%end%>
+
+<div class="service_explain">
+  <h2>掲載中のサービス：</h2>
+
+  
+  <ul>
+    <% @note.note_revisions.each do |note_revision| %>
+
+    <li> 
+
+      <%= link_to note_revision.title, note_path(@note) %>
+   </li>
+   <% end %>
+</ul>
+</div>
+
 </div>
 </div>
