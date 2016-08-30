@@ -54,10 +54,14 @@
    <% @notes.each do |note| %>
    <div class="provider_job ">
      
-     <% if note.service_image1.present? %>
-  <%= link_to image_tag( note.service_image1_url, { :class => "provider_service_image"}), note_path(note) %>
-     <% else %>
+     <% note.note_images.each do |note_images| %>
+      <% if note_images.image1.present? %>
+      <%= link_to image_tag( note_images.image1_url, { :class => "provider_service_image"}), note_path(note) %>
+      <% else %>
       <%= link_to image_tag( 'Seekle_icon.png', { :class => "provider_service_image"}), note_path(note) %>
+      <% end %>
+
+      
          <% end %>
     <div class="title"><h2> <%= link_to note.title, note_path(note) %></h2>
      <div class="service-price"><h3> ¥<%= note.price %></h3> </div>
