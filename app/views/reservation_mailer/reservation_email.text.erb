@@ -1,11 +1,13 @@
+		<% @reservations.each do |reservation| %>
+ <% reservation.note.note_revisions.each do |note_revision| %>
+
 ===========================================
-  「<%= @title %> 」に予約が来ました！
+  「<%=  note_revision.title %>」に予約が来ました！
 ===========================================
 
 Seekleをご利用いただき、誠にありがとうございます。
 
-あなたの掲載中サービス、「<%= @title %> 」に予約が来ました！
-
+あなたの掲載中サービス、「<%=  note_revision.title %>」に予約が来ました！
 
 
 <%= @date %>
@@ -26,3 +28,5 @@ Seekleをご利用いただき、誠にありがとうございます。
 ●お問い合せ
 seekle.info@gmail.com
 ────────────────────────────────
+<% end %>
+   <% end %>
