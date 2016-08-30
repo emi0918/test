@@ -5,7 +5,8 @@ class ReservationMailer < ApplicationMailer
 #provider側に予約が来たよのメールを送信
   def reservation_email(provider, reservation)
   	 @provider = provider
-      @title = reservation.note.title
+
+  @reservations = Reservation.includes(:note).all
       @date = reservation.date
       @name= reservation.name
       @message=reservation.message
@@ -16,7 +17,7 @@ class ReservationMailer < ApplicationMailer
 #user側に予約完了確認のメールを送信
   def myreservation_email(user, reservation)
   	 @provider = reservation.note.provider.name
-      @title = reservation.note.title
+   @reservations = Reservation.includes(:note).all
       @date = reservation.date
       @name= reservation.name
       @message=reservation.message
@@ -25,3 +26,4 @@ class ReservationMailer < ApplicationMailer
 
 
 end
+

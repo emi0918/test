@@ -15,12 +15,21 @@ class NotesController < ApplicationController
     render :layout => 'providers_layout.html'
   end
 
+  def detail
+     @notes = Note.includes(:provider).all
+    @notes = Note.includes(:user).all
+    @note = Note.find(params[:id])
+  end
+
   def reservations
     @notes = current_provider.notes.all.page(params[:page]).per(3).order(:id)
     render :layout => 'providers_layout.html'
   end
  
   def show
+ 
+    @note_revisions = @note.note_revisions
+      @note_images = @note.note_images
     @notes = Note.includes(:provider).all
     @notes = Note.includes(:user).all
     @note = Note.find(params[:id])
@@ -33,9 +42,11 @@ class NotesController < ApplicationController
   end
 
 
-
   def housing
-    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => 1 )
+
+
+
+    @notes = Note.page(params[:page]).per(6).where( :category_id => 1 )
   end
 
   def event
@@ -58,13 +69,15 @@ class NotesController < ApplicationController
 
   # GET /notes/ne
   def new
-    @note = Note.new
+       @note = Note.new
+       @note.note_revisions.build #追加
+              @note.note_images.build #追加
     render :layout => 'providers_layout.html'
   end
 
   # GET /notes/1/sedit
   def edit
-    @note.service_image1.cache! unless @note.service_image1.blank?
+    @note = Note.find(params[:id])
     render :layout => 'providers_layout.html'
   end
 
@@ -84,8 +97,9 @@ class NotesController < ApplicationController
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
-   @note.service_image1.cache! unless @note.service_image1.blank?
-    if @note.update(note_params)
+        @note = Note.find(params[:id])
+
+    if @note.update(update_note_params)
       redirect_to @note, notice: '編集完了しました'
     else
       render 'edit'
@@ -112,10 +126,25 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :name, :content, :price, :service_image1,:service_image2,:service_image3, :category, :rule,:provider_id,:cancelrule, :salespoint, :catchcopy,:category_id)
+      params.require(:note).permit(:provider_id, :category_id,
+       note_images_attributes: [:image1,:image2,:image3,:image4,:image5,:image6,:image7,:image8,:image9],
+        note_revisions_attributes: [:title, :note_id,:name,:content,:price,:salespoint,:cancelrule,:rule,:catchcopy,:category_id,])
     end
+
+   def update_note_params
+      params.require(:note).permit(:provider_id, :category_id,
+        note_images_attributes: [:image1,:image2,:image3,:image4,:image5,:image6,:image7,:image8,:image9,:_destroy, :id],
+        note_revisions_attributes: [:title, :note_id,:name,:content,:price,:salespoint,:cancelrule,:rule,:catchcopy,:category_id,:_destroy, :id])
+
+    end
+
+
+
+
 
     def user_params
       params.require(:user).permit(:name,  :profile, :area, :email)
     end
 end
+
+

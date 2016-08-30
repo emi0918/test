@@ -1,6 +1,6 @@
 class ProvidersController < ApplicationController
 
- before_action :set_provider, only:[:index,:show,:edit,:update, :destroy]
+ before_action :set_provider, only:[:index,:show,:destroy]
  before_action :authenticate_provider!
 # before_action :configure_sign_up_params, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
@@ -38,7 +38,6 @@ end
 
 
 def mypage
-  
 end
 
 def inbox
@@ -64,9 +63,20 @@ end
 
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
-def provider_params
-  params.require(:provider).permit(:name, :email,:phonenumber, :address, :hours, :holiday, :payment, :password,:about, :provider, :mainpic)
-end
+    def provider_params
+      params.require(:provider).permit(:name,:provider_id,:mainpic,:email,:password,
+      provider_accounts_attributes: [:phonenumber, :staffname],
+      store_infos_attributes: [:hours,:holiday,:payment,:about]
+      )
+    end
+
+    def update_provider_params
+      params.require(:provider).permit(:name,:provider_id,:mainpic,:email,
+      provider_accounts_attributes: [:phonenumber, :staffname,:id, :_destroy],
+      store_infos_attributes: [:hours,:holiday,:payment,:about,:id, :_destroy]
+      )
+    end
+
 
 
 def mailbox

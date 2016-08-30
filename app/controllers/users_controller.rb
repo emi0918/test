@@ -9,9 +9,18 @@ class UsersController < ApplicationController
   @user = User.includes(:reservation)
 end
 
-def history
-  @reservations = current_user.reservations.all.page(params[:page]).per(4).order(:id)
+def reservations
+ @notes = Note.includes(:provider).all
+    @notes = Note.includes(:user).all
+ 
+    @user = User.includes(:reservation)
+      @user = User.includes(:notes)
+  @reservations = current_user.reservations.all.page(params[:page]).per(4).order(:id)    
  end
+
+
+
+
 
 def show
  @notes = @user.notes
