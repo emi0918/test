@@ -43,19 +43,17 @@
  </table>
 
 
-<div class="service_explain">
-    <h2>店舗紹介：</h2> 
-<%= s.about %>  
+<div class="store_explain">
+  <h2>店舗紹介：</h2> 
+<%= simple_format(s.about) %> 
  
     <% if s.about.blank? %>
- プロフィールがまだ記入されていません。
+<p>プロフィールがまだ記入されていません。</p>
     <%end%>
-
-
 </div>
     <%end%>
 
-<div class="service_explain">
+<div class="store_explain">
   <h2>掲載中のサービス：</h2>
 
   
