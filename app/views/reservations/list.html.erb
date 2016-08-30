@@ -14,7 +14,7 @@
 
 <div class="reservation_history_wrapper">
 
-	<h1><%= current_user.name %>さんの予約中サービス </h1>
+  <h1><%= current_user.name %>さんの予約中サービス </h1>
 
  
 <div class="customer_reservations_wrapper">
@@ -25,12 +25,12 @@
     
 
 
-		<% @reservations.each do |reservation| %>
+    <% @reservations.each do |reservation| %>
 
 <div class="reservation_info">
 
     <% reservation.note.note_revisions.each do |note_revision| %>
-	    <h4><%= link_to note_revision.title,detail_note_reservations_path(reservation.note) %></h4>
+      <h4><%= link_to note_revision.title,detail_note_reservations_path(reservation.note) %></h4>
           <% end %>
         <p><%= reservation.note.provider.name %></p>
         <div class="bootstrap">
@@ -38,7 +38,7 @@
 
 </div>
 </div>
-	  <% end %>
+    <% end %>
     
  <% end %>    
 </div>
