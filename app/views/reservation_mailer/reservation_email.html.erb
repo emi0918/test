@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
   </head>
   <body>
-   
-    <h2>  「<%= @title %> 」に予約が来ました！</h2>
-   <p>Seekleをご利用いただき、誠にありがとうございます。</p>
-<p>あなたの掲載中サービス、<br><br>「<%= @title %> 」<br><br>に予約が来ました！</p>
+		<% @reservations.each do |reservation| %>
+ <% reservation.note.note_revisions.each do |note_revision| %>
+ 
+
+ <p>Seekleをご利用いただき、誠にありがとうございます。</p>
+<p>あなたの掲載中サービス、「<%=  note_revision.title %>」に予約が来ました！
+！</p>
 
  <br>============================================================
 <br>
@@ -35,3 +38,5 @@
   </body>
 </html>
 
+<% end%>
+<% end%>
