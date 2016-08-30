@@ -43,10 +43,11 @@
 </table>
 
 
+<div class="store_explain">
+  <h2>店舗紹介：</h2> 
+<%= simple_format(s.about) %> 
 
-<div class="service_explain">
-    <h2>店舗紹介：</h2>
-    <%= s.about %>
+
     <% if s.about.blank? %>
     <%= link_to 'プロフィール編集ページ', '/providers/edit' %>から設定してください。
      <%end%>
