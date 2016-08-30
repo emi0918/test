@@ -11,7 +11,24 @@
 
 }
 
+.store_explain{
+	height:0 auto;
+	width:100%; 
+	margin-left:0%;
+	margin-bottom:15px;
+	margin-top:20px;
+	float:left;
+}
+.store_explain h3{
+	margin-left:750px;
+	margin-top:60px;
+}
 
+.store_explain h1{
+	font-weight: normal;
+	font-size: 22px;
+	margin-bottom: -20px;
+}
 
 
 .provider-introduction_profile h1{
@@ -32,6 +49,6 @@
 
 .provider-introduction_profile p{
 	float:left;
-	padding-right:80px;
-	padding-top:50px
+	padding-right:0px;
+	padding-top:10px
 }
