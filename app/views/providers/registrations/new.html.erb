@@ -6,33 +6,33 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-　<div class="field">
+<div class="field">
     <h3>店舗名</h3>
-
     <%= f.text_field :name, autofocus: true %>
   </div>
+
+ <%= f.fields_for :provider_accounts do |b| %>
 
 
   <div class="field">
     <h3>店長(代表者名)</h3>
-    <%= f.text_field  :name, autofocus: true %>
+    <%= b.text_field  :staffname, autofocus: true %>
   </div>
 
   <div class="field">
     <h3>電話番号</h3>
-    <%= f.text_field  :phonenumber, autofocus: true %>
+    <%= b.text_field  :phonenumber, autofocus: true %>
   </div>
+
 
   <div class="field">
     <h3>メールアドレス</h3>
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+
   <div class="field">
     <h3>パスワード</h3>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
@@ -43,10 +43,21 @@
 
 
 
+ <%= f.fields_for :store_infos do |s| %>
+ <%= s.hidden_field :provider_id %>
+  <%= s.hidden_field :hours %>
+   <%= s.hidden_field :holiday %>
+    <%= s.hidden_field :payment%>
+ <%= s.hidden_field :about %>
+   <%= s.hidden_field :storeimage%>
+
+
   <div class="actions">
     <%= f.submit "プロバイダーとして登録する",:class => 'provider_join_btn' %>
   </div>
-<% end %>
+  <% end %>
+  <% end %>
+    <% end %>
  
 すでにアカウントをお持ちですか？<%= render "providers/shared/links" %>
 </div>
