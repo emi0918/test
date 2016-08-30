@@ -15,22 +15,25 @@
 <%= render 'home/header/dashboardhead' %>
 
 <div class="customer_reservation_provider_info">
-<h4><%= link_to @note.title,  note_path(@note) %></h4>
-<%= @note.price%>円 （税込）
-<p><%= @note.provider.payment%></p>
-<p><%= @note.catchcopy %></p>
+   <% @note.note_revisions.each do |note_revision| %>
+<h4><%= link_to note_revision.title,  note_path(@note) %></h4>
+<%= note_revision.price%>円 （税込）
+   <% @note.provider.store_infos.each do |s| %>
+<p><%= s.payment%></p>
+<p><%= note_revision.catchcopy %></p>
+
 </div>
 
 
 <div class="customer_info_about_reservation">
 
 
-	<h1><%= @note.title%>の予約内容 </h1>
-
+	<h1><%= note_revision.title%>の予約内容 </h1>
+<% end %>
 
  
 <% @note.reservations.each do |reservation| %>
-<div class="bootstrap">
+<div class="bootstrap1">
 
 	<div class="reservations_infomations_wrapper">
 		ご予約受付日：<%= reservation.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
@@ -47,7 +50,8 @@
 		<p>お問い合わせ内容：<%= reservation.message %></p>
 
 </div>
-<% end %>    
+<% end %>
+<% end %>      
 
 
 
