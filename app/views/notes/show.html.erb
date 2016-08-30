@@ -11,18 +11,20 @@
  </div>
 </div>
 
+   <% @note_revisions.each do |note_revision| %>
+    
 
 <div class="provider_wrapper">
   <div class="provider-introduction">
-    <h1>  <%= @note.title %></h1>
+    <h1>  <%= note_revision.title %></h1>
 
-
-
-    <% if @note.service_image1.present? %>
-    <%= image_tag @note.service_image1_url ,class: "face_pic"%>
+ <% @note_images.each do |note_images| %>
+    <% if note_images.image1.present? %>
+    <%= image_tag note_images.image1_url ,class: "face_pic"%>
     <% else %>
     <%= image_tag 'Seekle_icon.png', :class => 'face_pic'%>
     <% end %>
+  
 
     <div class="star-rating" data-score= <%= @avg_review %> ></div>
     <em><%= "#{@reviews.length} 件の口コミ" %></em>
@@ -43,7 +45,7 @@
      </tr>
      <tr>
        <th>料金：</th>
-       <td><%= @note.price%>円 〜</td>
+       <td><%= note_revision.price%>円 〜</td>
      </tr>
    </tbody>
  </table>
@@ -63,14 +65,14 @@
 </div>
 
 <div class="service_explain">
-  <h1><%= @note.catchcopy %></h1>
+  <h1><%= note_revision.catchcopy %></h1>
 </div>
 
 <div class="service_explain">
  <h2>このサービスについて</h2>
  <ul>
 
-  <p><%= simple_format(@note.content) %></p>
+  <p><%= simple_format(note_revision.content) %></p>
 
 </ul>
 </div>
@@ -80,7 +82,7 @@
  <h2>セールスポイント</h2>
  <ul>
 
-  <p><%= simple_format(@note.salespoint) %></p>
+  <p><%= simple_format(note_revision.salespoint) %></p>
 
 </ul>
 </div>
@@ -89,7 +91,7 @@
  <h2>変更とキャンセルについて</h2>
  <ul>
 
-  <p><%= simple_format(@note.cancelrule) %></p>
+  <p><%= simple_format(note_revision.cancelrule) %></p>
 
 </ul>
 </div>
@@ -98,7 +100,7 @@
 <div class="rulesfromprovider">
  <h2>お客様へのお願い</h2>
  <ul>
-   <p> <%= simple_format(@note.rule) %></p>
+   <p> <%= simple_format(note_revision.rule) %></p>
 </div>
 
 
@@ -119,15 +121,48 @@
 
 
       <div class="popup-gallery">
-        <%= link_to image_path @note.service_image1, "data-size" => "1600x1068", "data-med-size" => "1024x683" , "title"=>"dance" do %>
-      <%= image_tag @note.service_image1, width:"75" ,height:"75"%>
+
+
+ <% @note_images.each do |note_images| %>
+
+      <%= link_to image_path note_images.image1 ,"title"=>"愛うdance" do %>
+      <%= image_tag note_images.image1, width:"75" ,height:"75"%>
       <% end %>
- <%= link_to image_path @note.service_image1,  "data-size" => "1600x1068", "data-med-size" => "1024x683", "title"=>"dance" do %>
-      <%= image_tag @note.service_image1, width:"75" ,height:"75"%>
+
+      <%= link_to image_path note_images.image2, "data-size" => "1600x1068", "data-med-size" => "1024x683" , "title"=>"dance" do %>
+      <%= image_tag note_images.image2, width:"75" ,height:"75"%>
       <% end %>
-       <%= link_to image_path @note.service_image1,  "data-size" => "1600x1068", "data-med-size" => "1024x683", "title"=>"dance" do %>
-      <%= image_tag @note.service_image1, width:"75" ,height:"75"%>
+
+      <%= link_to image_path note_images.image3, "data-size" => "1600x1068", "data-med-size" => "1024x683" , "title"=>"dance" do %>
+      <%= image_tag note_images.image3, width:"75" ,height:"75"%>
       <% end %>
+
+      <%= link_to image_path note_images.image4, "data-size" => "1600x1068", "data-med-size" => "1024x683" , "title"=>"dance" do %>
+      <%= image_tag note_images.image4, width:"75" ,height:"75"%>
+      <% end %>
+
+      <%= link_to image_path note_images.image5, "data-size" => "1600x1068", "data-med-size" => "1024x683" , "title"=>"dance" do %>
+      <%= image_tag note_images.image5, width:"75" ,height:"75"%>
+      <% end %>
+
+      <%= link_to image_path note_images.image6, "data-size" => "1600x1068", "data-med-size" => "1024x683" , "title"=>"dance" do %>
+      <%= image_tag note_images.image6, width:"75" ,height:"75"%>
+      <% end %>
+
+     <%= link_to image_path note_images.image7, "data-size" => "1600x1068", "data-med-size" => "1024x683" , "title"=>"dance" do %>
+      <%= image_tag note_images.image7, width:"75" ,height:"75"%>
+      <% end %>
+
+       <%= link_to image_path note_images.image8, "data-size" => "1600x1068", "data-med-size" => "1024x683" , "title"=>"dance" do %>
+      <%= image_tag note_images.image8, width:"75" ,height:"75"%>
+      <% end %>
+
+      <%= link_to image_path note_images.image9, "data-size" => "1600x1068", "data-med-size" => "1024x683" , "title"=>"dance" do %>
+      <%= image_tag note_images.image9, width:"75" ,height:"75"%>
+      <% end %>
+
+
+    <% end %>
 
        
 
@@ -147,8 +182,8 @@
             preload: [0,1] // Will preload 0 - before current, and 1 after the current image
           },
           image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-            titleSrc: function(item) {
+            tError: 'イメージがありません',
+             titleSrc: function(item) {
               return item.el.attr('title') ;
             }
           }
@@ -156,9 +191,6 @@
       });
     </script>
   </div>
-
-
-
 
 
 
@@ -178,6 +210,8 @@
     </div>
     <% end %>
     <% end %>
+    <% end %>
+      <% end %>
   </div>
 </ul>
 </div>
@@ -186,7 +220,7 @@
 </div>
 
 
-
+</div>
 
 
 <script type="text/javascript">
