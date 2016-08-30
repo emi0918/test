@@ -13,8 +13,7 @@ class ReservationsController < ApplicationController
 
 
 def list
-   @reservations = current_user.reservations
-
+   @reservations = Reservation.includes(:note).all
 
 end
   # GET /reservations/1
@@ -29,6 +28,7 @@ def detail
 end
   # GET /reservations/new
   def new
+    
     @reservation = Reservation.new
    authenticate_user!
 
@@ -76,7 +76,6 @@ conversation = current_user.send_message(recipients, confirm_message, confirm_su
  end
 
  
-
 def confirm
   @reservation = Reservation.new(reservation_params) # <=POSTされたパラメータを取得
   render :new if @reservation.invalid? # <=バリデーションチェックNGなら戻す  
@@ -116,5 +115,9 @@ end
     # Never trust parameters from the scary internet, only allow the white list through.
     def reservation_params
       params.require(:reservation).permit(:date, :name,:phone_number,:message,:note_id)
+      
+
+
+
     end
   end
