@@ -5,7 +5,13 @@ class NoteMailer < ApplicationMailer
 
   def note_email(provider, note)
   	 @provider = provider
-    @title = note.title
+
+ @note = Note.includes(:note).all
+
+  
     mail to: note.provider.email, subject: "【Seekle】サービスぺージの掲載が完了しました"
   end
 end
+
+  
+    
