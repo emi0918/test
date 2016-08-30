@@ -1,0 +1,128 @@
+.reservation_history_wrapper{
+	width:75%;
+	margin:4% 13%;
+	 height:0 auto; 
+	}
+
+.reservation_history_wrapper h1{
+	margin-bottom:30px;
+	font-weight:normal;
+}
+
+.reservation_history_wrapper .bootstrap .panel-body{
+	height:230px;
+}
+
+.reservation_history_wrapper .bootstrap .btn-default{
+	margin-left: 70%;
+	margin-top: 6%;
+}
+
+.reservation_note_pic{
+	width:32%;
+	height:100%; 
+	float:left;
+	border-radius:3px;
+}
+
+.reservation_history_wrapper p{
+	line-height: 27px;
+}
+
+.reservation_content{
+	margin-top:30px; 
+	width:58%;
+	margin-left: 37%;
+}
+
+.reservation_content p{
+	margin-left: 50px;
+}
+
+.reservation_history_wrapper .bootstrap a{
+	text-decoration: none; 
+	color:black;
+	 border-left:3px solid #F47503;
+	 font-size: 16px; 
+	 margin-left:28px; 
+	 padding-left: 9px;
+	}
+
+
+
+
+
+
+/* ipad iphone4と5のレスポンシブデザイン */
+@media screen and (min-width: 320px) and (max-width: 374px)
+{
+
+
+}
+
+
+
+
+/* ipad iphone6のレスポンシブデザイン */
+
+@media (min-width: 375px) 
+{
+
+
+
+}
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
+
+.reservation_history_wrapper{
+	width:100%;
+	margin:9% 0%;
+ 
+	}
+
+
+.reservation_history_wrapper h1{
+	font-size: 23px;
+	margin-left: 5%;
+}
+
+
+
+.reservation_history_wrapper .bootstrap a{
+font-size: 13px;
+	 padding-left: 9px;
+	 	 margin-left:10px; 
+	 	
+	}
+
+
+.reservation_content{
+	margin-top:28px; 
+	width:80%;
+	margin-left: 0%;
+}
+
+
+.reservation_content p{
+	line-height: 14px;
+	font-size: 10px;
+}
+
+.reservation_note_pic{
+
+display:none;
+}
+
+
+
+.reservation_history_wrapper .bootstrap .btn-default{
+	margin-left: 0%;
+	margin-top: 6%;
+	font-size: 12px;
+}
+
+
+}
