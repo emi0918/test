@@ -8,6 +8,7 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
+
   <table class="newpost">
  
 
@@ -18,21 +19,7 @@
   </td>
 </tr>
 
-   <tr>
-   <th> <p>営業時間<span class="form-label required">必須</span></p></th>
-   <td>
-    <%= f.text_field :hours, class: 'form-control',placeholder:"8時～15時受付まで対応可" %>
-  </td>
-</tr>
-
  <tr>
-   <th> <p>定休日<span class="form-label required">必須</span></p></th>
-   <td>
-    <%= f.text_field :holiday, class: 'form-control',placeholder:"不定休" %>
-  </td>
-</tr>
-
-  <tr>
    <th> <p>住所<span class="form-label required">必須</span></p></th>
    <td>
     <%= f.text_field :address, class: 'form-control',placeholder:"〒123-4567 
@@ -40,34 +27,57 @@
   </td>
 </tr>
 
+   <%= f.fields_for :store_infos do |s| %>
+
+  
+<tr>
+ <th> <p>店舗概要<span class="form-label required">必須</span> </p></th>
+ <td>
+  <%= s.text_area :about, class: 'content-area',placeholder:"お店の特徴、提供サービスへの思い、オススメポイントなどを紹介しましょう" %>
+</td>
+</tr>
+
+   <tr>
+   <th> <p>営業時間<span class="form-label required">必須</span></p></th>
+   <td>
+    <%= s.text_field :hours, class: 'form-control',placeholder:"8時～15時受付まで対応可" %>
+  </td>
+</tr>
+
+ <tr>
+   <th> <p>定休日<span class="form-label required">必須</span></p></th>
+   <td>
+    <%= s.text_field :holiday, class: 'form-control',placeholder:"不定休" %>
+  </td>
+</tr>
+
+ 
+
   <tr>
    <th> <p>お支払い方法<span class="form-label required">必須</span></p></th>
    <td>
-    <%= f.text_field :payment, class: 'form-control',placeholder:"現金・クレジットカード" %>
+    <%= s.text_field :payment, class: 'form-control',placeholder:"現金・クレジットカード" %>
   </td>
 </tr>
+
+
+
+ <%= f.fields_for :provider_accounts do |a| %>
 
   <tr>
    <th> <p>電話番号<span class="form-label required">必須</span></p></th>
    <td>
-    <%= f.text_field :phonenumber, class: 'form-control',placeholder:"1234-56-7890" %>
+    <%= a.text_field :phonenumber, class: 'form-control',placeholder:"1234-56-7890" %>
   </td>
 </tr>
 
-
-<tr>
- <th> <p>店舗概要<span class="form-label required">必須</span> </p></th>
- <td>
-  <%= f.text_area :about, class: 'content-area',placeholder:"お店の特徴、提供サービスへの思い、オススメポイントなどを紹介しましょう" %>
-</td>
-</tr>
 
 
 <tr>
  <th> <p>店舗写真<span class="form-label required">必須</span> </p></th>
  <td>
   <%= f.file_field :mainpic, class: "form-control image-field" %>
-   <%= f.hidden_field :mainpic_cache %>
+  
 </td>
 </tr>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -80,6 +90,8 @@
 
     <%= f.submit "編集を更新する",  :class => 'btn btn-default'%>
 
+<% end %>
+<% end %>
 <% end %>
 
 <h3>アカウントを削除する</h3>
