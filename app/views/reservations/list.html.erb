@@ -19,18 +19,24 @@
  
 <div class="customer_reservations_wrapper">
 
- <% if current_user.reservations.blank? %>
+ <% if @reservations.blank? %>
   <h3>予約中のサービスはまだありません</h3>
  <% else %>
-    <div class="bootstrap">
+    
+
 
 		<% @reservations.each do |reservation| %>
 
 <div class="reservation_info">
-	    <h4><%= link_to reservation.note.title,detail_note_reservations_path(reservation.note) %></h4>
+
+    <% reservation.note.note_revisions.each do |note_revision| %>
+	    <h4><%= link_to note_revision.title,detail_note_reservations_path(reservation.note) %></h4>
+          <% end %>
         <p><%= reservation.note.provider.name %></p>
+        <div class="bootstrap">
         <%= link_to "お問い合わせする",  new_note_conversation_path(reservation.note),:class =>'btn btn-default' %>   
 
+</div>
 </div>
 	  <% end %>
     
