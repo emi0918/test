@@ -12,20 +12,25 @@
 
       <% else %>
       <ul>
+   
        <% @notes.each do |note|  %>
        <li> 
          <div class="panel panel-default">
            <div class="panel-heading">
-            <%= link_to note.title, note_path(note) %> 　 <%= note.reservations.count %>件の予約があります！
+           <% note.note_revisions.each do |note_revision| %>
+
+            <%= link_to note_revision.title, note_path(note) %>
+                 <% end %> 　 <%= note.reservations.count %>件の予約があります！
+
           </div>
           <div class="panel-body-list">
-
-            <% if note.service_image1.present? %>
-             <%= image_tag note.service_image1_url ,class: "service_image"%>
+  <% note.note_images.each do |note_images| %>
+        <% if note_images.image1.present? %>
+             <%= image_tag note_images.image1_url ,class: "service_image"%>
             <% else %>
              <%= image_tag 'Seekle_icon.png', :class => 'service_image'%>
             <% end %>
-
+       <% end %>
 
         
            <%= link_to '予約を確認する', note_reservations_path(note), class:"btn btn-default" %>
@@ -37,6 +42,12 @@
    <% end %>
  </div>
 </div>
+
+
+
+
+
+
 
 
 <div class="bootstrap">
