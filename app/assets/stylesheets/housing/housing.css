@@ -4,37 +4,43 @@
  	height:1000px
  }
 
+
+
+
  .top_home_page{
- 	height:280px;width:100%;margin-top: -34px;
+  height:280px;
+  width:100%;
+  margin-top: -34px;
  }
 
   .top_home_page h1{
-  	text-align: center;
-  	font-size:50px;
+    text-align: center;
+    font-size:50px;
     padding-top:78px;
   }
 
  .top_home_page h3{
- 	text-align: center;
- 	font-size:15px;
+  text-align: center;
+  font-size:15px;
  }
 
- .home-all-wrapper h2{
- 	margin-left:132px; 
- 	margin-top: 2.5%;
+
+ .categories h2{
+  margin-left:7.4%; 
+  margin-top: 4%;
  }
 
- .categories ul{
- 	margin-left:92px;
- 	margin-top: -19px;
+
+ .categories {
+ 	margin-left:6.7%;
+width:90%;
  }
 
 
  .categories ul li{
  	height:140px;
- 	margin-top:30px;
- 	margin-left:10px;
- 	padding:3px;
+margin:1%;
+margin-bottom: 2%;
  	width:21%;
  	font-size:17px;
  	border-radius:4px
@@ -75,30 +81,61 @@
 
 
 
-.provider_service_pictures,.reviews_providers,.rulesfromprovider{
-	float:left;
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
+
+
+ 
+ .home-all-wrapper{
+  height:2000px
+ }
+
+
+
+ .top_home_page{
+  height:200px;
+  width:100%;
+  margin-top: -34px;
+ }
+
+
+  .top_home_page h1{
+    text-align: center;
+    font-size:50px;
+    padding-top:40px;
+
+  }
+
+ .top_home_page h3{
+  text-align: center;
+  font-size:15px;
+
+ }
+
+
+
+
+ .categories {
+  margin-left:-5%;
+width:100%;
+ }
+
+
+ .categories ul li{
+  margin-top: 10%;
+  height:140px;
+
+margin-bottom: 5%;
+  width:100%;
+  font-size:17px;
+  border-radius:4px
+ }
+
+
+
 }
 
-.provider_wrapper h2{
-  font-weight: normal;
-  padding-left: 10px;
-  border-left: solid 3px  #f18d00;
-  font-size: 18px;
-  font-weight: 700;
-}
 
 
-.provider_introduction h3{margin-left: 30%; width:20%;}
-
-
-.service-price_provider h1{color:#fff;text-align:center;font-size:40px;padding-top:28px}
-.service-price_provider{background-color:orange;margin-top:-27px;height:100px}
-.fa-jpy{padding-right:16px;font-size:46px}
-
-.provider_service_pictures{width:73%;height:420px; margin-left:1%}
-.service_pic{float:left;width:270px;height:300px;margin-top:60px;margin-left:15px}
-.rulesfromprovider{width:73%;height:0 auto;margin-left:14%; margin-bottom:20px;}
-
-
-.main-image{background-color:gray;height:360px;}
 
