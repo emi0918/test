@@ -16,45 +16,45 @@
     <%= current_provider.name %>
   </div>
 
-
- <div class="field">
-    <h3>営業時間</h3>
-    <%= current_provider.hours %>
-  </div>
-  
- <div class="field">
-    <h3>店舗概要</h3>
-   <%= current_provider.about %>
-  </div>
-
-
-   <div class="field">
-    <h3>定休日</h3>
-   <%= current_provider.holiday %>
-  </div>
-
-  <h2>店舗の基本情報</h2>
-
-
-   <div class="field">
+    <div class="field">
     <h3>住所</h3>
     <%= current_provider.address %>
   </div>
 
-    <div class="field">
-    <h3>お支払い方法</h3>
-    <%= current_provider.payment %>
-  </div>
-
-  <div class="field">
-    <h3>電話番号</h3>
-   <%= current_provider.phonenumber %>
-  </div>
 
   <div class="field">
     <h3>メールアドレス</h3>
    <%= current_provider.email %>
   </div>
 
-</div>
 
+
+   <% current_provider.store_infos.each do |s| %>
+ <div class="field">
+    <h3>営業時間</h3>
+    <%= s.hours %>
+  </div>
+
+ <div class="field">
+    <h3>店舗概要</h3>
+   <%= s.about %>
+  </div>
+
+
+   <div class="field">
+    <h3>定休日</h3>
+   <%= s.holiday %>
+  </div>
+
+
+
+ 
+    <div class="field">
+    <h3>お支払い方法</h3>
+    <%= s.payment %>
+  </div>
+
+
+
+</div>
+  <%end%>
