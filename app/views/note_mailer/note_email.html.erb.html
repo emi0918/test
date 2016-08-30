@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
   </head>
   <body>
-   
-    <h1>「<%= @title %> 」の掲載が完了しました。</h1>
+   <% @note.note_revisions.each do |note_revision| %>
+
+    <h1>「<%= note_revision.title %> 」の掲載が完了しました。</h1>
    <p>Seekleをご利用いただき、誠にありがとうございます。</p>
 <p>サービスぺージの作成が完了し、掲載が完了しました。</p>
 
@@ -32,3 +33,4 @@
 <br>────────────────────────────────
   </body>
 </html>
+<% end %>
