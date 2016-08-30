@@ -8,7 +8,9 @@
 </div>
 
 <div class="reservations_list">
-<h1> <%= @note.title %>にされている予約一覧</h1>
+<% @note.note_revisions.each do |note_revision| %>
+<h1> <%= note_revision.title %>にされている予約一覧</h1> 
+<% end %>
 <div class="bootstrap">
 
   <% if @note.reservations.blank? %>
