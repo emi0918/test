@@ -9,11 +9,13 @@ layout "providers_layout"
 
 def new
   @provider=Provider.new
+  @provider.provider_accounts.build #追加
+   @provider.store_infos.build #追加
 end
 
-  def edit
-    @provider.mainpic.cache! unless @provider.mainpic.blank?
-  end
+def edit
+
+end
 
 def create
   @provider = Provider.new(provider_params)
@@ -26,24 +28,35 @@ def create
   end
 end
 
-  def update
-   @provider.mainpic.cache! unless @provider.mainpic.blank?
-    if @provider.update(provider_params)
+def update
+
+    if @provider.update(update_provider_params)
       redirect_to profile_providers_path
     else
       render 'edit'
     end
-  end
+end
 
 
-  private
+private
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
-    def provider_params
-      params.require(:provider).permit(:name, :email,:phonenumber, :address, :hours, :holiday, :payment, :password,:about, :provider, :mainpic)
+  def provider_params
+      params.require(:provider).permit(:name,:provider_id,:mainpic,:email,:password,
+      provider_accounts_attributes: [:phonenumber, :staffname],
+      store_infos_attributes: [:hours,:holiday,:payment,:about]
+      )
     end
-    
 
+    def update_provider_params
+      params.require(:provider).permit(:name,:provider_id,:mainpic,:email,
+      provider_accounts_attributes: [:phonenumber, :staffname,:id, :_destroy],
+      store_infos_attributes: [:hours,:holiday,:payment,:about,:id, :_destroy]
+      )
+    end
+
+
+    
   # GET /resource/sign_up
   # def new
   #   super
