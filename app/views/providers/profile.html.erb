@@ -1,36 +1,32 @@
 <%= render 'providers/header' %>
 
 
-<div class="mypage-all_wrapper">
-   <h1><%= current_provider.name %>さんのページ  </h1>
-
-     <a class="profile_edit" href="/providers">
-     <i class="fa fa-pencil" aria-hidden="true"></i>プロフィールを編集</a>
+<div class="provider_wrapper">
+  <div class="provider-introduction_profile">
+ <h1><%= current_provider.name %>さんのページ  </h1>
 
 
- <div class="left-wrapper">
  <% if current_provider.mainpic? %>
-    <%= image_tag current_provider.mainpic.url, :class => 'mypage-picture'%>
+    <%= image_tag current_provider.mainpic.url, :class => 'provider_main_pic'%>
   <% else %>
-    <%= image_tag 'Seekle_icon.png', :class => 'mypage-picture'%>
+    <%= image_tag 'Seekle_icon.png', :class => 'provider_main_pic'%>
   <% end %>
 
-</div>
 
 
- <div class="mypage_wrapper">
+   <% current_provider.store_infos.each do |s| %>
   <table class="sample_03">
    <tbody>
     <tr>
     
     <tr>
      <th>営業時間：</th>
-      <td><%= current_provider.hours %></td>
+      <td><%= s.hours %></td>
     </tr>
 
      <tr>
      <th>定休日：</th>
-      <td> <%= current_provider.holiday %></td>
+      <td> <%= s.holiday %></td>
     </tr>
 
     <tr>
@@ -40,19 +36,25 @@
     
     <tr>
     <th>お支払い：</th> 
-      <td><%= current_provider.payment %></td>
+      <td><%= s.payment %></td>
     </tr>
    
   </tbody>
 </table>
 
-  <div class="about-profiles">
-    <h3>店舗紹介：</h3> <p><%= current_provider.about %>
-    <% if current_provider.about.blank? %>
+
+
+<div class="service_explain">
+    <h2>店舗紹介：</h2>
+    <%= s.about %>
+    <% if s.about.blank? %>
     <%= link_to 'プロフィール編集ページ', '/providers/edit' %>から設定してください。
      <%end%>
-    </p>
+  
 
   </div>
- </div>
+  </div>
 
+
+</div>
+<% end %>
