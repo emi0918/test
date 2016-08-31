@@ -3,11 +3,14 @@
 
   </div>
 </div>
-
+<%= render 'home/header/dashboardhead' %>
 
 <div class="provider_wrapper">
   <div class="provider-introduction_profile">
-    <h1>  <%= @note.provider.name %></h1>
+
+ <%= link_to "戻る", :back , class: "return"%>
+
+     <h1><%= @note.provider.name %></h1>
 
     <% if @note.provider.mainpic? %>
     <%= image_tag @note.provider.mainpic.url,class: "provider_main_pic"%>
