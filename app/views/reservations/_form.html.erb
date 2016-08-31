@@ -8,53 +8,6 @@
 
 
 
-<script type="text/javascript">
-$(function(){
-
-　$("#datepicker").datepicker({
- 
-Format: 'yy年mm月dd日', //表示フォーマット
- minDate: '+2', //現在から２日後から選択可能にする
- 
-　onClose : function(){
-　this.focus();
-　　}
-　})
-});
- </script>
-
-<script type="text/javascript">
-$(function(){
-
-　$("#datepicker2").datepicker({
- 
-Format: 'yy年mm月dd日', //表示フォーマット
- minDate: '+2', //現在から２日後から選択可能にする
- 
-　onClose : function(){
-　this.focus();
-　　}
-　})
-});
- </script>
-
-<script type="text/javascript">
-$(function(){
-
-　$("#datepicker3").datepicker({
- 
-Format: 'yy年mm月dd日', //表示フォーマット
- minDate: '+2', //現在から２日後から選択可能にする
- 
-　onClose : function(){
-　this.focus();
-　　}
-　})
-});
- </script>
-
-
-
 <div class="reservation-confirm">
   <div class="bootstrap">
   
@@ -74,34 +27,36 @@ Format: 'yy年mm月dd日', //表示フォーマット
 
     <table class="newpost">
 
+
+
       <tr>
        <th> <p>ご希望の日程 <span class="form-label required">必須</span></p></th>
        <td>
-       第１候補　<%= f.text_field :date, :id => 'datepicker', placeholder: ' YYYY/MM/DD' , readonly:"true" %>
+       第１候補　<%= f.text_field :workdate1, :id => 'reservation_reservation_dates_attributes_0_workdate1', placeholder: ' YYYY/MM/DD' , readonly:"true" %>
 
-           希望時間  <%= select :p, :times, @times, include_blank: '選択してください'%>
+          希望時間   <%= f.select :worktime1, [["いつでも良い","いつでも"] ,["07:00"],["08:00"],["09:00"], ["10:00"], ["11:00"],["12:00"],["13:00"],["14:00"],["15:00"],["16:00"],["17:00"],["18:00"],["19:00"],["20:00"],["21:00"],["22:00"],["特に決まっていない"]], include_blank: '選択してください' %>
       </td>
     </tr>
+
+
+
 
 
       <tr>
        <th></th>
        <td>
-       第２候補　<%= f.text_field :date, :id => 'datepicker2', placeholder: 'YYYY/MM/DD' , readonly:"true" %>
-         希望時間  <%= select :p, :times, @times, include_blank: '選択してください'%>
+       第２候補　<%= f.text_field :workdate2, :id => 'reservation_reservation_dates_attributes_0_workdate2', placeholder: ' YYYY/MM/DD' , readonly:"true" %>
+         希望時間   <%= f.select :worktime2, [["いつでも良い"] ,["07:00"],["08:00"],["09:00"], ["10:00"], ["11:00"],["12:00"],["13:00"],["14:00"],["15:00"],["16:00"],["17:00"],["18:00"],["19:00"],["20:00"],["21:00"],["22:00"],["特に決まっていない"]], include_blank: '選択してください' %>
       </td>
     </tr>
-
-
 
  <tr>
        <th></th>
        <td>
-       第３候補　<%= f.text_field :date, :id => 'datepicker3', placeholder: 'YYYY/MM/DD' , readonly:"true" %>
-        希望時間  <%= select :p, :times, @times, include_blank: '選択してください'%>
+       第３候補　<%= f.text_field :workdate3, :id => 'reservation_reservation_dates_attributes_0_workdate3', placeholder: ' YYYY/MM/DD' , readonly:"true" %>
+        希望時間   <%= f.select :worktime3, [["いつでも良い"] ,["07:00"],["08:00"],["09:00"], ["10:00"], ["11:00"],["12:00"],["13:00"],["14:00"],["15:00"],["16:00"],["17:00"],["18:00"],["19:00"],["20:00"],["21:00"],["22:00"],["特に決まっていない"]], include_blank: '選択してください' %>
       </td>
     </tr>
-
 
 
 
@@ -131,6 +86,11 @@ Format: 'yy年mm月dd日', //表示フォーマット
   </td>
 </tr>
 
+
+
+
+
+
 <tr>
  <th> <p>詳細予約内容 <span class="form-label required">必須</span></p></th>
  <td>
@@ -139,15 +99,66 @@ Format: 'yy年mm月dd日', //表示フォーマット
 </tr>
 </table>
 
+
+
+
 <%= f.submit '予約内容を確認する', class:'shadow_btn', data:{ disable_with: "・・・"} %>
 <%= link_to "サービスページへ戻る", :back %>
-</div>
 
 <% end %>
 
 </div>
+</div>
 
 
 
+
+
+
+
+<script type="text/javascript">
+$(function(){
+
+　$("#reservation_reservation_dates_attributes_0_workdate1").datepicker({
+ 
+Format: 'yy年mm月dd日', //表示フォーマット
+ minDate: '+2', //現在から２日後から選択可能にする
+ 
+　onClose : function(){
+　this.focus();
+　　}
+　})
+});
+ </script>
+
+<script type="text/javascript">
+$(function(){
+
+　$("#reservation_reservation_dates_attributes_0_workdate2").datepicker({
+ 
+Format: 'yy年mm月dd日', //表示フォーマット
+ minDate: '+2', //現在から２日後から選択可能にする
+ 
+　onClose : function(){
+　this.focus();
+　　}
+　})
+});
+ </script>
+
+<script type="text/javascript">
+$(function(){
+
+　$("#reservation_reservation_dates_attributes_0_workdate3").datepicker({
+ 
+Format: 'yy年mm月dd日', //表示フォーマット
+ minDate: '+2', //現在から２日後から選択可能にする
+ 
+　onClose : function(){
+　this.focus();
+　　}
+　})
+});
+ </script>
 
 
