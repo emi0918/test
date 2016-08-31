@@ -138,6 +138,7 @@ margin-top: 5%;
 .service-price h3{
 	font-weight:1px;
 	float:right;
+	color:#B22222;
 
 }
 .service-price span{
@@ -173,6 +174,12 @@ margin-top: 5%;
 
     margin-left: 0px;
  }
+
+.service-price h3{
+
+	color:#B22222;
+
+}
 
 
 
