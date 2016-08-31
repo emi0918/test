@@ -11,64 +11,66 @@
 	font-size:14px
 }
 
+.published_service_wrapper{
+	margin-top: 0%;
+	width:73%;
+	margin-left:13.8%;
+}
+
  .left-other-housing{
+
  	float:left;
- 	margin-top: 40px;
+ 	
  	height:1400px;
- 	display:block;
- 	clear:both;
+    width:22%;
+
  }
 
 
  .services_right_wrapper{
-    width:73%;
-    float:right;
-    margin-left: 28px;
+    width:99%;
+
+ 
  }
 
  .other-jobs-menu{
- 	margin-left:96px;
+ 	width:100%;
  	line-height:30px
+
  }
 
- .other-jobs-menu ul li{
- 	color:#696969
+ .other-jobs-menu li{
+ 	color:#4682B4;
+ 	text-align:left;
  }
 
- .find-wrapper{
- 	float:right;
- }
 
- .search-provider{
- 	margin-right:30px;
- 	margin-top:26px;
- 	float:left;
- 	width:1000px;
- 	height:1800px
- }
+
+ 
+
+
  .create_requirement{
  	margin-top:10px;
  	margin-left:32px
  }
 
  .provider_service_image{
- 	border-radius: 16px;
- 	width:30%;
- 	height:180px;
+clear:both;
+ 	width:27%;
+ 	height:150px;
  	float:left;
- 	padding:10px;
+ 	padding-top:0px;
  	}
 
  .provider_job{
- 	height:200px;
- 	border:1px solid gray;
- 	width:80%;
+ 	height:230px;
+ 	border-bottom:1px solid #C0C0C0;
+ 	width:77%;
  	position:relative;
  	margin-top:10px;
- 	margin-bottom:18px;
- 	
+ 	margin-bottom:0px;
  	float:left;
- 	border-radius: 6px;
+ 	
  }
 
 
@@ -89,9 +91,35 @@
 }
 
 
+.service_catchcopy_top{
+
+width:70%;
+margin-left: 30%;
+}
+
+.service_catchcopy_top p{
+	text-align: left;
+	margin-left: 0px;
+}
+
+
+.store_name_left{
+
+width:70%;
+margin-left: 30%;
+
+}
+
+
+.store_name_left p{
+	text-align: left;
+	margin-left: 0px;
+	font-size: 17px;
+}
+
 .title h2{
-	margin-top:10px;
-	font-size:16px;
+	margin-bottom:10px;
+	font-size:18px;
 }
 
 .provider_image{
@@ -102,22 +130,68 @@
 }
 
 .show_providers{
-	margin-top:50px;
+
 	margin-bottom:90px;
 
 }
 
-.service-price{
-	font-weight:1px
+.service-price h3{
+	font-weight:1px;
+	float:right;
+
 }
-.clearfix:after{
-	content:"";
-	display:block;
-	clear:both
+.service-price span{
+	font-size: 70%;
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 .footer-bottom{
 	clear:both
 }
+
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
+
+ .left-other-housing{
+ 	display:none;
+ }
+.published_service_wrapper{
+	width:100%;
+	margin-left:0%;
+}
+
+  .services_right_wrapper{
+    width:100%;
+
+    margin-left: 0px;
+ }
+
+ .provider_job{
+ 	
+ 	height:210px;
+ 
+ 	width:100%;
+ 	position:relative;
+ 	margin-top:10px;
+ 	margin-bottom:1px;
+
+ 	border-radius: 0px;
+ }
+ 
+.provider_service_image{
+ 	border-radius:0px;
+ 	width:33%;
+ 	height:80%;
+ 	float:left;
+ 	padding:0px;
+ 	}
+
+ 
+}
+
 
 
