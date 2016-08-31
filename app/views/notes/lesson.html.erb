@@ -42,51 +42,53 @@
 </div>
 </div>
 
+
 <div class="services_right_wrapper">
 
-<div class="show_providers clearfix">
-  <p><%= @notes.count %>件のサービスが見つかりました</p>
-  <ul>
-   <% @notes.each do |note| %>
-   <div class="provider_job ">
-     
-    <div class="provider_job ">
-     
-     <% note.note_images.each do |note_images| %>
+
+      <div class="show_providers">
+
+  
+<%= @notes.count %>件のサービスが見つかりました
+     <% @notes.each do |note| %>
+
+     <div class="provider_job ">
+ <% note.note_revisions.each do |note_revision| %>
+      <div class="title"><h2> <%= link_to note_revision.title, note_path(note) %></h2>
+      <% note.note_images.each do |note_images| %>
       <% if note_images.image1.present? %>
       <%= link_to image_tag( note_images.image1_url, { :class => "provider_service_image"}), note_path(note) %>
       <% else %>
       <%= link_to image_tag( 'Seekle_icon.png', { :class => "provider_service_image"}), note_path(note) %>
       <% end %>
-
-      
-         <% end %>
-    <div class="title"><h2> <%= link_to note.title, note_path(note) %></h2>
-     <div class="service-price"><h3> ¥<%= note.price %></h3> </div>
-     <% if note.provider.mainpic.present? %>
-     <%= image_tag note.provider.mainpic.url, :class => 'provider_image'%>
-     <% else %>
-     <%= image_tag 'Seekle_icon.png', :class => 'provider_image'%>
      <% end %>
+
+
+    <div class="service_catchcopy_top"> 
+     <p><%= note_revision.catchcopy.truncate(37, omission: '...' )%></p>
+    </div>
+
+     <div class="store_name_left">
+     <p><%= link_to note.provider.name,profile_note_path(note) %></p>
+     </div>
+       <div class="service-price"><h3> <%= note_revision.price %>円<span>(税込)</span>〜</h3> </div>
+       <% end %>
+     </div>
+   </div>
+   <% end %>
+
+
+
+
+ <div class="bootstrap">
+   <div class="list-number-2 clearfix">
+     <%= paginate(@notes) %>
    </div>
  </div>
- <% end %>
-</ul>
-
-
-
-
-<div class="bootstrap">
- <div class="list-number-2 clearfix">
-   <%= paginate(@notes) %>
-   
- </div>
-</div>
 
 </div>
 
 </div>
 </div>
-
 
 
