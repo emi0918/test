@@ -4,11 +4,19 @@
 
 
 <%= form_for([@note, @reservation] ) do |f| %>
+
    <div class="field">
     <h3>ご予約日</h3> 
-    <%= @reservation.date %>
-    <%= f.hidden_field :date %>
+ <p> 希望日時１：  <%= @reservation.workdate1 %> 　<%= @reservation.worktime1 %> </p>
+   <%= f.hidden_field :workdate1 %>    <%= f.hidden_field :worktime1 %>
+  <p> 希望日時２：  <%= @reservation.workdate2 %>   　<%= @reservation.worktime2 %></p>
+  <%= f.hidden_field :workdate2 %>    <%= f.hidden_field :worktime2 %>
+   <p> 希望日時３：  <%= @reservation.workdate3 %>   　<%= @reservation.worktime3 %></p>
+   <%= f.hidden_field :workdate3 %>    <%= f.hidden_field :worktime3 %>
 </div>
+
+ 
+
 
  <div class="field">
     <h3>お名前</h3> 
@@ -41,6 +49,6 @@
   <div class="actions">
     <%= f.submit '仮予約する' ,:class => 'shadow_btn',data:{ disable_with: "予約中・・・"} %>
 </div>
-<% end %>
 
+<% end %>
 </div></div>
