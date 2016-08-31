@@ -43,13 +43,14 @@
 </div>
 </div>
 
+
 <div class="services_right_wrapper">
 
-<p><%= @notes.count %>件のサービスが見つかりました</p>
+
       <div class="show_providers">
 
-
- 
+  
+<%= @notes.count %>件のサービスが見つかりました
      <% @notes.each do |note| %>
 
      <div class="provider_job ">
@@ -80,7 +81,6 @@
 
 
 
-
  <div class="bootstrap">
    <div class="list-number-2 clearfix">
      <%= paginate(@notes) %>
@@ -91,3 +91,5 @@
 
 </div>
 </div>
+
+
