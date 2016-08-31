@@ -39,11 +39,12 @@
 		ご予約受付日：<%= reservation.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
 		<p><%= @note.provider.name %>へのお申し込み</p>
 		<p><i class="fa fa-envelope-o" aria-hidden="true"></i><%= link_to "お問い合わせする",  new_note_conversation_path(reservation.note) %> </p>
+		
 
-		<h5>予約候補日</h5>
-		<p>候補１：<%= reservation.date.strftime("%Y年%m月%d日") %></p>
-		<p>候補１：<%= reservation.date.strftime("%Y年%m月%d日") %></p>
-		<p>候補１：<%= reservation.date.strftime("%Y年%m月%d日") %></p>
+		<h5>予約希望日</h5>
+		<p>希望日時１： <%= reservation.workdate1 %> 　<%= reservation.worktime1 %> </p>
+		<p>希望日時２： <%= reservation.workdate2 %> 　<%= reservation.worktime2 %> </p>
+		<p>希望日時３： <%= reservation.workdate3%> 　<%= reservation.worktime3 %> </p>
 		<h5>お客様のご連絡先</h5>
 		<p>氏名：<%= reservation.name %></p>
 		<p>電話：<%= reservation.phone_number %></p>
@@ -52,7 +53,6 @@
 </div>
 <% end %>
 <% end %>      
-
 
 
 
