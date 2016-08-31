@@ -81,24 +81,21 @@ margin-bottom: 2%;
 
 
 
-
 /* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
 @media screen and (max-width: 414px) {
-
-
  
  .home-all-wrapper{
   height:2000px
  }
-
-
+ .home-all-wrapper .bootstrap{
+  margin:0px;
+ }
 
  .top_home_page{
   height:200px;
   width:100%;
   margin-top: -34px;
  }
-
 
   .top_home_page h1{
     text-align: center;
@@ -113,25 +110,32 @@ margin-bottom: 2%;
 
  }
 
-
-
-
  .categories {
-  margin-left:-5%;
+  margin-left:0%;
 width:100%;
  }
-
 
  .categories ul li{
   margin-top: 10%;
   height:140px;
-
-margin-bottom: 5%;
-  width:100%;
+  margin-bottom: 5%;
+  margin-right: 0%;
+    margin-left: 0%;
+width:88%;
   font-size:17px;
   border-radius:4px
  }
 
+
+
+ .categories h2{
+display:none;
+ }
+
+
+ .bootstrap{
+  margin:0px;
+ }
 
 
 }
