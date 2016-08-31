@@ -199,11 +199,32 @@ display:none;
  
 .provider_service_image{
  	border-radius:0px;
- 	width:33%;
- 	height:90%;
+
+ 	height:80%;
  	float:left;
  	padding:0px;
  	}
+
+
+
+.list-number-2{
+  margin-left: 26%;
+margin-top: 10%;
+clear:both;
+
+}
+
+
+
+
+.store_name_left{
+width:0%;
+margin-left: 0%;
+clear:both;
+float: left;
+
+}
+
 
  
 }
