@@ -46,12 +46,11 @@
 
 <div class="services_right_wrapper">
 
-<p><%= @notes.count %>件のサービスが見つかりました</p>
+
       <div class="show_providers">
 
-    <ul>
-
- 
+  
+<%= @notes.count %>件のサービスが見つかりました
      <% @notes.each do |note| %>
 
      <div class="provider_job ">
@@ -78,7 +77,6 @@
      </div>
    </div>
    <% end %>
- </ul>
 
 
 
@@ -93,3 +91,5 @@
 
 </div>
 </div>
+
+
