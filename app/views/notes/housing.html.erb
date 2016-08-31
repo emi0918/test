@@ -15,7 +15,9 @@
   <div class="other-jobs-menu">
 
 
-   <h4>住まいカテゴリ</h4>
+   住まいカテゴリ
+   <br/>
+   <br/>
 
      <li>不用品回収</li>
      <li>リモデル</li>
@@ -45,12 +47,11 @@
 
 <div class="services_right_wrapper">
 
-<p><%= @notes.count %>件のサービスが見つかりました</p>
+
       <div class="show_providers">
 
   
-
- 
+<%= @notes.count %>件のサービスが見つかりました
      <% @notes.each do |note| %>
 
      <div class="provider_job ">
