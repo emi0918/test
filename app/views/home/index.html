@@ -1,150 +1,128 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <%= render 'home/header/dashboardhead' %>
- <div class="top-wrapper">
 
-  <div class="container">
-   <div class="background-image">
-    <a img="https://static.pexels.com/photos/7075/people-office-group-team.jpg">
-     </a>
-      </div>
-       <h1>登録費無料の簡単サービス依頼</h1>
-       <p>あなたの求める全てのサービスがここに集まります</p>
+<div class="top-wrapper">
+ <div class="background-image">
+  <a img="https://static.pexels.com/photos/7075/people-office-group-team.jpg">
+  </a>
+</div>
 
-   <div class="bootstrap"><%= link_to "プロバイダーとして参加", 'http://goo.gl/forms/y9P0l9bh5OFkPs1J3', class: "btn btn-lg btn-primary" %></div>
-  </div>
- </div>
-
-
+<h1>明確な業者比較に簡単オンライン予約！</h1>
+<p>No More 業者選びの失敗！</p>
+<div class="bootstrap"><%= link_to "プロバイダーとして参加", 'http://goo.gl/forms/y9P0l9bh5OFkPs1J3', class: "btn btn-lg btn-primary" %></div>
+</div>
 
 <div class="web-menu-var">
  <div class="dropmenu">
   <div class="wrapper">
- 
     <li><a href="/category/housing"><i class="fa fa-home fa-fw"></i>住まい</a></li>
     <li><a href="/category/event"><i class="fa fa-glass fa-fw"></i>イベント</a></li>
     <li><a href="/category/lesson"><i class="fa fa-book fa-fw"></i>習い事</a></li>
     <li><a href="/category/health"><i class="fa fa-heart fa-fw"></i>健康</a></li>
     <li><a href="/category/others"><i class="fa fa-list-ul fa-fw"></i>その他</a></li>
-
-
   </div>
- </div>
-
 </div>
-
+</div>
 
 
 <div class="responsive-menu-var">
-
  <div class="dropmenu">
   <div class="wrapper">
-  <nav id="scroll-menu">
- <ul class="scroll-menu-inner">
+   <nav id="scroll-menu">
+    <ul class="scroll-menu-inner">
     <li><a href="/category/housing"><i class="fa fa-home fa-fw"></i>住まい</a></li>
     <li><a href="/category/event"><i class="fa fa-glass fa-fw"></i>イベント</a></li>
     <li><a href="/category/lesson"><i class="fa fa-book fa-fw"></i>習い事</a></li>
     <li><a href="/category/health"><i class="fa fa-heart fa-fw"></i>健康</a></li>
     <li><a href="/category/others"><i class="fa fa-list-ul fa-fw"></i>その他</a></li>
-   </ul>
+  </ul>
 </nav>
-
-  </div>
- </div>
-
-
+</div>
+</div>
 </div>
 
 
 
 
- <div class="explain-seekle-wrapper">
-  <div class="container">
-   <div class="Seekle-heading">
-    <h2>もうサービス選びに失敗しない！</h2>
-     <p>Seekleでは語学教室・ポートフォリオ撮影・ハウスクリーニングなど<br>各種サービスのを見つけオンラインで予約することが可能です！</p>
-    </div>
+
+<div class="main-top-wrapper">
+
+
+  <div class="explain-seekle-wrapper">
+    <div class="explain-seekle-wrapper-content">
+
+     <div class="Seekle-heading">
+      <h2>注目のサービス</h2>
+      <p>Seekleでのおすすめサービスです</p>
+   
+
+
+
+<div class="seekle_favs_left">
+
+    <% @note1.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( note_images.image1_url, { :class => "popular_service1"}), note_path(@note1) %>
+    <% end %>
+
+
+    <% @note2.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( note_images.image1_url, { :class => "popular_service2"}), note_path(@note2) %>
+    <% end %>
+
+    <% @note3.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( note_images.image1_url, { :class => "popular_service2"}), note_path(@note3) %>
+    <% end %>
+
+
+    <% @note4.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( note_images.image1_url, { :class => "popular_service2"}), note_path(@note4) %>
+    <% end %>
+
   </div>
+
  </div>
 
+</div>
+</div>
+
+
 <div class="about-seekle-wrapper">
-  <div class="container">
-   <div class="reasons">
-    <div class="reason">
-     <div class=icons>
-      <i class="fa fa-users fa-5x"></i>
-     </div>
-<h2>プロバイダーとは</h2>
+
+ <div class="reasons">
+   <div class=icons>
+    <i class="fa fa-users fa-5x"></i>
+  </div>
+  <h2>プロバイダーとは</h2>
   <p>サービスを提供する提供者のことです。プロフィール、口コミ、サービス価格などの様々な情報から、プロバイダーを比較できます。</p>
-    </div>
-  </div>
-     <div class="reasons">
-       <div class="reason">
-       <div class="icons">
-          <i class="fa fa-money fa-5x"></i>
-        </div>
-      <h2>最大10万円保証</h2>
+</div>
+
+
+<div class="reasons2">
+ <div class="icons">
+  <i class="fa fa-money fa-5x"></i>
+</div>
+<h2>最大10万円保証</h2>
 <p>Seekleを経由して利用したサービスに問題があった場合、最大10万円を保証します</p>
-
-        </div>
-  </div>
+</div>
 
 
-     <div class="reasons">
-       <div class="reason">
-       <div class="icons">
-       <i class="fa fa-smile-o fa-5x"></i>
-     </div>
+<div class="reasons2">
+ <div class="icons">
+   <i class="fa fa-smile-o fa-5x"></i>
+ </div>
  <h2>豊富なジャンル</h2>
-<p>カメラマン、便利屋さん、マジシャンなど、Seekleは様々なジャンルのサービスを見つけることのできる場です。</p>
-        </div>
-  </div>
-  </div>
-  </div>
+ <p>カメラマン、便利屋さん、マジシャンなど、Seekleは様々なジャンルのサービスを見つけることのできる場です。</p>
+</div>
 
-<div class="lesson-wrapper">
-      <div class="heading">
-        <h2>How Seekle Works</h2>
-      </div>
-  <div class="lesson-container">
-      <div class="images">
-        <div class="first">
-          <div class="first-icon">
-           <%= image_tag 'one.png'%>
-          </div>
-
-          <div class="how-works-explain">
-           <h3>1. 見つけよう</h3>
-         <p> あなたの住所、または各種サービス覧から<br>プロバイダーを探そう。</p>
-          </div>
-        </div>
-
-    <div class="first">
-      <div class="first-icon">
-       <%= image_tag 'two.png' %>
-      </div>
-
-      <div class="how-works-explain">
-        <h3>2. 選ぼう</h3>
-           <p>値段、プロフィール、レビュー、などの様々な情報から、あなたの求めるサービスにあったプロバイダーを比較しよう。</p>
-      </div>
-    </div>
-
- <div class="first">
-   <div class="first-icon">
-     <%= image_tag 'three.png' %>
-   </div>
-      <div class="how-works-explain">
-        <h3>3. 依頼しよう</h3>
-          <p>準備ができたら採用！<br>Seekleでの素晴らしい経験を増やしていきましょう。</p>
-       </div>
-       </div>
-      </div>
-    </div>
-  </div>
+</div>
 
   <div class="message-wrapper">
-    <div class="container">
+
       <div class="heading">
         <h2>あなたもプロバイダーとして参加しませんか？</h2>
         <h3 id="tagline">Let's find customers who need you!</h3>
@@ -153,4 +131,10 @@
       <%= link_to "プロバイダーとして参加",'http://goo.gl/forms/y9P0l9bh5OFkPs1J3', class: "btn message signup-show" %>
     </div>
     </div>
+  </div>
+
+
+
+
+
   </div>
