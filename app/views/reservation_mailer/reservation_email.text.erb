@@ -1,16 +1,21 @@
-		<% @reservations.each do |reservation| %>
- <% reservation.note.note_revisions.each do |note_revision| %>
-
+<% @note.note_revisions.each do |note_revision| %>
 ===========================================
   「<%=  note_revision.title %>」に予約が来ました！
 ===========================================
 
 Seekleをご利用いただき、誠にありがとうございます。
 
-あなたの掲載中サービス、「<%=  note_revision.title %>」に予約が来ました！
+あなたの掲載中サービス、
+「<%=  note_revision.title %>」
+に予約が来ました！
+<% end %>
 
 
-<%= @date %>
+ ご予約日 
+ 希望日時１：  <%= @workdate1 %> 　<%= @worktime1 %>
+ 希望日時２：  <%= @workdate2 %>   <%= @worktime2 %>
+ 希望日時３：  <%= @workdate3 %>   <%= @worktime3 %>
+
 <%= @name %>さんから、
 
 <%= @message %>
@@ -22,11 +27,10 @@ Seekleをご利用いただき、誠にありがとうございます。
 
 
 ※このEメールアドレスは配信専用です。このメッセージに返信しないようお願いいたします。
-────────────────────────────────c
+────────────────────────────────
 運営会社：株式会社Seekle
 
 ●お問い合せ
 seekle.info@gmail.com
 ────────────────────────────────
-<% end %>
-   <% end %>
+
