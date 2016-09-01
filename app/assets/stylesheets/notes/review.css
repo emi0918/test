@@ -1,9 +1,19 @@
 
 .star-rating{letter-spacing:-5px;height:17px;}
 .star-rating img{height:20px;}
+
 .review-wrapper{margin-top: 40px;margin-bottom: 20px;}
-.reviews{margin-top:28px; margin-left:85px;border-bottom: 1px solid #DCDCDC; width:80%;}
-.reviews p{margin-bottom: 30px;}
+
+.reviews{
+	margin-top:28px;
+    margin-left:85px;
+    border-bottom: 1px solid #DCDCDC;
+    width:100%;
+}
+
+.reviews p{
+	margin-bottom: 30px;
+}
 
 .new_review_wrapper{margin-left: 20%;margin-top:5%; margin-bottom:10%;}
 .new_review_wrapper h1{font-weight: normal;}
