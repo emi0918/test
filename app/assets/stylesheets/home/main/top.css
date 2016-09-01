@@ -17,30 +17,122 @@
 
 
 .top-wrapper h1{
-	opacity:.9;
+
 	font-size:45px;
 	letter-spacing:5px;
 	padding-top:20px
-	  	width:100%;
+	 
+    margin-left:1%;
 }
 
 .top-wrapper p{
-	opacity:.7;
-	font-size:14px;
+  opacity:.9;
 	margin-bottom:35px
 }
 
 
 
 
-@media only screen and  ( max-width:640px )
-{
+.about-seekle-wrapper{
+  margin-top: 4%;
+  height:270px;
+  color:gray;
+width:73%;
+    margin-left: 13.9%;
+
+text-align:center;
+font-size:14px
+}
+
+.about-seekle-wrapper p{
+  font-size:14px;
+  line-height:25px;
+  text-align: left;
+}
+.reasons{
+  float:left;
+  width:28.9%;
+
+}
+
+.reasons2{
+  float:left;
+  width:28.9%;
+  margin-left: 60px;
+}
+
+.Seekle-heading{
+  margin-top:60px;
+  margin-right:0px;
+  color:#5f5d60;
+  margin-bottom: 40px;
+}
+.Seekle-heading h2{
+  margin-top:12px
+}
+.Seekle-heading p{
+  font-size:15px
+}
+
+.explain-seekle-wrapper{
+   height:430px;
+  text-align:center;
+  background-color:#fff;
+  border-top:2px solid #f5f5f5;
+border-bottom: 2px solid #f5f5f5;
+
+}
+.explain-seekle-wrapper p{
+  font-size:15px;
+  line-height:25px
+
+}
+
+.explain-seekle-wrapper-content{
+width:73%;
+    margin-left: 14%;
+
+}
+
+.seekle_favs_left{
+margin-top: 50px;
+}
+
+
+.popular_service1{
+width:23.7%;
+height:180px;
+float:left;
+}
+.popular_service2{
+width:23.7%;
+height:180px;
+float:left;
+margin-left: 13px;
+}
+
+
+.message-wrapper{
+  height:290px;
+  text-align:center;
+  background-color:   #F8F8FF;
+  border-bottom:1px solid #eee;
+  border-top:1px solid #eee;
+}
+.message-wrapper .heading h3{font-weight:400}
+
+
+
+
+
+@media only screen and  ( max-width:414px ){
   .top-wrapper{
     padding: 50px 0 60px 0px;
   }
+
   .top-wrapper h1 {
-width:80%;
-margin-left: 9%;
+   width:80%;
+   margin-left: 9%;
    text-shadow: 2px 2px 1px black;
    font-size: 30px;
    line-height: 50px;
@@ -50,11 +142,98 @@ margin-left: 9%;
 
 
   .top-wrapper p{
-width:70%;
-margin-left: 14%;
-line-height: 20px;
+   width:70%;
+   margin-left: 14%;
+   line-height: 10px;
+   }
+
+
+   .Seekle-heading{
+  margin-top:50px;
+  margin-right:0px;
+  color:#5f5d60;
+  margin-bottom: 0px;
+
 }
 
- 
+.seekle_favs_left{
+margin-top: 30px;
+}
+
+.popular_service1{
+  height:130px;
+  width:50%;
+  margin-bottom: 10px;
+}
+.popular_service2{
+    height:130px;
+  margin-left: 0px;
+  width:50%;
+    margin-bottom: 10px;
+}
+.explain-seekle-wrapper{
+   height:490px;
+  text-align:center;
+  background-color:#fff;
+  border-top:2px solid #f5f5f5;
+border-bottom: 2px solid #f5f5f5;
+
+}
+.explain-seekle-wrapper p{
+  font-size:15px;
+  line-height:25px
+
+}
+
+.explain-seekle-wrapper-content{
+width:73%;
+    margin-left: 14%;
+
+}
+
+.about-seekle-wrapper{
+  margin-top: 4%;
+  height:850px;
+  color:gray;
+width:73%;
+    margin-left: 13.9%;
+
+text-align:center;
+font-size:14px
+}
+
+.about-seekle-wrapper p{
+  font-size:14px;
+  line-height:25px;
+  text-align: left;
+}
+
+.reasons{
+    margin-top: 50px;
+  float:left;
+  width:100%;
+
+}
+
+.reasons2{
+  float:left;
+  width:100%;
+  margin-top: 40px;
+  margin-left: 0px;
+}
+
+
+.message-wrapper{
+  height:300px;
+  width:100%;
+}
+
+.heading{
+  width:73%;
+      margin-left: 13.9%;
+}
+
+
+
 
 }
