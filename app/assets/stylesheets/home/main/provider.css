@@ -1,0 +1,37 @@
+
+.explain-provider-wrapper{
+	 height:255px;
+  text-align:center;
+  background-color:#fff;
+  border-top:2px solid #f5f5f5;
+border-bottom: 2px solid #f5f5f5;
+}
+.explain-provider-wrapper p{font-size:15px;line-height:25px}
+
+
+
+/*プロバイダーページ */
+.pro-top-wrapper{
+	margin-top:-90px;
+	  background-image: url(/images/businesswoman.jpg);
+	background-size:cover;
+	color:#fff;
+	text-align:center;
+	padding:90px 0;
+
+	
+}
+
+
+.pro-container{height:300px}
+.pro-top-wrapper h1{padding-top:70px;opacity:.9;font-size:42px;letter-spacing:2px}
+.pro-top-wrapper p{opacity:.7;font-size:16px;margin-bottom:35px}
+.btn{color:#fff;opacity:.8;padding:10px 24px;border-radius:3px}
+.btn.signup{font-size:17px}
+.btn:hover{color:#DCDCDC}
+.title-field{width:480px}
+.content-field{height:90px;width:956px}
+.signup{background-color:#239b76}
+.first-wrapper,.pro-explain-wrapper{background-color:#fff;text-align:center}
+.pro-explain-wrapper{height:340px;margin-bottom:-100px;border-bottom:1px solid #eee;padding:10px 0 120px}@media screen and (max-width:640px){.pro-explain-wrapper{height:800px}
+.All-first{width:180%}.first{clear:both}}.first-wrapper{height:420px;padding-bottom:80px;font-size:14px}.first-wrapper p{font-size:15px;line-height:25px}.heading{padding-top:40px;padding-bottom:0;color:#5f5d60}.first{float:left;width:33%}.first p{font-size:14px;line-height:20px}
