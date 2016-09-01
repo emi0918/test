@@ -1,11 +1,11 @@
 
  
  .home-all-wrapper{
- 	height:1000px
+ 	height:990px
  }
 
 
-
+ 
 
  .top_home_page{
   height:280px;
@@ -26,14 +26,19 @@
 
 
  .categories h2{
-  margin-left:7.4%; 
+  width:100%;
+ float:left;
   margin-top: 4%;
+
  }
 
 
  .categories {
- 	margin-left:6.7%;
-width:90%;
+  clear:both;
+margin-top: 70px;
+margin-bottom: 40px;
+  width:77%;
+  margin-left:10%;
  }
 
 
@@ -41,7 +46,7 @@ width:90%;
  	height:140px;
 margin:1%;
 margin-bottom: 2%;
- 	width:21%;
+ 	width:23%;
  	font-size:17px;
  	border-radius:4px
  }
