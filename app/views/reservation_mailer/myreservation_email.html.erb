@@ -5,19 +5,26 @@
   </head>
   <body>
 
-		<% @reservations.each do |reservation| %>
- <% reservation.note.note_revisions.each do |note_revision| %>
+	
+<% @note.note_revisions.each do |note_revision| %>
 
     <h2>「<%=  note_revision.title %> 」への予約が完了しました。</h2>
 
-   <p>Seekleをご利用いただき、誠にありがとうございます。</p>
+<p>Seekleをご利用いただき、誠にありがとうございます。</p>
+<p>「<%=  note_revision.title %> 」への予約が完了しました。</p>
+<% end %>
+
 
  <br>============================================================
 <br>
 <br>
 <p>氏名：<%= @name %></p>
 
-<p>希望日程：<%= @date %></p>
+ <p>希望のご予約日</p> 
+ <p> 希望日時１：  <%= @workdate1 %> 　<%= @worktime1 %> </p>
+ <p> 希望日時２：  <%= @workdate2 %>   　<%= @worktime2 %></p>
+ <p> 希望日時３：  <%= @workdate3 %>   　<%= @worktime3 %></p>
+
 
  <p>お問い合わせ、質問等：<%= @message %></p>
 
@@ -38,5 +45,5 @@
   </body>
 </html>
 
-    <%end %>
-        <%end %>
+
+    
