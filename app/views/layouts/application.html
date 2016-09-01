@@ -27,7 +27,7 @@
 				<%= javascript_include_tag "application" %>
 				<li> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
 				<% else %> 
-				<li><%= link_to 'プロバイダーになる', home_pro_path %></li> 
+				<li><%= link_to 'サービスを提供する', home_pro_path %></li> 
 				<li> <%= link_to 'アカウント作成', new_user_registration_path %></li> 
 				<li><%= link_to 'ログイン', new_user_session_path %></li>
 				<% end %> 
@@ -58,7 +58,7 @@
 									<li>
 										<a href="/providers/sign_in">管理画面ログイン</a>
 									</li>
-									<li><a href="/providers/sign_up">プロバイダーとして参加</a></li> 
+									<li><a href="/providers/sign_up">サービス提供者登録</a></li> 
 								</ul>
 							</div>
 						</div> 
