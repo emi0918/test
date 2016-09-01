@@ -124,6 +124,7 @@
  <th> <p><%= f.label Note.human_attribute_name '写真(9枚まで)' %><span class="form-label required">必須</span></p></th>
  <td>
    <%= i.file_field :image1, class: "form-control image-field" %>
+   <%= i.hidden_field :image1, autofocus: true %>
  </td>
 </tr>
 <tr>
