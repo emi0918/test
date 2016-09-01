@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
   </head>
   <body>
-		<% @reservations.each do |reservation| %>
- <% reservation.note.note_revisions.each do |note_revision| %>
- 
+
 
  <p>Seekleをご利用いただき、誠にありがとうございます。</p>
-<p>あなたの掲載中サービス、「<%=  note_revision.title %>」に予約が来ました！
-！</p>
+
+
+<% @note.note_revisions.each do |note_revision| %>
+ <h2>あなたの掲載中サービス、<br/>「<%=  note_revision.title %> 」 <br/>に予約が来ました！</h2>
+<% end %> 
+
+
+
 
  <br>============================================================
 <br>
 <br>
 <p><%= @name %>さんから、</p>
 
-<p>希望日程：<%= @date %></p>
+
+
+ <p>ご予約日</p> 
+ <p> 希望日時１：  <%=   @workdate1%> 　<%= @worktime1 %> </p>
+  <p> 希望日時２：  <%= @workdate2 %>   　<%= @worktime2 %></p>
+   <p> 希望日時３：  <%= @workdate3 %>   　<%= @worktime3 %></p>
+
 
  <p>お問い合わせ、質問等：<%= @message %></p>
 
@@ -25,8 +35,8 @@
  <br>============================================================
  <br>
 <p>=> <a href="http://seekle.jp/providers/inbox">こちらのリンク</a>からさっそくお返事を返しましょう！</p>
-
 <br>
+
 
 <br>※このEメールアドレスは配信専用です。このメッセージに返信しないようお願いいたします。
 <br>────────────────────────────────
@@ -38,5 +48,4 @@
   </body>
 </html>
 
-<% end%>
-<% end%>
+
