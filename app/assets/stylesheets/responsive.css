@@ -14,13 +14,6 @@
   display:none;
 }
 
-.Seekle_heading{
-
-}
-
-.dropmenu{
-
-}
 
 .header-right {
   display: none;
@@ -44,7 +37,7 @@
 }
 
 .join-button{
-  display: none;
+
 }
 
 
@@ -65,36 +58,13 @@
     float:left;
   }
 
-.message-wrapper{
-
-  width:90%;
-  padding-left: 4%;
-}
-
-.explain-seekle-wrapper{
-  margin-top: 0px;
-  width:100%;
-  padding-left: 0px;
-}
-
-  .lesson-wrapper{
-    height:1130px;
-
-  }
-  .images{
-    padding-top: 10%;
-
-  }
 
   .first {
   clear:both;
   padding-left: 12%;
     }
 
-.how-works-explain{
-  width: 300px;
-  padding-bottom: 20px;
-}
+
 
 .reason p{
 
@@ -124,11 +94,6 @@
 
   }
 
-  .about-seekle-wrapper{
-    height:900px;
-
- }
-
   .wrapper{
    width:auto;
   position:relative;
@@ -136,10 +101,7 @@
     max-width:640px;
   }
 
-  .explain-seekle-wrapper p{
-    font-size:14px;
-    text-align: center;
-  }
+
 
 
 }
