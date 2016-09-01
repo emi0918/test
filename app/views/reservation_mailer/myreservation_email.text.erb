@@ -1,6 +1,4 @@
-
-		<% @reservations.each do |reservation| %>
- <% reservation.note.note_revisions.each do |note_revision| %>
+	<% @note.note_revisions.each do |note_revision| %>
 
 「<%=  note_revision.title %> 」への予約が完了しました。
 
@@ -10,17 +8,19 @@ Seekleをご利用いただき、誠にありがとうございます。
 「<%=  note_revision.title %>」
  に予約をしました。
    
-
+<% end %>
 ============================================================
 
-氏名：<%= @name %>
+ 氏名：<%= @name %>
 
-希望日程：<%= @date %>
+ ご希望のご予約日 
+ 希望日時１：  <%= @workdate1 %> 　<%= @worktime1 %>
+ 希望日時２：  <%= @workdate2 %>   <%= @worktime2 %>
+ 希望日時３：  <%= @workdate3 %>   <%= @worktime3 %>
 
-お問い合わせ、質問等：<%= @message %>
+ お問い合わせ、質問等：<%= @message %>
 
 ============================================================
-
 
 <%= @provider %>さんから連絡がきます。お返事を待ちましょう。
 連絡が来ない場合はSeekleお問い合わせメールからお気軽にご相談ください。
@@ -34,5 +34,3 @@ Seekleをご利用いただき、誠にありがとうございます。
 seekle.info@gmail.com
 ────────────────────────────────
 
-<% end %>
-<% end %>
