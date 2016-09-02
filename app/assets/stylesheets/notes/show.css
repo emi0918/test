@@ -300,9 +300,9 @@ float:left;
 
 .message_reservetion .bootstrap .btn-default{
 	float:left;
-	margin-top: 0%;
-	margin-left: -18%;
-	margin-bottom:5%; 
+
+		    margin: 23px 0px;
+
 }
 
 
