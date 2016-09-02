@@ -258,11 +258,7 @@
 border-top: 1px solid #f5f5f5;
 }
 
-.dropmenu{
 
-  width:960px;
-  margin:auto
-}
 .dropmenu:after,.dropmenu:before{content:"";display:table}
 .dropmenu:after{clear:both}
 
