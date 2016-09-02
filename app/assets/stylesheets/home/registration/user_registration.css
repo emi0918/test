@@ -1,42 +1,28 @@
 
 
 
-/* ipad iphone4と5のレスポンシブデザイン */
-@media screen and (min-width: 320px) and (max-width: 374px)
-{
-.content_in_user{
-
-   margin:8% -10%;
- }
-
-}
-
-
-
-
-/* ipad iphone6のレスポンシブデザイン */
-
-@media (min-width: 375px) 
-{
-.content_in_user{
- 
-   margin:8% -5.5%;
- }
-
-
-}
-
-
-
 /* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
-@media screen and (min-width: 414px) {
+@media screen and (max-width: 414px) {
 
-
-.content_in_user{
-   
-   margin:8% 0%;
+  .content_in_user{
+   width:85%;
+   margin-left: 7%;
  }
- 
+
+ .field {
+ margin-top:15px;
+    margin-bottom:10px;
+}
+
+.field input{
+        width:100%;
+        height:20%;
+padding:7px;
+ font-size:20px;
+  
+}
+
+
 }
 
 
@@ -46,24 +32,33 @@
 @media screen and (min-width: 800px) {
 	.content_in_user{
    text-align: left;
-   margin:5% 36%;
+   width:30%;
+  margin-left: 35%;
+
  }
 
 .content_in_user a{
    color:#483D8B;
 }
-   
-   
-#user_email:focus,#user_password:focus,#user_password_confirmation:focus{
-  outline:0
-  }
 
-#user_email,#user_password,#user_password_confirmation,#user_パスワード確認{
-  border:1px solid gray;
-  border-radius:2px;
-  width:333px;
-  padding-top:10px
+.main_content .bootstrap  .content_in_user{
+padding-top: 50px;
+padding-bottom: 50px;
 }
+.field {
+ margin-top:20px;
+    margin-bottom:10px;
+}
+
+.field input{
+        width:100%;
+        height:20%;
+padding:7px;
+ font-size:20px;
+  
+}
+
+
 
 
 
