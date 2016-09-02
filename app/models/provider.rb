@@ -9,11 +9,10 @@ has_many :provider_accounts, dependent: :destroy
 has_many :store_infos, dependent: :destroy
  accepts_nested_attributes_for :store_infos,allow_destroy: true
 
-
  has_many :notes, dependent: :destroy
- has_many :mailboxer_conversations
-  has_many :reservations, dependent: :destroy
- has_many :contacts
+
+  has_many :reservations
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
