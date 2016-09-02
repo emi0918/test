@@ -1,16 +1,19 @@
 <%= render 'providers/header' %>
 <div class="providers_signup">
 
-<h2>プロバイダー管理画面へログイン</h2>
+<h2>サービス管理画面へログイン</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
- 
- <div class="field">
+
+
+ <div class="field2">
     <h3>メールアドレス</h3>
+     
       <%= f.email_field :email, autofocus: true %>
+     
     </div>
 
-  <div class="field">
+  <div class="field2">
     <h3>パスワード</h3>
 
     <%= f.password_field :password, autocomplete: "off" %>
@@ -21,6 +24,8 @@
   <div class="actions">
     <%= f.submit "ログインする" ,:class => 'provider_join_btn' %>
   </div>
+
+
 <% end %>
 
 <%= render "providers/shared/links" %>
