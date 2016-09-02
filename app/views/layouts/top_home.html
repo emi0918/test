@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<title>Seekle（シークル）｜ 簡単比較で失敗しないサービス選び！</title>  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <%= csrf_meta_tags %>
+<%= favicon_link_tag('favicon.ico') %>
+<meta name=”description” content=”ハウスクリーニングやポートフォリオ撮影、マッサージ、カウンセリングなどの各サービス選びに失敗しない！あなたの必要とするサービスをオンラインで無料予約するならSeekle。サービスを利用したユーザーの口コミ、満足度や具体的なサービス料金で簡単・便利に徹底比較！[最大10万円の安心保証つき]”>
+</head>
+
+<script src='https://cdn.slaask.com/chat.js'></script>
+<script>
+	_slaask.init('e82bd97e2f19e5c3820785f34a397d1c');
+</script>
+<!--bodyタグ内のコンテンツの表示はhead内にあるjsの処理が完了してから行われるので、表示が遅くなる   なるべくheadに不要なjs入れない bodyにいれる-->
+
+
+
+<body>
+
+	<%= stylesheet_link_tag "application", media: "all" %>
+	<header>
+		<div class="container_head"> 
+			<a href="/"><%= image_tag('logo-min.png',class: 'logo') %></a> 
+			<ul class="header-right"> 
+				<% if user_signed_in? %> 
+				<li> <%= link_to 'ダッシュボード',users_path %></li> 
+				<%= javascript_include_tag "application" %>
+				<li> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+				<% else %> 
+				<li><%= link_to 'サービスを提供する', home_pro_path %></li> 
+				<li> <%= link_to 'アカウント作成', new_user_registration_path %></li> 
+				<li><%= link_to 'ログイン', new_user_session_path %></li>
+				<% end %> 
+			</ul>
+		</div>
+	</header> 
+	<div class="main_content"> <%= yield %> </div>
+
+		<footer class="footer"> 
+			<div class="footer-top"> 
+				<div class="row">
+					<div class="col-sm-3"> 
+						<h3 class="widget-title">Customers</h3> 
+			
+								<ul>
+									<li><a href="/home/guide">ご利用ガイド</a></li> 
+								</ul> 
+					</div> 
+
+					<div class="col-sm-3"> 
+						<h3 class="widget-title">Provider</h3> 
+
+							
+								<ul> 
+									<li>
+										<a href="/providers/sign_in">管理画面ログイン</a>
+									</li>
+									<li><a href="/providers/sign_up">サービス提供者登録</a></li> 
+					          	</ul>
+					</div>
+
+					<div class="col-sm-3 "> 
+						<h3 class="widget-title">Company</h3> 
+						
+							
+								<ul>
+									<li><a href="/company/index">運営会社</a></li> 
+								</ul> 
+						
+				
+					</div>
+
+					<div class="col-sm-4">
+						<div id="social-icon">
+							<a href="https://www.facebook.com/seeklejp/">
+								<i class="fa fa-facebook fa-2x"></i></a> 
+								<a href="https://twitter.com/Seeklejp">
+									<i class="fa fa-twitter fa-2x"></i></a>
+									<a href="https://www.instagram.com/seekle_jp/"><i class="fa fa-instagram fa-2x"></i></a> 
+									<a href="#"><i class="fa fa-pinterest fa-2x"></i></a> 
+								</div> 
+							</div>
+						</div>
+					</div> 
+		
+			</footer>
+			<div class="footer-bottom"> 
+	
+						<nav class="widget-menu"> <ul>
+							<li><a href="/home/term">利用規約</a></li>
+							<li><a href="/home/policy">プライバシポリシー</a></li> 
+							<li><a href="/home/signage">特定商取引に基づく表記</a></li> 
+						</ul> 
+					</nav> 
+		
+		
+		</div>
+		<div class="copy-right">© Seekle inc., All Rights Reseved.</div>
+
+	</body>
+
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	</html>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76983508-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
