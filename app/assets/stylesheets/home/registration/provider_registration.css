@@ -213,7 +213,7 @@ margin-top: 30px;
 
 .provider_join_btn{
 
- margin-left:13%;
+    margin-left:30%;
     margin-bottom:10%;
     font-size:16px;
     font-weight:700;
@@ -232,7 +232,7 @@ border-radius:3%;
 }
 
 
-.field input{
+.field2 input{
         width:610px;
         height:10%;
 padding:5px;
@@ -240,16 +240,15 @@ padding:5px;
 }
 
 
-.name_field input{
+.field2.name_field input{
     width:100%;
     font-size:20px;
     padding:7px;
 }
-.name_field{
-    margin-top:29px;
-}
 
-.field,.name_field{
+
+.field2,.name_field{
+     margin-top:29px;
     margin-bottom:29px;
 }
 }
