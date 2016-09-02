@@ -6,7 +6,7 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-<div class="field">
+<div class="field2">
     <h3>店舗名</h3>
     <%= f.text_field :name, autofocus: true %>
   </div>
@@ -14,29 +14,29 @@
  <%= f.fields_for :provider_accounts do |b| %>
 
 
-  <div class="field">
+  <div class="field2">
     <h3>店長(代表者名)</h3>
     <%= b.text_field  :staffname, autofocus: true %>
   </div>
 
-  <div class="field">
+  <div class="field2">
     <h3>電話番号</h3>
     <%= b.text_field  :phonenumber, autofocus: true %>
   </div>
 
 
-  <div class="field">
+  <div class="field2">
     <h3>メールアドレス</h3>
     <%= f.email_field :email, autofocus: true %>
   </div>
 
 
-  <div class="field">
+  <div class="field2">
     <h3>パスワード</h3>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
-  <div class="field">
+  <div class="field2">
     <h3>パスワード（確認）</h3>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
@@ -53,7 +53,7 @@
 
 
   <div class="actions">
-    <%= f.submit "プロバイダーとして登録する",:class => 'provider_join_btn' %>
+    <%= f.submit "サービス提供者として登録する",:class => 'provider_join_btn' %>
   </div>
   <% end %>
   <% end %>
