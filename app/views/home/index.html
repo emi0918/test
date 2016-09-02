@@ -8,15 +8,14 @@
   </a>
 </div>
 
-<h1>明確な業者比較に簡単オンライン予約！</h1>
+<h1>信頼できるサービスをオンラインで</br>すぐに簡単に無料で予約</h1>
 <p>No More 業者選びの失敗！</p>
-<div class="bootstrap"><%= link_to "あなたのサービスを掲載する", home_pro_path, class: "btn btn-lg btn-primary" %></div>
+
 
 </div>
 
 <div class="web-menu-var">
  <div class="dropmenu">
-  <div class="wrapper">
     <li><a href="/category/housing"><i class="fa fa-home fa-fw"></i>住まい</a></li>
     <li><a href="/category/event"><i class="fa fa-glass fa-fw"></i>イベント</a></li>
     <li><a href="/category/lesson"><i class="fa fa-book fa-fw"></i>習い事</a></li>
@@ -24,7 +23,7 @@
     <li><a href="/category/others"><i class="fa fa-list-ul fa-fw"></i>その他</a></li>
   </div>
 </div>
-</div>
+
 
 
 <div class="responsive-menu-var">
@@ -60,28 +59,114 @@
 
 
 
+
+
+
 <div class="seekle_favs_left">
+<p>住まい</p>
 
     <% @note1.note_images.each do |note_images| %>
+    <%= link_to image_tag( "/images/kitchin.jpg", { :class => "popular_service1"}) %>
 
-    <%= link_to image_tag( note_images.image1_url, { :class => "popular_service1"}), note_path(@note1) %>
+
+    <% end %>
+
+    <% @note2.note_images.each do |note_images| %>
+    <%= link_to image_tag( "/images/aircon.jpg", { :class => "popular_service2"}) %>
+    <% end %>
+
+    <% @note3.note_images.each do |note_images| %>
+    <%= link_to image_tag( "/images/box.jpg", { :class => "popular_service2"}) %>
     <% end %>
 
 
+    <% @note4.note_images.each do |note_images| %>
+    <%= link_to image_tag( "/images/room.jpg", { :class => "popular_service2"}) %>
+    <% end %>
+
+  </div>
+
+
+<div class="seekle_favs_left">
+<p>イベント</p>
+
+    <% @note1.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( "/images/bridress.jpg", { :class => "popular_service1"})%>
+    <% end %>
+    
     <% @note2.note_images.each do |note_images| %>
 
-    <%= link_to image_tag( note_images.image1_url, { :class => "popular_service2"}), note_path(@note2) %>
+    <%= link_to image_tag( "/images/video.jpg", { :class => "popular_service2"}) %>
     <% end %>
 
     <% @note3.note_images.each do |note_images| %>
 
-    <%= link_to image_tag( note_images.image1_url, { :class => "popular_service2"}), note_path(@note3) %>
+    <%= link_to image_tag( "/images/photographer.jpg", { :class => "popular_service2"}) %>
     <% end %>
 
 
     <% @note4.note_images.each do |note_images| %>
 
-    <%= link_to image_tag( note_images.image1_url, { :class => "popular_service2"}), note_path(@note4) %>
+    <%= link_to image_tag( "/images/catering.jpg", { :class => "popular_service2"})%>
+    <% end %>
+
+  </div>
+
+
+<div class="seekle_favs_left">
+<p>習い事</p>
+
+    <% @note1.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( "/images/golf.jpg", { :class => "popular_service1"}) %>
+    <% end %>
+    
+    <% @note2.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( "/images/dance.jpg", { :class => "popular_service2"}) %>
+    <% end %>
+
+    <% @note3.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( "/images/running.jpg", { :class => "popular_service2"})%>
+    <% end %>
+
+
+    <% @note4.note_images.each do |note_images| %>
+
+    <%= link_to image_tag(  "/images/painting.jpg", { :class => "popular_service2"}) %>
+    <% end %>
+
+  </div>
+
+
+
+
+
+
+<div class="seekle_favs_left">
+<p>健康</p>
+
+    <% @note1.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( "/images/trainor.jpg", { :class => "popular_service1"}) %>
+    <% end %>
+    
+    <% @note2.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( "/images/yoga.jpg", { :class => "popular_service2"})%>
+    <% end %>
+
+    <% @note3.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( "/images/footmassage.jpg", { :class => "popular_service2"}) %>
+    <% end %>
+
+
+    <% @note4.note_images.each do |note_images| %>
+
+    <%= link_to image_tag( "/images/boxing.jpg", { :class => "popular_service2"}) %>
     <% end %>
 
   </div>
