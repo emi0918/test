@@ -37,14 +37,14 @@ $(function(){
 <%= stylesheet_link_tag "application", media: "all" %>
 
 
-<header> <div class="container_head"> <a href="/"><%= image_tag('logo-min.png',class: 'logo') %></a> 
+<header><a href="/"><%= image_tag('logo-min.png',class: 'logo') %></a> 
 <ul class="header-right"> 
   <%= javascript_include_tag "application" %> 
   <li><a href="#1">About</a></li>
 
   <li><a href="#2">Company</a></li>
    <li><a href="#3">Recruit</a></li>
-   </ul> </div></header> <div class="main_content"> <%= yield %> </div>
+   </ul> </header> <div class="main_content"> <%= yield %> </div>
 
 
 
