@@ -234,17 +234,3 @@ hr{
 .dropmenu li a{display:block;padding:15px 0 11px;color:#000;font-size:16px}
 
 
-/*ログインしました報告*/
-
-#user_email:focus,#user_password:focus,#user_password_confirmation:focus{
-  outline:0
-  }
-
-#user_email,#user_password,#user_password_confirmation,#user_パスワード確認{
-  border:1px solid gray;
-  border-radius:2px;
-  width:100%;
-  padding-top:10px
-}
-
-
