@@ -29,7 +29,7 @@
  	transition:all .5s
  }
   .upper-menu ul {
-    margin-left: 8%;
+    margin-left: 9%;
   }
  .upper-menu ul li{
  	margin-top:16px;
@@ -138,14 +138,17 @@
 
     #main_mobile-head{
 
-    background-color:transparent;
-  
+   background-color: white;
     height: 56px;
     position: relative;
     z-index: 5;
-
-
     }
+
+.container_head{
+display: none;
+}
+
+
 
     #top-head.fixed .logo_2,
     #top-head .logo_2 {
