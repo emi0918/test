@@ -3,10 +3,34 @@
   font-family:'ヒラギノ丸ゴ Pro W4','Hiragino Maru Gothic Pro';
 }
 
+
+.container_head{
+  background-color: white;
+    border-bottom: 1px solid #ccc;
+        box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.135);
+  position: fixed;
+  width:100%;
+    height:67px;
+}
+
 .logo a,a,a:hover,header{text-decoration:none}html{overflow:auto}body{overflow:hidden;position:relative;margin:0}li,ul{list-style-type:none;margin:0}a{color:gray}a:hover{color:#1b7ccd}.main_content{padding-top:57px;margin:0 auto}
 
 h1{font-size:32px;letter-spacing:-2px;margin-bottom:0px;}
-.logo a,h2{letter-spacing:-1px}h2{font-size:20px}p{font-size:16px;line-height:40px}header{height:57px;width:100%;margin:0 120px;position:absolute;top:0;z-index:10;padding:1px;cursor:pointer}.logo{height:70px;width:16%;}
+
+.logo a,h2{letter-spacing:-1px}h2{font-size:20px}p{font-size:16px;line-height:40px}
+
+header{
+  width:100%;
+  position:absolute;
+  top:0;
+  z-index:10;
+  cursor:pointer}
+
+  .logo{
+    height:67px;
+    width:15%;
+    margin-left: 169px;
+  }
 .logo a{float:left;font-size:30px;padding:12px 50px;font-weight:700}
 .logo a:hover {
 
@@ -44,7 +68,7 @@ h1{font-size:32px;letter-spacing:-2px;margin-bottom:0px;}
 
 .header-right {
   float: right;
-  margin-right:225px;
+  margin-right:150px;
   text-decoration:none;
 }
 
@@ -164,7 +188,8 @@ and (max-device-width:568px)
 .column-menu a{cursor:pointer;color:#fff}.column-menu ul{color:#fff}.column-menu ul li a:hover,.column-menu ul li:hover{color:rgba(255,255,255,.5)}.column-menu li{display:inline-block;margin:10px}.column-menu ul li a:hover{text-decoration:none}
 
 .widget-title{margin-left:57px;text-align:left;}
-#social-icon i,#social-icon i:before{line-height:50px}#social-icon i,.actions p,.copy-right,.dropmenu li{text-align:center}.dropmenu li a,.widget-details li a{text-decoration:none}  .dropmenu li a:hover{font-size: 20px;} 
+#social-icon i,#social-icon i:before{line-height:50px}#social-icon i,.actions p,.copy-right,.dropmenu li{text-align:center}
+.dropmenu li a,.widget-details li a{text-decoration:none}  .dropmenu li a:hover{font-size: 20px;} 
 
 
 .widget-menu{cursor:pointer}
@@ -224,10 +249,7 @@ hr{
   margin-bottom:18px
 }
 
-.dropmenu{
-  width:960px;
-  margin:auto
-}
+
 .dropmenu:after,.dropmenu:before{content:"";display:table}
 .dropmenu:after{clear:both}
 .dropmenu li{position:relative;width:20%;float:left}
