@@ -247,3 +247,52 @@ font-size:14px
 
 
 }
+
+
+
+ @media (min-width: 767px){
+  .explain-seekle-wrapper{
+    height:980px;
+  }
+
+  .popular_service1{
+  height:130px;
+  width:23%;
+  margin-bottom: 10px;
+}
+.popular_service2{
+    height:130px;
+  margin-left: 9px;
+  width:23%;
+    margin-bottom: 10px;
+}
+
+.about-seekle-wrapper{
+  height:300px;
+ }
+
+.reasons{
+  float:left;
+  width:29%;
+
+}
+.reasons p{
+  font-size: 12px;
+}
+.reasons h2{
+  font-size: 18px;
+}
+
+.reasons2{
+  float:left;
+  width:30%;
+  margin-left: 30px;
+}
+.reasons p{
+  font-size: 12px;
+}
+.reasons h2{
+  font-size: 18px;
+}
+
+}
