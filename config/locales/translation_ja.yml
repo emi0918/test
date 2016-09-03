@@ -69,6 +69,12 @@ ja:
         phone_number: "電話番号"  #g
         provider: :activerecord.models.provider  #g
         user: :activerecord.models.user  #g
+        workdate1: "ご希望日程 第１候補"
+        workdate2: "ご希望日程 第２候補"
+        workdate3: "ご希望日程 第３候補"
+        worktime1: "ご希望時間 第１候補"
+        worktime2: "ご希望時間 第２候補"
+        worktime3: "ご希望時間 第３候補"
 
       review:
         comment: "コメント"  #g
