@@ -1,4 +1,18 @@
 
+
+// Media queries breakpoints
+$screen-mobile-xs: 375px !default;
+$screen-mobile-md: 400px !default;
+$screen-mobile: 480px !default;
+$screen-phablet: 620px !default;
+$screen-tablet: 768px !default;
+$screen-desktop: 1024px !default;
+$screen-mobile-max: ($screen-mobile - 1) !default;
+$screen-tablet-max: ($screen-tablet - 1) !default;
+$screen-desktop-max: ($screen-desktop - 1) !default;
+$app-container-width: $screen-desktop !default;
+
+
 .top-wrapper{position:relative}
 
 
@@ -21,6 +35,7 @@
 	 
     margin-left:1%;
 }
+
 
 .top-wrapper p{
  
@@ -132,7 +147,22 @@ margin-left: 13px;
 
 
 
-@media only screen and  ( max-width:414px ){
+
+.top-wrapper{
+  margin-top:-90px;
+
+  color:#fff;
+  background-image: url("/images/manclean.jpg");
+  background-size:cover;
+  text-align:center;
+  padding:50px 0 100px
+}
+
+
+
+
+
+@media only screen and  ( max-width:$screen-mobile-max ){
 
   .top-wrapper{
     padding: 50px 0 60px 0px;
@@ -149,6 +179,7 @@ margin-left: 13px;
   }
 
 
+
   .top-wrapper p{
    width:70%;
    margin-left: 14%;
@@ -160,8 +191,6 @@ margin-left: 13px;
 
    .Seekle-heading{
   margin-top:50px;
-  margin-right:0px;
-  color:#5f5d60;
   margin-bottom: 0px;
 
 }
@@ -245,16 +274,18 @@ font-size:14px
 
 
 
-
 }
+  
 
-
-
- @media (min-width: 767px){
+@media (min-width: $screen-tablet) {
   .explain-seekle-wrapper{
     height:980px;
   }
+.explain-seekle-wrapper-content{
+    width:100%;
+    margin-left: 2%;
 
+ }
   .popular_service1{
   height:130px;
   width:23%;
@@ -267,9 +298,17 @@ font-size:14px
     margin-bottom: 10px;
 }
 
+
 .about-seekle-wrapper{
+
   height:300px;
- }
+
+width:100%;
+    margin-left: 2%;
+
+text-align:center;
+
+}
 
 .reasons{
   float:left;
@@ -294,5 +333,74 @@ font-size:14px
 .reasons h2{
   font-size: 18px;
 }
+
+}
+
+
+
+@media (min-width: $screen-desktop) {
+
+
+
+.about-seekle-wrapper{
+height:270px;
+width:73%;
+margin-left: 13.9%;
+}
+
+.about-seekle-wrapper p{
+  font-size:14px;
+  line-height:25px;
+  text-align: left;
+}
+.reasons{
+
+  width:28.9%;
+
+}
+
+.reasons p{
+  font-size: 14px;
+}
+
+.reasons2{
+
+  width:28.9%;
+  margin-left: 60px;
+}
+
+
+.explain-seekle-wrapper{
+   height:1000px;
+}
+
+
+
+.explain-seekle-wrapper-content{
+width:73%;
+    margin-left: 14%;
+
+}
+
+
+
+.popular_service1{
+
+width:23.7%;
+height:130px;
+
+margin-bottom: 12px;
+float:left;
+}
+.popular_service2{
+width:23.7%;
+height:130px;
+margin-bottom: 12px;
+float:left;
+margin-left: 13px;
+}
+
+
+
 
 }
