@@ -8,8 +8,8 @@
   </a>
 </div>
 
-<h1>信頼できるサービスをオンラインで</br>すぐに簡単に無料で予約</h1>
-<p>No More 業者選びの失敗！</p>
+<h1>信頼できるサービスをオンラインで</br>すぐに簡単に予約</h1>
+<p>登録費・利用料すべて無料！</p>
 
 
 </div>
@@ -44,10 +44,7 @@
 
 
 
-
-
 <div class="main-top-wrapper">
-
 
   <div class="explain-seekle-wrapper">
     <div class="explain-seekle-wrapper-content">
@@ -58,16 +55,11 @@
    
 
 
-
-
-
-
 <div class="seekle_favs_left">
 <p>住まい</p>
 
     <% @note1.note_images.each do |note_images| %>
     <%= link_to image_tag( "/images/kitchin.jpg", { :class => "popular_service1"}) %>
-
 
     <% end %>
 
@@ -214,7 +206,7 @@
         <h3 id="tagline">Let's find customers who need you!</h3>
       </div>
       <div class="join-button">
-      <%= link_to "サービス提供者として参加",'http://goo.gl/forms/y9P0l9bh5OFkPs1J3', class: "btn message signup-show" %>
+      <%= link_to "サービス提供者として参加",home_pro_path, class: "btn message signup-show" %>
     </div>
     </div>
   </div>
