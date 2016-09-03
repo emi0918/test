@@ -1,0 +1,467 @@
+
+
+// Media queries breakpoints
+$screen-mobile-xs: 375px !default;
+$screen-mobile-md: 400px !default;
+$screen-mobile: 480px !default;
+$screen-phablet: 620px !default;
+$screen-tablet: 768px !default;
+$screen-desktop: 1024px !default;
+$screen-mobile-max: ($screen-mobile - 1) !default;
+$screen-tablet-max: ($screen-tablet - 1) !default;
+$screen-desktop-max: ($screen-desktop - 1) !default;
+$app-container-width: $screen-desktop !default;
+
+
+
+
+.container_head{
+  background-color: white;
+    border-bottom: 1px solid #ccc;
+        box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.135);
+  position: fixed;
+  width:100%;
+    height:67px;
+}
+
+.logo a,a,a:hover,header{
+  text-decoration:none
+}
+
+html{
+  overflow:auto
+  }
+
+body{
+  overflow:hidden;
+  position:relative;
+  margin:0
+  }
+li,ul{
+  list-style-type:none;
+  margin:0
+  }
+
+a{
+  color:gray
+}
+a:hover{
+  color:#1b7ccd
+}
+
+.main_content{
+  padding-top:57px;
+  margin:0 auto
+}
+
+h1{
+  font-size:32px;
+  letter-spacing:-2px;
+  margin-bottom:0px;
+}
+
+.logo a,h2{letter-spacing:-1px}h2{font-size:20px}p{font-size:16px;line-height:40px}
+
+header{
+  width:100%;
+  position:absolute;
+  top:0;
+  z-index:10;
+  cursor:pointer}
+
+  .logo{
+    height:67px;
+    width:15%;
+    margin-left: 169px;
+  }
+.logo a{float:left;font-size:30px;padding:12px 50px;font-weight:700}
+.logo a:hover {
+
+  text-decoration:none;
+}
+
+.logo_2 a,h2{letter-spacing:-1px}
+.logo_2{height:70px;width:16%; margin-left: 120px;}
+.logo_2 a{float:left;font-size:30px;padding:12px 50px;font-weight:700}
+
+.provider-header{text-decoration:none}
+.provider-header{height:69.6px;width:100%; background-color:#6495ED; position:absolute;top:0;z-index:10;padding:1px;cursor:pointer}
+
+
+
+
+
+.header-right {
+  float: right;
+  margin-right:150px;
+  text-decoration:none;
+}
+
+.header-right a {
+  color: gray;
+  display: block;
+  text-decoration:none;
+}
+.header-right a:hover{
+  color:  #DCDCDC;
+  text-decoration:none;
+}
+
+.header-right li {
+  line-height: 65px;
+  padding: 0 25px;
+  float: left;
+}
+
+
+@media only screen and  ( max-width:414px )
+{
+  .body{
+    position: relative;
+  }
+  /* ボディ */
+  .background-image
+  {
+    float:left;
+  }
+
+
+  .first {
+  clear:both;
+  padding-left: 12%;
+    }
+
+
+
+.reason p{
+
+  width:100%;
+
+}
+
+}
+
+
+
+@media screen and  ( max-width:414px )
+{
+
+  .reasons {
+    font-size:60%;
+    clear:both;
+    padding-top: 10px;
+    padding-right:0px;
+
+  }
+  .reason  {
+    display: inline-block;
+    font-size: 10px;
+     line-height:14px;
+      width:100%;
+
+  }
+
+  .wrapper{
+   width:auto;
+  position:relative;
+  margin-left:0px;
+    max-width:640px;
+  }
+
+ .lesson{
+    width:100%;
+    margin-bottom:50px;
+  }
+    .web-menu-var{
+    display: none;
+  }
+  
+.column-menu{
+  display:none;
+}
+
+
+.header-right {
+  display: none;
+}
+
+.btn .btn-lg .btn-primary{
+  display: none;
+}
+
+.footer{
+  display: none;
+}
+
+
+.footer-bottom{
+  display: none;
+}
+
+.lesson-wrapper{
+  display:none;
+}
+
+
+
+
+}
+
+
+
+
+
+@media only screen and  ( max-width:414px )
+{
+  .body{
+    position: relative;
+  }
+  /* ボディ */
+  .background-image
+  {
+    float:left;
+  }
+
+}
+
+
+
+
+
+/* ipad iphone4と5のレスポンシブデザイン */
+@media screen and (min-width: 320px) and (max-width: 374px){
+
+
+#scroll-menu {
+    height: 56px;/*メニューの縦幅*/
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#scroll-menu a {
+    display: block;
+    height: 100%;
+    font-size: 70%;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 40px;/*メニューの縦幅*/
+}
+
+#scroll-menu .scroll-menu-inner {
+
+     list-style-type: none;
+    width: 760px;/*メニューの横幅*/
+    height: 100%;
+    margin-left: 10px;
+    padding: 0;
+    text-align: center;
+}
+#scroll-menu li {
+    margin-top: -4px;
+    float: left;
+    font-size: 25px;
+    width: 18%;
+    height: 100%;
+}
+
+
+
+
+}
+
+
+
+
+
+
+/* ipad iphone6のレスポンシブデザイン */
+@media (min-width: 375px) 
+{
+
+#scroll-menu {
+    height: 65px;/*メニューの縦幅*/
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+#scroll-menu a {
+    display: block;
+    height: 100%;
+    font-size: 70%;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 40px;/*メニューの縦幅*/
+}
+#scroll-menu .scroll-menu-inner {
+    list-style-type: none;
+    width: 760px;/*メニューの横幅*/
+    height: 100%;
+    margin-left: 10px;
+    padding: 0;
+    text-align: center;
+}
+#scroll-menu li {
+  float: left;
+    font-size: 26px;
+    width: 20%;
+    height: 100%;
+}
+
+
+}
+
+
+@media screen and  ( min-width:414px )
+{
+
+
+#scroll-menu {
+    height: 63px;/*メニューの縦幅*/
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+#scroll-menu a {
+    display: block;
+    height: 100%;
+    font-size: 70%;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 40px;/*メニューの縦幅*/
+}
+
+#scroll-menu .scroll-menu-inner {
+    list-style-type: none;
+    width: 760px;/*メニューの横幅*/
+    height: 100%;
+    margin-left: 10px;
+    padding: 0;
+    text-align: center;
+}
+#scroll-menu li {
+    float: left;
+    font-size: 26px;
+    width: 20%;
+    height: 100%;
+}
+
+
+
+
+}
+
+
+.responsive-menu-var .dropmenu{
+
+border-top: 1px solid #f5f5f5;
+}
+
+
+.dropmenu:after,.dropmenu:before{content:"";display:table}
+.dropmenu:after{clear:both}
+
+
+
+
+
+/* ブレイクポイントが1000px以下の時のメディアクエリを設定してください*/
+
+@media (min-width: $screen-tablet) {
+  /* lessonクラスのwidthを50%に変更し、margin-bottom: 50px;を追加してください */
+.container_head{
+    margin-left:-10px;
+}
+
+
+  .logo{
+    width:23%;
+    margin-left: 10px;
+  }
+
+
+.header-right {
+ 
+  margin-right:0px;
+
+}
+
+
+
+
+.column-menu{
+  display:none;
+}
+#top-head .inner {
+display:none;
+}
+
+#scroll-menu {
+    display:none;
+}
+
+
+
+.btn .btn-lg .btn-primary{
+  display: none;
+}
+
+.footer{
+  display: none;
+}
+
+
+.footer-bottom{
+  display: none;
+}
+
+.lesson-wrapper{
+  display:none;
+}
+
+.explain-seekle-wrapper{
+    height:980px;
+  }
+
+}
+
+
+
+
+
+
+@media (min-width: $screen-desktop) {
+.responsive-menu-var {
+display:none;
+}
+
+.container_head{
+       margin-left:0px;
+}
+
+
+.logo{
+    height:67px;
+    width:15%;
+    margin-left: 169px;
+  }
+
+
+.header-right {
+  float: right;
+  margin-right:150px;
+
+}
+.responsive-menu-var {
+display:none;
+}
+
+
+}
+
+
+
+
+
