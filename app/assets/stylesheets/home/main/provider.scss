@@ -1,0 +1,137 @@
+
+
+// Media queries breakpoints
+$screen-mobile-xs: 375px !default;
+$screen-mobile-md: 400px !default;
+$screen-mobile: 480px !default;
+$screen-phablet: 620px !default;
+$screen-tablet: 768px !default;
+$screen-desktop: 1024px !default;
+$screen-mobile-max: ($screen-mobile - 1) !default;
+$screen-tablet-max: ($screen-tablet - 1) !default;
+$screen-desktop-max: ($screen-desktop - 1) !default;
+$app-container-width: $screen-desktop !default;
+
+
+.explain-provider-wrapper{
+	 height:255px;
+  text-align:center;
+  background-color:#fff;
+  border-top:2px solid #f5f5f5;
+border-bottom: 2px solid #f5f5f5;
+}
+.explain-provider-wrapper p{font-size:15px;line-height:25px}
+
+
+
+/*プロバイダーページ */
+.pro-top-wrapper{
+  margin-top:-90px;
+    background-image: url(/images/businesswoman.jpg);
+  background-size:cover;
+  color:#fff;
+  text-align:center;
+  padding:90px 0;
+
+}
+
+.pro-container{
+height:300px
+}
+
+.pro-top-wrapper h1{
+padding-top:70px;
+opacity:.9;
+font-size:42px;
+etter-spacing:2px
+}
+
+.pro-top-wrapper p{
+opacity:.7;
+font-size:16px;
+margin-bottom:35px
+}
+
+
+
+.about-provider-wrapper{
+  margin-top: 4%;
+  height:290px;
+  color:gray;
+width:73%;
+    margin-left: 13.9%;
+
+text-align:center;
+font-size:14px
+}
+
+.about-provider-wrapper p{
+  font-size:14px;
+  line-height:25px;
+  text-align: left;
+}
+
+
+
+.btn{color:#fff;opacity:.8;padding:10px 24px;border-radius:3px}
+.btn.signup{font-size:17px}
+.btn:hover{color:#DCDCDC}
+.title-field{width:480px}
+.content-field{height:90px;width:956px}
+.signup{background-color:#239b76}
+.first-wrapper,.pro-explain-wrapper{background-color:#fff;text-align:center}
+.pro-explain-wrapper{height:340px;margin-bottom:-100px;border-bottom:1px solid #eee;padding:10px 0 120px}@media screen and (max-width:640px){.pro-explain-wrapper{height:800px}
+.All-first{width:180%}.first{clear:both}}.first-wrapper{height:420px;padding-bottom:80px;font-size:14px}.first-wrapper p{font-size:15px;line-height:25px}.heading{padding-top:40px;padding-bottom:0;color:#5f5d60}.first{float:left;width:33%}.first p{font-size:14px;line-height:20px}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and  ( max-width:$screen-mobile-max ){
+
+.pro-top-wrapper{
+    padding: 50px 0 60px 0px;
+  }
+.pro-top-wrapper h1 {
+   width:80%;
+   margin-left: 9%;
+   text-shadow: 2px 2px 1px black;
+   font-size: 30px;
+   line-height: 50px;
+   padding-left: 0%;
+    padding-top:16%;
+  }
+
+.pro-top-wrapper p{
+   width:70%;
+   margin-left: 14%;
+   line-height: 22px;
+   font-size: 14px;
+   }
+
+
+.about-provider-wrapper{
+  margin-top: 4%;
+  height:900px;
+  color:gray;
+width:73%;
+    margin-left: 13.9%;
+
+text-align:center;
+font-size:14px
+}
+
+.about-provider-wrapper p{
+  font-size:14px;
+  line-height:25px;
+  text-align: left;
+}
+
+
+   }
