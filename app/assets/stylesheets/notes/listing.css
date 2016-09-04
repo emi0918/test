@@ -1,114 +1,64 @@
-
-.listing-wrapper{
-	height:0 auto;
-	background-color:#FFF;
-} 
-
-.listing-wrapper .bootstrap p{
-	margin-left:40%;
+.listing_wrapper{
+	    padding-top: 18px;
+	    padding-bottom: 18px;
+	width:73%;
+	margin-left:13.8%;
+}
+.listing_wrapper h1{
+width:100%;
+float:left;
+font-size: 27px;
+margin-bottom: 30px;
+	font-weight: 500; 
+	 line-height: 1.3em; 
+}
+.listing_wrapper .bootstrap{
+	margin-top: 120px;
+	float:right;
 }
 
-
-
-.provider-listings-heading h2{
-	float:center;
-	margin-left:200px;
-	padding-top:40px;
-	font-weight:normal; 
+.listing_wrapper .bootstrap .btn{
+	font-size: 24px;
 }
 
-.provider-listings ul li{
-	background-color:#fff;
-	margin-top:30px;
-	float:center;
-	margin-left:14%;
-	height:150px;
-	width:800px;
-	border-radius:5px;
-	margin-bottom:12%;
-}
+.listing_title{
+width:100%;
+float:left;
 
-
-.panel-heading{
-	height:40px;
-}
-
-
-.panel-body-list{
-	height:200px;
-}
-
-.service_image{
-	height:83%;
-	width:34%;
-	margin-top:16px;
-	margin-left:20px;
-}
-
-
-
-
-
-.listing-wrapper .bootstrap .btn-default{
-	margin-right:10px; 
-	 margin-top:18%;
-	 float:right;
-	 font-size: 20px;
-	}
-
-
-
-
-
-
-
-
-/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
-@media screen and (max-width: 767px) {
-
-
-.provider-listings-heading h2{
-   margin-top: 0px;
-	margin-left:10px;
-
-}
-
-
-.panel-body-list{
-	height:40%;
-}
-
-
-.provider-listings ul li{
-	background-color:#fff;
-	margin-top:30px;
-    margin-left: -22%;
-	width:130%;
-	border-radius:5px;
-	margin-bottom:60px;
 }
 
 
 .service_image{
-	height:10%;
-	width:30%;
-	margin-bottom: 12px;
+   float:left;
+   clear:both;
+   width:28%;
+   height:170px;
+}
+
+
+
+
+li.listing{
+border-bottom: 1px solid gray;
+clear:both;
+height:270px;
 
 }
 
-.panel-heading{
-	height:50px;
-	font-size: 11px;
+.listing h3{
+	float:left;
 }
 
-.listing-wrapper .bootstrap .btn-default{
-	margin-right:3%; 
-	 margin-top:20%;
-	 float:right;
-	 font-size: 12px;
-	}
 
+.listing h4{
+	float:left;
+	padding-left: 10px;
+}
 
+.listing p{
+
+	float:left;
+	padding-left: 10px;
 }
 
 
@@ -117,26 +67,160 @@
 /* ipad iphone4と5のレスポンシブデザイン */
 @media screen and (min-width: 320px) and (max-width: 374px){
 
+.listing_wrapper{
+	width:95%;
+	margin-left:3%;
+}
 
 
-.provider-listings ul li{
-	
-	margin-top:30px;
-    margin-left: -30%;
-	width:140%;
-	border-radius:5px;
-	margin-bottom:30px;
+.listing_wrapper h1{
+
+margin-bottom: 5px;
+ 
+}
+
+
+.listing h4{
+	padding-left: 5px;
+	font-size: 14px;
+}
+
+.service_image{
+   
+   width:42%;
+   height:120px;
+}
+
+.listing_wrapper .bootstrap{
+	margin-top: 35px;
+	float:right;
+}
+.listing_wrapper .bootstrap .btn{
+	font-size: 10px;
+}
+
+
 }
 
 
 
 
-.listing-wrapper .bootstrap .btn-default{
-	margin-right:3%; 
-	margin-top:8%;
-	font-size: 9px;
-	}
+
+/* iphone6 のレスポンシブデザイン */
+@media (min-width: 375px)  {
+
+
+.listing_wrapper{
+	width:95%;
+	margin-left:3%;
 }
+
+
+
+.listing h4{
+	float:left;
+	padding-left: 10px;
+}
+
+
+.listing_wrapper h1{
+
+margin-bottom: 10px;
+ 
+}
+.service_image{
+   
+   width:45%;
+   height:150px;
+}
+
+.listing_wrapper .bootstrap{
+	margin-top: 58px;
+	float:right;
+}
+.listing_wrapper .bootstrap .btn{
+	font-size: 11px;
+}
+
+
+}
+
+
+
+
+
+
+/* iphone6 plusのレスポンシブデザイン */
+@media (min-width: 414px) {
+
+
+
+.service_image{
+   width:45%;
+   height:160px;
+}
+
+.listing_wrapper .bootstrap{
+	margin-top: 62px;
+}
+.listing_wrapper .bootstrap .btn{
+	font-size: 13px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* MAC */
+@media screen and (min-width: 800px) {
+
+.listing_wrapper{
+	    padding-top: 18px;
+	    padding-bottom: 18px;
+	width:73%;
+	margin-left:13.8%;
+}
+.listing_wrapper h1{
+width:100%;
+float:left;
+font-size: 27px;
+margin-bottom: 30px;
+	font-weight: 500; 
+	 line-height: 1.3em; 
+}
+.listing_wrapper .bootstrap{
+	margin-top: 120px;
+	float:right;
+}
+
+.listing_wrapper .bootstrap .btn{
+	font-size: 24px;
+}
+
+.listing_title{
+width:100%;
+float:left;
+
+}
+
+
+.service_image{
+   float:left;
+   clear:both;
+   width:28%;
+   height:170px;
+}
+
+
+}
+
 
 
 
