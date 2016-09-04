@@ -44,6 +44,12 @@
 
 
  <%= f.fields_for :store_infos do |s| %>
+
+<%= s.hidden_field :postalcode %>
+  <%= s.hidden_field :prefecture %>
+   <%= s.hidden_field :city %>
+    <%= s.hidden_field :address%>
+        <%= s.hidden_field :building %>
  <%= s.hidden_field :provider_id %>
   <%= s.hidden_field :hours %>
    <%= s.hidden_field :holiday %>
