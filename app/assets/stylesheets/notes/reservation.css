@@ -16,10 +16,14 @@ margin-bottom: 30px;
 	}
 
 .reservation-confirm{
-		   width:100%;
+		   width:90%;
 	margin-top: -4%;
-margin-left: 3.8%;
+margin-left: 5%;
 	
+}
+
+.reservation-confirm .bootstrap .newpost{
+	width:100%;
 }
 
 .complete_reservation_wrapper{margin: 10% 10%;text-align: center;}
@@ -91,3 +95,59 @@ margin-left: 3%;
 .provider_info_for_reservation{
 	padding:1%;
 }
+
+
+
+
+
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
+
+	.reservation-confirm .bootstrap{
+		margin:0px;
+	}
+
+.reservation-form{
+	   width:100%;
+	margin-top:5%;
+	margin-left:0%;
+	 margin-bottom: 7%
+  
+	}
+
+	.reservation-confirm{
+		 width:100%;
+	margin-top: 0%;
+margin-left: 0%;
+	
+}
+
+
+.reservation-confirm .bootstrap .shadow_btn{
+	margin-left: 0%; 
+	 margin-top:6%;
+	 font-size: 20px;
+	 padding:10px; 
+	 background-color:	#FFD700;
+	  }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
