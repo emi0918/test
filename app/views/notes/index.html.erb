@@ -1,30 +1,23 @@
 <%= render 'providers/header' %>
 
-<div class="listing-wrapper">
-  <div class="provider-listings">
-    <div class="provider-listings-heading">
-      <h2>あなたのサービス</h2>
-    </div>
+<div class="listing_wrapper">
+<h1>掲載中サービス</h1>
 
-    <div class="bootstrap">
-      <% if @notes.blank? %>
+
+<div class="listings_list">
+
+   <% if @notes.blank? %>
       <p>掲載中のサービスはまだありません</p>
+   <% else %>
 
-      <% else %>
-      <ul>
-   
-       <% @notes.each do |note|  %>
-       <li> 
-         <div class="panel panel-default">
-           <div class="panel-heading">
+    <% @notes.each do |note|  %>
+       <li class="listing"> 
+        <div class="listing_title">        
            <% note.note_revisions.each do |note_revision| %>
+           <h3> <%= link_to note_revision.title, note_path(note) %></h3>
 
-            <%= link_to note_revision.title, note_path(note) %>
-                 <% end %> 　 <%= note.reservations.count %>件の予約があります！
-
-          </div>
-          <div class="panel-body-list">
-  <% note.note_images.each do |note_images| %>
+      </div>
+     <% note.note_images.each do |note_images| %>
         <% if note_images.image1.present? %>
              <%= image_tag note_images.image1_url ,class: "service_image"%>
             <% else %>
@@ -32,29 +25,29 @@
             <% end %>
        <% end %>
 
+         <h4> <%= note.reservations.count %>件の予約があります！</h4>
         
-           <%= link_to '予約を確認する', note_reservations_path(note), class:"btn btn-default" %>
-           <%= link_to '編集する', edit_note_path(note), class:"btn btn-default" %>       </div>
-       </div>
-     </li>   
-     <% end %>
-   </ul>
-   <% end %>
- </div>
-</div>
-
-
-
-
-
-
+ 
 
 
 <div class="bootstrap">
- <div class="list-number clearfix">
-   <%= paginate(@notes) %>
- </div>
+        
+           <%= link_to '予約を確認する', note_reservations_path(note), class:"btn btn-default" %>
+           <%= link_to '編集する', edit_note_path(note), class:"btn btn-default" %>       
+    
+   </div>
+    <% end %> 
+     <% end %>
+     </li>   
+   <% end %>
+
+
+
 </div>
 
 
 
+
+
+
+</div>
