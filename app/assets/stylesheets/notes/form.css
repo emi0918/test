@@ -20,7 +20,7 @@
 }
 
 table.newpost {
-    
+width:80%;
     
     border-collapse: separate;
     border-spacing: 0px 1px;
@@ -28,8 +28,8 @@ table.newpost {
  
  
 table.newpost  td {
-padding-top: 26px;
-padding-bottom: 26px;
+padding-top: 23px;
+padding-bottom: 23px;
     padding-left:28px;
     vertical-align: middle;
     text-align: left;
@@ -39,7 +39,13 @@ padding-bottom: 26px;
 table.newpost tr{
         border-bottom: 1px solid #e6e9e3;
 }
+table.newpost th{
+    width:100%;
+}
 
+table.newpost p{
+    width:100%;
+}
 
 .form-label {
     margin-left: 10px;
@@ -141,35 +147,4 @@ table.newpost tr{
 
 
 
-
-
-
-
-/* ipad iphone4と5のレスポンシブデザイン */
-@media screen and  (max-width: 374px)
-{
-
-
-.providers_new_post{
-
-    margin-right:3%;
-   
-}
-
-
-}
-
-
-
-/* ipad iphone6のレスポンシブデザイン */
-
-@media (max-width: 375px) 
-{
-
-    .providers_new_post{
-
-    margin-left:3%;
-   
-}
-}
 
