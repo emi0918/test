@@ -1,20 +1,22 @@
 .reservations_list{
-	width:90%;
-	 margin-left:4%;
+width:73%;
+	 margin-left:13.8%;
 	 height:0 auto;
-	 margin-top: 6%; 
+	 margin-top: 4%; 
 	 margin-bottom: 6%;
 	}
 
 .reservations_list h1{
-	font-size:20px;
+	font-size:25px;
 	 font-weight: normal;
+	 margin-bottom: 50px;
 	}
 
-.reservations_list .bootstrap .table td{
-	padding:30px;
 
+.reservations_list .bootstrap .table tr{
+margin-bottom: 80px;
 }
+
 
 
 
@@ -43,9 +45,9 @@
 @media screen and (max-width: 414px) {
 
 .reservations_list{
-	width:100%;
+	width:94%;
 	 margin-left:0%;
-	
+	 margin-left: 3%;
 	 margin-top: 6%; 
 	 margin-bottom: 6%;
 	}
@@ -53,7 +55,7 @@
 .reservations_list h1{
 	font-size:14px;
 	 font-weight: normal;
-	 margin-left: 7%;
+
 	margin-right: 7%;
 	}
 
@@ -62,7 +64,7 @@
      display: block;
 padding-top: 0px;
 padding-bottom: none;
-    padding-left:0px;
+
  border:none;
 
 }
