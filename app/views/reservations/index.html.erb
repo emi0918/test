@@ -8,6 +8,7 @@
 </div>
 
 <div class="reservations_list">
+
 <% @note.note_revisions.each do |note_revision| %>
 <h1> <%= note_revision.title %>にされている予約一覧</h1> 
 <% end %>
@@ -22,10 +23,10 @@
 
   <thead>
     <tr>
-      <th>希望日程</th>
       <th>お名前</th>
-      <th>電話番号</th>
+      <th>希望日程</th>
       <th>お問い合わせ</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -34,10 +35,19 @@
 
     <% @note.reservations.each do |reservation| %>
       <tr>
-        <td><%= reservation.date %></td>
+
         <td><%= reservation.name %></td>
-        <td><%= reservation.phone_number %></td>
+        <td>
+        第１希望：　<br><%= reservation.workdate1 %> <%= reservation.worktime1 %>  <br><br>
+        第２希望：<br><%= reservation.workdate2 %> <%= reservation.worktime2 %> <br><br>
+        第３希望：<br><%= reservation.workdate3 %> <%= reservation.worktime3 %> 
+        </td>
         <td><%= simple_format(reservation.message) %></td>
+        
+
+
+
+
       </tr>
     <% end %>
   </tbody>
