@@ -19,7 +19,7 @@
 
 	<%= stylesheet_link_tag "application", media: "all" %>
 	<header>
-
+	<div class="header_content">
 	 <%= link_to image_tag('logo-min.png',class: 'logo'), "/" %>
 		 
 
@@ -34,7 +34,7 @@
 				<li><%= link_to 'ログイン', new_user_session_path %></li>
 				<% end %> 
 			</ul>
-	
+	</div>
 	</header> 
 	<div class="main_content"> <%= yield %> </div>
 
