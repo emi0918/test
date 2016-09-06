@@ -71,8 +71,6 @@ header{
 
   .logo{
     height:67px;
-
-    margin-left: 169px;
   }
 .logo a{float:left;font-size:30px;padding:12px 50px;font-weight:700}
 .logo a:hover {
@@ -86,28 +84,6 @@ header{
 
 
 
-
-.header-right {
-  float: right;
-  margin-right:150px;
-  text-decoration:none;
-}
-
-.header-right a {
-  color: gray;
-  display: block;
-  text-decoration:none;
-}
-.header-right a:hover{
-  color:  #DCDCDC;
-  text-decoration:none;
-}
-
-.header-right li {
-  line-height: 65px;
-  padding: 0 25px;
-  float: left;
-}
 
 
 @media only screen and  ( max-width:414px )
@@ -368,7 +344,7 @@ border-top: 1px solid #f5f5f5;
 @media (min-width: $screen-tablet) {
   /* lessonクラスのwidthを50%に変更し、margin-bottom: 50px;を追加してください */
 .container_head{
-    margin-left:-10px;
+    margin-left:0px;
 }
 
 
@@ -433,13 +409,12 @@ display:none;
     height:67px;
 
 
-    margin-left: 169px;
   }
 
 
 .header-right {
   float: right;
-  margin-right:150px;
+margin-right:0px;
 
 }
 .responsive-menu-var {
