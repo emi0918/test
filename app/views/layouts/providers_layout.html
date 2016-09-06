@@ -7,21 +7,26 @@
 
 <!--bodyタグ内のコンテンツの表示はhead内にあるjsの処理が完了してから行われるので、表示が遅くなる   なるべくheadに不要なjs入れない bodyにいれる-->
 
+
+
 <body>
 <script src='https://cdn.slaask.com/chat.js'></script>
 <script>
     _slaask.init('e82bd97e2f19e5c3820785f34a397d1c');
 </script>
 <%= stylesheet_link_tag "application", media: "all" %>
-<div class="provider-header">
+<header class="provider-header">
+	<div class="header_content">
 
-<a href="/providers/profile"><%= image_tag('whitelogo.png', class: 'logo_2') %></a> 
+
+ <%= link_to image_tag('whitelogo.png',class: 'logo_2'), "/providers/profile" %>
+
 
 <ul class="header-right"> <% if provider_signed_in? %>  <%= javascript_include_tag "application" %>
  <li> <%= link_to 'サービスを掲載', new_note_path %></li>
  <li> <%= link_to 'ログアウト', destroy_provider_session_path, method: :delete %></li> <% else %> <% end %> </ul>
-
-</div> <div class="main_content"> <%= yield %> </div>
+</div>
+</header> <div class="main_content"> <%= yield %> </div>
 
 <div class="footer-bottom">
 
