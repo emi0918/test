@@ -21,7 +21,18 @@
  <li> <%= link_to 'サービスを掲載', new_note_path %></li>
  <li> <%= link_to 'ログアウト', destroy_provider_session_path, method: :delete %></li> <% else %> <% end %> </ul>
 
-</div> <div class="main_content"> <%= yield %> </div><div class="footer-bottom"> <div class="footer-menu pull-left"> <div class="widget widget_menu"> <nav class="widget-menu"> <ul> <li><a href="/home/term">利用規約</a></li> <li><a href="/home/policy">プライバシポリシー</a></li> <li><a href="/home/signage">特定商取引に基づく表記</a></li> </ul> </nav> </div> </div></div> <div class="copy-right">© Seekle inc., All Rights Reseved.</div></body>
+</div> <div class="main_content"> <%= yield %> </div>
+
+<div class="footer-bottom">
+
+  <nav class="widget-menu"> 
+
+  <li><a href="/home/term">利用規約</a></li>
+   <li><a href="/home/policy">プライバシポリシー</a></li> 
+   <li><a href="/home/signage">特定商取引に基づく表記</a></li> 
+
+   </nav>
+  </div> <div class="copy-right">© Seekle inc., All Rights Reseved.</div></body>
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
