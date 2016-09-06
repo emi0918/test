@@ -19,7 +19,8 @@
 	<%= stylesheet_link_tag "application", media: "all" %>
 	<header>
 		<div class="container_head"> 
-			<a href="/"><%= image_tag('logo-min.png',class: 'logo') %></a> 
+		 <%= link_to image_tag('logo-min.png',class: 'logo'), "/" %>
+		 
 			<ul class="header-right"> 
 				<% if user_signed_in? %> 
 				<li> <%= link_to 'ダッシュボード',users_path %></li> 
