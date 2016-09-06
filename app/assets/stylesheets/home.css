@@ -4,16 +4,39 @@
 }
 
 
-.container_head{
-  background-color: white;
-    border-bottom: 1px solid #ccc;
-        box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.135);
-  position: fixed;
-  width:100%;
-    height:67px;
+
+.header_content{
+  max-width: 964px;
+     margin: 0 auto;
+
+    position: relative;
 }
 
-.logo a,a,a:hover,header{text-decoration:none}
+
+.header-right {
+  float: right;
+padding-left:110px; 
+}
+
+.header-right a {
+  color: gray;
+  display: block;
+  text-decoration:none;
+}
+.header-right a:hover{
+  color:  #DCDCDC;
+  text-decoration:none;
+}
+
+.header-right li {
+  line-height: 65px;
+padding-right:20px; 
+padding-left:20px; 
+  float: left;
+}
+
+
+
 html{overflow:auto}body{overflow:hidden;position:relative;margin:0}li,ul{list-style-type:none;margin:0}a{color:gray}a:hover{color:#1b7ccd}.main_content{padding-top:57px;margin:0 auto}
 
 h1{font-size:32px;letter-spacing:-2px;margin-bottom:0px;}
@@ -34,40 +57,18 @@ header{
   z-index:10;
   cursor:pointer}
 
-  .logo{
+.logo{
     height:67px;
-  
-    margin-left: 169px;
+  float:left;
+
   }
 
-.logo a{
-  float:left;
-  font-size:30px;
-  padding:12px 50px;
-  font-weight:700;
-}
-
-.logo a:hover {
-  text-decoration:none;
-}
-
-.logo_2 a,h2{
-  letter-spacing:-1px;
-}
 
 .logo_2{
- 
-    max-width: 100%; 
- height:67px;
-
-    margin-left: 169px;
- }
-.logo_2 a{
+     height:67px;
   float:left;
-  font-size:30px;
-  padding:12px 50px;
-  font-weight:700
-}
+ }
+
 
 .provider-header{
   text-decoration:none
@@ -102,27 +103,6 @@ header{
 
 
 
-.header-right {
-  float: right;
-  margin-right:150px;
-  text-decoration:none;
-}
-
-.header-right a {
-  color: gray;
-  display: block;
-  text-decoration:none;
-}
-.header-right a:hover{
-  color:  #DCDCDC;
-  text-decoration:none;
-}
-
-.header-right li {
-  line-height: 65px;
-  padding: 0 25px;
-  float: left;
-}
 
 
 
