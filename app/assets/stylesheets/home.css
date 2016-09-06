@@ -146,20 +146,29 @@ and (max-device-width:568px)
   clear: both;
   height: 250px;
   width: 100%;
+
   text-align: center;
   padding-top: 20px;
-  margin: auto;
+
+}
+
+.footer_content{
+  width: 78%;
+    margin-left: 13.8%;
+    float:left;
+      clear: both;
 }
 
 
 .col-sm-3 {
   float: left;
+margin-right: 50px;
   cursor: pointer;
   transition: all 0.5s;
 }
 .col-sm-3 ul li {
   list-style: none;
-  margin: 14px 60px;
+  margin: 14px 0px;
   font-size:15px;
   text-align: left;
 }
@@ -187,12 +196,16 @@ and (max-device-width:568px)
 
 .column-menu a{cursor:pointer;color:#fff}.column-menu ul{color:#fff}.column-menu ul li a:hover,.column-menu ul li:hover{color:rgba(255,255,255,.5)}.column-menu li{display:inline-block;margin:10px}.column-menu ul li a:hover{text-decoration:none}
 
-.widget-title{margin-left:57px;text-align:left;}
+.widget-title{margin-left:0px;text-align:left;}
 #social-icon i,#social-icon i:before{line-height:50px}#social-icon i,.actions p,.copy-right,.dropmenu li{text-align:center}
 .dropmenu li a,.widget-details li a{text-decoration:none}  .dropmenu li a:hover{font-size: 20px;} 
 
 
-.widget-menu{cursor:pointer}
+.widget-menu{
+  cursor:pointer;
+  width:78%;
+  margin-left: 13%;
+}
 .widget-menu a{color:#F5F5F5}
 .widget-menu a:hover{color:#D3D3D3}
 .widget-menu li{display:inline-block;margin:10px}
