@@ -5,46 +5,46 @@
  
 
  .upper-menu,.upper-menu ul li:hover{
- 	-webkit-tap-highlight-color:transparent
+    -webkit-tap-highlight-color:transparent
  }
  .categories ul li,.details{
- 	list-style:none;
- 	float:left
+    list-style:none;
+    float:left
  }
 
  .genre,.top_home_page{
- 	background-color:#F5F5F5
+    background-color:#F5F5F5
  }
  .up-var{
- 	padding-top:57px
+    padding-top:57px
  }
  .upper-menu{
- 	text-align:center;
- 	height:50px;
- 	cursor:pointer;
- 	margin-top:-43px;
+    text-align:center;
+    height:50px;
+    cursor:pointer;
+    margin-top:-43px;
 
- 	border-top:2px solid #ebebeb;
- 	border-bottom:2px solid #ebebeb;
- 	transition:all .5s
+    border-top:2px solid #ebebeb;
+    border-bottom:2px solid #ebebeb;
+    transition:all .5s
  }
   .upper-menu ul {
     margin-left: 9%;
   }
  .upper-menu ul li{
- 	margin-top:16px;
- 	text-transform:uppercase;
- 	font-size:14px;
- 	font-weight:700;
- 	width:10%;
- 	float:left;
- 	box-sizing:border-box;
- 	border-right:1px solid #ebebeb;
- 	overflow:hidden
+    margin-top:16px;
+    text-transform:uppercase;
+    font-size:14px;
+    font-weight:700;
+    width:10%;
+    float:left;
+    box-sizing:border-box;
+    border-right:1px solid #ebebeb;
+    overflow:hidden
  }
 
  .upper-menu ul li:hover{
- 	color:gray
+    color:gray
  }
 
 
@@ -154,7 +154,7 @@ display: none;
     #top-head .logo_2 {
    margin-left: 2%;
     margin-top: 1px;
-   width:34%;
+
    height:96%;
      
     }
@@ -219,11 +219,11 @@ display: none;
     }
 
      .up-var{
- 	display:none;
+    display:none;
  }
 
  .provider-header{
- 	display:none;
+    display:none;
  }
 
 
@@ -233,7 +233,7 @@ display: none;
 /* MAC */
 @media screen and (min-width: 800px) {
 .inner{
-	display: none;
+    display: none;
 }
 header#top-head{
  display:none;
