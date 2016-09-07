@@ -1,8 +1,9 @@
 
 .mypage-all_wrapper{
 	padding-top:18px;
-margin-left:13.8%;
+margin-left:0%;
 	padding-bottom: 60px;
+	height:0 auto;
 }
 
 
@@ -28,7 +29,7 @@ margin-bottom: 30px;
 }
 
 .notification_header{
-width: 84%;
+width: 100%;
 border-bottom: 2px solid	#FDF5E6;
 }
 
