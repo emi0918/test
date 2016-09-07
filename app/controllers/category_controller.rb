@@ -6,7 +6,8 @@ class CategoryController < ApplicationController
     end
 
     def housing
-			@category= Category.find_by(title: params[:category])
+    	 @housecategories =  Category.where(:parent_id => (1))
+			@category= Category.find_by(name: params[:category])
 			@notes = Note.where(category_id: @category_id).order("created_at DESC")
 	end
 
