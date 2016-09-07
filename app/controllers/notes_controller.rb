@@ -48,7 +48,7 @@ class NotesController < ApplicationController
 
   def housing
      @housecategories =  Category.where(:parent_id => (1))
-    @notes = Note.page(params[:page]).per(6).where( :category_id => [(1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12),(13),(14),(15),(16)] )
+    @notes = Note.page(params[:page]).per(6).where( :category_id => [(1),(6),(7),(8),(9),(10),(11),(12),(13),(14),(15),(16)] )
   end
 
   def event
