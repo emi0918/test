@@ -11,6 +11,8 @@
  </div>
 </div>
 
+<div class="main-container">
+
    <% @note_revisions.each do |note_revision| %>
     
 
@@ -19,6 +21,7 @@
     <h1>  <%= note_revision.title %></h1>
 
  <% @note_images.each do |note_images| %>
+ 
     <% if note_images.image1.present? %>
     <%= image_tag note_images.image1_url ,class: "face_pic"%>
     <% else %>
@@ -41,7 +44,7 @@
      </tr>
      <tr>
        <th>カテゴリー：</th>
-       <td><%= @note.category.title %></td>
+       <td><%= @note.category.name %></td>
      </tr>
      <tr>
        <th>料金：</th>
@@ -104,7 +107,6 @@
 </div>
 
 
-
 <div class="service_explain">
   <div class="section section--head">
 
@@ -112,7 +114,6 @@
       <h2>画像ギャラリー</h2>
       <p>サービスのイメージ画像</p>
       </div>
-
 
 
   <div class="example gc3">
@@ -194,7 +195,6 @@
 
 
 
-
 <div class="reviews_providers">
  <h2>レビュー (<%= "#{@reviews.length}" %>)</h2>
  <ul>
@@ -219,7 +219,7 @@
 
 </div>
 
-
+</div>
 </div>
 
 
