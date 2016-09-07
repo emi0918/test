@@ -1,0 +1,35 @@
+.child-category{
+	float:left;
+	line-height:22px;
+	margin-right:15px;
+width:20%
+}
+
+.child-category h3{
+	
+
+}
+
+.child-category p{
+font-size:14px;
+text-align:center;
+	border:1px solid gray;
+
+}
+
+p.housing-categories{
+	background-color:#FFA07A;
+}
+
+p.event-categories{
+	background-color:#F08080;
+}
+
+p.lesson-categories{
+	background-color:	#40E0D0
+;
+}
+
+p.health-categories{
+	background-color:#90EE90;
+}
