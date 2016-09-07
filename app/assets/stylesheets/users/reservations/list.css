@@ -24,17 +24,6 @@
 @media screen and (max-width: 414px) {
 
 
- .reservation_history_wrapper h3{
-    font-size: 16px;
-    height:50px;
-     margin-left: 14px; 
-        width: 90%;
-  padding: 1%;
-    border-radius: 4px;
-    background-color: #FFFAF0;
-    margin-top: 18%;
-    border: 1px solid #808080;
-}
 
 }
 
@@ -69,15 +58,16 @@
 .reservation_info {
         width:100%;
   margin-top: 18%;
-    border-radius: 4px;
-    background-color: #FFFAF0;
+clear:both;
 
-    border: 1px solid #808080;
+
+    border-bottom: 1px solid #808080;
     margin-left: 0px;
 }
 
 .reservation_history_wrapper .bootstrap .btn-default {
-    margin-left: 28%;
+   float:right;
+   clear:both;
         margin-bottom: 8%;
 }
 
@@ -102,7 +92,7 @@
 @media screen and (min-width: 800px) {
     .reservation_history_wrapper {
     padding-top: 18px;
-        margin-left: 13.8%;
+        margin-left:0%;
 width: 100%;
 }
 
@@ -131,11 +121,11 @@ width: 100%;
 }
 .reservation_info {
 margin-bottom: 30px;
-    width:73%;
+    width:97%;
 padding: 1%;
     border-radius: 4px;
     background-color: #FFFAF0;
-margin-top: 0px;
+margin-top: 90px;
     border: 1px solid #808080;
 
 }
