@@ -23,6 +23,10 @@ class NotesController < ApplicationController
 
   def reservations
     @notes = current_provider.notes.all.page(params[:page]).per(3).order(:id)
+        @notes = Note.includes(:conversations).all
+   @notes = Note.includes(:provider).all
+    @notes = Note.includes(:user).all
+    @note = Note.find(params[:id])
     render :layout => 'providers_layout.html'
   end
  
@@ -43,21 +47,22 @@ class NotesController < ApplicationController
 
 
   def housing
-
-
-
-    @notes = Note.page(params[:page]).per(6).where( :category_id => 1 )
+     @housecategories =  Category.where(:parent_id => (1))
+    @notes = Note.page(params[:page]).per(6).where( :category_id => [(1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12),(13),(14),(15),(16)] )
   end
 
   def event
+     @eventcategories =  Category.where(:parent_id => (2))
     @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => 2)
   end
 
   def lesson
+    @lessoncategories =  Category.where(:parent_id => (3))
     @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => 3 )
   end
 
   def health
+     @healthcategories =  Category.where(:parent_id => (4))
     @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => 4 )
   end
 
@@ -70,6 +75,12 @@ class NotesController < ApplicationController
   # GET /notes/ne
   def new
        @note = Note.new
+       @categories= Category.all
+       @housecategories =  Category.where(:parent_id => (1))
+      @eventcategories =  Category.where(:parent_id => (2))
+       @lessoncategories =  Category.where(:parent_id => (3))
+       @healthcategories =  Category.where(:parent_id => (4))
+
        @note.note_revisions.build #追加
               @note.note_images.build #追加
     render :layout => 'providers_layout.html'
@@ -128,16 +139,21 @@ class NotesController < ApplicationController
     def note_params
       params.require(:note).permit(:provider_id, :category_id,
        note_images_attributes: [:image1,:image2,:image3,:image4,:image5,:image6,:image7,:image8,:image9],
-        note_revisions_attributes: [:title, :note_id,:name,:content,:price,:salespoint,:cancelrule,:rule,:catchcopy,:category_id,])
+        note_revisions_attributes: [:title, :note_id,:name,:content,:price,:salespoint,:cancelrule,:rule,:catchcopy,:category_id,:name, :parent_id])
     end
 
    def update_note_params
       params.require(:note).permit(:provider_id, :category_id,
         note_images_attributes: [:image1,:image2,:image3,:image4,:image5,:image6,:image7,:image8,:image9,:_destroy, :id],
-        note_revisions_attributes: [:title, :note_id,:name,:content,:price,:salespoint,:cancelrule,:rule,:catchcopy,:category_id,:_destroy, :id])
+        note_revisions_attributes: [:title, :note_id,:name,:content,:price,:salespoint,:cancelrule,:rule,:catchcopy,:category_id,:name, :parent_id,:_destroy, :id])
 
     end
 
+
+
+def category_params
+  params.require(:category).permit(:name, :parent_id)
+end
 
 
 
