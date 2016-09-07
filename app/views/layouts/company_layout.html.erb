@@ -36,8 +36,10 @@ $(function(){
 <body>
 <%= stylesheet_link_tag "application", media: "all" %>
 
+<header>
+  <div class="header_content">
+     <%= link_to image_tag('logo-min.png',class: 'logo'), "/" %>
 
-<header><a href="/"><%= image_tag('logo-min.png',class: 'logo') %></a> 
 <ul class="header-right"> 
   <%= javascript_include_tag "application" %> 
   <li><a href="#1">About</a></li>
@@ -49,7 +51,17 @@ $(function(){
 
 
 <footer class="footer"> <div class="row">
-<div class="footer-bottom"> <div class="footer-menu pull-left"> <div class="widget widget_menu"> <nav class="widget-menu"> <ul> <li><a href="/home/term">利用規約</a></li> <li><a href="/home/policy">プライバシポリシー</a></li> <li><a href="/home/signage">特定商取引に基づく表記</a></li> </ul> </nav> </div> </div></body>
+      <div class="footer-bottom"> 
+  
+            <nav class="widget-menu"> 
+              <li><a href="/home/term">利用規約</a></li>
+              <li><a href="/home/policy">プライバシポリシー</a></li> 
+              <li><a href="/home/signage">特定商取引に基づく表記</a></li> 
+        
+          </nav> 
+    
+    
+    </div> </div></body>
 
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
