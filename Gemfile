@@ -21,7 +21,6 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks'
-gem 'awesome_nested_set', :git => 'git://github.com/galetahub/awesome_nested_set.git'
 gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
@@ -65,7 +64,7 @@ gem 'stripe'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'i18n_generators'
-
+gem 'awesome_nested_set'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
