@@ -1,7 +1,10 @@
+ <%= render 'home/header/dashboardhead' %>
 
- 
+ <div class="main-container">
 
 <div class="reservation-form">
+
+ <%= link_to "戻る", :back , class: "return"%>
 <% @note.note_revisions.each do |note_revision| %>
 <h1>  <%=  @note.provider.name %>さんの<br/>"<%=  note_revision.title %>"　仮予約フォーム</h1>
 
@@ -16,7 +19,6 @@
 ◆営業時間：<%=  s.hours %>　 ◆定休日：<%=  s.holiday %>
 </p>
 
-
 <h3>《変更とキャンセル》</h3>
 <p><%=  note_revision.cancelrule %></p>
 
@@ -25,6 +27,6 @@
 </div>
 <%= render 'form' %>
 
+<% end %>   <% end %>
 
-
-   <% end %>   <% end %>
+</div>
