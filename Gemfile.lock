@@ -49,6 +49,8 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.6)
       execjs
+   awesome_nested_set (3.1.1)
+      activerecord (>= 4.0.0, < 5.1)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -294,6 +296,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_nested_set
   bcrypt (~> 3.1.7)
   bootstrap-sass
   byebug
