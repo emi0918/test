@@ -69,14 +69,6 @@ header{
   z-index:10;
   cursor:pointer}
 
-  .logo{
-    height:67px;
-  }
-.logo a{float:left;font-size:30px;padding:12px 50px;font-weight:700}
-.logo a:hover {
-
-  text-decoration:none;
-}
 
 .provider-header{text-decoration:none}
 .provider-header{height:69.6px;width:100%; background-color:#6495ED; position:absolute;top:0;z-index:10;padding:1px;cursor:pointer}
@@ -350,7 +342,7 @@ border-top: 1px solid #f5f5f5;
 
   .logo{
  
-    margin-left: 10px;
+    margin-left: 0px;
   }
 
 
@@ -406,8 +398,8 @@ display:none;
 
 
 .logo{
-    height:67px;
 
+padding-right: 10px;
 
   }
 
