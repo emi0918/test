@@ -1,0 +1,291 @@
+// Media queries breakpoints
+$screen-mobile-xs: 375px !default;
+$screen-mobile-md: 400px !default;
+$screen-mobile: 480px !default;
+$screen-phablet: 620px !default;
+$screen-tablet: 768px !default;
+$screen-desktop: 1024px !default;
+$screen-mobile-max: ($screen-mobile - 1) !default;
+$screen-tablet-max: ($screen-tablet - 1) !default;
+$screen-desktop-max: ($screen-desktop - 1) !default;
+$app-container-width: $screen-desktop !default;
+
+
+ 
+ .home-all-wrapper{
+  height:990px
+ }
+
+
+ 
+
+ .top_home_page{
+  height:280px;
+  width:100%;
+  margin-top: -34px;
+ }
+
+  .top_home_page h1{
+    text-align: center;
+    font-size:50px;
+    padding-top:78px;
+  }
+
+ .top_home_page h3{
+  text-align: center;
+  font-size:15px;
+ }
+
+
+ .categories h2{
+  width:100%;
+ float:left;
+  margin-top: 4%;
+
+ }
+
+
+ .categories {
+  clear:both;
+margin-top: 50px;
+margin-bottom: 0px;
+  width:100%;
+  margin-left:0%;
+ }
+
+
+ .categories ul li{
+  height:140px;
+
+margin-bottom: 2%;
+  width:23%;
+  font-size:17px;
+  border-radius:4px
+ }
+
+
+ .panel-body-housing{
+  height:120px;
+  width:100%;
+ }
+
+ 
+ .services-detail-wrapper{
+  margin:39px;
+ }
+
+ .services-detail-wrapper h2{
+  border-bottom:1px solid #006400;
+  margin:60px;
+  padding-top:10px
+  }
+ .dynamic-row{
+  padding:10px 0 20px;
+  display:block;
+  width:100%;
+  margin:30px;
+}
+
+ .dynamic-row li{
+  line-height:17px;
+ }
+ 
+ .details{
+  display:inline;
+  height:200px;
+  width:30%
+ }
+
+
+ @media (min-width: $screen-tablet){
+
+ .home-all-wrapper{
+  height:880px;
+  width:100%;
+ }
+
+ .top_home_page{
+  height:240px;
+  width:100%;
+  margin-top: -34px;
+ }
+  .top_home_page h1{
+   padding-top:62px;
+
+  }
+
+ .categories {
+  clear:both;
+  margin-top: 43px;
+margin-bottom: 0px;
+width:100%;
+margin:0 auto;
+ }
+
+
+ .categories ul li{
+  height:140px;
+margin-bottom: 4%;
+margin-right:5px;
+  width:23%;
+  font-size:17px;
+  border-radius:4px
+ }
+
+
+
+
+ }
+
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media screen and (max-width: 414px) {
+ 
+ .home-all-wrapper{
+  height:2000px
+ }
+ .home-all-wrapper .bootstrap{
+  margin:0px;
+ }
+
+ .top_home_page{
+  height:200px;
+  width:100%;
+  margin-top: -34px;
+ }
+
+  .top_home_page h1{
+    text-align: center;
+    font-size:50px;
+    padding-top:40px;
+
+  }
+
+ .top_home_page h3{
+  text-align: center;
+  font-size:15px;
+
+ }
+
+
+ .categories {
+  margint:0 auto;
+width:100%;
+ }
+
+ .categories ul li{
+  margin-top: 10%;
+  height:140px;
+  margin-bottom: 5%;
+  margin-right: 0%;
+    margin-left: 0%;
+width:89%;
+  font-size:17px;
+  border-radius:4px
+ }
+
+
+
+ .categories h2{
+display:none;
+ }
+
+
+ .bootstrap{
+  margin:0px;
+ }
+
+
+}
+
+
+ @media (min-width: $screen-desktop){
+  
+ .home-all-wrapper{
+  height:990px
+ }
+
+
+ 
+
+ .top_home_page{
+  height:280px;
+  width:100%;
+  margin-top: -34px;
+ }
+
+  .top_home_page h1{
+    text-align: center;
+    font-size:50px;
+    padding-top:78px;
+  }
+
+ .top_home_page h3{
+  text-align: center;
+  font-size:15px;
+ }
+
+
+ .categories h2{
+  width:100%;
+ float:left;
+  margin-top: 4%;
+
+ }
+
+
+ .categories {
+  clear:both;
+margin-top: 50px;
+margin-bottom: 0px;
+  width:100%;
+margin-left:-17px;
+
+ }
+
+
+ .categories ul li{
+  height:140px;
+margin-right:9px;
+margin-left:0px;
+margin-bottom: 3%;
+  width:24%;
+  font-size:17px;
+  border-radius:4px
+ }
+
+
+ .panel-body-housing{
+  height:120px;
+  width:100%;
+ }
+
+ 
+ .services-detail-wrapper{
+  margin:39px;
+ }
+
+ .services-detail-wrapper h2{
+  border-bottom:1px solid #006400;
+  margin:60px;
+  padding-top:10px
+  }
+ .dynamic-row{
+  padding:10px 0 20px;
+  display:block;
+  width:100%;
+  margin:30px;
+}
+
+ .dynamic-row li{
+  line-height:17px;
+ }
+ 
+ .details{
+  display:inline;
+  height:200px;
+  width:30%
+ }
+ }
+
