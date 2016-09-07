@@ -7,6 +7,7 @@
   </div>
 </div>
 
+<div class="main-container">
 
 <div class="published_service_wrapper">
  <div class="left-other-housing">
@@ -17,23 +18,13 @@
    <br/>
    <br/>
 
-   <li>マッサージ</li>
-   <li>カウンセリング</li>
-   <li>パーソナルシェフ</li>
-   <li>セラピー</li>
-   <li>ストレッチ</li>
-   <li>栄養士</li>
-   <li>トレーナー</li>
-   <li>エクササイズ</li>
-   <li>ヨガ</li>
-   <li>コーチング</li>
- <li>座禅</li>
-   <li>エクササイズ</li>
-   <li>ヨガ</li>
-   <li>コーチング</li>
 
+<% @healthcategories.each do |health| %>
 
- <br><br>
+<li><%= health.name %></li>
+<% end %>
+ <br>
+ <br>
 
  <h2>ご利用にあたって</h2>
  <ul>
@@ -93,4 +84,4 @@
 </div>
 </div>
 
-
+</div>
