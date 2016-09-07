@@ -14,14 +14,19 @@
    <h2>あなたのサービスを紹介しよう</h2>
    <p>あなたのサービスを求めるカスタマーの決め手になるようなタイトルや内容を考えよう</p>
 
+
+
    <table class="newpost">
 
     <tr>
      <th> <p>  <%= f.label Note.human_attribute_name 'カテゴリー' %> <span class="form-label required">必須</span></p></th>
      <td>
 
-      <%= f.select(:category_id, Category.all.collect {|p| [ p.title, p.id ] }, {}, { multiple: false, class: "chosen-select form-control" })%>
-    </td>
+
+<%= f.select :parent_id, nested_set_options(Category) {|i| "#{'---' * i.level} #{i.name}"}, {},{ multiple: false, class: "chosen-select form-control" }   %>
+
+
+
 
 
  <%= f.fields_for :note_revisions do |b| %>
@@ -40,6 +45,7 @@
     <p><%= f.label Note.human_attribute_name '価格(税込)' %><span class="form-label required">必須</span></p></th>
     <td>
       <div class="input-group">
+      
        <%= b.text_field :price, class: 'form-control', placeholder:"5000" %>
        <span class="input-group-addon">円(税込)〜</span>
      </div>
@@ -98,11 +104,6 @@
   </div>
 </td>
 </tr>
-
-
-
-
-
 
 
 
