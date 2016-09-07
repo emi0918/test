@@ -5,8 +5,9 @@
 @media screen and (max-width: 414px) {
 
   .content_in_user{
-   width:85%;
-   margin-left: 7%;
+   width:92%;
+   margin:0 auto;
+
  }
 
  .field {
@@ -30,10 +31,10 @@ padding:7px;
 
 /* MAC */
 @media screen and (min-width: 800px) {
-	.content_in_user{
+  .content_in_user{
    text-align: left;
-   width:30%;
-  margin-left: 35%;
+   width:40%;
+   margin:0 auto;
 
  }
 
