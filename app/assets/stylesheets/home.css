@@ -6,7 +6,7 @@
 
 
 .header_content{
-  max-width: 964px;
+  max-width:970px;
      margin: 0 auto;
 
     position: relative;
@@ -30,8 +30,8 @@ padding-left:110px;
 
 .header-right li {
   line-height: 65px;
-padding-right:20px; 
-padding-left:20px; 
+padding-right:10px; 
+padding-left:40px; 
   float: left;
 }
 
@@ -60,7 +60,7 @@ header{
 .logo{
     height:67px;
   float:left;
-
+padding-right: 10px;
   }
 
 
