@@ -1,11 +1,12 @@
 <%= render 'providers/header' %>
 
+<div class="main-container">
 
 <div class="mypage-all_wrapper">
    <h1><%= current_provider.name %>さんのページ  </h1>
 
-        <a class="profile_edit" href="/providers/profile">
-プロフィールを見る</a>
+<a class="profile_edit" href="/providers/profile">
+店舗のプロフィールを見る</a>
 
 <div class="notification_user">
 
@@ -20,8 +21,12 @@
   <% else %>
      <em class="fa fa-inbox fa-lg"></em><a href='/providers/inbox'> <%=unread_messages_count%>件の未読メッセージがあります！</a>
  <% end %>
+
+
 </div>
 
 
 </div>
+</div>
+
 </div>
