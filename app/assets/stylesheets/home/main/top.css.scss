@@ -6,7 +6,7 @@ $screen-mobile-md: 400px !default;
 $screen-mobile: 480px !default;
 $screen-phablet: 620px !default;
 $screen-tablet: 768px !default;
-$screen-desktop: 1024px !default;
+$screen-desktop: 960px !default;
 $screen-mobile-max: ($screen-mobile - 1) !default;
 $screen-tablet-max: ($screen-tablet - 1) !default;
 $screen-desktop-max: ($screen-desktop - 1) !default;
@@ -17,9 +17,9 @@ $app-container-width: $screen-desktop !default;
 
 
 .top-wrapper{
-	margin-top:-90px;
+  margin-top:-90px;
 
-	color:#fff;
+  color:#fff;
   background-image: url("/images/manclean.jpg");
   background-size:cover;
   text-align:center;
@@ -29,28 +29,31 @@ $app-container-width: $screen-desktop !default;
 
 .top-wrapper h1{
 
-	font-size:45px;
-	letter-spacing:5px;
-	padding-top:150px;
-	 
+  font-size:45px;
+  letter-spacing:5px;
+  padding-top:150px;
+   
     margin-left:1%;
 }
 
 
 .top-wrapper p{
  
-	margin-bottom:35px
+  margin-bottom:35px
 }
 
 
-
+.main-container{
+  max-width:940px;
+      margin: 0 auto;
+}
 
 .about-seekle-wrapper{
   margin-top: 4%;
   height:270px;
   color:gray;
-width:73%;
-    margin-left: 13.9%;
+width:100%;
+    margin-left: 0%;
 
 text-align:center;
 font-size:14px
@@ -90,9 +93,9 @@ font-size:14px
    height:1000px;
   text-align:center;
   background-color:#fff;
-  border-top:2px solid #f5f5f5;
-border-bottom: 2px solid #f5f5f5;
 
+border-bottom: 2px solid #f5f5f5;
+    margin: 0 auto;
 }
 .explain-seekle-wrapper p{
   font-size:15px;
@@ -101,8 +104,8 @@ border-bottom: 2px solid #f5f5f5;
 }
 
 .explain-seekle-wrapper-content{
-width:73%;
-    margin-left: 14%;
+width:100%;
+    margin: 0 auto;
 
 }
 
@@ -136,8 +139,10 @@ margin-left: 13px;
 
 .message-wrapper{
   height:290px;
+
   text-align:center;
   background-color:   #F8F8FF;
+
   border-bottom:1px solid #eee;
   border-top:1px solid #eee;
 }
@@ -175,7 +180,7 @@ margin-left: 13px;
    font-size: 30px;
    line-height: 50px;
    padding-left: 0%;
-   	padding-top:16%;
+    padding-top:16%;
   }
 
 
@@ -203,7 +208,10 @@ margin-top: 30px;
   height:130px;
   width:50%;
   margin-bottom: 10px;
+  float:left;
 }
+
+
 .popular_service2{
     height:130px;
   margin-left: 0px;
@@ -216,19 +224,24 @@ margin-top: 30px;
   background-color:#fff;
   border-top:2px solid #f5f5f5;
 border-bottom: 2px solid #f5f5f5;
+ width:100%;
+ margin:3px;
 
 }
 .explain-seekle-wrapper p{
   font-size:15px;
-  line-height:25px
+  line-height:25px;
+
 
 }
 
 .explain-seekle-wrapper-content{
 width:73%;
-    margin-left: 14%;
+    margin-left: 13%;
 
 }
+
+
 
 .about-seekle-wrapper{
   margin-top: 4%;
@@ -344,8 +357,8 @@ text-align:center;
 
 .about-seekle-wrapper{
 height:270px;
-width:73%;
-margin-left: 13.9%;
+width:100%;
+margin-left: 0%;
 }
 
 .about-seekle-wrapper p{
@@ -377,8 +390,8 @@ margin-left: 13.9%;
 
 
 .explain-seekle-wrapper-content{
-width:73%;
-    margin-left: 14%;
+width:100%;
+    margin-left: 0%;
 
 }
 
@@ -387,17 +400,17 @@ width:73%;
 .popular_service1{
 
 width:23.7%;
-height:130px;
+height:140px;
 
 margin-bottom: 12px;
 float:left;
 }
 .popular_service2{
 width:23.7%;
-height:130px;
+height:140px;
 margin-bottom: 12px;
 float:left;
-margin-left: 13px;
+margin-left: 16px;
 }
 
 
