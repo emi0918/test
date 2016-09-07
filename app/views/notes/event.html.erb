@@ -7,6 +7,7 @@
   </div>
 </div>
 
+<div class="main-container">
 
 <div class="published_service_wrapper">
 
@@ -19,21 +20,10 @@
    <br/>
    <br/>
 
-   <li>司会・MC</li>
-   <li>ダンサー</li>
-   <li>イベントメイクアップ</li>
-   <li>着付け</li>
-   <li>ヘアスタイリング</li>
-   <li>通訳</li>
-   <li>食品移動販売</li>
-   <li>似顔絵</li>
-   <li>大道芸</li>
-   <li>フラワーデザイナー</li>
-    <li>カメラマン</li>
-   <li>バルーンアーティスト</li>
-   <li>マジシャン</li>
-   <li>DJ</li>
-   <li>コメディアン</li>
+<% @eventcategories.each do |event| %>
+
+<li><%= event.name %></li>
+<% end %>
 
  <br><br>
 
@@ -94,5 +84,5 @@
 
 </div>
 </div>
-
+</div>
 
