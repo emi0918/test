@@ -7,6 +7,7 @@
   </div>
 </div>
 
+<div class="main-container">
 
 
 
@@ -17,24 +18,14 @@
  <div class="other-jobs-menu">
 
 
-
    習い事カテゴリ
    <br/>
    <br/>
 
-   <li>語学</li>
-   <li>音楽</li>
-   <li>Web・デザイン</li>
-   <li>パソコン教室</li>
-   <li>資格取得</li>
-   <li>趣味</li>
-   <li>プログラミング</li>
-   <li>ダンス</li>
-   <li>ビジネススキル</li>
-   <li>美容</li>
-   <li>ファッション</li>
-   <li>ものづくり</li>
+<% @lessoncategories.each do |lesson| %>
 
+<li><%= lesson.name %></li>
+<% end %>
  <br>
  <br>
 
@@ -82,8 +73,6 @@
    <% end %>
 
 
-
-
  <div class="bootstrap">
    <div class="list-number-2 clearfix">
      <%= paginate(@notes) %>
@@ -95,4 +84,4 @@
 </div>
 </div>
 
-
+</div>
