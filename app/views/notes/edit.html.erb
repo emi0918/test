@@ -32,8 +32,11 @@
      <th> <p>  <%= f.label Note.human_attribute_name 'カテゴリー' %> <span class="form-label required">必須</span></p></th>
      <td>
 
-      <%= f.select(:category_id, Category.all.collect {|p| [ p.title, p.id ] }, {}, { multiple: false, class: "chosen-select form-control" })%>
+
+<%= f.select :parent_id, nested_set_options(Category) {|i| "#{'---' * i.level} #{i.name}"}, {},{ multiple: false, class: "chosen-select form-control" }   %>
     </td>
+
+    </tr>
 
 
  <%= f.fields_for :note_revisions do |b| %>
