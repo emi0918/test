@@ -6,6 +6,7 @@
 .forgot-password-wrapper{   
     width: 50% !important;
     min-width: 600px !important;
+    margin:0 auto;
     padding: 60px 20px !important;
     background-color: #f6f8fa !important;
     border: 1px solid #e3e4e8 !important;
@@ -30,7 +31,63 @@ text-align: center
 }
 
 .forgot-password-wrapper .provider_join_btn{
-margin-left: 33%;
+margin: 0 auto;
 }
 
+
+
+
+// Media queries breakpoints
+$screen-mobile-xs: 375px !default;
+$screen-mobile-md: 400px !default;
+$screen-mobile: 480px !default;
+$screen-phablet: 620px !default;
+$screen-tablet: 768px !default;
+$screen-desktop: 1024px !default;
+$screen-mobile-max: ($screen-mobile - 1) !default;
+$screen-tablet-max: ($screen-tablet - 1) !default;
+$screen-desktop-max: ($screen-desktop - 1) !default;
+$app-container-width: $screen-desktop !default;
+
+
+/* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
+@media (max-width: $screen-phablet) {
+
+.forgot-password-wrapper h2{
+    text-align: center;
+}
+
+.forgot-password-wrapper{   
+
+    min-width: 300px !important;
+    margin:0 auto;
+    padding: 30px 20px !important;
+    background-color: #f6f8fa !important;
+    border: 1px solid #e3e4e8 !important;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+text-align: center
+}
+
+.forgot-password-wrapper p{
+  
+    line-height:20px;
+}
+.providers_signup .forgot-password-wrapper .field {
+    padding:20px;
+}
+
+.providers_signup .forgot-password-wrapper .field input{
+    width:100%;
+   
+}
+
+.forgot-password-wrapper .provider_join_btn{
+margin: 0 auto;
+}
+
+
+}
 
