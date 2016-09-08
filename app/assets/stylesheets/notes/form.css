@@ -1,12 +1,11 @@
 .providers_new_post .bootstrap .middleform .form-control{
-    width:580px;
+
     height:120px;
     font-size: 15px;
 }
 
 
 .providers_new_post .bootstrap .largeform .form-control{
-    width:580px;
     height:360px;
     font-size: 15px;
 }
@@ -15,13 +14,13 @@
 
 .providers_new_post{
         margin-top:6%;
-    margin-left:16%;
+width:100%;
     margin-bottom: 10%;
 }
 
 table.newpost {
-width:80%;
-    
+width:90%;
+    margin:0 auto;
     border-collapse: separate;
     border-spacing: 0px 1px;
 }
@@ -30,7 +29,7 @@ width:80%;
 table.newpost  td {
 padding-top: 23px;
 padding-bottom: 23px;
-    padding-left:28px;
+ 
     vertical-align: middle;
     text-align: left;
 }
@@ -40,7 +39,7 @@ table.newpost tr{
         border-bottom: 1px solid #e6e9e3;
 }
 table.newpost th{
-    width:100%;
+    width:30%;
 }
 
 table.newpost p{
@@ -54,7 +53,8 @@ table.newpost p{
 }
 
 .providers_new_post .btn{
-  margin:4% 27%;
+  margin:0 auto;
+  margin-top:30px;
   font-size: 16px;
     font-weight: 700;
     text-decoration: none;
