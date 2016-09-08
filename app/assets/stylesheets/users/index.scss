@@ -1,12 +1,24 @@
 
+// Media queries breakpoints
+$screen-mobile-xs: 375px !default;
+$screen-mobile-md: 400px !default;
+$screen-mobile: 480px !default;
+$screen-phablet: 620px !default;
+$screen-tablet: 768px !default;
+$screen-desktop: 1024px !default;
+$screen-mobile-max: ($screen-mobile - 1) !default;
+$screen-tablet-max: ($screen-tablet - 1) !default;
+$screen-desktop-max: ($screen-desktop - 1) !default;
+$app-container-width: $screen-desktop !default;
+
+
+
 .mypage-all_wrapper{
 	padding-top:18px;
 margin-left:0%;
 	padding-bottom: 60px;
 	height:0 auto;
 }
-
-
 
 
 
@@ -55,23 +67,16 @@ border-bottom: 2px solid	#FDF5E6;
 
 
 
-
-
-
-
-
-
-
-
-
 /* ipad タブレットのレスポンシブデザイン */
-@media (max-width: 767px) {
+@media (max-width: $screen-tablet) {
 
 
 .mypage-all_wrapper{
-margin-left:0%;
+width:80%;
+margin:0 auto;
 
 }
+
 
 
 .mypage-all_wrapper h1{
@@ -119,6 +124,16 @@ display: none;
 	}
 
 }
+
+/* ipad タブレットのレスポンシブデザイン */
+@media (max-width: $screen-mobile) {
+
+.mypage-all_wrapper{
+width:100%;
+margin:0 auto;
+
+}
+	}
 
 
 
