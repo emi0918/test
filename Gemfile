@@ -21,9 +21,9 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks'
-gem 'awesome_nested_set', '3.0.2'
 
 
+gem 'awesome_nested_set', '~> 3.1', '>= 3.1.1'
 gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
