@@ -213,6 +213,15 @@ figure{
 /* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
 @media screen and (max-width: 414px) {
 
+
+.provider_wrapper{
+	width:78%;
+	margin:0 auto;
+	height:0 auto;
+}
+
+
+
 .provider-introduction{
 
 	border-bottom:none;
