@@ -1,6 +1,10 @@
 <%= render 'providers/header' %>
+
+
+<div class="main-container">
 <div class="providers_signup">
 
+<div class="provider_login">
 <h2>サービス管理画面へログイン</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -31,7 +35,8 @@
 <%= render "providers/shared/links" %>
 
 </div>
-
+</div>
+</div>
 
 
 
