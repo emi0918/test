@@ -1,6 +1,6 @@
 
 <%= render 'providers/header' %>
-
+<div class="main-container">
 
 <div class="menu-back-head">
 
@@ -16,38 +16,28 @@
 
   <% if @note.reservations.blank? %>
      <p>予約はまだありません</p>
-
    <% else %>
 
 <table class="table">
-
   <thead>
     <tr>
       <th>お名前</th>
       <th>希望日程</th>
       <th>お問い合わせ</th>
-
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-
     <% @note.reservations.each do |reservation| %>
       <tr>
-
         <td><%= reservation.name %></td>
         <td>
         第１希望：　<br><%= reservation.workdate1 %> <%= reservation.worktime1 %>  <br><br>
         第２希望：<br><%= reservation.workdate2 %> <%= reservation.worktime2 %> <br><br>
         第３希望：<br><%= reservation.workdate3 %> <%= reservation.worktime3 %> 
         </td>
-        <td><%= simple_format(reservation.message) %></td>
-        
-
-
-
-
+        <td><%= simple_format(reservation.message) %></td>        
       </tr>
     <% end %>
   </tbody>
@@ -57,5 +47,6 @@
 
 <br>
 
+</div>
 </div>
 </div>
