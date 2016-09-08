@@ -1,8 +1,3 @@
-
-require "awesome_nested_set"
-
-
-
 class NotesController < ApplicationController
 
 
