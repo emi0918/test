@@ -1,3 +1,5 @@
+<div class="main-container">
+
 <div class="providers_new_post">
   <div class="bootstrap">
     <%= form_for(@note,  class: 'form-horizontal', role: 'form' ) do |f| %>
@@ -22,9 +24,7 @@
      <th> <p>  <%= f.label Note.human_attribute_name 'カテゴリー' %> <span class="form-label required">必須</span></p></th>
      <td>
 
-
 <%= f.select :parent_id, nested_set_options(Category) {|i| "#{'---' * i.level} #{i.name}"}, {},{ multiple: false, class: "chosen-select form-control" }   %>
-
 
 
 
@@ -195,7 +195,7 @@
 <% end %>
 </div>
 </div>
-
+</div>
 <link rel="stylesheet" href="chosen.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
