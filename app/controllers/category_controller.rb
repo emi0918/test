@@ -1,3 +1,8 @@
+
+require "awesome_nested_set"
+
+
+
 class CategoryController < ApplicationController
 
     def show
