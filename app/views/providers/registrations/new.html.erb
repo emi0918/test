@@ -1,6 +1,9 @@
 <%= render 'providers/header' %>
+ <div class="main-container">
 <div class="providers_signup">
 
+
+<div class="provider_login">
 <h2>Seekleに無料でサービスを掲載する</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -67,7 +70,8 @@
  
 すでにアカウントをお持ちですか？<%= render "providers/shared/links" %>
 </div>
+</div>
 
-
+</div>
 
 
