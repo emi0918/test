@@ -1,5 +1,5 @@
 <%= render 'providers/header' %>
-
+ <div class="main-container">
 <div class="providers_new_post">
 <div class="bootstrap">
 
@@ -28,7 +28,7 @@
 <tr>
  <th> <p>店舗概要<span class="form-label required">必須</span> </p></th>
  <td>
-  <%= s.text_area :about, class: 'content-area',placeholder:"お店の特徴、ご自身の経歴・資格、提供サービスへの思いなどを詳しく紹介しましょう(^ ^)" %>
+  <%= s.text_area :about, class: 'content-area',placeholder:"お店の特徴、ご自身の経歴・資格、提供サービスへの思いなどを詳しく紹介しましょう" %>
 </td>
 </tr>
 
@@ -207,5 +207,6 @@
 
 <%= link_to "Back", :back %>
 
+</div>
 </div>
 </div>
