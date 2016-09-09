@@ -35,7 +35,7 @@
 
 
 
-.profile_edit{float: left; margin-top: 35px; margin-left: 55px;}
+.profile_edit{float:right; margin-top: 35px; }
 .fa-pencil{padding-right: 10px;}
 
 .presentation{padding-right: 300px; float:left;padding-top: 40px;}
