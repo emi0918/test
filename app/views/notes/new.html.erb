@@ -23,47 +23,55 @@
     <tr>
      <th> <p>  <%= f.label Note.human_attribute_name 'カテゴリー' %> <span class="form-label required">必須</span></p></th>
      <td>
-<select class="chosen-select form-control" name="note[category_id]" id="note_category_id" ><option value="1"> 住まい</option>
-<option value="6">--- ハウスクリーニング</option>
-<option value="7">--- フローリング</option>
-<option value="8">--- お引越し</option>
-<option value="9">--- リフォーム</option>
-<option value="10">--- 不用品回収</option>
-<option value="11">--- 配管工事</option>
-<option value="12">--- 家具</option>
-<option value="13">--- 家電取り付け</option>
-<option value="14">--- 剪定・造園</option>
-<option value="15">--- 害虫駆除</option>
-<option value="16">--- その他</option>
-<option value="2"> イベント</option>
-<option value="17">--- ケータリング</option>
-<option value="18">--- 結婚式</option>
-<option value="19">--- 写真撮影</option>
-<option value="20">--- 動画撮影</option>
-<option value="21">--- 音楽</option>
-<option value="22">--- パーティーレンタル</option>
-<option value="23">--- ドライバー</option>
-<option value="24">--- エンターテイメント</option>
-<option value="25">--- パーティー準備</option>
-<option value="26">--- その他</option>
-<option value="3"> 習い事</option>
-<option value="27">--- 音楽</option>
-<option value="28">--- 料理</option>
-<option value="29">--- スポーツ</option>
-<option value="30">--- フィットネス</option>
-<option value="31">--- 語学</option>
-<option value="32">--- 特技</option>
-<option value="33">--- 学習</option>
-<option value="34">--- その他</option>
-<option value="4"> 健康</option>
-<option value="35">--- カウンセリング</option>
-<option value="36">--- エクササイズ</option>
-<option value="37">--- ヒーリング</option>
-<option value="38">--- コーチング</option>
-<option value="39">--- スパ</option>
-<option value="40">--- パーソナルシェフ</option>
-<option value="41">--- その他</option>
+<select class="chosen-select form-control" name="note[category_id]" id="note_category_id" >
+ <option value="">選択してください</option>
+<optgroup label="住まい">
+<option value="6">- ハウスクリーニング</option>
+<option value="7">- フローリング</option>
+<option value="8">- お引越し</option>
+<option value="9">- リフォーム</option>
+<option value="10">- 不用品回収</option>
+<option value="11">- 配管工事</option>
+<option value="12">- 家具</option>
+<option value="13">- 家電取り付け</option>
+<option value="14">- 剪定・造園</option>
+<option value="15">- 害虫駆除</option>
+<option value="16">- その他</option>
+</optgroup>
+<optgroup label="イベント">
+<option value="17">- ケータリング</option>
+<option value="18">- 結婚式</option>
+<option value="19">- 写真撮影</option>
+<option value="20">- 動画制作</option>
+<option value="21">- 音楽</option>
+<option value="22">- パーティーレンタル</option>
+<option value="23">- ドライバー</option>
+<option value="24">- エンターテイメント</option>
+<option value="25">- パーティー準備</option>
+<option value="26">- その他</option>
+</optgroup>
+<optgroup label="習い事">
+<option value="27">- 音楽</option>
+<option value="28">- 料理</option>
+<option value="29">- スポーツ</option>
+<option value="30">- フィットネス</option>
+<option value="31">- 語学</option>
+<option value="32">- 特技</option>
+<option value="33">- 学習</option>
+<option value="34">- その他</option>
+</optgroup>
+<optgroup label="健康">
+<option value="35">- カウンセリング</option>
+<option value="36">- エクササイズ</option>
+<option value="37">- ヒーリング</option>
+<option value="38">- コーチング</option>
+<option value="39">- スパ</option>
+<option value="40">- パーソナルシェフ</option>
+<option value="41">- その他</option>
+ </optgroup>
 <option value="5"> その他</option></select>
+
+</select>
  
 
  <%= f.fields_for :note_revisions do |b| %>
