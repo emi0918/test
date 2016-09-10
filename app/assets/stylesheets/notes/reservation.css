@@ -111,23 +111,22 @@ margin-left: 3%;
 	}
 
 .reservation-form{
-	   width:100%;
+	   width:90%;
 	margin-top:5%;
-	margin-left:0%;
+margin:0 auto;
 	 margin-bottom: 7%
   
 	}
 
 	.reservation-confirm{
-		 width:100%;
-	margin-top: 0%;
-margin-left: 0%;
+		 width:90%;
+margin:0 auto;
 	
 }
 
 
 .reservation-confirm .bootstrap .shadow_btn{
-	margin-left: 0%; 
+margin:0 auto;
 	 margin-top:6%;
 	 font-size: 20px;
 	 padding:10px; 
