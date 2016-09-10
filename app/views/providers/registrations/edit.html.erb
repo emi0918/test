@@ -24,11 +24,15 @@
    <%= f.fields_for :store_infos do |s| %>
 
 
+
+
   
 <tr>
  <th> <p>店舗紹介<span class="form-label required">必須</span> </p></th>
  <td>
-  <%= s.text_area :about, class: 'content-area',placeholder:"お店の特徴、ご自身の経歴・資格、提供サービスへの思いなどを詳しく紹介しましょう" %>
+  <div class="middleform">
+  <%= s.text_area :about, class: 'form-control',placeholder:"店舗の特徴、スタッフの雰囲気、ご自身の経歴・取得済み資格、提供サービスへの思いなどを詳しく紹介しましょう" %>
+  </div>
 </td>
 </tr>
 
