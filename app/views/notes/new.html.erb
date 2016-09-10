@@ -126,13 +126,16 @@
 
 
 
+
+
+
 <tr>
  <th> <p><%= f.label Note.human_attribute_name '詳しいサービス内容' %><span class="form-label required">必須</span> </p></th>
  <td>
 
 <div class="largeform">
-<textarea class="form-control" placeholder="必須のサービス内容に加えて、お客様に提供しているサービスや特典をアピールして他者と差別化を図りましょう" name="note[note_revisions_attributes][0][content]" id="note_note_revisions_attributes_0_content" >
-</textarea>
+   <%= b.text_area :content ,class: 'form-control',placeholder:"必須のサービス内容に加えて、お客様に提供しているサービスや特典をアピールして他者と差別化を図りましょう" %>
+
    </div>
 
  </td>
