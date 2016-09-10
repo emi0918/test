@@ -121,16 +121,18 @@ width: 100%;
 }
 
 .customer_reservations_wrapper {
-       margin-top: 6.6%;
+       margin-top: 9%;
         width: 100%;
 }
+
+
 .reservation_info {
 margin-bottom: 30px;
     width:97%;
 padding: 1%;
     border-radius: 4px;
     background-color: #FFFAF0;
-margin-top: 90px;
+
     border: 1px solid #808080;
 
 }
