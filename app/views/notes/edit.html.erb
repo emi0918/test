@@ -34,8 +34,9 @@
      <th> <p>  <%= f.label Note.human_attribute_name 'カテゴリー' %> <span class="form-label required">必須</span></p></th>
      <td>
 
+
 <select class="chosen-select form-control" name="note[category_id]" id="note_category_id" >
- <option value="">選択してください</option>
+<option value="">選択してください</option>
 <optgroup label="住まい">
 <option value="6">- ハウスクリーニング</option>
 <option value="7">- フローリング</option>
@@ -237,7 +238,7 @@
 </div>
 </table>
 </div>
-<%= f.submit '作成する', class: 'btn btn-default', data:{ disable_with: "作成中・・・"} %>
+<%= f.submit '更新する', class: 'btn btn-default', data:{ disable_with: "更新中・・・"} %>
 
 <% end %>
 <% end %>
