@@ -14,24 +14,24 @@ ja:
         user: :activerecord.models.user  #g
 
       note:
-        cancelrule: 変更とキャンセルについて #g
-        catchcopy: キャッチコピー  #g
-        category: "カテゴリー"  #g
+        category_id: "カテゴリー"  #g
         content: "コンテンツ"  #g
         likes: "いいね！"  #g
         liking_users: "好きなユーザー"  #g
         mailboxer_conversations: :activerecord.models.mailboxer_conversations  #g
-        price: "価格"  #g
         provider: :activerecord.models.provider  #g
         reservations: "予約"  #g
         reviews: "レビュー"  #g
-        rule: "ルール"  #g
-        salespoint: セールスポイント  #g
-        service_image1: "サービスイメージ1"  #g
-        service_image2: "サービス画像2"  #g
-        service_image3: "サービス画像3"  #g
-        title: "タイトル"  #g
         user: :activerecord.models.user  #g
+      note_revisions:
+        title: "タイトル"  #g
+        content: "詳しいサービスの内容"
+        price: "料金" 
+        catchcopy: キャッチコピー  #g 
+        cancelrule: 変更とキャンセルについて #g
+        rule: "お客様へのお願い"  #g
+        salespoint: セールスポイント  #g
+
 
       provider:
         about: "約"  #g
