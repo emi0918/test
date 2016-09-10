@@ -14,7 +14,7 @@
 <div class="main-container">
 
    <% @note_revisions.each do |note_revision| %>
-    
+     <% @note.provider.store_infos.each do |s| %>
 
 <div class="provider_wrapper">
   <div class="provider-introduction">
@@ -40,7 +40,7 @@
      </tr>
      <tr>
        <th>エリア：</th>
-       <td><%= @note.provider.address %></td>
+       <td><%=s.prefecture %>></td>
      </tr>
      <tr>
        <th>カテゴリー：</th>
@@ -212,6 +212,7 @@
     <% end %>
     <% end %>
       <% end %>
+       <% end %>
   </div>
 </ul>
 </div>
