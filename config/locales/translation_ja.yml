@@ -58,6 +58,17 @@ ja:
         reservations: "予約"  #g
         reset_password_sent_at: "で送信されたパスワードをリセット"  #g
         reset_password_token: "パスワードトークンをリセット"  #g
+      provider_accounts:
+        phonenumber: "電話番号"
+        staffname: "代表者名"
+      store_infos:
+        prefecture: "都道府県"
+        holiday: "定休日"
+        hours: "営業時間"
+        postalcode: "郵便番号"
+        city: "市区町村"
+        address: "町名・番地"
+        building: "ビル名・部屋番号"
 
       reservation:
         date: "日付"  #g
@@ -81,6 +92,9 @@ ja:
         note: :activerecord.models.note  #g
         rating: "評価"  #g
         user: :activerecord.models.user  #g
+
+
+
 
       user:
         area: "エリア"  #g
