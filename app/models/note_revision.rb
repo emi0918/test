@@ -16,10 +16,10 @@
 
 
 class NoteRevision < ActiveRecord::Base
-	 belongs_to :note, foreign_key: "note_id"
+	 belongs_to :note, dependent: :destroy
  has_one :category
 
-	validates :title, presence:  true
+	validates :title,length:{maximum:40} ,presence:  true
 	
 	validates :content, presence: true
 	validates :price, presence: true
