@@ -26,11 +26,13 @@
 
   
 <tr>
- <th> <p>店舗概要<span class="form-label required">必須</span> </p></th>
+ <th> <p>店舗紹介<span class="form-label required">必須</span> </p></th>
  <td>
   <%= s.text_area :about, class: 'content-area',placeholder:"お店の特徴、ご自身の経歴・資格、提供サービスへの思いなどを詳しく紹介しましょう" %>
 </td>
 </tr>
+
+
 
    <tr>
    <th> <p>営業時間<span class="form-label required">必須</span></p></th>
@@ -52,7 +54,7 @@
 
 　
   <tr>
-   <th> <p>お支払い方法<span class="form-label required">必須</span></p></th>
+   <th> <p>料金受け取り方法<span class="form-label required">必須</span></p></th>
    <td>
           <div class="col-xs-5">
     <%= s.text_field :payment, class: 'form-control',placeholder:"現金・クレジットカード" %>
@@ -63,6 +65,18 @@
 
 
  <%= f.fields_for :provider_accounts do |a| %>
+
+  <tr>
+   <th> <p>代表者名<span class="form-label required">必須</span></p></th>
+   <td>
+          <div class="col-xs-5">
+    <%= a.text_field :staffname, class: 'form-control',placeholder:"山田 太郎" %>
+    </div>
+  </td>
+</tr>
+
+
+
 
   <tr>
    <th> <p>電話番号<span class="form-label required">必須</span></p></th>
@@ -76,7 +90,7 @@
 
 
 <tr>
- <th> <p>店舗写真<span class="form-label required">必須</span> </p></th>
+ <th> <p>スタッフ写真<span class="form-label required">必須</span> </p></th>
  <td>
         <div class="col-xs-7">
   <%= f.file_field :mainpic, class: "form-control image-field" %>
@@ -87,7 +101,7 @@
 <tr class="cell-join">
 <th class="address" rowspan="5">住所</th>
 
-     <td> <p>郵便番号<span class="form-label required">必須</span> </p>
+     <td> <p>郵便番号(ハイフンなし)<span class="form-label required">必須</span> </p>
       <div class="col-xs-4">
      <%= s.text_field :postalcode, class: 'form-control',placeholder:"123-4567"%>
          </div>
