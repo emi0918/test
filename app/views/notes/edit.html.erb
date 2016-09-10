@@ -124,9 +124,9 @@
  <th> <p><%= f.label Note.human_attribute_name 'セールスポイント' %><span class="form-label required">必須</span></p></th>
  <td>
    
-
-   <%= b.text_area :salespoint ,class: 'content-area',placeholder:"このサービスの売りをお客様にアピールするキャッチコピーをつけましょう" %>
-
+<div class="middleform">
+   <%= b.text_area :salespoint ,class: 'form-control',placeholder:"このサービスの売りをお客様にアピールするキャッチコピーをつけましょう" %>
+</div>
 </div>
 
 </td>
@@ -138,8 +138,10 @@
  <th> <p><%= f.label Note.human_attribute_name '詳しいサービス内容' %><span class="form-label required">必須</span> </p></th>
  <td>
 
+<div class="largeform">
+   <%= b.text_area :content ,class: 'form-control',placeholder:"必須のサービス内容に加えて、お客様に提供しているサービスや特典をアピールして他者と差別化を図りましょう" %>
 
-   <%= b.text_area :content ,class: 'content-area',placeholder:"必須のサービス内容に加えて、お客様に提供しているサービスや特典をアピールして他者と差別化を図りましょう" %>
+   </div>
 
  </td>
 </tr>
@@ -148,7 +150,7 @@
  <th> <p><%= f.label Note.human_attribute_name 'お客様へのお願い' %><span class="form-label required">必須</span> </p></th>
  <td>
    <div class="middleform">
-   <%= b.text_area :rule ,class: 'content-area',placeholder:"当日必要なもの、注意点などを事前に伝えておきましょう。" %>
+   <%= b.text_area :rule ,class: 'form-control',placeholder:"当日必要なもの、注意点などを事前に伝えておきましょう。" %>
 
   </div>
 </td>
@@ -165,8 +167,9 @@
 <tr>
  <th> <p><%= f.label Note.human_attribute_name '変更とキャンセル' %><span class="form-label optional">任意</span></p></th>
  <td>
-     <%= b.text_area :cancelrule ,class: 'content-area',placeholder:"キャンセルや、日付変更の詳細説明をしましょう。" %>
-
+ <div class="middleform">
+     <%= b.text_area :cancelrule ,class: 'form-control',placeholder:"キャンセルや、日付変更の詳細説明をしましょう。" %>
+</div>
   </td>
 </td>
 </tr>
