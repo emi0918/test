@@ -14,51 +14,60 @@
 </div>
 <h2>店舗の基本情報</h2> 
 
-  <div class="field">
-    <h3>店舗名</h3>
-    <%= current_provider.name %>
-  </div>
-
-    <div class="field">
-    <h3>住所</h3>
-    <%= current_provider.address %>
-  </div>
-
-
-  <div class="field">
-    <h3>メールアドレス</h3>
-   <%= current_provider.email %>
-  </div>
-
-
-
    <% current_provider.store_infos.each do |s| %>
- <div class="field">
-    <h3>営業時間</h3>
-    <%= s.hours %>
-  </div>
 
- <div class="field">
-    <h3>店舗概要</h3>
-   <%= s.about %>
-  </div>
+      <% current_provider.provider_accounts.each do |a| %>
 
-
-   <div class="field">
-    <h3>定休日</h3>
-   <%= s.holiday %>
-  </div>
-
-
-
+ <table class="sample_03">
+     <tbody>
+      <tr>
+       <th>店舗名</th>
+       <td>  <%= current_provider.name %></td>
+     </tr>
+        <tr>
+       <th>代表者名</th>
+       <td>  <%= a.staffname%></td>
+     </tr>
  
-    <div class="field">
-    <h3>お支払い方法</h3>
-    <%= s.payment %>
-  </div>
+   
+        <tr>
+       <th>営業時間</th>
+       <td><%= s.hours %></td>
+     </tr>
+     
+    <tr>
+       <th>定休日</th>
+       <td> <%= s.holiday %></td>
+     </tr>
+     <tr>
+       <th>お支払い方法</th>
+       <td>  <%= s.payment %></td>
+     </tr>
+    <tr>
+       <th>店舗紹介</th>
+       <td>  <%= s.about %></td>
+     </tr>
+            <tr>
+       <th>住所</th>
+       <td>  〒<%= s.postalcode%>  <%= s.prefecture %>   <%= s.city%>   <%= s.address%>  <%= s.building%></td>
+     </tr>
+          <tr>
+       <th>メールアドレス</th>
+       <td>  <%= current_provider.email %></td>
+     </tr>
+     <tr>
+       <th>電話番号</th>
+       <td>  <%= a.phonenumber%></td>
+     </tr>
+   
+
+ </tbody>
+ </table>
+
 
 
 
 </div>
+  <%end%>
   <%end%>
 </div>
