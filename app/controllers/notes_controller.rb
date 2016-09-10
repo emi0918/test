@@ -1,6 +1,5 @@
+
 class NotesController < ApplicationController
-
-
 
  before_action :set_note, only: [:show,:edit, :update, :destroy, :profile]
  before_action :authenticate_user!, only:[:profile]
@@ -53,7 +52,7 @@ class NotesController < ApplicationController
 
   def event
      @eventcategories =  Category.where(:parent_id => (2))
-    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => 2)
+    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => [(17),(18),(19),(20),(21),(22),(23),(24),(25),(26)] )
   end
 
   def lesson
@@ -74,10 +73,11 @@ class NotesController < ApplicationController
 
   # GET /notes/ne
   def new
+   
        @note = Note.new
        @categories= Category.all
        @housecategories =  Category.where(:parent_id => (1))
-      @eventcategories =  Category.where(:parent_id => (2))
+       @eventcategories =  Category.where(:parent_id => (2))
        @lessoncategories =  Category.where(:parent_id => (3))
        @healthcategories =  Category.where(:parent_id => (4))
 
