@@ -1,5 +1,4 @@
-
-class NotesController < ApplicationController
+ class NotesController < ApplicationController
 
  before_action :set_note, only: [:show,:edit, :update, :destroy, :profile]
  before_action :authenticate_user!, only:[:profile]
@@ -57,12 +56,12 @@ class NotesController < ApplicationController
 
   def lesson
     @lessoncategories =  Category.where(:parent_id => (3))
-    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => 3 )
+    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id =>  [(27),(28),(29),(30),(31),(32),(33),(34)] )
   end
 
   def health
      @healthcategories =  Category.where(:parent_id => (4))
-    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => 4 )
+    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id =>  [(35),(36),(37),(38),(39),(40),(41)]  )
   end
 
 
