@@ -32,29 +32,37 @@
       <tr>
        <th> <p>ご希望の日程 <span class="form-label required">必須</span></p></th>
        <td>
+      <div class="workdate">
        第１候補　<%= f.text_field :workdate1, :id => 'reservation_reservation_dates_attributes_0_workdate1', placeholder: ' YYYY/MM/DD' , readonly:"true" %>
-
+       </div>
+        <div class="worktime">
           希望時間   <%= f.select :worktime1, [["いつでも良い","いつでも"] ,["07:00"],["08:00"],["09:00"], ["10:00"], ["11:00"],["12:00"],["13:00"],["14:00"],["15:00"],["16:00"],["17:00"],["18:00"],["19:00"],["20:00"],["21:00"],["22:00"],["特に決まっていない"]], include_blank: '選択してください' %>
+          </div>
       </td>
     </tr>
-
-
-
 
 
       <tr>
        <th></th>
        <td>
+      <div class="workdate">
        第２候補　<%= f.text_field :workdate2, :id => 'reservation_reservation_dates_attributes_0_workdate2', placeholder: ' YYYY/MM/DD' , readonly:"true" %>
+       </div>
+        <div class="worktime">
          希望時間   <%= f.select :worktime2, [["いつでも良い"] ,["07:00"],["08:00"],["09:00"], ["10:00"], ["11:00"],["12:00"],["13:00"],["14:00"],["15:00"],["16:00"],["17:00"],["18:00"],["19:00"],["20:00"],["21:00"],["22:00"],["特に決まっていない"]], include_blank: '選択してください' %>
+         </div>
       </td>
     </tr>
 
  <tr>
        <th></th>
        <td>
+     <div class="workdate">
        第３候補　<%= f.text_field :workdate3, :id => 'reservation_reservation_dates_attributes_0_workdate3', placeholder: ' YYYY/MM/DD' , readonly:"true" %>
+       </div>
+          <div class="worktime">
         希望時間   <%= f.select :worktime3, [["いつでも良い"] ,["07:00"],["08:00"],["09:00"], ["10:00"], ["11:00"],["12:00"],["13:00"],["14:00"],["15:00"],["16:00"],["17:00"],["18:00"],["19:00"],["20:00"],["21:00"],["22:00"],["特に決まっていない"]], include_blank: '選択してください' %>
+        </div>
       </td>
     </tr>
 
