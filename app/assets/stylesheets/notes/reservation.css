@@ -22,6 +22,15 @@ margin-left: 5%;
 	
 }
 
+.workdate{
+	float:left;
+}
+
+.worktime{
+	float:left;
+  padding-left: 20px;
+}
+
 .reservation-confirm .bootstrap .newpost{
 	width:100%;
 }
@@ -133,6 +142,19 @@ margin:0 auto;
 	 background-color:	#FFD700;
 	  }
 
+
+
+.workdate{
+	float:left;
+}
+
+.worktime{
+	float:left;
+	clear:both;
+  padding-left: 0px;
+  margin-bottom:30px;
+  margin-top: 9px;
+}
 
 
 
