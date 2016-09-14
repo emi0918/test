@@ -114,6 +114,7 @@ ja:
         notes: "ノート"  #g
         password: "パスワード"
         password_confirmation: "確認用パスワード"
+        current_password: "設定を変更するには現在のパスワード"
         profile: "プロフィール"  #g
         profile_pic: "プロフィールPIC"  #g
         provider: "プロバイダー"  #g
