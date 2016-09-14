@@ -47,7 +47,7 @@ ja:
         last_sign_in_ip: "腹腔内の最後の記号"  #g
         mailboxer_conversations: Mailboxerの会話  #g
         messages: "メッセージ"  #g
-        name: "名"  #g
+        name: "店舗名"  #g
         notes: "ノート"  #g
         password: "パスワード"
         payment: "支払い"  #g
@@ -62,6 +62,7 @@ ja:
         phonenumber: "電話番号"
         staffname: "代表者名"
       store_infos:
+        payment: "お支払い方法"
         prefecture: "都道府県"
         holiday: "定休日"
         hours: "営業時間"
@@ -109,9 +110,10 @@ ja:
         likes: "いいね！"  #g
         mailboxer_conversations: Mailboxerの会話  #g
         messages: "メッセージ"  #g
-        name: "名"  #g
+        name: "ユーザーネーム"  #g
         notes: "ノート"  #g
         password: "パスワード"
+        password_confirmation: "確認用パスワード"
         profile: "プロフィール"  #g
         profile_pic: "プロフィールPIC"  #g
         provider: "プロバイダー"  #g
