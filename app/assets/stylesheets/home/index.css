@@ -28,3 +28,25 @@
 
 /* 404, 505のエラーページ */
 .error-wrapper{height:300px;} .error-wrapper h1{font-weight: normal; margin-top:80px; margin-left: 130px;}
+
+
+#error_explanation{
+	background-color:	#CD5C5C;
+	color:white;
+	padding: 20px;
+	border:1px solid gray;
+	border-radius: 12px;
+ box-shadow: 3px 3px 	#696969;
+
+}
+
+#error_explanation h2{
+	font-size: 20px;
+}
+
+#error_explanation ul li{
+	list-style: square;
+}
+
+
+
