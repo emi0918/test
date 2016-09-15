@@ -18,7 +18,7 @@ has_many :store_infos, dependent: :destroy
 
  mount_uploader :mainpic, ImageUploader
  
-  validates :email, presence:  true
+
    acts_as_messageable
 
      def mailboxer_name
