@@ -46,23 +46,28 @@
 
   def housing
      @housecategories =  Category.where(:parent_id => (1))
-    @notes = Note.page(params[:page]).per(6).where( :category_id => [(1),(6),(7),(8),(9),(10),(11),(12),(13),(14),(15),(16)] )
+
+      @category_id= Category.find_by(name: params[:category]).id
+      @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
   end
 
   def event
      @eventcategories =  Category.where(:parent_id => (2))
-    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id => [(17),(18),(19),(20),(21),(22),(23),(24),(25),(26)] )
+      @category_id= Category.find_by(name: params[:category]).id
+       @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
   end
 
   def lesson
     @lessoncategories =  Category.where(:parent_id => (3))
-    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id =>  [(27),(28),(29),(30),(31),(32),(33),(34)] )
+     @category_id= Category.find_by(name: params[:category]).id
+       @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
   end
 
   def health
      @healthcategories =  Category.where(:parent_id => (4))
-    @notes = Note.includes(:provider).page(params[:page]).per(6).where( :category_id =>  [(35),(36),(37),(38),(39),(40),(41)]  )
-  end
+     @category_id= Category.find_by(name: params[:category]).id
+       @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
+end
 
 
 
@@ -95,6 +100,7 @@
   # POST /notes.json
   def create
     @note = current_provider.notes.build(note_params)
+    @note.category_id = params[:category_id]
      if @note.save
       redirect_to  @note
      NoteMailer.note_email(@provider, @note).deliver
