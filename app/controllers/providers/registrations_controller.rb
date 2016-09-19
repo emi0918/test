@@ -20,6 +20,7 @@ end
 def create
   @provider = Provider.new(provider_params)
   if @provider.save
+   
     # @userはuser_path(@user) に自動変換される
     redirect_to profile_providers_path
   else
@@ -56,12 +57,10 @@ private
     def update_provider_params
       params.require(:provider).permit(:name,:address,:provider_id,:mainpic,:email,
       provider_accounts_attributes: [:phonenumber, :staffname,:id, :_destroy],
-      store_infos_attributes: [:hours,:holiday,:payment,:about,:postalcode,:prefecture,:city,:address,:building,:id, :_destroy]
+      store_infos_attributes: [:hours,:holiday,:payment,:about, :staffname,:postalcode,:prefecture,:city,:address,:building,:id, :_destroy]
       )
     end
 
-
-    
   # GET /resource/sign_up
   # def new
   #   super
