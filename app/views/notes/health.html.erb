@@ -21,7 +21,7 @@
 
 <% @healthcategories.each do |health| %>
 
-<li><%= health.name %></li>
+<li><%= link_to health.name, health_notes_path(category: health.name)  %></li>
 <% end %>
  <br>
  <br>
@@ -35,18 +35,12 @@
 </div>
 
 
-
 <div class="services_right_wrapper">
-
-
-      <div class="show_providers">
-
-  
-<%= @notes.count %>件のサービスが見つかりました
+ <div class="show_providers">
+   <%= @notes.count %>件のサービスが見つかりました
      <% @notes.each do |note| %>
-
      <div class="provider_job ">
- <% note.note_revisions.each do |note_revision| %>
+       <% note.note_revisions.each do |note_revision| %>
       <div class="title"><h2> <%= link_to note_revision.title, note_path(note) %></h2>
       <% note.note_images.each do |note_images| %>
       <% if note_images.image1.present? %>
