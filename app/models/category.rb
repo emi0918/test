@@ -4,7 +4,7 @@ class Category < ActiveRecord::Base
 
     belongs_to :notes
 
-
+  acts_as_nested_set
 
 
 end
