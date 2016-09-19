@@ -24,7 +24,7 @@
 
 <% @housecategories.each do |house| %>
 
-<li><%= house.name %></li>
+<li><%= link_to house.name, housing_notes_path(category: house.name)  %></li>
 <% end %>
    <br><br>
    <h2>ご利用にあたって</h2>
@@ -69,7 +69,6 @@
      </div>
    </div>
    <% end %>
-
 
 
 
