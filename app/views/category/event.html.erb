@@ -8,21 +8,25 @@
     <h1>イベント</h1>
      <h3>一生の思い出になるイベントをもっと華やかに</h3>
    </div>
-
 <div class="main-container">
+
    <div class="categories">
 
-   <div class="bootstrap">
-
-
     <ul>
+  
         <h4>イベント ジャンル</h4>
-         <li><div class="panel panel-default">
+
+<div class="bootstrap">
+
+    
+
+
+   <li><div class="panel panel-default">
        <div class="panel-heading">
-        <h3 class="panel-title"><%= link_to "イベントメイクアップ","/notes/event" %></h3>
+        <h3 class="panel-title"><%= link_to "ケータリング","/notes/event?category=ケータリング" %></h3>
        </div>
    
-  <%= link_to image_tag( 'event/makeup.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
+  <%= link_to image_tag( 'event/catering.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=ケータリング" %>
        </div>
          </li>
  
@@ -31,48 +35,55 @@
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to "結婚式","/notes/event" %></h3>
+    <h3 class="panel-title"><%= link_to "結婚式","/notes/event?category=結婚式" %></h3>
   </div>
-          <%= link_to image_tag( 'event/bouquet.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
+          <%= link_to image_tag( 'event/bridal.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=結婚式" %>
 
     </div>
   </li>
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "バーテンディング","/notes/event" %></h3>
+     <h3 class="panel-title"><%= link_to "写真撮影","/notes/event?category=写真撮影" %></h3>
      </div>
        
-  <%= link_to image_tag( 'event/cocktails.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
+  <%= link_to image_tag( 'event/camera.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=写真撮影" %>
     </div>
   </li>
  
-   <li><div class="panel panel-default">
+  
+     <li><div class="panel panel-default">
    <div class="panel-heading">
-   <h3 class="panel-title"><%= link_to "フラワーデザイナー","/notes/event" %></h3>
- </div>
-        
-  <%= link_to image_tag( 'event/floral-arrangement.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
-
-
-    </div>
-  </li>
- 
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "マジシャン","/notes/event" %></h3>
+     <h3 class="panel-title"><%= link_to "動画撮影","/notes/event?category=動画撮影" %></h3>
      </div>
      
-  <%= link_to image_tag( 'event/magicianhat.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
+  <%= link_to image_tag( 'event/video.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=動画撮影" %>
     </div>
   </li>
- 
+
+
+
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "イベントカメラマン","/notes/event" %></h3>
+     <h3 class="panel-title"><%= link_to "フラワーデザイナー","/notes/event?category=フラワーデザイナー" %></h3>
      </div>
        
-  <%= link_to image_tag('event/camera.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
+  <%= link_to image_tag('event/flower.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=フラワーデザイナー" %>
+
+
+    </div>
+  </li>
+
+
+
+
+ 
+   <li><div class="panel panel-default">
+   <div class="panel-heading">
+     <h3 class="panel-title"><%= link_to "音楽演奏","/notes/event?category=音楽演奏" %></h3>
+     </div>
+       
+  <%= link_to image_tag('event/sax.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=音楽演奏" %>
 
 
     </div>
@@ -80,65 +91,83 @@
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "衣装レンタル","/notes/event" %></h3>
+     <h3 class="panel-title"><%= link_to "エンターテイメント","/notes/event?category=エンターテイメント" %></h3>
      </div>
         
-  <%= link_to image_tag('event/dresses.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
+  <%= link_to image_tag('event/magic.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=エンターテイメント" %>
+
+    </div>
+  </li>
+
+
+   <li><div class="panel panel-default">
+   <div class="panel-heading">
+     <h3 class="panel-title"><%= link_to "プランニング","/notes/event?category=プランニング" %></h3>
+     </div>
+        
+  <%= link_to image_tag('event/planner.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=プランニング" %>
 
     </div>
   </li>
  
+
+
+
+ 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "ヘアスタイリング","/notes/event" %></h3>
+     <h3 class="panel-title"><%= link_to "ドライバー","/notes/event?category=ドライバー" %></h3>
      </div>
     
-  <%= link_to image_tag('event/bride.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
+  <%= link_to image_tag('event/limdine.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=ドライバー" %>
 
     </div>
   </li>
 
+
+
+   <li><div class="panel panel-default">
+       <div class="panel-heading">
+        <h3 class="panel-title"><%= link_to "メイク・ヘアメイク","/notes/event?category=メイク・ヘアメイク" %></h3>
+       </div>
+   
+  <%= link_to image_tag( 'event/makeup.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=メイク・ヘアメイク" %>
+       </div>
+         </li>
+ 
+
+
+
+
+
+   <li><div class="panel panel-default">
+       <div class="panel-heading">
+        <h3 class="panel-title"><%= link_to "ネイル","/notes/event?category=ネイル" %></h3>
+       </div>
+   
+  <%= link_to image_tag( 'event/nail.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=ネイル" %>
+       </div>
+         </li>
+ 
+
+
+
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "バルーンアーティスト","/notes/event" %></h3>
+     <h3 class="panel-title"><%= link_to "その他","/notes/event?category=その他" %></h3>
      </div>
-  <%= link_to image_tag('event/shoes.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
+  <%= link_to image_tag( '', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event?category=その他" %>
+
     </div>
   </li>
  
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "コメディアン","/notes/event" %></h3>
-     </div>
-  <%= link_to image_tag('event/microphone.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
-    </div>
-  </li>
- 
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "DJ","/notes/event" %></h3>
-     </div>
-  <%= link_to image_tag( 'event/record.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
-
-    </div>
-  </li>
-  
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "その他","/notes/event" %></h3>
-     </div>
-
-  <%= link_to image_tag( 'event/eyeshadow.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/event" %>
-
-    </div>
-  </li>
- </ul>
+   </ul>
   </div>
-
-
-
 </div>
 
 
   </div>
  </div>
+
+
+
