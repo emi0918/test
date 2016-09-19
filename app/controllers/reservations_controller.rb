@@ -18,9 +18,9 @@ def list
 end
   # GET /reservations/1
   # GET /reservations/1.json
-  def show
+ def show
 
-  end
+ end
 
 def detail
   @reservations = Reservation.all
@@ -28,10 +28,8 @@ def detail
 end
   # GET /reservations/new
   def new
-    
+    authenticate_user!
     @reservation = Reservation.new
-   authenticate_user!
-
     @times = ["いつでも良い" ,"07:00","08:00","09:00", "10:00", "11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","特に決まっていない"]
   end
 
@@ -44,6 +42,7 @@ end
   def create
     @reservation = Reservation.new(reservation_params)
 
+
     @reservation.user_id = current_user.id
     @reservation.note_id = @note.id
     
@@ -53,8 +52,17 @@ end
 
     confirm_message= 
     "
-     希望日程は#{reservation_params[:date]}で、#{reservation_params[:name]}さんからご予約が来ました。
-    -------------------------------------------------------------------------------------------
+    #{reservation_params[:name]}さんから、
+
+     希望日程：
+
+     第１希望　　#{reservation_params[:workdate1]} #{reservation_params[:worktime1]},
+     第２希望　　#{reservation_params[:workdate2]} #{reservation_params[:worktime2]},
+     第３希望　　#{reservation_params[:workdate3]} #{reservation_params[:worktime3]}
+
+     で、 仮予約をしました。
+
+    -------------------------------------------------------------------
      お問い合わせ内容：
 
       #{reservation_params[:message]}"
@@ -70,6 +78,7 @@ conversation = current_user.send_message(recipients, confirm_message, confirm_su
      redirect_to complete_note_reservations_path
       ReservationMailer.reservation_email(@provider, @reservation).deliver
       ReservationMailer.myreservation_email(@user, @reservation).deliver
+        ReservationMailer.mail_to_seekle(@provider, @reservation).deliver
    else
      render :new 
    end
@@ -77,6 +86,7 @@ conversation = current_user.send_message(recipients, confirm_message, confirm_su
 
  
 def confirm
+
   @reservation = Reservation.new(reservation_params) # <=POSTされたパラメータを取得
   render :new if @reservation.invalid? # <=バリデーションチェックNGなら戻す  
 end
@@ -114,10 +124,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reservation_params
-      params.require(:reservation).permit(:date, :name,:phone_number,:message,:note_id)
-      
-
-
+      params.require(:reservation).permit(:workdate1, :workdate2,:workdate3,:worktime1,:worktime2,:worktime3,:name,:phone_number,:message,:note_id)
 
     end
   end
