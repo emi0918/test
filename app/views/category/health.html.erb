@@ -1,30 +1,24 @@
-     <%= render 'category/header' %>
-     
-    <%= render 'category/responsivemenuvar' %>
+<%= render 'category/header' %>
+<%= render 'category/responsivemenuvar' %>
 <%= render 'home/header/dashboardhead' %>
 <div class="home-all-wrapper">
-   <div class="top_home_page">
-
+  <div class="top_home_page">
 
     <h1>健康</h1>
      <h3>あなたの健康を支えるSeekleでの健康サービス</h3>
-   </div>
+  </div>
+
 <div class="main-container">
-
-   <div class="categories">
-
-
-
-
-    <ul>
-      <div class="bootstrap">
-        <h4>健康 ジャンル</h4>
-   <li><div class="panel panel-default">
+  <div class="categories">
+  <ul>
+    <h4>健康 ジャンル</h4>
+   <div class="bootstrap">
+    <li><div class="panel panel-default">
    <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to "マッサージ","/notes/health" %></h3>
+    <h3 class="panel-title"><%= link_to "カウンセリング","/notes/health?category=カウンセリング"%></h3>
   </div>
  
-  <%= link_to image_tag( 'health/massage.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>
+  <%= link_to image_tag( 'health/chairs.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health?category=カウンセリング" %>
     </div>
   </li>
   </div>
@@ -32,10 +26,10 @@
 <div class="bootstrap">
    <li><div class="panel panel-default">
    <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to "エステ","/notes/health" %></h3>
+    <h3 class="panel-title"><%= link_to "エクササイズ","/notes/health?category=エクササイズ" %></h3>
   </div>
     
-  <%= link_to image_tag( 'health/este.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>
+  <%= link_to image_tag( 'health/strech.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health?category=エクササイズ" %>
     </div>
   </li>
   </div>
@@ -45,10 +39,10 @@
 <div class="bootstrap">
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "サイクリング","/notes/health" %></h3>
+     <h3 class="panel-title"><%= link_to "ヒーリング","/notes/health?category=ヒーリング"%></h3>
      </div>
      
-  <%= link_to image_tag( 'health/cicling.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>
+  <%= link_to image_tag( 'health/lotus.png', { :class => 'panel-body-housing', :size => 'cover'}),"/notes/health?category=ヒーリング" %>
     </div>
   </li>
   </div>
@@ -57,9 +51,9 @@
 <div class="bootstrap">
    <li><div class="panel panel-default">
    <div class="panel-heading">
-   <h3 class="panel-title"><%= link_to "ヨガ","/notes/health" %></h3>
+   <h3 class="panel-title"><%= link_to "コーチング","/notes/health?category=コーチング" %></h3>
  </div>
-       <%= link_to image_tag( 'health/ballet.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>
+       <%= link_to image_tag( 'health/coffee.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health?category=コーチング" %>
     </div>
   </li>
   </div>
@@ -68,10 +62,33 @@
   <div class="bootstrap">
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "栄養士","/notes/health" %></h3>
+     <h3 class="panel-title"><%= link_to "マッサージ","/notes/health?category=マッサージ" %></h3>
      </div>
     
-  <%= link_to image_tag( 'health/vegies.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>
+  <%= link_to image_tag( 'health/massage.png', { :class => 'panel-body-housing', :size => 'cover'}),"/notes/health?category=マッサージ" %>
+    </div>
+  </li>
+  </div>
+
+ <div class="bootstrap">
+   <li><div class="panel panel-default">
+   <div class="panel-heading">
+     <h3 class="panel-title"><%= link_to "エステ","/notes/health?category=エステ" %></h3>
+     </div>
+    
+  <%= link_to image_tag( 'health/este.png', { :class => 'panel-body-housing', :size => 'cover'}),"/notes/health?category=エステ" %>
+    </div>
+  </li>
+  </div>
+
+
+
+  <div class="bootstrap">
+   <li><div class="panel panel-default">
+   <div class="panel-heading">
+     <h3 class="panel-title"><%= link_to "パーソナルシェフ","/notes/health?category=パーソナルシェフ" %></h3>
+     </div>
+  <%= link_to image_tag( 'health/chef.png', { :class => 'panel-body-housing', :size => 'cover'}),"/notes/health?category=パーソナルシェフ" %>
     </div>
   </li>
   </div>
@@ -80,9 +97,42 @@
   <div class="bootstrap">
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "セラピー","/notes/health" %></h3>
+     <h3 class="panel-title"><%= link_to "デンタルケア","/notes/health?category=デンタルケア" %></h3>
      </div>
-  <%= link_to image_tag( 'health/lotus.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>
+  <%= link_to image_tag( 'health/dental.jpg', { :class => 'panel-body-housing', :size => 'cover'}),"/notes/health?category=デンタルケア" %>
+    </div>
+  </li>
+  </div>
+
+
+  <div class="bootstrap">
+   <li><div class="panel panel-default">
+   <div class="panel-heading">
+     <h3 class="panel-title"><%= link_to "パーソナルトレーニング","/notes/health?category=パーソナルトレーニング" %></h3>
+     </div>
+  <%= link_to image_tag( 'health/strech.png', { :class => 'panel-body-housing', :size => 'cover'}),"/notes/health?category=パーソナルトレーニング" %>
+    </div>
+  </li>
+  </div>
+
+
+  <div class="bootstrap">
+   <li><div class="panel panel-default">
+   <div class="panel-heading">
+     <h3 class="panel-title"><%= link_to "アロマセラピー","/notes/health?category=アロマセラピー" %></h3>
+     </div>
+  <%= link_to image_tag( 'health/aroma.jpg', { :class => 'panel-body-housing', :size => 'cover'}),"/notes/health?category=アロマセラピー" %>
+    </div>
+  </li>
+  </div>
+
+
+  <div class="bootstrap">
+   <li><div class="panel panel-default">
+   <div class="panel-heading">
+     <h3 class="panel-title"><%= link_to "介護ヘルパー","/notes/health?category=介護ヘルパー" %></h3>
+     </div>
+  <%= link_to image_tag( 'health/helper.jpg', { :class => 'panel-body-housing', :size => 'cover'}),"/notes/health?category=介護ヘルパー" %>
     </div>
   </li>
   </div>
@@ -93,66 +143,13 @@
   <div class="bootstrap">
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "パーソナルシェフ","/notes/health" %></h3>
+     <h3 class="panel-title"><%= link_to "その他","/notes/health?category=その他" %></h3>
      </div>
-  <%= link_to image_tag( 'health/chef.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>    </div>
+  <%= link_to image_tag( '', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health?category=その他" %>    </div>
   </li>
   </div>
 
 
-
-
-
-  <div class="bootstrap">
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "人生相談","/notes/health" %></h3>
-     </div>
-     
-  <%= link_to image_tag( 'health/chairs.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>
-    </div>
-  </li>
-  </div>
-
-  <div class="bootstrap">
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "カウンセリング","/notes/health" %></h3>
-     </div>
-     
-  <%= link_to image_tag( 'health/coffee.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>    </div>
-  </li>
-  </div>
-
-  <div class="bootstrap">
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "座禅","/notes/health" %></h3>
-     </div>
-     
-    <%= link_to image_tag( 'health/temple.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>
-    </div>
-  </li>
-  </div>
-
-  <div class="bootstrap">
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "ストレッチ","/notes/health" %></h3>
-     </div>
-     <%= link_to image_tag( 'health/strech.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>
-    </div>
-  </li>
-  </div>
-
-<div class="bootstrap">
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "その他","/notes/health" %></h3>
-     </div>
-          <%= link_to image_tag( 'pigeon.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/health" %>
-    </div>
-  </li>
  </ul>
   </div>
 
