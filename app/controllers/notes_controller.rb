@@ -36,6 +36,7 @@
     @notes = Note.includes(:user).all
     @note = Note.find(params[:id])
     @reviews = Review.where(note_id: @note.id).order("created_at DESC")
+      render :layout => 'note_layout.html'
    if @reviews.blank?
       @avg_review = 0
     else
