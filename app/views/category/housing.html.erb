@@ -8,118 +8,112 @@
 
 
 <div class="home-all-wrapper">
+ <div class="top_home_page">
+  <h1>住まい</h1>
+    <h3>暮らしを変えるSeekleでの住まいサービス</h3>
+ </div>
 
-
-   <div class="top_home_page">
-
-
-    <h1>住まい</h1>
-     <h3>暮らしを変えるSeekleでの住まいサービス</h3>
-
-   </div>
-
-<div class="main-container">
-
+ <div class="main-container">
    <div class="categories">
+    <ul> 
+      <h4>住まい ジャンル</h4>
 
-    <ul>
-  
-        <h4>住まい ジャンル</h4>
-
-
-            <div class="bootstrap">
-       <li><div class="panel panel-default">
+      <div class="bootstrap">
+        <li><div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title"><%= link_to "便利屋 修復","/notes/housing" %></h3>
+        <h3 class="panel-title"><%= link_to "ハウスクリーニング","/notes/housing?category=ハウスクリーニング" %></h3>
       </div>
 
-  <%= link_to image_tag( 'housing/repair.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
+  <%= link_to image_tag( 'housing/housecleaning.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing?category=ハウスクリーニング" %>
     </div>
      </li>
 
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to "増設、リモデル","/notes/housing" %></h3>
-  </div>
-      
-  <%= link_to image_tag('housing/blueprint.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
-     
-    </div>
-  </li>
-
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "コンクリート","/notes/housing" %></h3>
+     <h3 class="panel-title"><%= link_to "お引越し","/notes/housing?category=お引越し"%></h3>
      </div>
-  <%= link_to image_tag('housing/concrete.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
+  <%= link_to image_tag('housing/moving.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing?category=お引越し" %>
     </div>
   </li>
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-   <h3 class="panel-title"><%= link_to "ペインティング","/notes/housing" %></h3>
+   <h3 class="panel-title"><%= link_to "リフォーム","/notes/housing?category=リフォーム"%></h3>
  </div>
 
-  <%= link_to image_tag('housing/painting.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
+  <%= link_to image_tag('housing/remodel.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing?category=リフォーム"%>
     </div>
   </li>
 
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "屋根、雨漏り","/notes/housing" %></h3>
+     <h3 class="panel-title"><%= link_to "不用品回収","/notes/housing?category=不用品回収"%></h3>
      </div>
-  <%= link_to image_tag('housing/roof.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
+  <%= link_to image_tag('housing/track.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing?category=不用品回収"%>
     </div>
   </li>
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "壁、階段、フレーミング","/notes/housing" %></h3>
-     </div>
- 
-  <%= link_to image_tag('housing/floor.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
-
-    </div>
-  </li>
-
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "ドア、窓","/notes/housing" %></h3>
-     </div>
-  
-  <%= link_to image_tag('housing/window.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
-
-    </div>
-  </li>
-
-   <li><div class="panel panel-default">
-   <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "クリーニング","/notes/housing" %></h3>
+     <h3 class="panel-title"><%= link_to "配管工事","/notes/housing?category=配管工事" %></h3>
      </div>
  
-  <%= link_to image_tag('housing/cleaning.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
+  <%= link_to image_tag('housing/plumber.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing?category=配管工事" %>
 
     </div>
   </li>
 
+
+
+
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "引っ越し","/notes/housing" %></h3>
+     <h3 class="panel-title"><%= link_to "剪定・造園","/notes/housing?category=剪定・造園"%></h3>
      </div>
-      <%= link_to image_tag('housing/moving.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
+      <%= link_to image_tag('housing/gardening.jpg', { :class => 'panel-body-housing', :size => 'cover'}),"/notes/housing?category=剪定・造園" %>
     </div>
   </li>
 
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "大工、木工","/notes/housing" %></h3>
+     <h3 class="panel-title"><%= link_to "家具修理","/notes/housing?category=家具修理" %></h3>
+     </div>
+  
+  <%= link_to image_tag('housing/repair.jpg', { :class => 'panel-body-housing', :size => 'cover'}),"/notes/housing?category=家具修理" %>
+
+    </div>
+  </li>
+
+
+   <li><div class="panel panel-default">
+   <div class="panel-heading">
+     <h3 class="panel-title"><%= link_to "家電取り付け","/notes/housing?category=家電取り付け" %></h3>
      </div>
  
+  <%= link_to image_tag('housing/aircon.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing?category=家電取り付け"%>
+    </div>
+  </li>
 
-  <%= link_to image_tag('housing/crosscut.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
+
+   <li><div class="panel panel-default">
+   <div class="panel-heading">
+     <h3 class="panel-title"><%= link_to "害虫駆除","/notes/housing?category=害虫駆除" %></h3>
+     </div>
+
+  <%= link_to image_tag('housing/tree.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing?category=害虫駆除" %>
+    </div>
+  </li>
+
+
+   <li><div class="panel panel-default">
+   <div class="panel-heading">
+     <h3 class="panel-title"><%= link_to "家事代行・家政婦","/notes/housing?category=家事代行・家政婦"%></h3>
+     </div>
+  
+  <%= link_to image_tag( 'housing/housekeeper.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing?category=家事代行・家政婦" %>
 
     </div>
   </li>
@@ -127,33 +121,36 @@
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "配管工事","/notes/housing" %></h3>
+     <h3 class="panel-title"><%= link_to "ペットシッター","/notes/housing?category=ペットシッター"%></h3>
      </div>
   
-  <%= link_to image_tag( 'housing/plumber.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
+  <%= link_to image_tag( 'housing/dog.jpg', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing?category=ペットシッター" %>
 
     </div>
   </li>
 
-  
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "その他","/notes/housing" %></h3>
+     <h3 class="panel-title"><%= link_to "その他","/notes/housing?category=その他"%></h3>
      </div>
-    
-  <%= link_to image_tag( 'pigeon.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing" %>
+  
+  <%= link_to image_tag( '', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/housing?category=その他" %>
 
     </div>
   </li>
 
+  
 
 
- </ul>
-
-
-
-
+   </ul>
  </div>
 
 </div>
+
+
+
+
+
+ 
+
