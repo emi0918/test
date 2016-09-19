@@ -4,6 +4,8 @@
   <div class="bootstrap1">
     <ol class="breadcrumb">
 
+
+
     </ol>
   </div>
 </div>
@@ -18,8 +20,8 @@
 
 
    住まいカテゴリ
-   <br/>
-   <br/>
+  <br/>
+  <br/>
 
 
 <% @housecategories.each do |house| %>
@@ -62,7 +64,7 @@
     </div>
 
      <div class="store_name_left">
-     <p><%= link_to note.provider.name,profile_note_path(note) %></p>
+     <p><%= link_to note.provider.name,profile_note_path(note),:class => "link_provider" %></p>
      </div>
        <div class="service-price"><h3> <%= note_revision.price %>円<span>(税込)</span>〜</h3> </div>
        <% end %>
