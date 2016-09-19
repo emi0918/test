@@ -24,7 +24,7 @@
 
 <% @lessoncategories.each do |lesson| %>
 
-<li><%= lesson.name %></li>
+<li><%= link_to lesson.name, lesson_notes_path(category: lesson.name)  %></li>
 <% end %>
  <br>
  <br>
