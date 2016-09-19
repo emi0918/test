@@ -48,7 +48,7 @@ private
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
     def provider_params
-      params.require(:provider).permit(:name,:address,:provider_id,:mainpic,:email,:password,
+      params.require(:provider).permit(:name,:address,:provider_id,:mainpic,:email,:password,:password_confirmation,
       provider_accounts_attributes: [:phonenumber, :staffname],
       store_infos_attributes: [:hours,:holiday,:payment,:about,:postalcode,:prefecture,:city,:address,:building]
       )
