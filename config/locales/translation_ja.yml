@@ -50,6 +50,7 @@ ja:
         name: "店舗名"  #g
         notes: "ノート"  #g
         password: "パスワード"
+        password_confirmation: "確認用パスワード"
         payment: "支払い"  #g
         phonenumber: "電話番号"  #g
         provider_pic: "プロバイダーPIC"  #g
