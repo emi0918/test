@@ -64,8 +64,8 @@ end
 
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
-    def provider_params
-      params.require(:provider).permit(:name,:address,:provider_id,:mainpic,:email,:password,
+      def provider_params
+      params.require(:provider).permit(:name,:address,:provider_id,:mainpic,:email,:password,:password_confirmation,
       provider_accounts_attributes: [:phonenumber, :staffname],
       store_infos_attributes: [:hours,:holiday,:payment,:about,:postalcode,:prefecture,:city,:address,:building]
       )
