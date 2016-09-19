@@ -1,4 +1,4 @@
-       <%= render 'category/header' %>
+     <%= render 'category/header' %>
      
     <%= render 'category/responsivemenuvar' %>
 <%= render 'home/header/dashboardhead' %>
@@ -13,40 +13,38 @@
    </div>
 <div class="main-container">
    <div class="categories">
-
-
-
-
-    <ul>
+ <ul>
+            <h4>習い事 ジャンル</h4>
       <div class="bootstrap">
-        <h4>習い事 ジャンル</h4>
-   <li><div class="panel panel-default">
+
+
+ <li><div class="panel panel-default">
    <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to "歌","/notes/lesson" %></h3>
+    <h3 class="panel-title"><%= link_to "楽器演奏","/notes/lesson?category=楽器演奏" %></h3>
   </div>
      
 
-  <%= link_to image_tag( 'lesson/guitar.png', { :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
+  <%= link_to image_tag( 'lesson/drum.jpg', { :class => 'panel-body-housing', :size => 'cover'}),"/notes/lesson?category=楽器演奏"%>
 
     </div>
   </li>
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to "語学","/notes/lesson" %></h3>
+    <h3 class="panel-title"><%= link_to "ボイストレーニング","/notes/lesson?category=ボイストレーニング"%></h3>
   </div>
-  <%= link_to image_tag( 'lesson/english.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
+  <%= link_to image_tag( 'lesson/piano.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson?category=ボイストレーニング" %>
     </div>
   </li>
 
 
      <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "料理","/notes/lesson" %></h3>
+     <h3 class="panel-title"><%= link_to "ダンス","/notes/lesson?category=ダンス" %></h3>
      </div>
    
 
-  <%= link_to image_tag('lesson/cooking.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
+  <%= link_to image_tag('lesson/dance.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson?category=ダンス" %>
 
     </div>
   </li>
@@ -54,10 +52,10 @@
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "ピアノ","/notes/lesson" %></h3>
+     <h3 class="panel-title"><%= link_to "絵画教室","/notes/lesson?category=絵画教室" %></h3>
      </div>
         
-  <%= link_to image_tag('lesson/piano.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
+  <%= link_to image_tag('lesson/paint.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson?category=絵画教室" %>
     </div>
   </li>
 
@@ -68,76 +66,79 @@
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-   <h3 class="panel-title"><%= link_to "武道","/notes/lesson" %></h3>
+   <h3 class="panel-title"><%= link_to "アロマ教室","/notes/lesson?category=アロマ教室"%></h3>
  </div>
-       <%= link_to image_tag('lesson/muay.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
+       <%= link_to image_tag('lesson/aroma.jpg',{ :class => 'panel-body-housing', :size => 'cover'}),"/notes/lesson?category=アロマ教室"%>
 
     </div>
   </li>
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "ウェブ","/notes/lesson" %></h3>
+     <h3 class="panel-title"><%= link_to "身体作り","/notes/lesson?category=身体作り" %></h3>
      </div>
   
-  <%= link_to image_tag('lesson/coding.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
+  <%= link_to image_tag('lesson/shoes.jpg',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson?category=身体作り" %>
     </div>
   </li>
 
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "ダンス","/notes/lesson" %></h3>
+     <h3 class="panel-title"><%= link_to "スポーツ","/notes/lesson?category=スポーツ" %></h3>
      </div>
      
-  <%= link_to image_tag('lesson/dance.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
+  <%= link_to image_tag('lesson/tennis.jpg',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson?category=スポーツ" %>
     </div>
   </li>
 
+  
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "勉学","/notes/lesson" %></h3>
+     <h3 class="panel-title"><%= link_to "語学","/notes/lesson?category=語学" %></h3>
      </div>
-          <%= link_to image_tag('lesson/study.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
+  
+  <%= link_to image_tag('lesson/teacher.jpg',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson?category=語学" %>
     </div>
   </li>
 
-   <li><div class="panel panel-default">
+     <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "絵","/notes/lesson" %></h3>
+     <h3 class="panel-title"><%= link_to "学習","/notes/lesson?category=学習" %></h3>
      </div>
-      
-  <%= link_to image_tag('lesson/paint.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
+  
+  <%= link_to image_tag('lesson/study.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson?category=学習" %>
     </div>
   </li>
 
-   <li><div class="panel panel-default">
+     <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "パーソナルトレーニング","/notes/lesson" %></h3>
+     <h3 class="panel-title"><%= link_to "料理","/notes/lesson?category=料理" %></h3>
      </div>
-         <%= link_to image_tag('lesson/fitness.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
-
+  
+  <%= link_to image_tag('lesson/cooking.jpg',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson?category=料理" %>
     </div>
   </li>
 
-
-   <li><div class="panel panel-default">
+     <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "編み物","/notes/lesson" %></h3>
+     <h3 class="panel-title"><%= link_to "フラワーアレンジメント","/notes/lesson?category=フラワーアレンジメント" %></h3>
      </div>
-    
-  <%= link_to image_tag('lesson/crochet.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
-
+  
+  <%= link_to image_tag('lesson/flower.jpg',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson?category=フラワーアレンジメント" %>
     </div>
   </li>
 
+
    <li><div class="panel panel-default">
    <div class="panel-heading">
-     <h3 class="panel-title"><%= link_to "その他","/notes/lesson" %></h3>
+     <h3 class="panel-title"><%= link_to "その他","/notes/lesson?category=その他"%></h3>
      </div>
         
-  <%= link_to image_tag('pigeon.png',{ :class => 'panel-body-housing', :size => 'cover'}), "/notes/lesson" %>
+  <%= link_to image_tag('',{ :class => 'panel-body-housing', :size => 'cover'}),"/notes/lesson?category=その他"%>
     </div>
   </li>
+
+
  </ul>
   </div>
   </div>
