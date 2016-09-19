@@ -22,7 +22,7 @@
 
 <% @eventcategories.each do |event| %>
 
-<li><%= event.name %></li>
+<li><%= link_to event.name,  event_notes_path(category: event.name)  %></li>
 <% end %>
 
  <br><br>
