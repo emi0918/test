@@ -14,9 +14,7 @@
   <div class="other-jobs-menu">
 
 
- 健康カテゴリ
-   <br/>
-   <br/>
+<h2> 健康カテゴリ</h2>
 
 
 <% @healthcategories.each do |health| %>
@@ -37,7 +35,7 @@
 
 <div class="services_right_wrapper">
  <div class="show_providers">
-   <%= @notes.count %>件のサービスが見つかりました
+  <div class="notes_count"><%= @notes.count %>件のサービスが見つかりました</div>
      <% @notes.each do |note| %>
      <div class="provider_job ">
        <% note.note_revisions.each do |note_revision| %>
