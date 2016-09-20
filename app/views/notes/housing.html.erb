@@ -10,7 +10,6 @@
   </div>
 </div>
 
-
 <div class="main-container">
 
 <div class="published_service_wrapper">
@@ -19,9 +18,8 @@
   <div class="other-jobs-menu">
 
 
-   住まいカテゴリ
-  <br/>
-  <br/>
+  <h2> 住まいカテゴリ</h2>
+
 
 
 <% @housecategories.each do |house| %>
@@ -44,7 +42,7 @@
       <div class="show_providers">
 
   
-<%= @notes.count %>件のサービスが見つかりました
+<div class="notes_count"><%= @notes.count %>件のサービスが見つかりました</div>
      <% @notes.each do |note| %>
 
      <div class="provider_job ">
