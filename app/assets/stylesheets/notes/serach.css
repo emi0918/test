@@ -17,37 +17,38 @@
 	margin-left:0%;
 }
 
- .left-other-housing{
+.notes_count{
+float:right;
+}
 
+ .left-other-housing{
  	float:left;
- 	
- 	height:1400px;
+
+ 	height:0 auto;
     width:22%;
 
  }
 
-
- .services_right_wrapper{
-    width:99%;
-
- 
+ .left-other-housing h2{
+ 	background-color: #FAEBD7;
+ 	padding:8px;
  }
 
- .other-jobs-menu{
- 	width:100%;
- 	line-height:30px
+.services_right_wrapper{
+    width:99%; 
+ }
 
+.other-jobs-menu{
+  padding: 6px;
+  font-size: 15px;
+  line-height:28px;
+  background-color:#FFFFFF;
  }
 
  .other-jobs-menu li{
  	color:#4682B4;
  	text-align:left;
  }
-
-
-
- 
-
 
  .create_requirement{
  	margin-top:10px;
@@ -64,13 +65,14 @@ clear:both;
 
  .provider_job{
  	height:230px;
+
  	border-bottom:1px solid #C0C0C0;
- 	width:77%;
+ 	width:74%;
  	position:relative;
  	margin-top:10px;
  	margin-bottom:0px;
- 	float:left;
- 	
+ 	margin-left: 25px;
+ 	float:right;	
  }
 
 
@@ -92,7 +94,6 @@ clear:both;
 
 
 .service_catchcopy_top{
-
 width:70%;
 margin-left: 30%;
 }
@@ -191,7 +192,7 @@ display:none;
  	
  	height:200px;
  margin-left: 3%;
- 	width:93%;
+ 	width:100%;
  	position:relative;
  	margin-bottom:1px;
  	border-radius: 0px;
