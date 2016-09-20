@@ -15,10 +15,7 @@
   <div class="other-jobs-menu">
 
 
-
-   イベントカテゴリ
-   <br/>
-   <br/>
+  <h2>イベントカテゴリ</h2>
 
 <% @eventcategories.each do |event| %>
 
@@ -43,7 +40,9 @@
       <div class="show_providers">
 
   
-<%= @notes.count %>件のサービスが見つかりました
+
+  
+<div class="notes_count"><%= @notes.count %>件のサービスが見つかりました</div>
      <% @notes.each do |note| %>
 
      <div class="provider_job ">
