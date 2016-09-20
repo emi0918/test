@@ -13,11 +13,13 @@
     render :layout => 'providers_layout.html'
   end
 
+
   def detail
      @notes = Note.includes(:provider).all
     @notes = Note.includes(:user).all
     @note = Note.find(params[:id])
   end
+
 
   def reservations
     @notes = current_provider.notes.all.page(params[:page]).per(3).order(:id)
@@ -27,7 +29,8 @@
     @note = Note.find(params[:id])
     render :layout => 'providers_layout.html'
   end
- 
+
+
   def show
  
     @note_revisions = @note.note_revisions
@@ -50,6 +53,7 @@
 
       @category_id= Category.find_by(name: params[:category]).id
       @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
+         render :layout => 'show_layout.html'
   end
 
   def event
@@ -70,25 +74,16 @@
        @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
 end
 
-
-
   def profile
     @notes = Note.includes(:provider).all
   end
 
-  # GET /notes/ne
+  # GET /notes/new
   def new
-   
        @note = Note.new
-       @categories= Category.all
-       @housecategories =  Category.where(:parent_id => (1))
-       @eventcategories =  Category.where(:parent_id => (2))
-       @lessoncategories =  Category.where(:parent_id => (3))
-       @healthcategories =  Category.where(:parent_id => (4))
-
        @note.note_revisions.build #追加
-              @note.note_images.build #追加
-    render :layout => 'providers_layout.html'
+       @note.note_images.build #追加
+       render :layout => 'providers_layout.html'
   end
 
   # GET /notes/1/sedit
@@ -101,7 +96,7 @@ end
   # POST /notes.json
   def create
     @note = current_provider.notes.build(note_params)
-    @note.category_id = params[:category_id]
+  
      if @note.save
       redirect_to  @note
      NoteMailer.note_email(@provider, @note).deliver
@@ -115,7 +110,6 @@ end
   # PATCH/PUT /notes/1.json
   def update
         @note = Note.find(params[:id])
-
     if @note.update(update_note_params)
       redirect_to @note, notice: '編集完了しました'
     else
@@ -152,17 +146,11 @@ end
       params.require(:note).permit(:provider_id, :category_id,
         note_images_attributes: [:image1,:image2,:image3,:image4,:image5,:image6,:image7,:image8,:image9,:_destroy, :id],
         note_revisions_attributes: [:title, :note_id,:name,:content,:price,:salespoint,:cancelrule,:rule,:catchcopy,:category_id,:name, :parent_id,:_destroy, :id])
+    end 
 
+    def category_params
+      params.require(:category).permit(:name, :parent_id)
     end
-
-
-
-def category_params
-  params.require(:category).permit(:name, :parent_id)
-end
-
-
-
 
     def user_params
       params.require(:user).permit(:name,  :profile, :area, :email)
