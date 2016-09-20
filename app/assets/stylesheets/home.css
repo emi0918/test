@@ -244,11 +244,14 @@ margin-right: 50px;
   border-radius:5px;
   width:100%;
   font-size:15px;
-  color:#fff;
+ 
   padding-top:15px;
   padding-bottom:15px
 }
 
+.store_login_btn{
+float:right;
+}
 
 #face{
   background-color:#3b5998
