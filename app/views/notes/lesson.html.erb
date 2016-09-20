@@ -18,10 +18,8 @@
  <div class="other-jobs-menu">
 
 
-   習い事カテゴリ
-   <br/>
-   <br/>
-
+  <h2> 習い事カテゴリ</h2>
+  
 <% @lessoncategories.each do |lesson| %>
 
 <li><%= link_to lesson.name, lesson_notes_path(category: lesson.name)  %></li>
@@ -44,7 +42,7 @@
       <div class="show_providers">
 
   
-<%= @notes.count %>件のサービスが見つかりました
+ <div class="notes_count"><%= @notes.count %>件のサービスが見つかりました</div>
      <% @notes.each do |note| %>
 
      <div class="provider_job ">
