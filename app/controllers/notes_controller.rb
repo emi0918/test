@@ -53,7 +53,7 @@
 
       @category_id= Category.find_by(name: params[:category]).id
       @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
-         render :layout => 'show_layout.html'
+
   end
 
   def event
