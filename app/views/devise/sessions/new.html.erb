@@ -3,7 +3,20 @@
 <div class="bootstrap">
 
   <div class="content_in_user">
+
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+   <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
     <div class="field">
       <%= f.label :メールアドレス %><br />
       <%= f.email_field :email, autofocus: true %>
@@ -23,11 +36,17 @@
   <% end %>
 
 
+
   <%= render "devise/shared/links" %>
 <%= link_to "パスワードを忘れた", new_password_path(resource_name)%>
 
 
 
+<%= link_to "店舗ログイン", provider_session_path ,class:"store_login_btn" %>
+
 </div>
 </div>
+
 </div>
+
+
