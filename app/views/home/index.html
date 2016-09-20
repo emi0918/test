@@ -59,23 +59,16 @@
 <div class="seekle_favs_left">
 <p>住まい</p>
 
-    <% @note1.note_images.each do |note_images| %>
+
     <%= link_to image_tag( "/images/kitchin.jpg", { :class => "popular_service1"}), "/notes/housing?category=ハウスクリーニング" %>
 
-    <% end %>
 
-    <% @note2.note_images.each do |note_images| %>
     <%= link_to image_tag( "/images/aircon.jpg", { :class => "popular_service2"}) %>
-    <% end %>
 
-    <% @note3.note_images.each do |note_images| %>
     <%= link_to image_tag( "/images/box.jpg", { :class => "popular_service2"}), "/notes/housing?category=お引越し" %>
-    <% end %>
-
-
-    <% @note4.note_images.each do |note_images| %>
+    
     <%= link_to image_tag( "/images/room.jpg", { :class => "popular_service2"}) , "/notes/housing?category=リフォーム" %>
-    <% end %>
+
 
   </div>
 
@@ -104,27 +97,16 @@
 
 <div class="seekle_favs_left">
 <p>習い事</p>
-
-    <% @note1.note_images.each do |note_images| %>
-
     <%= link_to image_tag( "/images/golf.jpg", { :class => "popular_service1"}),"/notes/lesson?category=スポーツ" %>
-    <% end %>
-    
-    <% @note2.note_images.each do |note_images| %>
-
+   
     <%= link_to image_tag( "/images/dance.jpg", { :class => "popular_service2"}), "/notes/lesson?category=ダンス" %>
-    <% end %>
 
-    <% @note3.note_images.each do |note_images| %>
 
     <%= link_to image_tag( "/images/running.jpg", { :class => "popular_service2"})%>
-    <% end %>
 
-
-    <% @note4.note_images.each do |note_images| %>
 
     <%= link_to image_tag(  "/images/painting.jpg", { :class => "popular_service2"}),"/notes/lesson?category=絵画教室" %>
-    <% end %>
+
 
   </div>
 
@@ -136,26 +118,17 @@
 <div class="seekle_favs_left">
 <p>健康</p>
 
-    <% @note1.note_images.each do |note_images| %>
+
 
     <%= link_to image_tag( "/images/trainor.jpg", { :class => "popular_service1"}) ,"/notes/health?category=パーソナルトレーニング"%>
-    <% end %>
-    
-    <% @note2.note_images.each do |note_images| %>
+
 
     <%= link_to image_tag( "/images/yoga.jpg", { :class => "popular_service2"}), "/notes/health?category=エクササイズ"%>
-    <% end %>
-
-    <% @note3.note_images.each do |note_images| %>
 
     <%= link_to image_tag( "/images/footmassage.jpg", { :class => "popular_service2"}) , "/notes/health?category=マッサージ"%>
-    <% end %>
-
-
-    <% @note4.note_images.each do |note_images| %>
 
     <%= link_to image_tag( "/images/boxing.jpg", { :class => "popular_service2"}) %>
-    <% end %>
+
 
   </div>
 
