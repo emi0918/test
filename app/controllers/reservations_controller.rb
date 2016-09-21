@@ -12,20 +12,17 @@ class ReservationsController < ApplicationController
   end
 
 
-def list
-   @reservations = Reservation.includes(:note).all
-
-end
+  def list
+     @reservations = Reservation.includes(:note).all
+  end
   # GET /reservations/1
   # GET /reservations/1.json
- def show
+   def show
+   end
 
- end
-
-def detail
-  @reservations = Reservation.all
-  
-end
+   def detail
+     @reservations = Reservation.all
+   end
   # GET /reservations/new
   def new
     authenticate_user!
@@ -42,17 +39,19 @@ end
   def create
     @reservation = Reservation.new(reservation_params)
 
+  @reservation.user_id = current_user.id
+    @reservation.note_id = @note.id
+     recipients = @note.provider
+
 
     if params[:back]          
       render :new
-    elsif @reservation.save
 
+    elsif
+     @reservation.save
 
-    @reservation.user_id = current_user.id
-    @reservation.note_id = @note.id
-    
-
-    recipients = @note.provider
+    redirect_to complete_note_reservations_path
+   
     confirm_subject= "予約が来ました！"
 
     confirm_message= 
@@ -75,7 +74,7 @@ end
 
 conversation = current_user.send_message(recipients, confirm_message, confirm_subject).conversation 
 
-     redirect_to complete_note_reservations_path
+   
       ReservationMailer.reservation_email(@provider, @reservation).deliver
       ReservationMailer.myreservation_email(@user, @reservation).deliver
         ReservationMailer.mail_to_seekle(@provider, @reservation).deliver
