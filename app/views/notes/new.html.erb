@@ -17,14 +17,16 @@
    <p>あなたのサービスを求めるカスタマーの決め手になるようなタイトルや内容を考えよう</p>
 
 
-
-   <table class="newpost">
+  <table class="newpost">
 
     <tr>
      <th> <p>  <%= f.label Note.human_attribute_name 'カテゴリー' %> <span class="form-label required">必須</span></p></th>
      <td>
-<select class="chosen-select form-control" name="note[category_id]" id="note_category_id" >
- <option value="">選択してください</option>
+
+<select class= "chosen-select form-control" id= "note_category_id" name= "note[category_id]">
+
+<option value="">選択してください</option>
+
 <optgroup label="住まい">
 <option value="6">- ハウスクリーニング</option>
 <option value="7">- お引越し</option>
@@ -82,12 +84,18 @@
 <option value="52">- 介護ヘルパー</option>
 <option value="53">- その他</option>
  </optgroup>
-<option value="5"> その他</option></select>
+<option value="5"> その他</option>
 
 </select>
 
+    </td>
+
+    </tr>
+
 
  <%= f.fields_for :note_revisions do |b| %>
+       
+
        
 
     <tr>
@@ -186,63 +194,63 @@
 <tr>
  <th> <p><%= f.label Note.human_attribute_name '写真(9枚まで)' %><span class="form-label required">必須</span></p></th>
  <td>
-   <%= i.file_field :image1, class: "form-control image-field" %>
+   画像1(トップ画像)<%= i.file_field :image1, class: "form-control image-field" %>
    <%= i.hidden_field :image1, autofocus: true %>
  </td>
 </tr>
 <tr>
  <th> </th>
  <td>
-   <%= i.file_field :image2, class: "form-control image-field" %>
+  画像2 <%= i.file_field :image2, class: "form-control image-field" %>
  </td>
 </tr>
 
 <tr>
  <th> </th>
  <td>
-   <%= i.file_field :image3, class: "form-control image-field" %>
+   画像3  <%= i.file_field :image3, class: "form-control image-field" %>
  </td>
 </tr>
 
 <tr>
  <th> </th>
  <td>
-   <%= i.file_field :image4, class: "form-control image-field" %>
+  画像4 <%= i.file_field :image4, class: "form-control image-field" %>
  </td>
 </tr>
 
 <tr>
  <th> </th>
  <td>
-   <%= i.file_field :image5, class: "form-control image-field" %>
+  画像5 <%= i.file_field :image5, class: "form-control image-field" %>
  </td>
 </tr>
 
 <tr>
  <th> </th>
  <td>
-   <%= i.file_field :image6, class: "form-control image-field" %>
+  画像6 <%= i.file_field :image6, class: "form-control image-field" %>
  </td>
 </tr>
 
 <tr>
  <th> </th>
  <td>
-   <%= i.file_field :image7, class: "form-control image-field" %>
+  画像7 <%= i.file_field :image7, class: "form-control image-field" %>
  </td>
 </tr>
 
 <tr>
  <th> </th>
  <td>
-   <%= i.file_field :image8, class: "form-control image-field" %>
+   画像8<%= i.file_field :image8, class: "form-control image-field" %>
  </td>
 </tr>
 
 <tr>
  <th> </th>
  <td>
-   <%= i.file_field :image9, class: "form-control image-field" %>
+  画像9 <%= i.file_field :image9, class: "form-control image-field" %>
  </td>
 </tr>
 
@@ -258,6 +266,16 @@
 </div>
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+
 <link rel="stylesheet" href="chosen.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
