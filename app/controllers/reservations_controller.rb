@@ -43,6 +43,11 @@ end
     @reservation = Reservation.new(reservation_params)
 
 
+    if params[:back]          
+      render :new
+    elsif @reservation.save
+
+
     @reservation.user_id = current_user.id
     @reservation.note_id = @note.id
     
@@ -52,7 +57,7 @@ end
 
     confirm_message= 
     "
-    #{reservation_params[:name]}さんから、
+    お名前：#{reservation_params[:name]}さん
 
      希望日程：
 
@@ -70,11 +75,6 @@ end
 
 conversation = current_user.send_message(recipients, confirm_message, confirm_subject).conversation 
 
-
-
-    if params[:back]          
-      render :new
-    elsif @reservation.save
      redirect_to complete_note_reservations_path
       ReservationMailer.reservation_email(@provider, @reservation).deliver
       ReservationMailer.myreservation_email(@user, @reservation).deliver
