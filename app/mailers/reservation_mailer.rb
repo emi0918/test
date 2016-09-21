@@ -41,5 +41,24 @@ class ReservationMailer < ApplicationMailer
 
   end
 
+
+  def mail_to_seekle(provider, reservation)
+     @provider = reservation.note.provider.name
+       @workdate1 = reservation.workdate1
+   @workdate2 = reservation.workdate2
+   @workdate3 = reservation.workdate3
+   @worktime1 = reservation.worktime1
+   @worktime2 = reservation.worktime2
+   @worktime3 = reservation.worktime3
+@note= reservation.note
+     @reservations = Reservation.includes(:note).all
+     @reservations = Reservation.includes(:note_revisions).all
+
+      @date = reservation.date
+      @name= reservation.name
+      @message=reservation.message
+    mail to: "emi.m0918@gmail.com", subject: "予約が来てる"
+  end
+
 end
 
