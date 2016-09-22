@@ -71,10 +71,9 @@ namespace :home do
   get :guide
 end
 
-namespace :company do
-  get :index 
-  get :question
-end
+resources :company ,only: [:index]
+
+
 
 namespace :category do
   get :housing
