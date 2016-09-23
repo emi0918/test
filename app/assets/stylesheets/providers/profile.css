@@ -55,7 +55,29 @@
 }
 
 
+.provider_services_introduce{
+	height:150px;
+	border-bottom: 2px solid #DCDCDC;
+padding-bottom: 20px;
+    margin-bottom: 20px;
+}
 
+.provider_service_introduce_image{
+	height:150px;
+
+	width:200px;
+	    padding-right: 10px;
+
+	float:left;
+		clear:both;
+}
+.provider_service_titles{
+	margin-left: 12px;
+	font-size: 17px;
+
+	clear:both;
+
+}
 
 
 
