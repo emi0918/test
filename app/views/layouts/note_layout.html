@@ -3,7 +3,7 @@
  <% @note_revisions.each do |note_revision| %>
    <% @note.provider.store_infos.each do |s| %>
 <head>
-<title><%= note_revision.title %>|<%=  @note.provider.name %>の<%= @note.category.name %>- Seekle</title>  
+<title><%= note_revision.title %> | <%=  @note.provider.name %>の<%= @note.category.name %>- Seekle</title>  
 <meta name="description" content= "<%= note_revision.salespoint %> " />
 <meta name="keywords" content="<%= @note.category.name %>,<%=  @note.provider.name %>,業者,料金" />
 <meta property="og:title" content="<%= note_revision.title %> - Seekle" />
