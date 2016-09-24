@@ -64,6 +64,11 @@
   <h2>掲載中のサービス：</h2>
 
   
+
+
+
+
+
   <ul>
    <% @note.provider.notes.each do |note| %>
     <% note.note_revisions.each do |note_revision| %>
@@ -73,11 +78,15 @@
     <div class="provider_services_introduce">
 
       <%= link_to note_revision.title, note_path(@note),class: "provider_service_titles" %>
+
     <% if note_images.image1.blank? %>
-    <%= image_tag 'Seekle_icon.png', :class => 'provider_service_introduce_image'%>
+
+  <%= link_to image_tag( 'Seekle_icon.png', { :class => "provider_service_introduce_image"}), note_path(note) %>
+
     <% else %>
-      <%= image_tag note_images.image1_url ,class: "provider_service_introduce_image"%>
+        <%= link_to image_tag( note_images.image1_url, { :class => "provider_service_introduce_image"}), note_path(note) %>
     <% end %>
+
 
       </div>
    </li>
