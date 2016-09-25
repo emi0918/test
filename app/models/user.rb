@@ -20,9 +20,10 @@ has_many :reservations, dependent: :destroy
     self.name
   end
 
-  def mailboxer_email(object)
-    self.email
-  end
+
+def mailboxer_email(object)
+  email
+end
 
   mount_uploader :mainpic, ImageUploader
 
