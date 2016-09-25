@@ -212,3 +212,11 @@ ja:
       truncate: "..."
  
 
+  mailboxer:
+    message_mailer:
+      subject_new: "【Seekle】新着メッセージ: %{subject}"
+      subject_reply: "【Seekle】新着メッセージ: %{subject}"
+    notification_mailer:
+      subject: "【Seekle】新着メッセージ: %{subject}"
+
+
