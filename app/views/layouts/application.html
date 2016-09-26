@@ -1,8 +1,10 @@
 <!DOCTYPE html><html lang="en">
 <head>
 
-<title>Seekle（シークル）｜ 簡単比較で失敗しないサービス選び！</title>  
+ <title> <%= yield :title %> - Seekle（シークル)</title> 
 <meta name="description" content="ハウスクリーニングや写真撮影、マッサージなどの各サービス選びに失敗しない！あなたの必要とするサービスをオンラインで予約するならSeekle。ユーザーの口コミ、満足度や料金で簡単・便利にサービス徹底比較！[最大10万円の安心保証つき]" >
+
+
 <meta name="keywords" content="業者,ポートフォリオ撮影,マッサージ,リフォーム" />
 <meta property="og:title" content="Seekle（シークル）｜ 簡単比較で失敗しないサービス選び！" />
 <meta property="og:description"
@@ -31,7 +33,6 @@
 	<div class="header_content">
 	 <%= link_to image_tag('logo-min.png',class: 'logo'), "/" %>
 		 
-
 			<ul class="header-right"> 
 				<% if user_signed_in? %> 
 				<li> <%= link_to 'ダッシュボード',users_path %></li> 
@@ -44,6 +45,7 @@
 				<% end %> 
 			</ul>
 	</div>
+	
 	</header> 
 	<div class="main_content"> <%= yield %> </div>
 
@@ -64,7 +66,7 @@
 								<h3 class="widget-title">Provider</h3> 
 
 									<li>
-										<a href="/providers/sign_in">管理画面ログイン</a>
+									<a href="/providers/sign_in">管理画面ログイン</a>
 									</li>
 									<li><a href="/home/pro">サービス提供者として参加</a></li> 
 					          	</ul>
@@ -73,7 +75,7 @@
 					<div class="col-sm-3 "> 
 						      <ul>
 									<h3 class="widget-title">Company</h3> 
-								<li><%= link_to "運営会社",company_index_path %></li> 
+									<li><%= link_to "運営会社",company_index_path %></li> 
 								</ul> 
 						
 				
