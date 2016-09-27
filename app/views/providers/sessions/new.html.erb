@@ -1,13 +1,20 @@
+<% provide :title, "管理画面ログイン" %>
 <%= render 'providers/header' %>
 
 
 <div class="main-container">
+
 <div class="providers_signup">
 
 <div class="provider_login">
 <h2>サービス管理画面へログイン</h2>
 <p><%= link_to "掲載ご希望フォーム" ,"https://goo.gl/forms/kReZeeocLxkidVkE3"%>ご記入後アカウント登録リンクを送らさせていただきます。</p>
 
+<h4>
+ <%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+  <%- end -%>  
+  </h4>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
 
@@ -24,12 +31,9 @@
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
-
-
   <div class="actions">
     <%= f.submit "ログインする" ,:class => 'provider_join_btn' %>
   </div>
-
 
 <% end %>
 
@@ -38,6 +42,7 @@
 </div>
 </div>
 </div>
+
 
 
 
