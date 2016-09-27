@@ -138,16 +138,35 @@ margin-right:5px;
  }
 
 
+@media screen and (min-width: 320px) and (max-width: 374px){
+
+.bootstrap h3.panel-title {
+    margin-left: -9px;
+    margin-bottom: 0;
+    font-size: 10px;
+    color: inherit;
+
+}
+
+}
+
+
 
 /* ipad iphone6+PLUSから大きめのスマホのレスポンシブデザイン */
 @media screen and (max-width: 414px) {
  
  .home-all-wrapper{
-  height:2000px
+  height:200px
  }
  .home-all-wrapper .bootstrap{
   margin:0px;
  }
+
+ .bootstrap h3.panel-title {
+    margin-left: -9px;
+ font-size: 14px;
+
+}
 
  .top_home_page{
   height:200px;
@@ -168,21 +187,31 @@ margin-right:5px;
 
  }
 
+ 
+  .panel-body-housing{
+  height:140px;
+  width:100%;
+ }
+
+
+
 
  .categories {
-  margint:0 auto;
+margin-left:-21px;
+  margin-bottom:30px;
 width:100%;
+margin-top:3px;
  }
 
  .categories ul li{
-  margin-top: 10%;
+
   height:140px;
-  margin-bottom: 5%;
-  margin-right: 0%;
-    margin-left: 0%;
-width:89%;
+  margin-bottom: 15%;
+ width:50%;
+ padding-left:3px;
   font-size:17px;
   border-radius:4px
+
  }
 
 
@@ -256,10 +285,6 @@ margin-bottom: 3%;
  }
 
 
- .panel-body-housing{
-  height:120px;
-  width:100%;
- }
 
  
  .services-detail-wrapper{
