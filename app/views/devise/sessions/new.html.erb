@@ -2,19 +2,15 @@
 <div class="main-container">
 <div class="bootstrap">
 
-  <div class="content_in_user">
+ 
+
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+ <div class="content_in_user">
+  <%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "error_explanation" if msg.is_a?(String) %>
+  <%- end -%>  
 
-   <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
 
     <div class="field">
