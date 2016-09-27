@@ -5,8 +5,15 @@
  
 .provider_login{
     margin:0 auto;
-
 }
+.provider_login a{
+        color: #337ab7;
+}
+
+.provider_login p{
+    line-height: 22px;
+}
+
 
 .providers_signup{
      margin:0 auto;
@@ -67,6 +74,12 @@ border-radius:3%;
 
 @media (min-width: 375px) 
 {
+    .provider_login a{
+        color: #337ab7;
+}
+.provider_login p{
+    line-height: 22px;
+}
 
 
 .providers_signup{
@@ -127,6 +140,12 @@ border-radius:3%;
 @media screen and (min-width: 414px) {
 
 
+.provider_login p{
+    line-height: 22px;
+}
+.provider_login a{
+        color: #337ab7;
+}
 .providers_signup{
     width:90%;
     margin:0 auto;
@@ -194,6 +213,7 @@ margin-top: 30px;
 
 /* MAC */
 @media screen and (min-width: 800px) {
+
 
 
 .providers_signup{
