@@ -1,0 +1,167 @@
+/*ご利用の流れページ*/
+.guide-wrapper{
+	height:0 auto;
+	text-align:center;
+}
+
+.guide-explain-wrapper,.guide_title{
+	height:0 auto;
+	padding:10px;
+}
+
+.seekle_explain_wrapper{
+	height:340px;
+}
+
+
+.seekle_explain_wrapper p{
+	width:60%;
+	padding-top:20px;
+	margin:0 auto;
+	line-height: 30px;
+}
+
+
+.guide_title{
+	margin-top:14px; 
+	width:98%; 
+	border:3px solid #483D8B;
+	background-color: #F8F8FF;
+	border-radius: 8px;
+
+}
+
+.guide-wrapper h1{
+	text-align:center;
+	padding-top:43px;
+	font-size:26px;
+	color:#440000;
+}
+
+
+.guide-wrapper h2{
+	text-align:center;
+	padding-top:0px;
+	font-size:22px;
+	color:#440000;
+}
+
+
+.seekle_solutions_wrapper{
+	margin-top: 20px;
+}
+
+.seekle_solutions_wrapper p{
+	width:90%;
+	line-height: 27px;
+	margin:0 auto;
+}
+
+.solution_wrapper{
+	margin:0 auto;
+
+}
+
+.solution_wrapper li{
+	border:3px solid #D2B48C;
+	background-color: #FFFAF0;
+	    width: 420px;
+    height: 230px;
+ border-radius:5px;
+    margin-right: 10px;
+    margin-top: 20px;
+	float:left;
+}
+
+
+
+
+.track_icon{
+	padding-top:42px;
+	width:18%;
+	height:24%;
+}
+
+.arrow-down{
+	height:90px;
+	width:90px;
+}
+
+.guide-explain-wrapper h2{
+	padding-top:30px
+}
+
+.fa-arrow-down{
+	color:#F47503
+}
+
+.slash_right{
+	height:22px;	
+	width:22px;
+	margin-right: 9px;
+}
+
+.slash_left{
+	height:22px;	
+	width:22px;
+}
+
+.safe{
+	color:	#F4A460;
+	font-size: 34px;
+}
+.seekle{
+	color:	#F47503;
+}
+
+
+
+.explain_reservations_step{
+	width:100%;
+	height:360px;
+	margin-top:90px;
+	border-top: 3px solid #66CDAA;
+	border-bottom: 3px solid #66CDAA;
+	background-color: 	#F5FFFA;
+	clear:both;
+	float:left;
+}
+
+
+.explain_reservations_step h2{
+	margin-top:40px;
+	text-align:center;
+	padding-top:0px;
+	font-size:26px;
+	color:#440000;
+}
+
+.explain_reservations_step h3{
+		color:#440000;
+}
+.explain_reservations_step_wrapper{
+	width:960px;
+	margin:0 auto;
+}
+
+.step li{
+	    color: #312927;
+	width:21%;
+	 margin-right: 15px;	
+	  margin-left: 15px;
+	float:left;
+}
+.step p{
+	line-height: 22px;
+}
+
+.seekle_visions_explain{
+width:100%;
+	height:360px;
+	margin-top:80px;
+	border: 3px solid #F47503;;
+border-radius: 8px;
+	background-color:	#FFFAF0;
+	clear:both;
+	float:left;
+}
