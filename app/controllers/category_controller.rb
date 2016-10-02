@@ -7,29 +7,30 @@ class CategoryController < ApplicationController
 
     def housing
        
+  render :layout => 'show_layout.html'
 
     	@maincategories =Category.where(:id => [(1),(2),(3),(4),(5)]  )
-     	@parentcategories =Category.find_by(name: params[:category]).id
-     
       @categories =  Category.where(:parent_id => (1))
      
 	   
 	end
 
-
     def event
+        render :layout => 'show_layout.html'
       @maincategories =Category.where(:id => [(1),(2),(3),(4),(5)]  )
       @parentcategories =Category.find_by(name: params[:category]).id
       @categories =  Category.where(:parent_id => (2))
   end
 
     def lesson
+        render :layout => 'show_layout.html'
       @maincategories =Category.where(:id => [(1),(2),(3),(4),(5)]  )
       @parentcategories =Category.find_by(name: params[:category]).id
       @categories =  Category.where(:parent_id => (3))
     end
 
     def health
+        render :layout => 'show_layout.html'
       @maincategories =Category.where(:id => [(1),(2),(3),(4),(5)]  )
       @parentcategories =Category.find_by(name: params[:category]).id
       @categories =  Category.where(:parent_id => (4))
