@@ -1,4 +1,4 @@
- class NotesController < ApplicationController
+  class NotesController < ApplicationController
 
  before_action :set_note, only: [:show,:edit, :update, :destroy, :profile]
  before_action :authenticate_user!, only:[:profile]
@@ -39,12 +39,13 @@
     @notes = Note.includes(:user).all
     @note = Note.find(params[:id])
     @reviews = Review.where(note_id: @note.id).order("created_at DESC")
-      render :layout => 'note_layout.html'
+     render :layout => 'note_layout.html'
    if @reviews.blank?
       @avg_review = 0
     else
       @avg_review = @reviews.average(:rating).round(2)
    end
+   
   end
 
 
@@ -53,13 +54,14 @@
 
       @category_id= Category.find_by(name: params[:category]).id
       @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
-
+         render :layout => 'show_layout.html'
   end
 
   def event
      @eventcategories =  Category.where(:parent_id => (2))
       @category_id= Category.find_by(name: params[:category]).id
        @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
+        render :layout => 'show_layout.html'
   end
 
   def lesson
@@ -72,9 +74,9 @@
      @healthcategories =  Category.where(:parent_id => (4))
      @category_id= Category.find_by(name: params[:category]).id
        @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
-end
+ end
 
-  def profile
+  def profile 
     @notes = Note.includes(:provider).all
   end
 
@@ -98,8 +100,9 @@ end
     @note = current_provider.notes.build(note_params)
   
      if @note.save
-      redirect_to  @note
+   
      NoteMailer.note_email(@provider, @note).deliver
+        redirect_to  @note
 #redirect_to @note で作成されたものが表示される
      else
       render :new
