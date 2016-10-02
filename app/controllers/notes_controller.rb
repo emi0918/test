@@ -1,4 +1,4 @@
-  class NotesController < ApplicationController
+ class NotesController < ApplicationController
 
  before_action :set_note, only: [:show,:edit, :update, :destroy, :profile]
  before_action :authenticate_user!, only:[:profile]
@@ -68,12 +68,14 @@
     @lessoncategories =  Category.where(:parent_id => (3))
      @category_id= Category.find_by(name: params[:category]).id
        @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
+             render :layout => 'show_layout.html'
   end
 
   def health
      @healthcategories =  Category.where(:parent_id => (4))
      @category_id= Category.find_by(name: params[:category]).id
        @notes = Note.page(params[:page]).per(6).where(category_id: @category_id).order("created_at DESC")
+             render :layout => 'show_layout.html'
  end
 
   def profile 
