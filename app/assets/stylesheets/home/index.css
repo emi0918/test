@@ -10,9 +10,6 @@
 .message{background-color:#6495ED;box-shadow:#4682B4 0 3px;padding:15px 40px}
 .fa-fw{font-size:18px;padding-right:10px}
 
-/*ご利用の流れページ*/
-.guide-wrapper{height:1900px;text-align:center}.guide-explain-wrapper,.guide_title{height:300px}.guide_title{background-color:#6495ED;margin-top:14px;border-top:2px solid gray}.guide_title h1{text-align:center;color:#fff;padding:90px;font-size:50px}.guide-explain-wrapper h2{padding-top:35px}.fa-arrow-down{color:#F47503}
-
 /*利用規約、ポリシー、特定商取引 のcss*/
 .policy-wrapper{margin-top:50px;margin-left:300px;border-radius:5px;background-color:#FFF}
 .policy-menu-heading,.signage-menu-heading{width:270px;float:left;background-color:#F5F5F5}
