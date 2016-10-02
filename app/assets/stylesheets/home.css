@@ -197,7 +197,7 @@ margin-right: 50px;
   float: left;
   cursor: pointer;
 
-  margin-left: 100px;
+  margin-left: 28px;
 }
 
 
@@ -222,6 +222,8 @@ margin-right: 50px;
   width:78%;
   margin-left: 13%;
 }
+
+
 .widget-menu a{color:#F5F5F5}
 .widget-menu a:hover{color:#D3D3D3}
 .widget-menu li{display:inline-block;margin:10px}
@@ -264,6 +266,7 @@ float:right;
   margin-top:10px;
   margin-bottom:0
 }
+
 #login:hover,#sign:hover{
   background-color:#FFA07A
 }
