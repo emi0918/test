@@ -333,7 +333,7 @@ border-top: 1px solid #f5f5f5;
 
 /* ブレイクポイントが1000px以下の時のメディアクエリを設定してください*/
 
-@media (min-width: $screen-tablet) {
+@media (min-width: $screen-phablet) {
   /* lessonクラスのwidthを50%に変更し、margin-bottom: 50px;を追加してください */
 .container_head{
     margin-left:0px;
