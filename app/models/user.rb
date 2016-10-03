@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   end
 
   def mailboxer_email(object)
-    self.name
+    email
   end
 
   mount_uploader :mainpic, ImageUploader
