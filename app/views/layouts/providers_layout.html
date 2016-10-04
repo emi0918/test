@@ -33,7 +33,7 @@
  <%= link_to image_tag('whitelogo.png',class: 'logo_2'), "/providers/profile" %>
 
 
-<ul class="header-right"> <% if provider_signed_in? %>  <%= javascript_include_tag "application" %>
+<ul class="header-right-provider"> <% if provider_signed_in? %>  <%= javascript_include_tag "application" %>
  <li> <%= link_to 'サービスを掲載', new_note_path %></li>
  <li> <%= link_to 'ログアウト', destroy_provider_session_path, method: :delete %></li> <% else %> <% end %> </ul>
 </div>
