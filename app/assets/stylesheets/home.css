@@ -37,6 +37,31 @@ padding-left:40px;
 
 
 
+.header-right-provider {
+  float: right;
+padding-left:110px; 
+}
+
+.header-right-provider a {
+  color:  #F0F8FF;
+  display: block;
+  text-decoration:none;
+}
+.header-right-provider a:hover{
+  color:    #E6E6FA;
+  text-decoration:none;
+}
+
+.header-right-provider li {
+  line-height: 65px;
+padding-right:10px; 
+padding-left:40px; 
+  float: left;
+}
+
+
+
+
 html{overflow:auto}body{overflow:hidden;position:relative;margin:0}li,ul{list-style-type:none;margin:0}a{color:gray}a:hover{color:#1b7ccd}.main_content{padding-top:57px;margin:0 auto}
 
 h1{font-size:32px;letter-spacing:-2px;margin-bottom:0px;}
