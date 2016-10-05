@@ -1,7 +1,8 @@
 <!DOCTYPE html><html lang="en">
 <head>
  <title> <%=  Category.find_by(name: params[:category]).name %> - Seekle（シークル)</title> 
-<meta name="description" content="ハウスクリーニングやポートフォリオ撮影、マッサージ、カウンセリングなどの各サービス選びに失敗しない！あなたの必要とするサービスをオンラインで無料予約するならSeekle。サービスを利用したユーザーの口コミ、満足度や具体的なサービス料金で簡単・便利に徹底比較！[最大10万円の安心保証つき]" >
+<meta name="description" content=" <%=  Category.find_by(name: params[:category]).name %>をシークルで探して、予約しましょう！価格・口コミから安心で満足度の高いのサービスを見つけるならシークル！[最大10万円の安心保証つき]" >
+
 
 
 <meta name="keywords" content="業者,ポートフォリオ撮影,マッサージ,リフォーム" />
@@ -75,9 +76,8 @@
 						      <ul>
 									<h3 class="widget-title">Company</h3> 
 									<li><%= link_to "運営会社",company_index_path %></li> 
-									<li><%= link_to "Seekleマガジン","http://articles.seekle.jp",:target=>["_blank"] %></li>
+									<li><%= link_to "Seekleメディア","http://articles.seekle.jp",:target=>["_blank"] %></li>
 								</ul> 
-						
 				
 					</div>
 
