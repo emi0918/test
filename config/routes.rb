@@ -95,6 +95,4 @@ end
  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
 
 
-get '*path', controller: 'application', action: 'render_404'
-get '*path', controller: 'application', action: 'render_500'
 end
