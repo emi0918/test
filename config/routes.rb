@@ -90,9 +90,6 @@ resources :conversations ,only: [:show] do
    post :reply
  end
 end
-if Rails.env.development?
-    mount LetterOpenerWeb::Engine, at: "/letter_opener"
-  end
 
  # mailbox folder routes
  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
