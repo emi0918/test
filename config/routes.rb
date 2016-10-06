@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
+
+
  default_url_options :host => "seekle.jp"
 
 
  devise_for :users 
-
 
 
  resources :about, only:[:index] 
@@ -31,11 +32,12 @@ resources :providers, only:[:index,:edit,:update,:show ]  do
      get :mypage
  end
  member do
-
    get :conversations
    post :reply
  end
 end
+
+
 
 resources :notes do
    resources :conversations ,except: [:show] 
@@ -69,12 +71,11 @@ namespace :home do
   get :signage
   get :term
   get :policy
-  get :guide
+
 end
 
+
 resources :company ,only: [:index]
-
-
 
 namespace :category do
   get :housing
@@ -89,6 +90,9 @@ resources :conversations ,only: [:show] do
    post :reply
  end
 end
+if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 
  # mailbox folder routes
  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
