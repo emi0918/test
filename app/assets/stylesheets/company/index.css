@@ -1,6 +1,25 @@
 /*会社概要*/
-.company_content{height:0 auto; margin-bottom:380px;color:#fff;     -webkit-font-smoothing: antialiased;}
+.company_content{
+    height:0 auto; margin-bottom:380px;color:#fff;     -webkit-font-smoothing: antialiased;}
+    .company_content a{
+        color:      #4682B4;
+    }
 
+.company_content h3{
+    color:black;
+text-align:center;
+     width:80%;
+     margin:0 auto;
+     margin-bottom:30px;
+      margin-top: 60px;
+          color: #337ab7;
+
+          font-weight: normal;
+}
+
+.company_content h3:hover{
+
+}
 
 .company_explanation{
 
@@ -34,18 +53,21 @@ background-size: cover;
 
 
 
+span.big_seekle{
+    font-size:29px;
+          font-weight:bold;
 
-
+}
 
 .company_service{height:0 auto; }
 
 
 
-.company_service_mission{float:left;width:60%; margin-left: 20%; }
+.company_service_mission{clear:both;width:80%; margin:0 auto;}
 
 .company_service_mission h2{text-align:center;    color: #333; margin-top: 20px;}
 
-.company_service_mission p{    line-height: 2em; color: #333;     padding: 0 0 50px; }
+.company_service_mission p{    line-height: 2em; color: #333;     padding: 0 0 0px; }
 
 
 .company-head h2{height:50px;color:black;font-size:;}     
@@ -105,7 +127,7 @@ background-size: cover;
 
 .about-company h1{text-align: center}
 
-.about-company{color:#333; margin-top:580px;clear:both; text-align: center}
+.about-company{color:#333;clear:both; text-align: center}
 
 .company-table{ text-align: center; margin: 0 auto; text-align: left; }
 
