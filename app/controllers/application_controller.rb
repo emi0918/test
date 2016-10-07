@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     rescue_from Exception, with: :render_500
 
     def render_404
-      render file: '/public/400', status: 404, layout: 'application', content_type: 'text/html'
+      render file: '/public/404', status: 404, layout: 'application', content_type: 'text/html'
     end
 
     def render_500
