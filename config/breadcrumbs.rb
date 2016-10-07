@@ -27,21 +27,21 @@ end
 
 
 crumb :event do
-	link  "イベント" ,"/category/housing?category=イベント"
+	link  "イベント" ,"/category/event/?category=イベント"
 	parent :root
 end
 crumb :lesson do
-	link  "習い事" ,"/category/housing?category=習い事"
+	link  "習い事" ,"/category/lesson?category=習い事"
 	parent :root
 end
 
 crumb :health do
-	link  "健康" ,"/category/housing?category=健康"
+	link  "健康" ,"/category/health?category=健康"
 	parent :root
 end
 
 crumb :others do
-	link  "その他" ,"/category/housing?category=その他"
+	link  "その他" ,"/category/others?category=その他"
 	parent :root
 end
 
@@ -52,19 +52,20 @@ crumb :housing_notes do
      parent :housing
 end
 crumb :event_notes do
-	link  Category.find_by(name: params[:category]).name,housing_notes_path
+	link  Category.find_by(name: params[:category]).name,
+	event_notes_path
      parent :event
 end
 crumb :lesson_notes do
-	link  Category.find_by(name: params[:category]).name,housing_notes_path
+	link  Category.find_by(name: params[:category]).name,lesson_notes_path
      parent :lesson
 end
 crumb :health_notes do
-	link  Category.find_by(name: params[:category]).name,housing_notes_path
+	link  Category.find_by(name: params[:category]).name,health_notes_path
      parent :health
 end
 crumb :others_notes do
-	link  Category.find_by(name: params[:category]).name,housing_notes_path
+	link  Category.find_by(name: params[:category]).name,others_notes_path
      parent :others
 end
 
