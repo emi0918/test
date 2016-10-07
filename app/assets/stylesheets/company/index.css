@@ -2,9 +2,36 @@
 .company_content{height:0 auto; margin-bottom:380px;color:#fff;     -webkit-font-smoothing: antialiased;}
 
 
-.company_explanation{height:100px; background-color:white;color:#333}
+.company_explanation{
 
-.company_explanation h1{font-size:40px;text-align:center;-webkit-font-smoothing: antialiased; padding-top:2%;letter-spacing: 1px;}
+background-size: cover;
+    position: relative;
+    background-image: url("/images/office.jpg");
+        height:400px; 
+    margin-top: 9px;
+}
+
+.company_explanation::before{
+    /* 透過した黒を重ねる */
+    background-color: rgba(0,0,0,0.5);
+    /* どの範囲に重ねるかを指定 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+}
+.box h1{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top:13%;
+  font-size: 45px;
+  letter-spacing: 2px;
+
+}
+
 
 
 
