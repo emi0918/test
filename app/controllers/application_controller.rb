@@ -11,9 +11,6 @@ class ApplicationController < ActionController::Base
 
     protect_from_forgery with: :exception
 
-
-
-
  rescue_from ActiveRecord::RecordNotFound, with: :render_404
     rescue_from ActionController::RoutingError, with: :render_404
     rescue_from Exception, with: :render_500
@@ -27,16 +24,16 @@ class ApplicationController < ActionController::Base
     end
 
 
-
-
     #protect_from_forgery
  
     private
 
     def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:sign_up) << :name << :area << :profile << :mainpic
+      #devise_parameter_sanitizer.for(:sign_up) << :name << :area << :profile << :mainpic
+      devise_parameter_sanitizer.permit(:sign_up, keys: [ :name, :area, :profile, :mainpic ] )
 
-      devise_parameter_sanitizer.for(:account_update) << :name << :area << :profile << :mainpic
+      #devise_parameter_sanitizer.for(:account_update) << :name << :area << :profile << :mainpic
+      devise_parameter_sanitizer.permit(:account_update, keys: [ :name, :area, :profile, :mainpic ] )
     end
 
     private
