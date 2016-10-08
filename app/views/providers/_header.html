@@ -1,7 +1,8 @@
-     <% if provider_signed_in? %> 
+       <% if provider_signed_in? %> 
           <div class="up-var">
               <div class="upper-menu">
                 <div class="wrapper" >
+                    <div class="main-container">
                   <ul>
                     <li><a href='/providers/mypage'>マイページ</a></li>
                     <li><a href='/providers/inbox'>メッセージ</a></li>
@@ -9,6 +10,7 @@
                     <li><a href='/providers'>基本情報</a></li>
 
                 </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -45,7 +47,7 @@
               <% else %> 
 
               <li> <%= link_to 'アカウント作成', new_provider_registration_path %></li> 
-              <li><%= link_to 'プロバイダーログイン',   new_provider_session_path %></li> 
+              <li><%= link_to 'サービス提供者ログイン',   new_provider_session_path %></li> 
               <% end %> 
 
 
