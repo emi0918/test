@@ -21,3 +21,16 @@
     clear:both;
 }  
 
+
+
+.delete_account{
+    margin:0 auto;
+    width:80%;
+    padding:20px;
+    border:1px solid #e3e4e8 ;
+    background-color: #f6f8fa ;
+    border-radius:9px;
+    margin-bottom:50px;
+}
+
+
