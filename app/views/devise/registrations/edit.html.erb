@@ -85,16 +85,19 @@
      <%= f.submit '保存する', :class => 'btn btn-default', data:{ disable_with: "保存中・・・"} %>
 
 <% end %>
+</div>
 
+<div class="delete_account">
 
 <h3>アカウントを削除する</h3>
 
 <p>退会してしまうと現在のデータはすべて削除されます。<%= button_to "退会する", registration_path(resource_name), :class => 'provider_delete_btn' , data: { confirm: "本当に退会しますか？" }, method: :delete %></p>
 
-<%= link_to "戻る", :back %>
+
 
 
   </div>
+  <%= link_to "戻る", :back %>
 </div>
 
 </div>
