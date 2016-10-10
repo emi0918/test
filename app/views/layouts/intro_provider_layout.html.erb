@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+ <title> <%= @note.provider.name  %> - Seekle（シークル)</title> 
+  <% @note.provider.store_infos.each do |s| %>
+<meta name="description" content="<%= s.about %>" >
+
+
+<meta name="keywords" content="<%= @note.provider.name  %>,<%= s.prefecture %>,<%= @note.category.name %>,Seekle" />
+<meta property="og:title" content=" <%= @note.provider.name  %> - Seekle（シークル)" />
+<meta property="og:description"
+     content="<%= s.about %>" />
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <%= csrf_meta_tags %>
+<%= favicon_link_tag('favicon.ico') %>
+</head>
+  <% end %>
+
+<script src='https://cdn.slaask.com/chat.js'></script>
+<script>
+	_slaask.init('e82bd97e2f19e5c3820785f34a397d1c');
+</script>
+<!--bodyタグ内のコンテンツの表示はhead内にあるjsの処理が完了してから行われるので、表示が遅くなる   なるべくheadに不要なjs入れない bodyにいれる-->
+
+
+
+<body>
+
+	<%= stylesheet_link_tag "application", media: "all" %>
+	<header>
+	<div class="header_content">
+	 <%= link_to image_tag('logo-min.png',class: 'logo'), "/" %>
+		 
+			<ul class="header-right"> 
+				<% if user_signed_in? %> 
+				<li> <%= link_to 'ダッシュボード',users_path %></li> 
+				<%= javascript_include_tag "application" %>
+				<li> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+				<% else %> 
+		
+				<li> <%= link_to 'アカウント作成', new_user_registration_path %></li> 
+				<li><%= link_to 'ログイン', new_user_session_path %></li>
+				<% end %> 
+			</ul>
+	</div>
+	
+	</header> 
+	<div class="main_content"> <%= yield %> </div>
+
+		<footer class="footer"> 
+
+			<div class="footer-top"> 
+					<div class="main-container">
+					<div class="footer_content">
+					<div class="col-sm-3"> 
+				
+						<h3 class="widget-title">Customers</h3> 
+									<li><a href="/about">シークルとは？</a></li> 
+	
+					</div> 
+
+					<div class="col-sm-3"> 
+							<ul> 
+								<h3 class="widget-title">Provider</h3> 
+
+									<li>
+									<a href="/providers/sign_in">管理画面ログイン</a>
+									</li>
+									<li><a href="/home/pro">サービス提供者として参加</a></li> 
+					          	</ul>
+					</div>
+
+					<div class="col-sm-3 "> 
+						       <ul>
+									<h3 class="widget-title">Company</h3> 
+									<li><%= link_to "運営会社",company_index_path %></li> 
+									<li><%= link_to "Seekleジャーナル","http://articles.seekle.jp",:target=>["_blank"] %></li>
+								</ul> 
+						
+				
+					</div>
+
+					<div class="col-sm-4">
+						<div id="social-icon">
+							<a href="https://www.facebook.com/seeklejp/">
+								<i class="fa fa-facebook fa-2x"></i></a> 
+								<a href="https://twitter.com/Seeklejp">
+									<i class="fa fa-twitter fa-2x"></i></a>
+									<a href="https://www.instagram.com/seekle_jp/"><i class="fa fa-instagram fa-2x"></i></a> 
+									<a href="#"><i class="fa fa-pinterest fa-2x"></i></a> 
+								</div> 
+							</div>
+						</div>
+					</div> 
+			</div>
+
+			</footer>
+					<div class="footer-bottom"> 
+	
+						<nav class="widget-menu"> 
+							<li><a href="/home/term">利用規約</a></li>
+							<li><a href="/home/policy">プライバシポリシー</a></li> 
+							<li><a href="/home/signage">特定商取引に基づく表記</a></li> 
+				
+					</nav> 
+		
+		
+		</div>
+		<div class="copy-right">© Seekle inc., All Rights Reseved.</div>
+
+	</body>
+
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	</html>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76983508-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
