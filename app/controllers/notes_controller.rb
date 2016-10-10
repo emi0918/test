@@ -80,6 +80,7 @@
 
   def profile 
     @notes = Note.includes(:provider).all
+    render :layout => 'intro_provider_layout.html.erb'
   end
 
   # GET /notes/new
@@ -101,8 +102,7 @@
   def create
     @note = current_provider.notes.build(note_params)
   
-     if @note.save
-   
+     if @note.save   
      NoteMailer.note_email(@provider, @note).deliver
         redirect_to  @note
 #redirect_to @note で作成されたものが表示される
