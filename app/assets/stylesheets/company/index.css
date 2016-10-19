@@ -1,3 +1,122 @@
+@media (min-width: 320px) and (max-width: 374px){
+.company_explanation{
+
+background-size: cover;
+    position: relative;
+    background-image: url("/images/office.jpg");
+        height:280px; 
+    margin-top: 0px;
+}
+
+.box h1{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top:100px;
+  font-size: 35px;
+  letter-spacing: 2px;
+
+}
+}
+
+
+@media (min-width: 375px) {
+.company_explanation{
+
+background-size: cover;
+    position: relative;
+    background-image: url("/images/office.jpg");
+        height:280px; 
+    margin-top: 0px;
+}
+
+.box h1{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top:100px;
+  font-size: 45px;
+  letter-spacing: 2px;
+
+}
+}
+@media (min-width: 414px){
+
+.company_explanation{
+
+background-size: cover;
+    position: relative;
+    background-image: url("/images/office.jpg");
+        height:280px; 
+    margin-top: 0px;
+}
+
+.box h1{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top:100px;
+  font-size: 45px;
+  letter-spacing: 2px;
+
+}
+
+}
+
+
+@media (min-width: 768px){
+  .company_explanation{
+
+background-size: cover;
+    position: relative;
+    background-image: url("/images/office.jpg");
+        height:330px; 
+    margin-top: 9px;
+}
+
+
+.box h1{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top:130px;
+  font-size: 45px;
+  letter-spacing: 2px;
+
+}
+
+  }
+
+
+
+
+
+@media (min-width: 1024px){
+.company_explanation{
+
+background-size: cover;
+    position: relative;
+    background-image: url("/images/office.jpg");
+        height:400px; 
+    margin-top: 9px;
+}
+
+
+
+.box h1{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top:160px;
+  font-size: 45px;
+  letter-spacing: 2px;
+
+}
+
+}
+
+
+
 /*会社概要*/
 .company_content{
     height:0 auto; margin-bottom:120px;color:#fff;     -webkit-font-smoothing: antialiased;}
@@ -21,14 +140,6 @@ text-align:center;
 
 }
 
-.company_explanation{
-
-background-size: cover;
-    position: relative;
-    background-image: url("/images/office.jpg");
-        height:400px; 
-    margin-top: 9px;
-}
 
 .company_explanation::before{
     /* 透過した黒を重ねる */
@@ -40,15 +151,6 @@ background-size: cover;
     bottom: 0;
     left: 0;
     content: ' ';
-}
-.box h1{
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  margin-top:13%;
-  font-size: 45px;
-  letter-spacing: 2px;
-
 }
 
 
